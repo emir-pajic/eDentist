@@ -2,9 +2,9 @@
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace eDentist.WebAPI.Database
+namespace eDentist.Model
 {
-    public partial class Examinations
+    public partial class MExaminations
     {
         public int ExaminationId { get; set; }
         public string AdditionalInfo { get; set; }
@@ -14,8 +14,8 @@ namespace eDentist.WebAPI.Database
         public int? TreatmentsMaterialsId { get; set; }
         public string PaymentTokenId { get; set; }
 
-        public virtual Appointments Appointment { get; set; }
-        public virtual TreatmentsMaterials TreatmentsMaterials { get; set; }
-        public virtual Users User { get; set; }
+        public virtual MAppointments Appointment { get; set; }
+        public virtual MTreatmentsMaterials TreatmentsMaterials { get; set; }
+        public virtual MUsers User { get; set; }
     }
 }

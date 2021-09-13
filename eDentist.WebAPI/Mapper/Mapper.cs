@@ -2,11 +2,11 @@
 
 namespace eDentist.WebAPI.Mapper
 {
-    public class Mapper:Profile
+    public class Mapper : Profile
     {
         public Mapper()
         {
-            
+
 
         }
     }

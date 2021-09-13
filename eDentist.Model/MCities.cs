@@ -4,20 +4,20 @@
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace eDentist.WebAPI.Database
+namespace eDentist.Model
 {
-    public partial class Cities
+    public partial class MCities
     {
-        public Cities()
+        public MCities()
         {
-            Users = new HashSet<Users>();
+            Users = new HashSet<MUsers>();
         }
 
         public int CityId { get; set; }
         public string CityName { get; set; }
         public int CountryId { get; set; }
 
-        public virtual Countries Country { get; set; }
-        public virtual ICollection<Users> Users { get; set; }
+        public virtual MCountries Country { get; set; }
+        public virtual ICollection<MUsers> Users { get; set; }
     }
 }
