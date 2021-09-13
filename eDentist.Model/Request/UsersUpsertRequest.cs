@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace eDentist.Model.Request
 {
@@ -13,7 +14,8 @@ namespace eDentist.Model.Request
         public DateTime DateOfBirth { get; set; }
         public string Telephone { get; set; }
         public string Password { get; set; }
-        public string PasswordHash { get; set; }
-        public string PasswordSalt { get; set; }
+        public string PasswordConfirmation { get; set; }
+        public List<int> Roles { get; set; } = new List<int>();
+        public List<int> RolesToDelete { get; set; } = new List<int>();
     }
 }

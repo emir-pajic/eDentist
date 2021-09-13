@@ -1,4 +1,8 @@
+using eDentist.Model;
 using eDentist.WebAPI.Database;
+using eDentist.WebAPI.Filters;
+using eDentist.WebAPI.Interface;
+using eDentist.WebAPI.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +25,12 @@ namespace eDentist.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers(); /*(x => x.Filters.Add<ErrorFilter>());*/
+            services.AddScoped<IBaseService<MRoles, object>, RoleService>();
+            services.AddScoped<IUserService, UserService>();
+
+
+
+            services.AddControllers((x => x.Filters.Add<ErrorFilter>()));
             services.AddAutoMapper(typeof(Startup));
 
             services.AddDbContext<eDentistContext>(options =>

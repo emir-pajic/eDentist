@@ -40,6 +40,7 @@ namespace eDentist.WebAPI.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            OnModelCreatingPartial(modelBuilder);
             modelBuilder.Entity<Appointments>(entity =>
             {
                 entity.HasKey(e => e.AppointmentId)
