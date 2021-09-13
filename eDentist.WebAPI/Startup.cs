@@ -1,8 +1,11 @@
 using eDentist.Model;
+using eDentist.Model.Request;
 using eDentist.WebAPI.Database;
 using eDentist.WebAPI.Filters;
 using eDentist.WebAPI.Interface;
+using eDentist.WebAPI.Security;
 using eDentist.WebAPI.Service;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,9 +30,11 @@ namespace eDentist.WebAPI
         {
             services.AddScoped<IBaseService<MRoles, object>, RoleService>();
             services.AddScoped<IUserService, UserService>();
+            //services.AddScoped < ICRUDService<MCities, CitiesSearchRequest, CitiesUpsertRequest, CitiesUpsertRequest>, M();
 
 
-
+            services.AddControllers().AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddControllers((x => x.Filters.Add<ErrorFilter>()));
             services.AddAutoMapper(typeof(Startup));
 
@@ -62,6 +67,8 @@ namespace eDentist.WebAPI
                 });
             });
 
+            services.AddAuthentication("BasicAuthentication")
+              .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

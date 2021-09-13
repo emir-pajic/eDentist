@@ -2,10 +2,13 @@
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
+using System.ComponentModel.DataAnnotations;
+
 namespace eDentist.WebAPI.Database
 {
     public partial class Examinations
     {
+        [Key]
         public int ExaminationId { get; set; }
         public string AdditionalInfo { get; set; }
         public int? AppointmentId { get; set; }

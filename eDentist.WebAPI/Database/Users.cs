@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -15,7 +16,7 @@ namespace eDentist.WebAPI.Database
             Examinations = new HashSet<Examinations>();
             UserRoles = new HashSet<UserRoles>();
         }
-
+        [Key]
         public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -24,7 +25,6 @@ namespace eDentist.WebAPI.Database
         public string Email { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Telephone { get; set; }
-        public string Password { get; set; }
         public string PasswordHash { get; set; }
         public string PasswordSalt { get; set; }
 

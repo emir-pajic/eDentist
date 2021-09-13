@@ -9,6 +9,10 @@ namespace eDentist.WebAPI.Mapper
     {
         public Mapper()
         {
+
+            CreateMap<Roles, MRoles>();
+            CreateMap<UserRoles, MUserRoles>();
+
             CreateMap<Users, MUsers>();
             CreateMap<Users, UsersUpsertRequest>().ReverseMap();
 
