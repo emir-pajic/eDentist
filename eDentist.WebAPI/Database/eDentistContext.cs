@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -132,6 +133,7 @@ namespace eDentist.WebAPI.Database
                     Telephone = "061-918-661",
                     PasswordSalt = Salt[0],
                     PasswordHash = GenerateHash(Salt[0], "pajson1"),
+                    Image = File.ReadAllBytes("Files/user.jpg")
                 },
                 new Users
                 {
@@ -145,6 +147,7 @@ namespace eDentist.WebAPI.Database
                     Telephone = "061-918-661",
                     PasswordSalt = Salt[1],
                     PasswordHash = GenerateHash(Salt[1], "pajson2"),
+                    Image = File.ReadAllBytes("Files/user.jpg")
                 }
             );
             modelBuilder.Entity<Roles>().HasData

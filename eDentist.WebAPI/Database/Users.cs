@@ -27,6 +27,7 @@ namespace eDentist.WebAPI.Database
         public string Telephone { get; set; }
         public string PasswordHash { get; set; }
         public string PasswordSalt { get; set; }
+        public byte[] Image { get; set; }
 
         public virtual Cities City { get; set; }
         public virtual ICollection<Appointments> Appointments { get; set; }

@@ -15,6 +15,8 @@ namespace eDentist.Model.Request
         public string Telephone { get; set; }
         public string Password { get; set; }
         public string PasswordConfirmation { get; set; }
+        public byte[] Image { get; set; }
+
         public List<int> Roles { get; set; } = new List<int>();
         public List<int> RolesToDelete { get; set; } = new List<int>();
     }

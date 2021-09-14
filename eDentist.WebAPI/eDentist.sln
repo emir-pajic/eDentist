@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eDentist.WebAPI", "eDentist.WebAPI.csproj", "{D33DB08E-9EBF-4C6F-AA8E-7CE5FE930CC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eDentist.Model", "..\eDentist.Model\eDentist.Model.csproj", "{5EDE92A6-2D4F-4E56-BD9E-B63D44A8653D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eDentist.Model", "..\eDentist.Model\eDentist.Model.csproj", "{5EDE92A6-2D4F-4E56-BD9E-B63D44A8653D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eDentist.WinUI", "..\eDentist.WinUI\eDentist.WinUI.csproj", "{261CDA86-BA80-4A9B-AB59-8DBC9C589DCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5EDE92A6-2D4F-4E56-BD9E-B63D44A8653D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EDE92A6-2D4F-4E56-BD9E-B63D44A8653D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EDE92A6-2D4F-4E56-BD9E-B63D44A8653D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261CDA86-BA80-4A9B-AB59-8DBC9C589DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261CDA86-BA80-4A9B-AB59-8DBC9C589DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261CDA86-BA80-4A9B-AB59-8DBC9C589DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261CDA86-BA80-4A9B-AB59-8DBC9C589DCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

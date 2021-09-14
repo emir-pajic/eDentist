@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{261CDA86-BA80-4A9B-AB59-8DBC9C589DCE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>eDentist.WinUI</RootNamespace>
+    <AssemblyName>eDentist.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\eDentist.WebAPI\packages\Flurl.3.0.2\lib\net472\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\eDentist.WebAPI\packages\Flurl.Http.3.2.0\lib\net472\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\eDentist.WebAPI\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIService.cs" />
+    <Compile Include="Forms\Appointments\AppointmentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Appointments\AppointmentList.Designer.cs">
+      <DependentUpon>AppointmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cities\CityList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Cities\CityList.Designer.cs">
+      <DependentUpon>CityList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Countries\CountryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Countries\CountryList.Designer.cs">
+      <DependentUpon>CountryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Examinations\ExaminationList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Examinations\ExaminationList.Designer.cs">
+      <DependentUpon>ExaminationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manufacturers\ManufacturerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Manufacturers\ManufacturerList.Designer.cs">
+      <DependentUpon>ManufacturerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Materials\MaterialList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Materials\MaterialList.Designer.cs">
+      <DependentUpon>MaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Treatments\TreatmentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Treatments\TreatmentList.Designer.cs">
+      <DependentUpon>TreatmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UserList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmAdminIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmAdminIndex.Designer.cs">
+      <DependentUpon>frmAdminIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\PanelHelper.cs" />
+    <Compile Include="Helper\SignedInUser.cs" />
+    <Compile Include="Main\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Appointments\AppointmentList.resx">
+      <DependentUpon>AppointmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cities\CityList.resx">
+      <DependentUpon>CityList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Countries\CountryList.resx">
+      <DependentUpon>CountryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Examinations\ExaminationList.resx">
+      <DependentUpon>ExaminationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manufacturers\ManufacturerList.resx">
+      <DependentUpon>ManufacturerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Materials\MaterialList.resx">
+      <DependentUpon>MaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Treatments\TreatmentList.resx">
+      <DependentUpon>TreatmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmAdminIndex.resx">
+      <DependentUpon>frmAdminIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eDentist.Model\eDentist.Model.csproj">
+      <Project>{5ede92a6-2d4f-4e56-bd9e-b63d44a8653d}</Project>
+      <Name>eDentist.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
