@@ -8,17 +8,11 @@ namespace eDentist.Model
 {
     public partial class MTreatmentsMaterials
     {
-        public MTreatmentsMaterials()
-        {
-            Examinations = new HashSet<MExaminations>();
-        }
-
+      
         public int TreatmentMaterialId { get; set; }
         public int? TreatmentId { get; set; }
         public int? MaterialId { get; set; }
 
-        public virtual MMaterials Material { get; set; }
-        public virtual MTreatments Treatment { get; set; }
-        public virtual ICollection<MExaminations> Examinations { get; set; }
+       
     }
 }

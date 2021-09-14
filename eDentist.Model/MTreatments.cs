@@ -7,15 +7,9 @@
 namespace eDentist.Model
 {
     public partial class MTreatments
-    {
-        public MTreatments()
-        {
-            TreatmentsMaterials = new HashSet<MTreatmentsMaterials>();
-        }
+    {       
 
         public int TreatmentId { get; set; }
-        public string Description { get; set; }
-
-        public virtual ICollection<MTreatmentsMaterials> TreatmentsMaterials { get; set; }
+        public string Description { get; set; }       
     }
 }

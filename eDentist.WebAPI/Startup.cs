@@ -34,6 +34,13 @@ namespace eDentist.WebAPI
             services.AddScoped<ICRUDService<MCountries, CountriesSearchRequest, CountriesUpsertRequest, CountriesUpsertRequest>, CountriesService>();
             services.AddScoped<ICRUDService<MCities, CitiesSearchRequest, CitiesUpsertRequest, CitiesUpsertRequest>, CitiesService>();
             services.AddScoped<ICRUDService<MMaterials, MaterialsSearchRequest, MaterialsUpsertRequest, MaterialsUpsertRequest>, MaterialsService>();
+            services.AddScoped<ICRUDService<MManufacturers, ManufacturersSearchRequest, ManufacturersUpsertRequest, ManufacturersUpsertRequest>, ManufacturersService>();
+            services.AddScoped<ICRUDService<MTreatments, TreatmentSearchRequest, TreatmentsUpsertRequest, TreatmentsUpsertRequest>, TreatmentsService>();
+            services.AddScoped<ICRUDService<MTreatmentsMaterials, TreatmentsMaterialsSearchRequest, TreatmentsMaterialsUpsertRequest, TreatmentsMaterialsUpsertRequest>, TreatmentsMaterialsService>();
+            services.AddScoped<ICRUDService<MExaminations, ExaminationsSearchRequest, ExaminationUpsertRequest, ExaminationUpsertRequest>, ExaminationsService>();
+
+
+
 
 
 
