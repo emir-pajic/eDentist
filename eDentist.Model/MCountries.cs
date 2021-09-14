@@ -8,14 +8,10 @@ namespace eDentist.Model
 {
     public partial class MCountries
     {
-        public MCountries()
-        {
-            Cities = new HashSet<MCities>();
-        }
-
+      
         public int CountryId { get; set; }
         public string CountryName { get; set; }
 
-        public virtual ICollection<MCities> Cities { get; set; }
+       
     }
 }

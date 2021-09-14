@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eDentist.WebAPI.Database;
 
 namespace eDentist.WebAPI.Migrations
 {
     [DbContext(typeof(eDentistContext))]
-    partial class eDentistContextModelSnapshot : ModelSnapshot
+    [Migration("20210914161202_addednewTable")]
+    partial class addednewTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -212,15 +214,6 @@ namespace eDentist.WebAPI.Migrations
                     b.HasIndex("CountryId");
 
                     b.ToTable("Manufacturers");
-
-                    b.HasData(
-                        new
-                        {
-                            ManufacturerId = 1,
-                            CountryId = 1,
-                            FoundationYear = 1951,
-                            Name = "Bosnalijek"
-                        });
                 });
 
             modelBuilder.Entity("eDentist.WebAPI.Database.Materials", b =>
@@ -241,14 +234,6 @@ namespace eDentist.WebAPI.Migrations
                     b.HasIndex("ManufacturerId");
 
                     b.ToTable("Materials");
-
-                    b.HasData(
-                        new
-                        {
-                            MaterialId = 1,
-                            ManufacturerId = 1,
-                            Name = "Brufen 400mg"
-                        });
                 });
 
             modelBuilder.Entity("eDentist.WebAPI.Database.Roles", b =>
@@ -401,12 +386,12 @@ namespace eDentist.WebAPI.Migrations
                         {
                             UserId = 1,
                             CityId = 1,
-                            DateOfBirth = new DateTime(2021, 9, 14, 18, 16, 40, 238, DateTimeKind.Local).AddTicks(4252),
+                            DateOfBirth = new DateTime(2021, 9, 14, 18, 12, 1, 619, DateTimeKind.Local).AddTicks(906),
                             Email = "emir.pajic@edu.fit.ba",
                             FirstName = "Emir",
                             LastName = "Pajić",
-                            PasswordHash = "lRAzJxMS7B3ixl/qlRIYr9iLIOs=",
-                            PasswordSalt = "JcQKcwGtEM70qRnfYSXNOA==",
+                            PasswordHash = "qVs96KNnY9L5CJmxFM/vgCww/oo=",
+                            PasswordSalt = "NEE5zt2HTsRcYUMrxtRB7A==",
                             Telephone = "061-918-661",
                             Username = "Pajson"
                         },
@@ -414,12 +399,12 @@ namespace eDentist.WebAPI.Migrations
                         {
                             UserId = 2,
                             CityId = 2,
-                            DateOfBirth = new DateTime(2021, 9, 14, 18, 16, 40, 245, DateTimeKind.Local).AddTicks(6521),
+                            DateOfBirth = new DateTime(2021, 9, 14, 18, 12, 1, 626, DateTimeKind.Local).AddTicks(5402),
                             Email = "emir.pajic2@edu.fit.ba",
                             FirstName = "Emir",
                             LastName = "Pajić",
-                            PasswordHash = "lVIpXBZkSy+IQMJk9Jznpr5ZFHA=",
-                            PasswordSalt = "m+hsAiyI7eGGZs8raIiNLw==",
+                            PasswordHash = "/PFmYkGg77MCGh3n/C2DwKVOlnU=",
+                            PasswordSalt = "l3ig3OoqpZm1F9/cP0/rog==",
                             Telephone = "061-918-661",
                             Username = "Pajson2"
                         });

@@ -13,9 +13,6 @@ namespace eDentist.Model
         public string Status { get; set; }
         public int? TreatmentsMaterialsId { get; set; }
         public string PaymentTokenId { get; set; }
-
-        public virtual MAppointments Appointment { get; set; }
-        public virtual MTreatmentsMaterials TreatmentsMaterials { get; set; }
-        public virtual MUsers User { get; set; }
+       
     }
 }

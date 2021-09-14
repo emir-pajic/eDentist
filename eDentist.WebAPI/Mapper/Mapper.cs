@@ -16,6 +16,20 @@ namespace eDentist.WebAPI.Mapper
             CreateMap<Users, MUsers>();
             CreateMap<Users, UsersUpsertRequest>().ReverseMap();
 
+            CreateMap<Appointments, MAppointments>();
+            CreateMap<Appointments, AppointmentsUpsertRequest>().ReverseMap();
+
+            CreateMap<Countries, MCountries>();
+            CreateMap<Countries, CountriesUpsertRequest>().ReverseMap();
+
+            CreateMap<Cities, MCities>();
+            CreateMap<Cities, CitiesUpsertRequest>().ReverseMap();
+
+            CreateMap<Materials, MMaterials>();
+            CreateMap<Materials, MaterialsUpsertRequest>().ReverseMap();
+
+            //CreateMap<Users, UsersUpsertRequest>().ReverseMap();
+
         }
     }
 }

@@ -12,11 +12,14 @@ namespace eDentist.WebAPI.Database
         public Countries()
         {
             Cities = new HashSet<Cities>();
+            Manufacturers = new HashSet<Manufacturers>();
         }
         [Key]
         public int CountryId { get; set; }
         public string CountryName { get; set; }
 
         public virtual ICollection<Cities> Cities { get; set; }
+        public virtual ICollection<Manufacturers> Manufacturers { get; set; }
+
     }
 }

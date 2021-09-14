@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
@@ -9,11 +10,8 @@ namespace eDentist.Model
 {
     public partial class MAppointments
     {
-        public MAppointments()
-        {
-            Examinations = new HashSet<MExaminations>();
-        }
-
+        
+        
         public int AppointmentId { get; set; }
         public DateTime Date { get; set; }
         public int? UserId { get; set; }
@@ -21,7 +19,6 @@ namespace eDentist.Model
         public bool Status { get; set; }
 
         public virtual MDays Day { get; set; }
-        public virtual MUsers User { get; set; }
-        public virtual ICollection<MExaminations> Examinations { get; set; }
+        
     }
 }

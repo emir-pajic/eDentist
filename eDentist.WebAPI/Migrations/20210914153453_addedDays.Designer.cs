@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eDentist.WebAPI.Database;
 
 namespace eDentist.WebAPI.Migrations
 {
     [DbContext(typeof(eDentistContext))]
-    partial class eDentistContextModelSnapshot : ModelSnapshot
+    [Migration("20210914153453_addedDays")]
+    partial class addedDays
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -191,38 +193,6 @@ namespace eDentist.WebAPI.Migrations
                     b.ToTable("Examinations");
                 });
 
-            modelBuilder.Entity("eDentist.WebAPI.Database.Manufacturers", b =>
-                {
-                    b.Property<int>("ManufacturerId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CountryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FoundationYear")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ManufacturerId");
-
-                    b.HasIndex("CountryId");
-
-                    b.ToTable("Manufacturers");
-
-                    b.HasData(
-                        new
-                        {
-                            ManufacturerId = 1,
-                            CountryId = 1,
-                            FoundationYear = 1951,
-                            Name = "Bosnalijek"
-                        });
-                });
-
             modelBuilder.Entity("eDentist.WebAPI.Database.Materials", b =>
                 {
                     b.Property<int>("MaterialId")
@@ -230,25 +200,12 @@ namespace eDentist.WebAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ManufacturerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaterialId");
 
-                    b.HasIndex("ManufacturerId");
-
                     b.ToTable("Materials");
-
-                    b.HasData(
-                        new
-                        {
-                            MaterialId = 1,
-                            ManufacturerId = 1,
-                            Name = "Brufen 400mg"
-                        });
                 });
 
             modelBuilder.Entity("eDentist.WebAPI.Database.Roles", b =>
@@ -401,12 +358,12 @@ namespace eDentist.WebAPI.Migrations
                         {
                             UserId = 1,
                             CityId = 1,
-                            DateOfBirth = new DateTime(2021, 9, 14, 18, 16, 40, 238, DateTimeKind.Local).AddTicks(4252),
+                            DateOfBirth = new DateTime(2021, 9, 14, 17, 34, 52, 526, DateTimeKind.Local).AddTicks(7501),
                             Email = "emir.pajic@edu.fit.ba",
                             FirstName = "Emir",
                             LastName = "Pajić",
-                            PasswordHash = "lRAzJxMS7B3ixl/qlRIYr9iLIOs=",
-                            PasswordSalt = "JcQKcwGtEM70qRnfYSXNOA==",
+                            PasswordHash = "tBhhEWPVEjfs2AW+27vJXukIxdY=",
+                            PasswordSalt = "/mGY/nNKSS9TuY7pGJbjUA==",
                             Telephone = "061-918-661",
                             Username = "Pajson"
                         },
@@ -414,12 +371,12 @@ namespace eDentist.WebAPI.Migrations
                         {
                             UserId = 2,
                             CityId = 2,
-                            DateOfBirth = new DateTime(2021, 9, 14, 18, 16, 40, 245, DateTimeKind.Local).AddTicks(6521),
+                            DateOfBirth = new DateTime(2021, 9, 14, 17, 34, 52, 540, DateTimeKind.Local).AddTicks(692),
                             Email = "emir.pajic2@edu.fit.ba",
                             FirstName = "Emir",
                             LastName = "Pajić",
-                            PasswordHash = "lVIpXBZkSy+IQMJk9Jznpr5ZFHA=",
-                            PasswordSalt = "m+hsAiyI7eGGZs8raIiNLw==",
+                            PasswordHash = "HArO7THp6MX1GD6X20YPMC758YI=",
+                            PasswordSalt = "KfbHDtE4Ph9q3K3woiIgbA==",
                             Telephone = "061-918-661",
                             Username = "Pajson2"
                         });
@@ -458,24 +415,6 @@ namespace eDentist.WebAPI.Migrations
                     b.HasOne("eDentist.WebAPI.Database.Users", "User")
                         .WithMany("Examinations")
                         .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("eDentist.WebAPI.Database.Manufacturers", b =>
-                {
-                    b.HasOne("eDentist.WebAPI.Database.Countries", "Country")
-                        .WithMany("Manufacturers")
-                        .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("eDentist.WebAPI.Database.Materials", b =>
-                {
-                    b.HasOne("eDentist.WebAPI.Database.Manufacturers", "Manufacturer")
-                        .WithMany("Materials")
-                        .HasForeignKey("ManufacturerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("eDentist.WebAPI.Database.TreatmentsMaterials", b =>

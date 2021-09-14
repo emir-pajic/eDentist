@@ -30,11 +30,17 @@ namespace eDentist.WebAPI
         {
             services.AddScoped<IBaseService<MRoles, object>, RoleService>();
             services.AddScoped<IUserService, UserService>();
-            //services.AddScoped < ICRUDService<MCities, CitiesSearchRequest, CitiesUpsertRequest, CitiesUpsertRequest>, M();
+            services.AddScoped<ICRUDService<MAppointments, AppointmentsSearchRequest, AppointmentsUpsertRequest, AppointmentsUpsertRequest>, AppointmentsService>();
+            services.AddScoped<ICRUDService<MCountries, CountriesSearchRequest, CountriesUpsertRequest, CountriesUpsertRequest>, CountriesService>();
+            services.AddScoped<ICRUDService<MCities, CitiesSearchRequest, CitiesUpsertRequest, CitiesUpsertRequest>, CitiesService>();
+            services.AddScoped<ICRUDService<MMaterials, MaterialsSearchRequest, MaterialsUpsertRequest, MaterialsUpsertRequest>, MaterialsService>();
+
+
 
 
             services.AddControllers().AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddControllers((x => x.Filters.Add<ErrorFilter>()));
             services.AddAutoMapper(typeof(Startup));
 

@@ -32,6 +32,8 @@ namespace eDentist.WebAPI.Database
         public virtual DbSet<TreatmentsMaterials> TreatmentsMaterials { get; set; }
         public virtual DbSet<UserRoles> UserRoles { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Manufacturers> Manufacturers { get; set; }
+
 
         //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //        {
@@ -69,6 +71,8 @@ namespace eDentist.WebAPI.Database
                 Salt.Add(GenerateSalt());
             }
 
+          
+
             modelBuilder.Entity<Countries>().HasData(
 
                 new Countries
@@ -76,6 +80,28 @@ namespace eDentist.WebAPI.Database
                     CountryId = 1,
                     CountryName = "Bosnia and Herzegovina"
                 });
+
+
+
+            modelBuilder.Entity<Manufacturers>().HasData(
+              new Manufacturers
+              {
+                  ManufacturerId = 1,
+                  Name = "Bosnalijek",
+                  FoundationYear = 1951,
+                  CountryId = 1
+              });
+
+
+            modelBuilder.Entity<Materials>().HasData(
+             new Materials
+             {
+                 MaterialId = 1,
+                 Name = "Brufen 400mg",
+                 ManufacturerId = 1
+             });
+
+
             modelBuilder.Entity<Cities>().HasData(
 
                 new Cities
@@ -132,6 +158,45 @@ namespace eDentist.WebAPI.Database
                 new UserRoles { UserRoleId = 1, UserId = 1, RoleId = 1 },
                 new UserRoles { UserRoleId = 2, UserId = 2, RoleId = 2 }
                 );
+
+            modelBuilder.Entity<Days>().HasData(
+                new Days
+                {
+                    DayId = 1,
+                    Name = "Monday"
+                },
+                new Days
+                {
+                    DayId = 2,
+                    Name = "Tuesday"
+                },
+                new Days
+                {
+                    DayId = 3,
+                    Name = "Wednesday"
+                },
+                new Days
+                {
+                    DayId = 4,
+                    Name = "Thursday"
+                },
+                new Days
+                {
+                    DayId = 5,
+                    Name = "Friday"
+                },
+                new Days
+                {
+                    DayId = 6,
+                    Name = "Saturday"
+                },
+                new Days
+                {
+                    DayId = 7,
+                    Name = "Sunday"
+                }
+                );
+
             OnModelCreatingPartial(modelBuilder);
             //modelBuilder.Entity<Appointments>(entity =>
             //{

@@ -1,11 +1,8 @@
 ﻿
 using eDentist.Model;
 using eDentist.Model.Request;
-using eDentist.WebAPI.Controllers;
 using eDentist.WebAPI.Interface;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace eDentist.WebAPI.Controllers
@@ -30,7 +27,7 @@ namespace eDentist.WebAPI.Controllers
         {
             return await _service.Insert(request);
         }
-        
+
     }
 }
 

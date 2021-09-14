@@ -16,6 +16,7 @@ namespace eDentist.WebAPI.Database
         }
 
         [Key]
+
         public int AppointmentId { get; set; }
         public DateTime Date { get; set; }
         public int? UserId { get; set; }
