@@ -129,6 +129,8 @@ namespace eDentist.WinUI.Forms.Appointments
             // 
             // dgvAppointments
             // 
+            this.dgvAppointments.AllowUserToAddRows = false;
+            this.dgvAppointments.AllowUserToDeleteRows = false;
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -137,28 +139,37 @@ namespace eDentist.WinUI.Forms.Appointments
             this.Status});
             this.dgvAppointments.Location = new System.Drawing.Point(117, 190);
             this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.Size = new System.Drawing.Size(443, 150);
             this.dgvAppointments.TabIndex = 57;
             // 
             // Date
             // 
+            this.Date.DataPropertyName = "Date";
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
             // FirstName
             // 
+            this.FirstName.DataPropertyName = "FirstName";
             this.FirstName.HeaderText = "First Name";
             this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
             // LastName
             // 
+            this.LastName.DataPropertyName = "LastName";
             this.LastName.HeaderText = "Last Name";
             this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
             // 
             // Status
             // 
+            this.Status.DataPropertyName = "Status";
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
             // AppointmentList
             // 
@@ -175,7 +186,6 @@ namespace eDentist.WinUI.Forms.Appointments
             this.Name = "AppointmentList";
             this.Size = new System.Drawing.Size(932, 536);
             this.Load += new System.EventHandler(this.AppointmentsList_Load);
-
             ((System.ComponentModel.ISupportInitialize)(this.mAppointmentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.ResumeLayout(false);

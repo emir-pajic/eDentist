@@ -15,6 +15,9 @@ namespace eDentist.WinUI.Forms.Examinations
     public partial class ExaminationList : UserControl
     {
         private readonly APIService service = new APIService("Examinations");
+        private readonly APIService userService = new APIService("User");
+        private readonly APIService appointmentService = new APIService("Appointments");
+
         public ExaminationList()
         {
             InitializeComponent();
@@ -26,7 +29,27 @@ namespace eDentist.WinUI.Forms.Examinations
         }
         private async Task LoadList()
         {
-            var result = await service.Get<List<MExaminations>>(null);
+            var examinations = await service.Get<List<MExaminations>>(null);
+            List<Examination> result = new List<Examination>();
+
+            foreach (var item in examinations)
+            {
+                var appointment = await appointmentService.GetById<MAppointments>(item.AppointmentId);
+                var doctor = await userService.GetById<MUsers>(item.UserId);
+                var patient = await userService.GetById<MUsers>(appointment.UserId);
+
+
+                var resultObj = new Examination()
+                {
+                    Description = item.AdditionalInfo,
+                    AppointmentDate = appointment.Date,
+                    Patient = patient.FirstName + " " + patient.LastName,
+                    Doctor = doctor.FirstName + " " + doctor.LastName,
+                    Status = item.Status
+                };
+
+                result.Add(resultObj);
+            }
 
             dgvExaminations.AutoGenerateColumns = false;
             dgvExaminations.ReadOnly = true;

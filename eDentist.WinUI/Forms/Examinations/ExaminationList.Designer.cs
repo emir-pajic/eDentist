@@ -37,10 +37,12 @@ namespace eDentist.WinUI.Forms.Examinations
             this.btnDetails = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvExaminations = new System.Windows.Forms.DataGridView();
-            this.AdditionalInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Treatment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExaminationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,36 +113,64 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // dgvExaminations
             // 
+            this.dgvExaminations.AllowUserToAddRows = false;
+            this.dgvExaminations.AllowUserToDeleteRows = false;
             this.dgvExaminations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExaminations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AdditionalInfo,
-            this.FirstName,
-            this.LastName,
-            this.Treatment});
+            this.ExaminationID,
+            this.Description,
+            this.AppointmentDate,
+            this.Patient,
+            this.Doctor,
+            this.Status});
             this.dgvExaminations.Location = new System.Drawing.Point(33, 230);
             this.dgvExaminations.Name = "dgvExaminations";
-            this.dgvExaminations.Size = new System.Drawing.Size(440, 150);
+            this.dgvExaminations.ReadOnly = true;
+            this.dgvExaminations.Size = new System.Drawing.Size(544, 150);
             this.dgvExaminations.TabIndex = 64;
             // 
-            // AdditionalInfo
+            // ExaminationID
             // 
-            this.AdditionalInfo.HeaderText = "Informations";
-            this.AdditionalInfo.Name = "AdditionalInfo";
+            this.ExaminationID.DataPropertyName = "ExaminationID";
+            this.ExaminationID.HeaderText = "ExaminationID";
+            this.ExaminationID.Name = "ExaminationID";
+            this.ExaminationID.ReadOnly = true;
+            this.ExaminationID.Visible = false;
             // 
-            // FirstName
+            // Description
             // 
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
             // 
-            // LastName
+            // AppointmentDate
             // 
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
+            this.AppointmentDate.DataPropertyName = "AppointmentDate";
+            this.AppointmentDate.HeaderText = "AppointmentDate";
+            this.AppointmentDate.Name = "AppointmentDate";
+            this.AppointmentDate.ReadOnly = true;
             // 
-            // Treatment
+            // Patient
             // 
-            this.Treatment.HeaderText = "Treatment";
-            this.Treatment.Name = "Treatment";
+            this.Patient.DataPropertyName = "Patient";
+            this.Patient.HeaderText = "Patient";
+            this.Patient.Name = "Patient";
+            this.Patient.ReadOnly = true;
+            // 
+            // Doctor
+            // 
+            this.Doctor.DataPropertyName = "Doctor";
+            this.Doctor.HeaderText = "Doctor";
+            this.Doctor.Name = "Doctor";
+            this.Doctor.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
             // ExaminationList
             // 
@@ -156,7 +186,6 @@ namespace eDentist.WinUI.Forms.Examinations
             this.Name = "ExaminationList";
             this.Size = new System.Drawing.Size(793, 506);
             this.Load += new System.EventHandler(this.ExaminationsList_Load);
-
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,9 +201,11 @@ namespace eDentist.WinUI.Forms.Examinations
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dgvExaminations;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AdditionalInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Treatment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExaminationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Patient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

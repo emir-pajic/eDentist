@@ -15,6 +15,8 @@ namespace eDentist.WinUI.Forms.Appointments
     public partial class AppointmentList : UserControl
     {
         private readonly APIService service = new APIService("Appointments");
+        private readonly APIService userService = new APIService("User");
+
         public AppointmentList()
         {
             InitializeComponent();
@@ -25,7 +27,25 @@ namespace eDentist.WinUI.Forms.Appointments
         }
         private async Task LoadList()
         {
-            var result = await service.Get<List<MAppointments>>(null);
+            var appointments = await service.Get<List<MAppointments>>(null);
+            List<UsersAppointments> result = new List<UsersAppointments>();
+
+            foreach (var item in appointments)
+            {
+                var user = await userService.GetById<MUsers>(item.UserId);
+
+                var resultObj = new UsersAppointments()
+                {
+                    Date = item.Date,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Status = item.Status
+                };
+
+                result.Add(resultObj);
+
+                
+            }
 
             dgvAppointments.AutoGenerateColumns = false;
             dgvAppointments.ReadOnly = true;
