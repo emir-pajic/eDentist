@@ -178,6 +178,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +186,9 @@
       <Project>{5ede92a6-2d4f-4e56-bd9e-b63d44a8653d}</Project>
       <Name>eDentist.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

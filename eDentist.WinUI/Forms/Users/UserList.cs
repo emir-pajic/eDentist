@@ -40,9 +40,6 @@ namespace eDentist.WinUI.Forms.Users
             dgvUsers.DataSource = result;
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
