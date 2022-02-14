@@ -62,7 +62,7 @@ namespace eDentist.WinUI.Forms.Appointments
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSearch.Location = new System.Drawing.Point(117, 122);
+            this.txtSearch.Location = new System.Drawing.Point(29, 75);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
@@ -74,7 +74,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(486, 118);
+            this.btnDetails.Location = new System.Drawing.Point(398, 71);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(41, 37);
             this.btnDetails.TabIndex = 52;
@@ -85,7 +85,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(533, 118);
+            this.btnDelete.Location = new System.Drawing.Point(445, 71);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(41, 37);
             this.btnDelete.TabIndex = 53;
@@ -96,7 +96,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(398, 122);
+            this.btnSearch.Location = new System.Drawing.Point(310, 75);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(24, 24);
             this.btnSearch.TabIndex = 54;
@@ -107,7 +107,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.Image")));
-            this.btnAddAppointment.Location = new System.Drawing.Point(439, 118);
+            this.btnAddAppointment.Location = new System.Drawing.Point(351, 71);
             this.btnAddAppointment.Name = "btnAddAppointment";
             this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
             this.btnAddAppointment.TabIndex = 55;
@@ -117,7 +117,7 @@ namespace eDentist.WinUI.Forms.Appointments
             // 
             this.App.AutoSize = true;
             this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.App.Location = new System.Drawing.Point(117, 72);
+            this.App.Location = new System.Drawing.Point(29, 25);
             this.App.Name = "App";
             this.App.Size = new System.Drawing.Size(120, 20);
             this.App.TabIndex = 56;
@@ -131,13 +131,16 @@ namespace eDentist.WinUI.Forms.Appointments
             // 
             this.dgvAppointments.AllowUserToAddRows = false;
             this.dgvAppointments.AllowUserToDeleteRows = false;
+            this.dgvAppointments.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvAppointments.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAppointments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
             this.FirstName,
             this.LastName,
             this.Status});
-            this.dgvAppointments.Location = new System.Drawing.Point(117, 190);
+            this.dgvAppointments.Location = new System.Drawing.Point(29, 143);
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.Size = new System.Drawing.Size(443, 150);
@@ -184,7 +187,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label2);
             this.Name = "AppointmentList";
-            this.Size = new System.Drawing.Size(932, 536);
+            this.Size = new System.Drawing.Size(533, 536);
             this.Load += new System.EventHandler(this.AppointmentsList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mAppointmentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();

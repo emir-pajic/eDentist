@@ -31,13 +31,12 @@ namespace eDentist.WinUI.Forms.Countries
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CountryList));
             this.App = new System.Windows.Forms.Label();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnAddCountry = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnDetails = new System.Windows.Forms.Button();
+            this.btnCountryDetails = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dvgCountries = new System.Windows.Forms.DataGridView();
-            this.CountryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCountries)).BeginInit();
             this.SuspendLayout();
@@ -52,16 +51,17 @@ namespace eDentist.WinUI.Forms.Countries
             this.App.TabIndex = 70;
             this.App.Text = "Countries";
             // 
-            // btnAddAppointment
+            // btnAddCountry
             // 
-            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.Image")));
-            this.btnAddAppointment.Location = new System.Drawing.Point(454, 95);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
-            this.btnAddAppointment.TabIndex = 69;
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddCountry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCountry.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCountry.Image")));
+            this.btnAddCountry.Location = new System.Drawing.Point(454, 95);
+            this.btnAddCountry.Name = "btnAddCountry";
+            this.btnAddCountry.Size = new System.Drawing.Size(41, 37);
+            this.btnAddCountry.TabIndex = 69;
+            this.btnAddCountry.UseVisualStyleBackColor = true;
+            this.btnAddCountry.Click += new System.EventHandler(this.btnAddCountry_Click);
             // 
             // btnSearch
             // 
@@ -85,16 +85,17 @@ namespace eDentist.WinUI.Forms.Countries
             this.btnDelete.TabIndex = 67;
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnDetails
+            // btnCountryDetails
             // 
-            this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(514, 95);
-            this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(41, 37);
-            this.btnDetails.TabIndex = 66;
-            this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnCountryDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCountryDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCountryDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnCountryDetails.Image")));
+            this.btnCountryDetails.Location = new System.Drawing.Point(514, 95);
+            this.btnCountryDetails.Name = "btnCountryDetails";
+            this.btnCountryDetails.Size = new System.Drawing.Size(41, 37);
+            this.btnCountryDetails.TabIndex = 66;
+            this.btnCountryDetails.UseVisualStyleBackColor = true;
+            this.btnCountryDetails.Click += new System.EventHandler(this.btnCountryDetails_Click);
             // 
             // txtSearch
             // 
@@ -113,21 +114,12 @@ namespace eDentist.WinUI.Forms.Countries
             this.dvgCountries.AllowUserToDeleteRows = false;
             this.dvgCountries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCountries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CountryID,
             this.CountryName});
             this.dvgCountries.Location = new System.Drawing.Point(32, 163);
             this.dvgCountries.Name = "dvgCountries";
             this.dvgCountries.ReadOnly = true;
             this.dvgCountries.Size = new System.Drawing.Size(144, 150);
             this.dvgCountries.TabIndex = 71;
-            // 
-            // CountryID
-            // 
-            this.CountryID.DataPropertyName = "CountryID";
-            this.CountryID.HeaderText = "CountryID";
-            this.CountryID.Name = "CountryID";
-            this.CountryID.ReadOnly = true;
-            this.CountryID.Visible = false;
             // 
             // CountryName
             // 
@@ -142,10 +134,10 @@ namespace eDentist.WinUI.Forms.Countries
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dvgCountries);
             this.Controls.Add(this.App);
-            this.Controls.Add(this.btnAddAppointment);
+            this.Controls.Add(this.btnAddCountry);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnDetails);
+            this.Controls.Add(this.btnCountryDetails);
             this.Controls.Add(this.txtSearch);
             this.Name = "CountryList";
             this.Size = new System.Drawing.Size(642, 376);
@@ -159,13 +151,12 @@ namespace eDentist.WinUI.Forms.Countries
         #endregion
 
         private System.Windows.Forms.Label App;
-        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.Button btnAddCountry;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnDetails;
+        private System.Windows.Forms.Button btnCountryDetails;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dvgCountries;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CountryID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CountryName;
     }
 }

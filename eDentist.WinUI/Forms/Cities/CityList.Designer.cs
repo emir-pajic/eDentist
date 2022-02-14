@@ -31,7 +31,7 @@ namespace eDentist.WinUI.Forms.Cities
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CityList));
             this.App = new System.Windows.Forms.Label();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnAddCity = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -53,16 +53,17 @@ namespace eDentist.WinUI.Forms.Cities
             this.App.TabIndex = 77;
             this.App.Text = "Cities";
             // 
-            // btnAddAppointment
+            // btnAddCity
             // 
-            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.Image")));
-            this.btnAddAppointment.Location = new System.Drawing.Point(463, 84);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
-            this.btnAddAppointment.TabIndex = 76;
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddCity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCity.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCity.Image")));
+            this.btnAddCity.Location = new System.Drawing.Point(463, 84);
+            this.btnAddCity.Name = "btnAddCity";
+            this.btnAddCity.Size = new System.Drawing.Size(41, 37);
+            this.btnAddCity.TabIndex = 76;
+            this.btnAddCity.UseVisualStyleBackColor = true;
+            this.btnAddCity.Click += new System.EventHandler(this.btnAddCity_Click);
             // 
             // btnSearch
             // 
@@ -151,7 +152,7 @@ namespace eDentist.WinUI.Forms.Cities
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvCities);
             this.Controls.Add(this.App);
-            this.Controls.Add(this.btnAddAppointment);
+            this.Controls.Add(this.btnAddCity);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
@@ -168,7 +169,7 @@ namespace eDentist.WinUI.Forms.Cities
         #endregion
 
         private System.Windows.Forms.Label App;
-        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.Button btnAddCity;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;

@@ -1,5 +1,6 @@
 ﻿using eDentist.Model;
 using eDentist.Model.Request;
+using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,16 @@ namespace eDentist.WinUI.Forms.Countries
             dvgCountries.AutoGenerateColumns = false;
             dvgCountries.ReadOnly = true;
             dvgCountries.DataSource = result;
+        }
+
+        private void btnAddCountry_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new CountryAdd());
+        }
+
+        private void btnCountryDetails_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new CountryEdit());
         }
     }
 }
