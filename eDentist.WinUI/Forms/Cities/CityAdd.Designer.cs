@@ -59,8 +59,9 @@ namespace eDentist.WinUI.Forms.Cities
             this.btnaddCity.Name = "btnaddCity";
             this.btnaddCity.Size = new System.Drawing.Size(130, 23);
             this.btnaddCity.TabIndex = 2;
-            this.btnaddCity.Text = "City";
+            this.btnaddCity.Text = "Save";
             this.btnaddCity.UseVisualStyleBackColor = true;
+            this.btnaddCity.Click += new System.EventHandler(this.btnaddCity_Click);
             // 
             // lblCityName
             // 
@@ -80,6 +81,7 @@ namespace eDentist.WinUI.Forms.Cities
             this.menuCountries.Name = "menuCountries";
             this.menuCountries.Size = new System.Drawing.Size(158, 21);
             this.menuCountries.TabIndex = 4;
+            this.menuCountries.SelectedIndexChanged += new System.EventHandler(this.menuCountries_SelectedIndexChanged);
             // 
             // CityAdd
             // 
@@ -92,6 +94,7 @@ namespace eDentist.WinUI.Forms.Cities
             this.Controls.Add(this.label1);
             this.Name = "CityAdd";
             this.Size = new System.Drawing.Size(486, 417);
+            this.Load += new System.EventHandler(this.CitiesAdd_LoadCountries);
             this.ResumeLayout(false);
             this.PerformLayout();
 
