@@ -31,7 +31,7 @@ namespace eDentist.WinUI.Forms.Materials
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaterialList));
             this.App = new System.Windows.Forms.Label();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnAddMaterial = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -53,16 +53,17 @@ namespace eDentist.WinUI.Forms.Materials
             this.App.TabIndex = 77;
             this.App.Text = "Materials";
             // 
-            // btnAddAppointment
+            // btnAddMaterial
             // 
-            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.Image")));
-            this.btnAddAppointment.Location = new System.Drawing.Point(446, 94);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
-            this.btnAddAppointment.TabIndex = 76;
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMaterial.Image")));
+            this.btnAddMaterial.Location = new System.Drawing.Point(446, 94);
+            this.btnAddMaterial.Name = "btnAddMaterial";
+            this.btnAddMaterial.Size = new System.Drawing.Size(41, 37);
+            this.btnAddMaterial.TabIndex = 76;
+            this.btnAddMaterial.UseVisualStyleBackColor = true;
+            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
             // 
             // btnSearch
             // 
@@ -151,7 +152,7 @@ namespace eDentist.WinUI.Forms.Materials
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dvgMaterials);
             this.Controls.Add(this.App);
-            this.Controls.Add(this.btnAddAppointment);
+            this.Controls.Add(this.btnAddMaterial);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
@@ -168,7 +169,7 @@ namespace eDentist.WinUI.Forms.Materials
         #endregion
 
         private System.Windows.Forms.Label App;
-        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.Button btnAddMaterial;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;

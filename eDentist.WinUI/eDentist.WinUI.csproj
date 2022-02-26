@@ -120,6 +120,12 @@
     <Compile Include="Forms\Materials\MaterialList.Designer.cs">
       <DependentUpon>MaterialList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Materials\MaterialsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Materials\MaterialsAdd.Designer.cs">
+      <DependentUpon>MaterialsAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Treatments\TreatmentAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Materials\MaterialList.resx">
       <DependentUpon>MaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Materials\MaterialsAdd.resx">
+      <DependentUpon>MaterialsAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Treatments\TreatmentAdd.resx">
       <DependentUpon>TreatmentAdd.cs</DependentUpon>
