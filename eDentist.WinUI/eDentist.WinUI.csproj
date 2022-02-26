@@ -108,6 +108,12 @@
     <Compile Include="Forms\Manufacturers\ManufacturerList.Designer.cs">
       <DependentUpon>ManufacturerList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Manufacturers\ManufacturersAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Manufacturers\ManufacturersAdd.Designer.cs">
+      <DependentUpon>ManufacturersAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Materials\MaterialList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manufacturers\ManufacturerList.resx">
       <DependentUpon>ManufacturerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manufacturers\ManufacturersAdd.resx">
+      <DependentUpon>ManufacturersAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Materials\MaterialList.resx">
       <DependentUpon>MaterialList.cs</DependentUpon>

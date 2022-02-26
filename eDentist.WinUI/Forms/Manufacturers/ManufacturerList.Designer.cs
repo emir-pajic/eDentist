@@ -31,7 +31,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManufacturerList));
             this.App = new System.Windows.Forms.Label();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnAddManufacturer = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -54,16 +54,17 @@ namespace eDentist.WinUI.Forms.Manufacturers
             this.App.TabIndex = 84;
             this.App.Text = "Manufacturers";
             // 
-            // btnAddAppointment
+            // btnAddManufacturer
             // 
-            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.Image")));
-            this.btnAddAppointment.Location = new System.Drawing.Point(455, 68);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
-            this.btnAddAppointment.TabIndex = 83;
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddManufacturer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddManufacturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddManufacturer.Image = ((System.Drawing.Image)(resources.GetObject("btnAddManufacturer.Image")));
+            this.btnAddManufacturer.Location = new System.Drawing.Point(455, 68);
+            this.btnAddManufacturer.Name = "btnAddManufacturer";
+            this.btnAddManufacturer.Size = new System.Drawing.Size(41, 37);
+            this.btnAddManufacturer.TabIndex = 83;
+            this.btnAddManufacturer.UseVisualStyleBackColor = true;
+            this.btnAddManufacturer.Click += new System.EventHandler(this.btnAddManufacturer_Click);
             // 
             // btnSearch
             // 
@@ -160,7 +161,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dvgManufacturers);
             this.Controls.Add(this.App);
-            this.Controls.Add(this.btnAddAppointment);
+            this.Controls.Add(this.btnAddManufacturer);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
@@ -177,7 +178,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
         #endregion
 
         private System.Windows.Forms.Label App;
-        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.Button btnAddManufacturer;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
