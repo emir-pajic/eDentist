@@ -1,5 +1,6 @@
 ﻿using eDentist.Model;
 using eDentist.Model.Request;
+using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,11 @@ namespace eDentist.WinUI.Forms.Treatments
             dgvTreatments.AutoGenerateColumns = false;
             dgvTreatments.ReadOnly = true;
             dgvTreatments.DataSource = result;
+        }
+
+        private void btnAddTreatment_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new TreatmentAdd());
         }
     }
 }

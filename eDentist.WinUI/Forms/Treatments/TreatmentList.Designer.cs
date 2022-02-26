@@ -31,7 +31,7 @@ namespace eDentist.WinUI.Forms.Treatments
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreatmentList));
             this.App = new System.Windows.Forms.Label();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnAddTreatment = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -52,16 +52,17 @@ namespace eDentist.WinUI.Forms.Treatments
             this.App.TabIndex = 70;
             this.App.Text = "Treatments";
             // 
-            // btnAddAppointment
+            // btnAddTreatment
             // 
-            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.Image")));
-            this.btnAddAppointment.Location = new System.Drawing.Point(509, 78);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
-            this.btnAddAppointment.TabIndex = 69;
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTreatment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddTreatment.Image")));
+            this.btnAddTreatment.Location = new System.Drawing.Point(509, 78);
+            this.btnAddTreatment.Name = "btnAddTreatment";
+            this.btnAddTreatment.Size = new System.Drawing.Size(41, 37);
+            this.btnAddTreatment.TabIndex = 69;
+            this.btnAddTreatment.UseVisualStyleBackColor = true;
+            this.btnAddTreatment.Click += new System.EventHandler(this.btnAddTreatment_Click);
             // 
             // btnSearch
             // 
@@ -144,7 +145,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvTreatments);
             this.Controls.Add(this.App);
-            this.Controls.Add(this.btnAddAppointment);
+            this.Controls.Add(this.btnAddTreatment);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
@@ -160,7 +161,7 @@ namespace eDentist.WinUI.Forms.Treatments
 
         #endregion
         private System.Windows.Forms.Label App;
-        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.Button btnAddTreatment;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
