@@ -102,6 +102,12 @@
     <Compile Include="Forms\Examinations\ExaminationList.Designer.cs">
       <DependentUpon>ExaminationList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Examinations\ExaminationsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Examinations\ExaminationsAdd.Designer.cs">
+      <DependentUpon>ExaminationsAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Manufacturers\ManufacturerList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Examinations\ExaminationList.resx">
       <DependentUpon>ExaminationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Examinations\ExaminationsAdd.resx">
+      <DependentUpon>ExaminationsAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manufacturers\ManufacturerList.resx">
       <DependentUpon>ManufacturerList.cs</DependentUpon>

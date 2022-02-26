@@ -31,7 +31,7 @@ namespace eDentist.WinUI.Forms.Examinations
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExaminationList));
             this.App = new System.Windows.Forms.Label();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnAddExamination = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -56,16 +56,17 @@ namespace eDentist.WinUI.Forms.Examinations
             this.App.TabIndex = 63;
             this.App.Text = "Examinations";
             // 
-            // btnAddAppointment
+            // btnAddExamination
             // 
-            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.Image")));
-            this.btnAddAppointment.Location = new System.Drawing.Point(459, 156);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
-            this.btnAddAppointment.TabIndex = 62;
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddExamination.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddExamination.Image = ((System.Drawing.Image)(resources.GetObject("btnAddExamination.Image")));
+            this.btnAddExamination.Location = new System.Drawing.Point(459, 156);
+            this.btnAddExamination.Name = "btnAddExamination";
+            this.btnAddExamination.Size = new System.Drawing.Size(41, 37);
+            this.btnAddExamination.TabIndex = 62;
+            this.btnAddExamination.UseVisualStyleBackColor = true;
+            this.btnAddExamination.Click += new System.EventHandler(this.btnAddExamination_Click);
             // 
             // btnSearch
             // 
@@ -178,7 +179,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvExaminations);
             this.Controls.Add(this.App);
-            this.Controls.Add(this.btnAddAppointment);
+            this.Controls.Add(this.btnAddExamination);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
@@ -195,7 +196,7 @@ namespace eDentist.WinUI.Forms.Examinations
         #endregion
 
         private System.Windows.Forms.Label App;
-        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.Button btnAddExamination;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
