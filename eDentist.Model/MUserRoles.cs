@@ -10,6 +10,6 @@ namespace eDentist.Model
         public int UserId { get; set; }
 
         public virtual MRoles Role { get; set; }
-        public virtual MUsers User { get; set; }
+        //public virtual MUsers User { get; set; }
     }
 }

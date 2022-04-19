@@ -24,7 +24,7 @@ namespace eDentist.WebAPI.Service
         }
         public async override Task<List<MUsers>> Get(UsersSearchRequest search)
         {
-            var query = _context.Users.Include(x => x.UserRoles).AsQueryable().OrderBy(c => c.FirstName);
+            var query = _context.Users.Include(x => x.UserRoles).ThenInclude(x => x.Role).AsQueryable().OrderBy(c => c.FirstName);
 
             //if (!string.IsNullOrWhiteSpace(search?.Username))
             //{

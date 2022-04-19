@@ -60,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIService.cs" />
+    <Compile Include="Forms\Appointments\AppointmentAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Appointments\AppointmentAdd.Designer.cs">
+      <DependentUpon>AppointmentAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Appointments\AppointmentList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Appointments\AppointmentAdd.resx">
+      <DependentUpon>AppointmentAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Appointments\AppointmentList.resx">
       <DependentUpon>AppointmentList.cs</DependentUpon>
     </EmbeddedResource>
