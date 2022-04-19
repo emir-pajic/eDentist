@@ -112,6 +112,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.btnAddAppointment.Size = new System.Drawing.Size(41, 37);
             this.btnAddAppointment.TabIndex = 55;
             this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
             // 
             // App
             // 
