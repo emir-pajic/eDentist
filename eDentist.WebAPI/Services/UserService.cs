@@ -62,7 +62,9 @@ namespace eDentist.WebAPI.Service
                 var role = new UserRoles()
                 {
                     UserId = entity.UserId,
-                    RoleId = roleID
+                    RoleId = roleID,
+                    
+                    
                 };
 
                 await _context.UserRoles.AddAsync(role);

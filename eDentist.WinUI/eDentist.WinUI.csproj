@@ -144,6 +144,12 @@
     <Compile Include="Forms\Treatments\TreatmentList.Designer.cs">
       <DependentUpon>TreatmentList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Users\UserAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Users\UserList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Treatments\TreatmentList.resx">
       <DependentUpon>TreatmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>

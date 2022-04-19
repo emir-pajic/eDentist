@@ -39,10 +39,6 @@ namespace eDentist.WebAPI.Mapper
 
             CreateMap<Examinations, MExaminations>();
             CreateMap<Examinations, ExaminationUpsertRequest>().ReverseMap();
-
-
-            //CreateMap<Users, UsersUpsertRequest>().ReverseMap();
-
         }
     }
 }
