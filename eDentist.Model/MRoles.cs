@@ -10,12 +10,12 @@ namespace eDentist.Model
     {
         public MRoles()
         {
-            UserRoles = new HashSet<MUserRoles>();
+            //UserRoles = new HashSet<MUserRoles>();
         }
 
         public int RoleId { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<MUserRoles> UserRoles { get; set; }
+        //public virtual ICollection<MUserRoles> UserRoles { get; set; }
     }
 }
