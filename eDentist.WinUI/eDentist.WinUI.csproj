@@ -78,6 +78,12 @@
     <Compile Include="Forms\Cities\CityAdd.Designer.cs">
       <DependentUpon>CityAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Cities\CityEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Cities\CityEdit.Designer.cs">
+      <DependentUpon>CityEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cities\CityList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cities\CityAdd.resx">
       <DependentUpon>CityAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cities\CityEdit.resx">
+      <DependentUpon>CityEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cities\CityList.resx">
       <DependentUpon>CityList.cs</DependentUpon>

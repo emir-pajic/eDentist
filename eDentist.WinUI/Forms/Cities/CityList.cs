@@ -62,5 +62,10 @@ namespace eDentist.WinUI.Forms.Cities
         {
             PanelHelper.SwapPanels(this.Parent, this, new CityAdd());
         }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new CityEdit());
+        }
     }
 }
