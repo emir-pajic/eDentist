@@ -108,8 +108,8 @@ namespace eDentist.WinUI
             try
             {
                 var url = $"{Properties.Settings.Default.ApiUrl}/{_route}/{ID}";
-
-                return await url.WithBasicAuth(Username, Password).DeleteAsync().ReceiveJson<bool>();
+                var result = await url.WithBasicAuth(Username, Password).DeleteAsync().ReceiveJson<bool>();
+                return result;
             }
             catch (FlurlHttpException ex)
             {
