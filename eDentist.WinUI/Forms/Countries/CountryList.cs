@@ -51,5 +51,11 @@ namespace eDentist.WinUI.Forms.Countries
         {
             PanelHelper.SwapPanels(this.Parent, this, new CountryEdit());
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new CountryDelete());
+
+        }
     }
 }

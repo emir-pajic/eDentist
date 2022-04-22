@@ -2,6 +2,8 @@
 using eDentist.Model;
 using eDentist.Model.Request;
 using eDentist.WebAPI.Database;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace eDentist.WebAPI.Service
 {
@@ -14,6 +16,7 @@ namespace eDentist.WebAPI.Service
             _context = context;
             _mapper = mapper;
         }
+       
 
 
     }

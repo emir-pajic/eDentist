@@ -102,6 +102,12 @@
     <Compile Include="Forms\Countries\CountryAdd.Designer.cs">
       <DependentUpon>CountryAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Countries\CountryDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Countries\CountryDelete.Designer.cs">
+      <DependentUpon>CountryDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Countries\CountryEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Countries\CountryAdd.resx">
       <DependentUpon>CountryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Countries\CountryDelete.resx">
+      <DependentUpon>CountryDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Countries\CountryEdit.resx">
       <DependentUpon>CountryEdit.cs</DependentUpon>
