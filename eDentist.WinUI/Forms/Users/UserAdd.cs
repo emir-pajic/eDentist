@@ -56,12 +56,14 @@ namespace eDentist.WinUI.Forms.Users
 
         private async void btnAddUser_Click(object sender, EventArgs e)
         {
+            int? cityId = ValidateCity();
+
             var request = new UsersUpsertRequest()
             {
                 FirstName = txtFirstName.Text,
                 LastName = txtLastName.Text,
                 Username = txtUserName.Text,
-                CityId = _selectedCity.CityId,
+                CityId = cityId,
                 Email = txtEmail.Text,
                 DateOfBirth = dtpDateOfBirth.Value,
                 Telephone = txtTelephone.Text,
@@ -74,6 +76,21 @@ namespace eDentist.WinUI.Forms.Users
             await _userService.Insert<MUsers>(request);
             MessageBox.Show("User added!");
             PanelHelper.SwapPanels(this.Parent, this, new UserList());
+        }
+
+        private int? ValidateCity()
+        {
+            int? cityId = 0;
+            if (_selectedCity == null)
+            {
+                cityId = null;
+            }
+            else
+            {
+                cityId = _selectedCity.CityId;
+            }
+
+            return cityId;
         }
     }
 }
