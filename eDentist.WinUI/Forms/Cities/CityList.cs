@@ -35,12 +35,21 @@ namespace eDentist.WinUI.Forms.Cities
             foreach (var item in cities)
             {
                 var country = await countryService.GetById<MCountries>(item.CountryId);
+                var resultObj = new CitiesCountries();
 
-                var resultObj = new CitiesCountries()
+
+                if (country == null)
                 {
-                    CityName = item.CityName,
-                    CountryName = country.CountryName
-                };
+                    resultObj.CityName = item.CityName;
+                    resultObj.CountryName = "N/A";
+                }
+                else
+                {
+                    resultObj.CityName = item.CityName;
+                    resultObj.CountryName = country.CountryName;
+                }
+
+                
                 result.Add(resultObj);
             }
 
@@ -49,14 +58,7 @@ namespace eDentist.WinUI.Forms.Cities
             dgvCities.ReadOnly = true;
             dgvCities.DataSource = result;
         }
-        private async Task LoadList(CitiesSearchRequest request)
-        {
-            var result = await service.Get<List<CitiesSearchRequest>>(request);
-
-            dgvCities.AutoGenerateColumns = false;
-            dgvCities.ReadOnly = true;
-            dgvCities.DataSource = result;
-        }
+        
 
         private void btnAddCity_Click(object sender, EventArgs e)
         {

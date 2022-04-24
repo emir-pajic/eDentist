@@ -16,8 +16,24 @@ namespace eDentist.WebAPI.Service
             _context = context;
             _mapper = mapper;
         }
-       
 
+        public override async Task<bool> Delete(int ID)
+        {
+            var entity = await _context.Countries.
+                Include(i => i.Cities).
+                Include(i => i.Manufacturers).
+                FirstOrDefaultAsync(i => i.CountryId == ID);
+
+            //if (entity.Users.Count != 0)
+            //{
+
+            //}
+
+            _context.Countries.Remove(entity);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
 
     }
 }
