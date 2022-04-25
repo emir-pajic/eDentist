@@ -24,24 +24,32 @@ namespace eDentist.WinUI.Forms.Countries
 
         private async void btnAddCountry_Click(object sender, EventArgs e)
         {
-            var request = new CountriesUpsertRequest()
+            if (string.IsNullOrEmpty(txtCountryAdd.Text))
             {
-                CountryName = txtCountryAdd.Text
-            };
-            var countries = await service.Get<List<MCountries>>(null);
+                MessageBox.Show("Country name can not be empty!");
+            }
+            else
+            {
 
-            foreach (var country in countries)
-            {
-                if (country.CountryName.Equals(request.CountryName))
+                var request = new CountriesUpsertRequest()
                 {
-                    MessageBox.Show("Country already exists!");
-                    return;
+                    CountryName = txtCountryAdd.Text
+                };
+                var countries = await service.Get<List<MCountries>>(null);
+
+                foreach (var country in countries)
+                {
+                    if (country.CountryName.Equals(request.CountryName))
+                    {
+                        MessageBox.Show("Country already exists!");
+                        return;
+                    }
                 }
-            }         
-            
-            await service.Insert<MCountries>(request);
-            MessageBox.Show("Country added!");
-            PanelHelper.SwapPanels(this.Parent, this, new CountryList());
+
+                await service.Insert<MCountries>(request);
+                MessageBox.Show("Country added!");
+                PanelHelper.SwapPanels(this.Parent, this, new CountryList());
+            }
         }
     }
 }
