@@ -65,20 +65,57 @@ namespace eDentist.WinUI.Forms.Cities
 
         private async void btnUpdateCity_Click(object sender, EventArgs e)
         {
-            _cityToEdit = _existingCities.FirstOrDefault(x => x.CityName.Equals(_selectedCity.CityName));
 
-            var request = new CitiesUpsertRequest()
+            if (ValidateCityFieldInput(_selectedCity, txtCityName.Text))
             {
-                CityId = _cityToEdit.CityId,
-                CityName = txtCityName.Text,
-                CountryId = _newCountry.CountryId
-            };
 
-            await _cityService.Update<MCities>(request.CityId,request);
-            MessageBox.Show("City updated!");
-            PanelHelper.SwapPanels(this.Parent, this, new CityList());
+                _cityToEdit = _existingCities.FirstOrDefault(x => x.CityName.Equals(_selectedCity.CityName));
+
+                var request = new CitiesUpsertRequest()
+                {
+                    CityId = _cityToEdit.CityId,
+                    CityName = txtCityName.Text,
+                };
+
+                if (ValidateCountryFieldInput(_newCountry))
+                {
+                    request.CountryId = _newCountry.CountryId;
+                }
+                else
+                {
+                    request.CountryId = null;
+                }
+
+                await _cityService.Update<MCities>(request.CityId, request);
+                MessageBox.Show("City updated!");
+                PanelHelper.SwapPanels(this.Parent, this, new CityList());
+            }
+
         }
 
-        
+        private bool ValidateCityFieldInput(MCities city, string cityName)
+        {
+            if (city == null)
+            {
+                MessageBox.Show("You must select a city to update!");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cityName))
+            {
+                MessageBox.Show("City name can not be empty!");
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidateCountryFieldInput(MCountries country)
+        {
+            if (country == null)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
