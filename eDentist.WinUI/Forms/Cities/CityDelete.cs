@@ -44,9 +44,17 @@ namespace eDentist.WinUI.Forms.Cities
 
         private async void btnRemoveCity_Click(object sender, EventArgs e)
         {
-            await _cityService.Delete<MCities>(_selectedCity.CityId);
-            MessageBox.Show("City removed!");
-            PanelHelper.SwapPanels(this.Parent, this, new CityList());
+            if (_selectedCity == null)
+            {
+                MessageBox.Show("Please select a city to remove!");
+            }
+            else
+            {
+                await _cityService.Delete<MCities>(_selectedCity.CityId);
+                MessageBox.Show("City removed!");
+                PanelHelper.SwapPanels(this.Parent, this, new CityList());
+
+            }
         }
     }
 }
