@@ -50,17 +50,44 @@ namespace eDentist.WinUI.Forms.Countries
 
         private async void btnUpdateCountry_Click(object sender, EventArgs e)
         {
-            _newCountry = _existingcountries.FirstOrDefault(x => x.CountryName.Equals(_selectedCountry.CountryName));
-
-            var request = new CountriesUpsertRequest()
+            if (ValidateSelectedCountry(_selectedCountry))
             {
-                CountryId = _newCountry.CountryId,
-                CountryName = txtCountryName.Text,
-            };
 
-            await _countryService.Update<MCountries>(request.CountryId, request);
-            MessageBox.Show("Country updated!");
-            PanelHelper.SwapPanels(this.Parent, this, new CountryList());
+                _newCountry = _existingcountries.FirstOrDefault(x => x.CountryName.Equals(_selectedCountry.CountryName));
+
+                if (ValidateCountryNameInput(txtCountryName.Text))
+                {
+                    var request = new CountriesUpsertRequest()
+                    {
+                        CountryId = _newCountry.CountryId,
+                        CountryName = txtCountryName.Text,
+                    };
+
+                    await _countryService.Update<MCountries>(request.CountryId, request);
+                    MessageBox.Show("Country updated!");
+                    PanelHelper.SwapPanels(this.Parent, this, new CountryList());
+                }
+            }
+        }
+
+        private bool ValidateSelectedCountry(MCountries country)
+        {
+            if (country == null)
+            {
+                MessageBox.Show("Please select a country to update!");
+                return false;
+            }
+            return true;
+        }
+
+        private bool ValidateCountryNameInput(string country)
+        {
+            if (string.IsNullOrEmpty(country))
+            {
+                MessageBox.Show("Country name can not be empty!");
+                return false;
+            }
+            return true;
         }
     }
 }
