@@ -23,7 +23,7 @@ namespace eDentist.WinUI.Forms.Cities
         public CityAdd()
         {
             InitializeComponent();
-            
+
         }
         private async void CitiesAdd_LoadCountries(object sender, EventArgs e)
         {
@@ -39,20 +39,39 @@ namespace eDentist.WinUI.Forms.Cities
         private async void menuCountries_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            _selectedCountry = _countries.FirstOrDefault(x => x.CountryName.Equals(menuCountries.SelectedItem));            
+            _selectedCountry = _countries.FirstOrDefault(x => x.CountryName.Equals(menuCountries.SelectedItem));
         }
 
         private async void btnaddCity_Click(object sender, EventArgs e)
         {
-            var request = new CitiesUpsertRequest()
+            if (ValidateInput(txtCityName.Text, _selectedCountry))
             {
-                CityName = txtCityName.Text,
-                CountryId = _selectedCountry.CountryId
-            };
 
-            await _cityService.Insert<MCities>(request);
-            MessageBox.Show("City added!");
-            PanelHelper.SwapPanels(this.Parent, this, new CityList());
+                var request = new CitiesUpsertRequest()
+                {
+                    CityName = txtCityName.Text,
+                    CountryId = _selectedCountry.CountryId
+                };
+
+                await _cityService.Insert<MCities>(request);
+                MessageBox.Show("City added!");
+                PanelHelper.SwapPanels(this.Parent, this, new CityList());
+            }
+        }
+
+        private bool ValidateInput(string cityName, MCountries country)
+        {
+            if (string.IsNullOrEmpty(cityName))
+            {
+                MessageBox.Show("City name can not be empty!");
+                return false;
+            }
+            if (country == null)
+            {
+                MessageBox.Show("Country can not be empty!");
+                return false;
+            }
+            return true;
         }
     }
 }
