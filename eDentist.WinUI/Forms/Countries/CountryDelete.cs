@@ -44,9 +44,17 @@ namespace eDentist.WinUI.Forms.Countries
 
         private async void btnRemoveCountry_Click(object sender, EventArgs e)
         {
-            await _countrySservice.Delete<MCountries>(_selectedCountry.CountryId);
-            MessageBox.Show("Country removed!");
-            PanelHelper.SwapPanels(this.Parent, this, new CountryList());
+            if (_selectedCountry == null)
+            {
+                MessageBox.Show("Please select a country to remove!");
+            }
+            else
+            {
+
+                await _countrySservice.Delete<MCountries>(_selectedCountry.CountryId);
+                MessageBox.Show("Country removed!");
+                PanelHelper.SwapPanels(this.Parent, this, new CountryList());
+            }
         }
     }
 }
