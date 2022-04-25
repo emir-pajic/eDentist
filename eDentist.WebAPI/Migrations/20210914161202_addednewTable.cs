@@ -21,7 +21,7 @@ namespace eDentist.WebAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     FoundationYear = table.Column<int>(nullable: false),
-                    CountryId = table.Column<int>(nullable: false)
+                    CountryId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -31,7 +31,7 @@ namespace eDentist.WebAPI.Migrations
                         column: x => x.CountryId,
                         principalTable: "Countries",
                         principalColumn: "CountryId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.UpdateData(

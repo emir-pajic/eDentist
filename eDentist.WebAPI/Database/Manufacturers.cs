@@ -16,7 +16,7 @@ namespace eDentist.WebAPI.Database
         public int ManufacturerId { get; set; }
         public string Name { get; set; }
         public int FoundationYear { get; set; }
-        public int CountryId { get; set; }
+        public int? CountryId { get; set; }
         public Countries Country { get; set; }
 
         public virtual ICollection<Materials> Materials { get; set; }
