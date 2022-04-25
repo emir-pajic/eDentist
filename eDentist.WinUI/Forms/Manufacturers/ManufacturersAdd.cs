@@ -43,16 +43,43 @@ namespace eDentist.WinUI.Forms.Manufacturers
 
         private async void btnaddCity_Click(object sender, EventArgs e)
         {
-            var request = new ManufacturersUpsertRequest()
+            if (ValidateFieldInput(txtManufacturerName.Text, txtFoundationYear.Text))
             {
-                 Name = txtManufacturerName.Text,
-                 FoundationYear = Convert.ToInt32(txtFoundationYear.Text),
-                 CountryId = _selectedCountry.CountryId
-            };
 
-            await _manufacturerService.Insert<MManufacturers>(request);
-            MessageBox.Show("Manufacturer added!");
-            PanelHelper.SwapPanels(this.Parent, this, new ManufacturerList());
+                var request = new ManufacturersUpsertRequest()
+                {
+                    Name = txtManufacturerName.Text,
+                    FoundationYear = Convert.ToInt32(txtFoundationYear.Text),
+                };
+
+                if (_selectedCountry == null)
+                {
+                    request.CountryId = null;
+                }
+                else
+                {
+                    request.CountryId = _selectedCountry.CountryId;
+                }
+
+                await _manufacturerService.Insert<MManufacturers>(request);
+                MessageBox.Show("Manufacturer added!");
+                PanelHelper.SwapPanels(this.Parent, this, new ManufacturerList());
+            }
+        }
+
+        private bool ValidateFieldInput(string ManufacturerName, string foundationYear)
+        {
+            if (string.IsNullOrEmpty(ManufacturerName))
+            {
+                MessageBox.Show("Manufacturer name can not be empty!");
+                return false;
+            }
+            if (string.IsNullOrEmpty(foundationYear))
+            {
+                MessageBox.Show("Foundation year can not be empty!");
+                return false;
+            }
+            return true;
         }
     }
 }

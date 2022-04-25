@@ -9,6 +9,6 @@ namespace eDentist.Model.Request
         public int ManufacturerId { get; set; }
         public string Name { get; set; }
         public int FoundationYear { get; set; }
-        public int CountryId { get; set; }
+        public int? CountryId { get; set; }
     }
 }
