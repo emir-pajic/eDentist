@@ -81,5 +81,10 @@ namespace eDentist.WinUI.Forms.Manufacturers
             PanelHelper.SwapPanels(this.Parent, this, new ManufacturerEdit());
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new ManufacturerDelete());
+        }
     }
 }

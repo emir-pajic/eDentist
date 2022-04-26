@@ -10,7 +10,7 @@ namespace eDentist.WebAPI.Migrations
             migrationBuilder.AddColumn<int>(
                 name: "ManufacturerId",
                 table: "Materials",
-                nullable: false,
+                nullable: true,
                 defaultValue: 0);
 
             migrationBuilder.CreateTable(
@@ -64,7 +64,7 @@ namespace eDentist.WebAPI.Migrations
                 column: "ManufacturerId",
                 principalTable: "Manufacturers",
                 principalColumn: "ManufacturerId",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

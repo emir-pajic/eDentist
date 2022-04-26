@@ -35,35 +35,8 @@ namespace eDentist.WinUI.Forms.Materials
 
             foreach (var item in materials)
             {
-                var manufacturer =await manufacturerService.GetById<MManufacturers>(item.ManufacturerId);
-
-                var resultObj = new MaterialsManufacturers()
-                {
-                    ManufacturerName = manufacturer.Name,
-                    MaterialName = item.Name
-                };
-                result.Add(resultObj);
-            }
-
-            dvgMaterials.AutoGenerateColumns = false;
-            dvgMaterials.ReadOnly = true;
-            dvgMaterials.DataSource = result;
-        }
-        private async Task LoadList(MaterialsSearchRequest request)
-        {
-            var materials = await service.Get<List<MMaterials>>(null);
-
-            List<MaterialsManufacturers> result = new List<MaterialsManufacturers>();
-
-            foreach (var item in materials)
-            {
                 var manufacturer = await manufacturerService.GetById<MManufacturers>(item.ManufacturerId);
-
-                var resultObj = new MaterialsManufacturers()
-                {
-                    ManufacturerName = manufacturer.Name,
-                    MaterialName = item.Name
-                };
+                MaterialsManufacturers resultObj = HandleData(item, manufacturer);                
                 result.Add(resultObj);
             }
 
@@ -71,6 +44,24 @@ namespace eDentist.WinUI.Forms.Materials
             dvgMaterials.ReadOnly = true;
             dvgMaterials.DataSource = result;
         }
+
+        private static MaterialsManufacturers HandleData(MMaterials item, MManufacturers manufacturer)
+        {
+            var resultObj = new MaterialsManufacturers()
+            {
+                MaterialName = item.Name
+            };
+            if (manufacturer == null)
+            {
+                resultObj.ManufacturerName = "N/A";
+            }
+            else
+            {
+                resultObj.ManufacturerName = manufacturer.Name;
+            }
+
+            return resultObj;
+        }     
 
         private void btnAddMaterial_Click(object sender, EventArgs e)
         {
