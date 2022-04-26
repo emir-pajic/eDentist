@@ -132,6 +132,12 @@
     <Compile Include="Forms\Examinations\ExaminationsAdd.Designer.cs">
       <DependentUpon>ExaminationsAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Manufacturers\ManufacturerEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Manufacturers\ManufacturerEdit.Designer.cs">
+      <DependentUpon>ManufacturerEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Manufacturers\ManufacturerList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Examinations\ExaminationsAdd.resx">
       <DependentUpon>ExaminationsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manufacturers\ManufacturerEdit.resx">
+      <DependentUpon>ManufacturerEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manufacturers\ManufacturerList.resx">
       <DependentUpon>ManufacturerList.cs</DependentUpon>
