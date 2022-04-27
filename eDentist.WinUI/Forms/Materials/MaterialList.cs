@@ -74,5 +74,11 @@ namespace eDentist.WinUI.Forms.Materials
             PanelHelper.SwapPanels(this.Parent, this, new MaterialsEdit());
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new MaterialsDelete());
+
+        }
     }
 }

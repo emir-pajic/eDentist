@@ -168,6 +168,12 @@
     <Compile Include="Forms\Materials\MaterialsAdd.Designer.cs">
       <DependentUpon>MaterialsAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Materials\MaterialsDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Materials\MaterialsDelete.Designer.cs">
+      <DependentUpon>MaterialsDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Materials\MaterialsEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Materials\MaterialsAdd.resx">
       <DependentUpon>MaterialsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Materials\MaterialsDelete.resx">
+      <DependentUpon>MaterialsDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Materials\MaterialsEdit.resx">
       <DependentUpon>MaterialsEdit.cs</DependentUpon>
