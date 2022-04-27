@@ -35,6 +35,7 @@ namespace eDentist.WinUI.Forms.Materials
 
             foreach (var item in materials)
             {
+                
                 var manufacturer = await manufacturerService.GetById<MManufacturers>(item.ManufacturerId);
                 MaterialsManufacturers resultObj = HandleData(item, manufacturer);                
                 result.Add(resultObj);
@@ -66,6 +67,12 @@ namespace eDentist.WinUI.Forms.Materials
         private void btnAddMaterial_Click(object sender, EventArgs e)
         {
             PanelHelper.SwapPanels(this.Parent, this, new MaterialsAdd());
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new MaterialsEdit());
+
         }
     }
 }
