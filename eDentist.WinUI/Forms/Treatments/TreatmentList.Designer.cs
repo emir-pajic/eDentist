@@ -96,6 +96,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.btnDetails.Size = new System.Drawing.Size(41, 37);
             this.btnDetails.TabIndex = 66;
             this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // txtSearch
             // 

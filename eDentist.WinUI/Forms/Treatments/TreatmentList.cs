@@ -46,5 +46,11 @@ namespace eDentist.WinUI.Forms.Treatments
         {
             PanelHelper.SwapPanels(this.Parent, this, new TreatmentAdd());
         }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new TreatmentEdit());
+
+        }
     }
 }
