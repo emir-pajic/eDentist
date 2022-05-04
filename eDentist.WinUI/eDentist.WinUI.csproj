@@ -186,6 +186,12 @@
     <Compile Include="Forms\Treatments\TreatmentAdd.Designer.cs">
       <DependentUpon>TreatmentAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Treatments\TreatmentDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Treatments\TreatmentDelete.Designer.cs">
+      <DependentUpon>TreatmentDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Treatments\TreatmentEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Treatments\TreatmentAdd.resx">
       <DependentUpon>TreatmentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Treatments\TreatmentDelete.resx">
+      <DependentUpon>TreatmentDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Treatments\TreatmentEdit.resx">
       <DependentUpon>TreatmentEdit.cs</DependentUpon>

@@ -43,7 +43,6 @@ namespace eDentist.WinUI.Forms.Treatments
         {
             if (ValidateInput(_selectedTreatment, txtTreatment.Text))
             {
-
                 var request = new TreatmentsUpsertRequest()
                 {
                     TreatmentId = _selectedTreatment.TreatmentId,
