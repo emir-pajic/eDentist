@@ -120,6 +120,12 @@
     <Compile Include="Forms\Countries\CountryList.Designer.cs">
       <DependentUpon>CountryList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Examinations\ExaminationEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Examinations\ExaminationEdit.Designer.cs">
+      <DependentUpon>ExaminationEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Examinations\ExaminationList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Countries\CountryList.resx">
       <DependentUpon>CountryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Examinations\ExaminationEdit.resx">
+      <DependentUpon>ExaminationEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Examinations\ExaminationList.resx">
       <DependentUpon>ExaminationList.cs</DependentUpon>

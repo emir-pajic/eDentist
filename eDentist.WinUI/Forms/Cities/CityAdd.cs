@@ -36,7 +36,7 @@ namespace eDentist.WinUI.Forms.Cities
             menuCountries.Items.AddRange(_countries.Select(x => x.CountryName).ToArray());
         }
 
-        private async void menuCountries_SelectedIndexChanged(object sender, EventArgs e)
+        private void menuCountries_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             _selectedCountry = _countries.FirstOrDefault(x => x.CountryName.Equals(menuCountries.SelectedItem));
