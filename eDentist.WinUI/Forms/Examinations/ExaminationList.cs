@@ -75,5 +75,11 @@ namespace eDentist.WinUI.Forms.Examinations
             PanelHelper.SwapPanels(this.Parent, this, new ExaminationEdit());
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new ExaminationDelete());
+
+        }
     }
 }
