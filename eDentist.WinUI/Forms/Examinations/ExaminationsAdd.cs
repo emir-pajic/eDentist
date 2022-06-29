@@ -3,11 +3,7 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,7 +38,11 @@ namespace eDentist.WinUI.Forms.Examinations
 
             foreach (var appointment in _appointments)
             {
-                menuAppointments.Items.Add(appointment.Date);
+                if (appointment.Date < DateTime.Now)
+                {
+
+                    menuAppointments.Items.Add(appointment.Date);
+                }
             }
 
             _users = await _userService.Get<List<MUsers>>(null);
@@ -84,7 +84,7 @@ namespace eDentist.WinUI.Forms.Examinations
             };
 
             //TODO check if already exist the same
-            
+
             await _examinationService.Insert<MExaminations>(request);
             MessageBox.Show("Examination added!");
             PanelHelper.SwapPanels(this.Parent, this, new ExaminationList());

@@ -42,6 +42,7 @@
             this.btnRemoveAppointment.TabIndex = 33;
             this.btnRemoveAppointment.Text = "Save";
             this.btnRemoveAppointment.UseVisualStyleBackColor = true;
+            this.btnRemoveAppointment.Click += new System.EventHandler(this.btnRemoveAppointment_Click);
             // 
             // menuAppointments
             // 
@@ -51,6 +52,7 @@
             this.menuAppointments.Name = "menuAppointments";
             this.menuAppointments.Size = new System.Drawing.Size(293, 21);
             this.menuAppointments.TabIndex = 32;
+            this.menuAppointments.SelectedIndexChanged += new System.EventHandler(this.menuAppointments_SelectedIndexChanged);
             // 
             // lblAppointment
             // 
@@ -82,6 +84,7 @@
             this.Controls.Add(this.lblRemoveAppointment);
             this.Name = "AppointmentDelete";
             this.Size = new System.Drawing.Size(499, 282);
+            this.Load += new System.EventHandler(this.AppointmentsDelete_LoadData);
             this.ResumeLayout(false);
             this.PerformLayout();
 
