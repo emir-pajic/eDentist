@@ -234,6 +234,12 @@
     <Compile Include="Forms\Users\UserAdd.Designer.cs">
       <DependentUpon>UserAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Users\UserEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Users\UserList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>
