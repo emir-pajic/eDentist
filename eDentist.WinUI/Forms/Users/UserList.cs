@@ -47,5 +47,11 @@ namespace eDentist.WinUI.Forms.Users
             PanelHelper.SwapPanels(this.Parent, this, new UserEdit());
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new UserDelete());
+
+        }
     }
 }
