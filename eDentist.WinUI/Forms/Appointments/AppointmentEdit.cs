@@ -52,7 +52,6 @@ namespace eDentist.WinUI.Forms.Appointments
         private void editAppointmentUserMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             _selectedAppointment = _appointments.FirstOrDefault(x => x.Date.ToString().Equals(editAppointmentUserMenu.SelectedItem));
-            var y = 1;
         }
 
         private void menuPatients_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,18 +65,37 @@ namespace eDentist.WinUI.Forms.Appointments
 
         private async void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            var request = new AppointmentsUpsertRequest()
+            if (ValidateInput(_selectedAppointment, _selectedUser))
             {
-                AppointmentId = _selectedAppointment.AppointmentId,
-                Date = dtpAppointment.Value,
-                UserId = _selectedUser.UserId,
-                DayId = _selectedAppointment.DayId,
-                Status = _selectedAppointment.Status
-            };
 
-            await _appointmentService.Update<MAppointments>(request.AppointmentId, request);
-            MessageBox.Show("Appointment updated!");
-            PanelHelper.SwapPanels(this.Parent, this, new AppointmentList());
+                var request = new AppointmentsUpsertRequest()
+                {
+                    AppointmentId = _selectedAppointment.AppointmentId,
+                    Date = dtpAppointment.Value,
+                    UserId = _selectedUser.UserId,
+                    DayId = _selectedAppointment.DayId,
+                    Status = _selectedAppointment.Status
+                };
+
+                await _appointmentService.Update<MAppointments>(request.AppointmentId, request);
+                MessageBox.Show("Appointment updated!");
+                PanelHelper.SwapPanels(this.Parent, this, new AppointmentList());
+            }
+        }
+
+        private bool ValidateInput(MAppointments selected, MUsers patient)
+        {
+            if (selected == null)
+            {
+                MessageBox.Show("You must select an appointment to update!");
+                return false;
+            }
+            if (patient == null)
+            {
+                MessageBox.Show("Patient must be selected!");
+                return false;
+            }
+            return true;
         }
     }
 }
