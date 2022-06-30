@@ -63,8 +63,8 @@ namespace eDentist.WebAPI.Service
                 {
                     UserId = entity.UserId,
                     RoleId = roleID,
-                    
-                    
+
+
                 };
 
                 await _context.UserRoles.AddAsync(role);
@@ -164,10 +164,13 @@ namespace eDentist.WebAPI.Service
         {
             var entity = await _context.Users.
                 Include(i => i.UserRoles).
+                Include(j => j.Appointments).
                 FirstOrDefaultAsync(i => i.UserId == ID);
 
             if (entity.UserRoles.Count != 0)
                 _context.UserRoles.RemoveRange(entity.UserRoles);
+
+
 
 
             _context.Users.Remove(entity);

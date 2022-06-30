@@ -34,7 +34,9 @@ namespace eDentist.WinUI.Forms.Appointments
         private async Task AppointmentEdit_Load()
         {
             _appointments = await _appointmentService.Get<List<MAppointments>>(null);
-            editAppointmentUserMenu.Items.AddRange(_appointments.Select(x => x.Date.ToString()).ToArray());
+            editAppointmentUserMenu.Items.AddRange(_appointments.Where(x => x.Date.DayOfYear >= DateTime.Now.DayOfYear).Select(x => x.Date.ToString()).ToArray());
+
+
 
             _users = await _userService.Get<List<MUsers>>(null);
             foreach (var user in _users)

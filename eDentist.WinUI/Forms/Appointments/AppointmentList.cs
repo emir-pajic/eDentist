@@ -1,5 +1,4 @@
 ﻿using eDentist.Model;
-using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
@@ -28,33 +27,27 @@ namespace eDentist.WinUI.Forms.Appointments
 
             foreach (var item in appointments)
             {
-                var user = await userService.GetById<MUsers>(item.UserId);
-
-                var resultObj = new UsersAppointments()
+                if (item.UserId != null)
                 {
-                    Date = item.Date,
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Status = item.Status
-                };
 
-                result.Add(resultObj);
+                    var user = await userService.GetById<MUsers>(item.UserId);
 
-
+                    var resultObj = new UsersAppointments()
+                    {
+                        Date = item.Date,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Status = item.Status
+                    };
+                    result.Add(resultObj);
+                }
             }
 
             dgvAppointments.AutoGenerateColumns = false;
             dgvAppointments.ReadOnly = true;
             dgvAppointments.DataSource = result;
         }
-        private async Task LoadList(AppointmentsSearchRequest request)
-        {
-            var result = await service.Get<List<AppointmentsSearchRequest>>(request);
 
-            dgvAppointments.AutoGenerateColumns = false;
-            dgvAppointments.ReadOnly = true;
-            dgvAppointments.DataSource = result;
-        }
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
