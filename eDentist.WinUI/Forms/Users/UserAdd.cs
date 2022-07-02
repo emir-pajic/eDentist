@@ -3,6 +3,7 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -57,6 +58,9 @@ namespace eDentist.WinUI.Forms.Users
         private async void btnAddUser_Click(object sender, EventArgs e)
         {
             int? cityId = ValidateCity();
+            Byte[] imgBytes = null;
+            ImageConverter imgConverter = new ImageConverter();
+            imgBytes = (System.Byte[])imgConverter.ConvertTo(profileImage.Image, Type.GetType("System.Byte[]"));
 
             var request = new UsersUpsertRequest()
             {
@@ -66,6 +70,7 @@ namespace eDentist.WinUI.Forms.Users
                 CityId = cityId,
                 Email = txtEmail.Text,
                 DateOfBirth = dtpDateOfBirth.Value,
+                Image = imgBytes,
                 Telephone = txtTelephone.Text,
                 Password = txtPassword.Text,
                 PasswordConfirmation = txtPasswordConfirmation.Text,
@@ -91,6 +96,16 @@ namespace eDentist.WinUI.Forms.Users
             }
 
             return cityId;
+        }
+
+        private void profileImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                profileImage.Image = new Bitmap(opnfd.FileName);
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using eDentist.WinUI.Forms;
+﻿using eDentist.Model;
 using eDentist.WinUI.Forms.Appointments;
 using eDentist.WinUI.Forms.Cities;
 using eDentist.WinUI.Forms.Countries;
@@ -9,26 +9,29 @@ using eDentist.WinUI.Forms.Treatments;
 using eDentist.WinUI.Forms.Users;
 using eDentist.WinUI.Helper;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eDentist.WinUI.Main
 {
     public partial class frmAdminIndex : Form
     {
-        public frmAdminIndex()
+        private static MUsers _user;
+        public frmAdminIndex(MUsers user)
         {
+            _user = user;
+            SignedInUser.User = _user;
             InitializeComponent();
+
+            ImageConverter converter = new ImageConverter();
+            pbUserPicture.Image = (Image)converter.ConvertFrom(_user.Image);
+
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+
         }
 
         private void button2_Click(object sender, EventArgs e)

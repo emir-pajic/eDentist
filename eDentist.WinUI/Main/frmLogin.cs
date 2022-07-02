@@ -1,13 +1,8 @@
 ﻿using eDentist.Model;
 using eDentist.Model.Request;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eDentist.WinUI.Main
@@ -34,11 +29,11 @@ namespace eDentist.WinUI.Main
 
         private void LoadPanel(MUsers user)
         {
-           // var instruktor = user.UserRoles.Select(i => i.Role.Name).FirstOrDefault();
-            var admin = user.UserRoles.Select(i => i.Role.Name).FirstOrDefault();
-            if (admin == "Admin")
+            // var instruktor = user.UserRoles.Select(i => i.Role.Name).FirstOrDefault();
+            var loggedInUser = user.UserRoles.Select(i => i.Role.Name).FirstOrDefault();
+            if (loggedInUser == "Admin")
             {
-                var form = new frmAdminIndex();
+                var form = new frmAdminIndex(user);
                 form.Show();
             }
             //else if (instruktor == "Instruktor")

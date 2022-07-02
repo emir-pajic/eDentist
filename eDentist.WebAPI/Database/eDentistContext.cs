@@ -72,7 +72,7 @@ namespace eDentist.WebAPI.Database
                 Salt.Add(GenerateSalt());
             }
 
-          
+
 
             modelBuilder.Entity<Countries>().HasData(
 
@@ -133,7 +133,7 @@ namespace eDentist.WebAPI.Database
                     Telephone = "061-918-661",
                     PasswordSalt = Salt[0],
                     PasswordHash = GenerateHash(Salt[0], "pajson1"),
-                    Image = File.ReadAllBytes("Files/user.jpg")
+                    Image = File.ReadAllBytes("Files/admin.jpg")
                 },
                 new Users
                 {

@@ -231,9 +231,9 @@ namespace eDentist.WinUI.Main
             // pbUserPicture
             // 
             this.pbUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbUserPicture.BackgroundImage")));
-            this.pbUserPicture.Location = new System.Drawing.Point(9, 11);
+            this.pbUserPicture.Location = new System.Drawing.Point(4, 4);
             this.pbUserPicture.Name = "pbUserPicture";
-            this.pbUserPicture.Size = new System.Drawing.Size(138, 131);
+            this.pbUserPicture.Size = new System.Drawing.Size(154, 162);
             this.pbUserPicture.TabIndex = 70;
             this.pbUserPicture.TabStop = false;
             // 

@@ -50,6 +50,8 @@
             this.btnAddUser = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.profileImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddNewUser
@@ -250,10 +252,22 @@
             this.lblEmail.TabIndex = 46;
             this.lblEmail.Text = "Email";
             // 
+            // profileImage
+            // 
+            this.profileImage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.profileImage.Location = new System.Drawing.Point(375, 86);
+            this.profileImage.Name = "profileImage";
+            this.profileImage.Size = new System.Drawing.Size(214, 220);
+            this.profileImage.TabIndex = 47;
+            this.profileImage.TabStop = false;
+            this.profileImage.Tag = "";
+            this.profileImage.Click += new System.EventHandler(this.profileImage_Click);
+            // 
             // UserAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.profileImage);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnAddUser);
@@ -277,8 +291,9 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblAddNewUser);
             this.Name = "UserAdd";
-            this.Size = new System.Drawing.Size(517, 552);
+            this.Size = new System.Drawing.Size(684, 552);
             this.Load += new System.EventHandler(this.UsersAdd_LoadData);
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +322,6 @@
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.PictureBox profileImage;
     }
 }
