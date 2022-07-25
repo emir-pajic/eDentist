@@ -139,6 +139,7 @@ namespace eDentist.WinUI.Main
             this.btn_editProfile.TabIndex = 77;
             this.btn_editProfile.Text = "Edit profile";
             this.btn_editProfile.UseVisualStyleBackColor = false;
+            this.btn_editProfile.Click += new System.EventHandler(this.btn_editProfile_Click);
             // 
             // btn_mngTreatments
             // 

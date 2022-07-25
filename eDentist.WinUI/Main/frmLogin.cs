@@ -15,6 +15,7 @@ namespace eDentist.WinUI.Main
         public frmLogin()
         {
             InitializeComponent();
+            this.AcceptButton = button3;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -29,18 +30,13 @@ namespace eDentist.WinUI.Main
 
         private void LoadPanel(MUsers user)
         {
-            // var instruktor = user.UserRoles.Select(i => i.Role.Name).FirstOrDefault();
             var loggedInUser = user.UserRoles.Select(i => i.Role.Name).FirstOrDefault();
             if (loggedInUser == "Admin")
             {
                 var form = new frmAdminIndex(user);
                 form.Show();
             }
-            //else if (instruktor == "Instruktor")
-            //{
-            //    var form = new frmInstructorIndex(user);
-            //    form.Show();
-            //}
+
             else
             {
                 MessageBox.Show("Please use Admin or Instructor credentials to login!");

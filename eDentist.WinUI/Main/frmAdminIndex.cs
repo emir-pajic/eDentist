@@ -5,6 +5,7 @@ using eDentist.WinUI.Forms.Countries;
 using eDentist.WinUI.Forms.Examinations;
 using eDentist.WinUI.Forms.Manufacturers;
 using eDentist.WinUI.Forms.Materials;
+using eDentist.WinUI.Forms.Profile;
 using eDentist.WinUI.Forms.Treatments;
 using eDentist.WinUI.Forms.Users;
 using eDentist.WinUI.Helper;
@@ -87,5 +88,10 @@ namespace eDentist.WinUI.Main
             PanelHelper.AddPanel(ContentPanel, new CityList());
         }
 
+        private void btn_editProfile_Click(object sender, EventArgs e)
+        {
+            PanelHelper.RemovePanels(ContentPanel);
+            PanelHelper.AddPanel(ContentPanel, new EditProfile());
+        }
     }
 }
