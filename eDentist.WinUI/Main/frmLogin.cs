@@ -15,6 +15,7 @@ namespace eDentist.WinUI.Main
         public frmLogin()
         {
             InitializeComponent();
+            this.ActiveControl = txtUsrName;
             this.AcceptButton = button3;
         }
 

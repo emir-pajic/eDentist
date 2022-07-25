@@ -31,7 +31,7 @@
             this.profileImage = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnAddUser = new System.Windows.Forms.Button();
+            this.saveInfo = new System.Windows.Forms.Button();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.txtTelephone = new System.Windows.Forms.TextBox();
             this.lblDateOfBirth = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.lblEditProfile = new System.Windows.Forms.Label();
             this.uploadImage = new System.Windows.Forms.Button();
             this.txtCity = new System.Windows.Forms.TextBox();
+            this.editProfileInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profileImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,15 +78,15 @@
             this.txtEmail.Size = new System.Drawing.Size(131, 20);
             this.txtEmail.TabIndex = 68;
             // 
-            // btnAddUser
+            // saveInfo
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(289, 341);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(130, 23);
-            this.btnAddUser.TabIndex = 67;
-            this.btnAddUser.Text = "Save";
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            this.saveInfo.Location = new System.Drawing.Point(288, 362);
+            this.saveInfo.Name = "saveInfo";
+            this.saveInfo.Size = new System.Drawing.Size(130, 23);
+            this.saveInfo.TabIndex = 67;
+            this.saveInfo.Text = "Save";
+            this.saveInfo.UseVisualStyleBackColor = true;
+            this.saveInfo.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // lblTelephone
             // 
@@ -219,16 +220,27 @@
             this.txtCity.Size = new System.Drawing.Size(131, 20);
             this.txtCity.TabIndex = 72;
             // 
+            // editProfileInfo
+            // 
+            this.editProfileInfo.Location = new System.Drawing.Point(119, 362);
+            this.editProfileInfo.Name = "editProfileInfo";
+            this.editProfileInfo.Size = new System.Drawing.Size(142, 23);
+            this.editProfileInfo.TabIndex = 73;
+            this.editProfileInfo.Text = "Edit information";
+            this.editProfileInfo.UseVisualStyleBackColor = true;
+            this.editProfileInfo.Click += new System.EventHandler(this.editProfileInfo_Click);
+            // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.editProfileInfo);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.uploadImage);
             this.Controls.Add(this.profileImage);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.btnAddUser);
+            this.Controls.Add(this.saveInfo);
             this.Controls.Add(this.lblTelephone);
             this.Controls.Add(this.txtTelephone);
             this.Controls.Add(this.lblDateOfBirth);
@@ -256,7 +268,7 @@
         private System.Windows.Forms.PictureBox profileImage;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.Button saveInfo;
         private System.Windows.Forms.Label lblTelephone;
         private System.Windows.Forms.TextBox txtTelephone;
         private System.Windows.Forms.Label lblDateOfBirth;
@@ -272,5 +284,6 @@
         private System.Windows.Forms.Label lblEditProfile;
         private System.Windows.Forms.Button uploadImage;
         private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.Button editProfileInfo;
     }
 }

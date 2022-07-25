@@ -1,4 +1,5 @@
 ﻿using eDentist.Model;
+using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace eDentist.WinUI.Forms.Profile
     {
         private MUsers user;
         private readonly APIService _cityService = new APIService("Cities");
+        private readonly APIService _userService = new APIService("User");
+
         private List<MCities> _cities { get; set; }
 
         private MCities _selectedCity { get; set; }
@@ -26,7 +29,7 @@ namespace eDentist.WinUI.Forms.Profile
         }
         private async Task LoadList()
         {
-            user = SignedInUser.User;
+            user = await _userService.GetById<MUsers>(SignedInUser.User.UserId);
             _cities = await _cityService.Get<List<MCities>>(null);
             UserCityMenu.Items.AddRange(_cities.Select(x => x.CityName).ToArray());
             uploadImage.Visible = false;
@@ -61,7 +64,7 @@ namespace eDentist.WinUI.Forms.Profile
             ImageConverter converter = new ImageConverter();
             profileImage.Image = (Image)converter.ConvertFrom(user.Image);
 
-            btnAddUser.Visible = false;
+            saveInfo.Visible = false;
 
         }
 
@@ -81,11 +84,93 @@ namespace eDentist.WinUI.Forms.Profile
 
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
+        private async void btnAddUser_Click(object sender, EventArgs e)
         {
             Byte[] imgBytes = null;
             ImageConverter imgConverter = new ImageConverter();
             imgBytes = (System.Byte[])imgConverter.ConvertTo(profileImage.Image, Type.GetType("System.Byte[]"));
+
+            int? cityId = ValidateCity();
+
+            if (ValidateInput())
+            {
+
+                var request = new UsersUpsertRequest()
+                {
+                    UserId = user.UserId,
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text,
+                    Username = txtUserName.Text,
+                    CityId = cityId,
+                    Email = txtEmail.Text,
+                    DateOfBirth = dtpDateOfBirth.Value,
+                    Telephone = txtTelephone.Text,
+                    Image = imgBytes,
+                };
+
+                await _userService.Update<MUsers>(request.UserId, request);
+                MessageBox.Show("User updated!");
+                PanelHelper.SwapPanels(this.Parent, this, new EditProfile());
+            }
+
+
+        }
+
+        private void editProfileInfo_Click(object sender, EventArgs e)
+        {
+            UserCityMenu.Visible = true;
+            txtFirstName.ReadOnly = false;
+            txtLastName.ReadOnly = false;
+            txtUserName.ReadOnly = false;
+            txtCity.Visible = false;
+            dtpDateOfBirth.Enabled = true;
+            txtEmail.ReadOnly = false;
+            txtTelephone.ReadOnly = false;
+            saveInfo.Visible = true;
+            uploadImage.Visible = true;
+            editProfileInfo.Visible = false;
+        }
+
+        private int? ValidateCity()
+        {
+            int? cityId = 0;
+            if (_selectedCity == null)
+            {
+                cityId = null;
+            }
+            else
+            {
+                cityId = _selectedCity.CityId;
+            }
+
+            return cityId;
+        }
+
+        private bool ValidateInput()
+        {
+
+
+            if (String.IsNullOrEmpty(txtFirstName.Text))
+            {
+                MessageBox.Show("First name can not be empty!");
+                return false;
+            }
+            if (String.IsNullOrEmpty(txtLastName.Text))
+            {
+                MessageBox.Show("Last name can not be empty!");
+                return false;
+            }
+            if (String.IsNullOrEmpty(txtUserName.Text))
+            {
+                MessageBox.Show("Username can not be empty!");
+                return false;
+            }
+            if (String.IsNullOrEmpty(txtEmail.Text))
+            {
+                MessageBox.Show("Email can not be empty!");
+                return false;
+            }
+            return true;
         }
     }
 }
