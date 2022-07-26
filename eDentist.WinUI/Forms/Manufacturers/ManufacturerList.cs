@@ -1,13 +1,7 @@
 ﻿using eDentist.Model;
-using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +11,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
     {
         private readonly APIService service = new APIService("Manufacturers");
         private readonly APIService countryService = new APIService("Countries");
+        public List<ManufacturersCountries> result = new List<ManufacturersCountries>();
 
         public ManufacturerList()
         {
@@ -25,11 +20,12 @@ namespace eDentist.WinUI.Forms.Manufacturers
         private async void ManufacturersList_Load(object sender, EventArgs e)
         {
             await LoadList();
+            txtSearch.Focus();
+
         }
         private async Task LoadList()
         {
             var manufacturers = await service.Get<List<MManufacturers>>(null);
-            List<ManufacturersCountries> result = new List<ManufacturersCountries>();
 
             foreach (var item in manufacturers)
             {
@@ -62,15 +58,6 @@ namespace eDentist.WinUI.Forms.Manufacturers
             return resultObj;
         }
 
-        private async Task LoadList(ManufacturersSearchRequest request)
-        {
-            var result = await service.Get<List<ManufacturersSearchRequest>>(request);
-
-            dvgManufacturers.AutoGenerateColumns = false;
-            dvgManufacturers.ReadOnly = true;
-            dvgManufacturers.DataSource = result;
-        }
-
         private void btnAddManufacturer_Click(object sender, EventArgs e)
         {
             PanelHelper.SwapPanels(this.Parent, this, new ManufacturersAdd());
@@ -85,6 +72,19 @@ namespace eDentist.WinUI.Forms.Manufacturers
         private void btnDelete_Click(object sender, EventArgs e)
         {
             PanelHelper.SwapPanels(this.Parent, this, new ManufacturerDelete());
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filtered = new List<ManufacturersCountries>();
+            foreach (var item in result)
+            {
+                if (item.ManufacturerName.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    filtered.Add(item);
+                }
+            }
+            dvgManufacturers.DataSource = filtered;
         }
     }
 }

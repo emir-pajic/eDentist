@@ -112,6 +112,7 @@ namespace eDentist.WinUI.Forms.Cities
             this.dgvCities.Location = new System.Drawing.Point(41, 138);
             this.dgvCities.Name = "dgvCities";
             this.dgvCities.ReadOnly = true;
+            this.dgvCities.RowHeadersVisible = false;
             this.dgvCities.Size = new System.Drawing.Size(329, 150);
             this.dgvCities.TabIndex = 78;
             // 

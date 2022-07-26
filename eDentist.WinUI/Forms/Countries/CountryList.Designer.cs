@@ -108,6 +108,7 @@ namespace eDentist.WinUI.Forms.Countries
             this.dvgCountries.Location = new System.Drawing.Point(32, 158);
             this.dvgCountries.Name = "dvgCountries";
             this.dvgCountries.ReadOnly = true;
+            this.dvgCountries.RowHeadersVisible = false;
             this.dvgCountries.Size = new System.Drawing.Size(216, 150);
             this.dvgCountries.TabIndex = 71;
             // 

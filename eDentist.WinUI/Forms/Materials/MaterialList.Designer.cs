@@ -32,7 +32,6 @@ namespace eDentist.WinUI.Forms.Materials
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaterialList));
             this.App = new System.Windows.Forms.Label();
             this.btnAddMaterial = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -64,17 +63,6 @@ namespace eDentist.WinUI.Forms.Materials
             this.btnAddMaterial.TabIndex = 76;
             this.btnAddMaterial.UseVisualStyleBackColor = true;
             this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(311, 107);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 75;
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -110,6 +98,7 @@ namespace eDentist.WinUI.Forms.Materials
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
             this.txtSearch.TabIndex = 72;
             this.txtSearch.Text = "Enter Name";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dvgMaterials
             // 
@@ -123,7 +112,8 @@ namespace eDentist.WinUI.Forms.Materials
             this.dvgMaterials.Location = new System.Drawing.Point(20, 155);
             this.dvgMaterials.Name = "dvgMaterials";
             this.dvgMaterials.ReadOnly = true;
-            this.dvgMaterials.Size = new System.Drawing.Size(244, 150);
+            this.dvgMaterials.RowHeadersVisible = false;
+            this.dvgMaterials.Size = new System.Drawing.Size(315, 150);
             this.dvgMaterials.TabIndex = 78;
             // 
             // MaterialId
@@ -136,6 +126,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             // MaterialName
             // 
+            this.MaterialName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MaterialName.DataPropertyName = "MaterialName";
             this.MaterialName.HeaderText = "Name";
             this.MaterialName.Name = "MaterialName";
@@ -143,6 +134,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             // Manufacturer
             // 
+            this.Manufacturer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Manufacturer.DataPropertyName = "ManufacturerName";
             this.Manufacturer.HeaderText = "Manufacturer";
             this.Manufacturer.Name = "Manufacturer";
@@ -155,7 +147,6 @@ namespace eDentist.WinUI.Forms.Materials
             this.Controls.Add(this.dvgMaterials);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddMaterial);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.txtSearch);
@@ -172,7 +163,6 @@ namespace eDentist.WinUI.Forms.Materials
 
         private System.Windows.Forms.Label App;
         private System.Windows.Forms.Button btnAddMaterial;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.TextBox txtSearch;

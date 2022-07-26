@@ -32,7 +32,6 @@ namespace eDentist.WinUI.Forms.Manufacturers
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManufacturerList));
             this.App = new System.Windows.Forms.Label();
             this.btnAddManufacturer = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -65,17 +64,6 @@ namespace eDentist.WinUI.Forms.Manufacturers
             this.btnAddManufacturer.TabIndex = 83;
             this.btnAddManufacturer.UseVisualStyleBackColor = true;
             this.btnAddManufacturer.Click += new System.EventHandler(this.btnAddManufacturer_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(320, 81);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 82;
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -111,6 +99,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
             this.txtSearch.TabIndex = 79;
             this.txtSearch.Text = "Enter Name";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dvgManufacturers
             // 
@@ -125,7 +114,8 @@ namespace eDentist.WinUI.Forms.Manufacturers
             this.dvgManufacturers.Location = new System.Drawing.Point(29, 141);
             this.dvgManufacturers.Name = "dvgManufacturers";
             this.dvgManufacturers.ReadOnly = true;
-            this.dvgManufacturers.Size = new System.Drawing.Size(344, 150);
+            this.dvgManufacturers.RowHeadersVisible = false;
+            this.dvgManufacturers.Size = new System.Drawing.Size(448, 150);
             this.dvgManufacturers.TabIndex = 85;
             // 
             // ManufacturerID
@@ -138,6 +128,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             // ManufacturerName
             // 
+            this.ManufacturerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ManufacturerName.DataPropertyName = "ManufacturerName";
             this.ManufacturerName.HeaderText = "Name";
             this.ManufacturerName.Name = "ManufacturerName";
@@ -145,6 +136,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             // FoundationYear
             // 
+            this.FoundationYear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FoundationYear.DataPropertyName = "FoundationYear";
             this.FoundationYear.HeaderText = "Foundation Year";
             this.FoundationYear.Name = "FoundationYear";
@@ -152,6 +144,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             // Country
             // 
+            this.Country.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Country.DataPropertyName = "Country";
             this.Country.HeaderText = "Country";
             this.Country.Name = "Country";
@@ -164,7 +157,6 @@ namespace eDentist.WinUI.Forms.Manufacturers
             this.Controls.Add(this.dvgManufacturers);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddManufacturer);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.txtSearch);
@@ -181,7 +173,6 @@ namespace eDentist.WinUI.Forms.Manufacturers
 
         private System.Windows.Forms.Label App;
         private System.Windows.Forms.Button btnAddManufacturer;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.TextBox txtSearch;
