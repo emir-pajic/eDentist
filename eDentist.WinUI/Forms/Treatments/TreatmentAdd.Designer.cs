@@ -33,6 +33,8 @@ namespace eDentist.WinUI.Forms.Treatments
             this.btnAddTreatment = new System.Windows.Forms.Button();
             this.txtTreatment = new System.Windows.Forms.TextBox();
             this.lblAddTreatment = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCityName
@@ -47,7 +49,7 @@ namespace eDentist.WinUI.Forms.Treatments
             // 
             // btnAddTreatment
             // 
-            this.btnAddTreatment.Location = new System.Drawing.Point(175, 122);
+            this.btnAddTreatment.Location = new System.Drawing.Point(168, 180);
             this.btnAddTreatment.Name = "btnAddTreatment";
             this.btnAddTreatment.Size = new System.Drawing.Size(130, 23);
             this.btnAddTreatment.TabIndex = 7;
@@ -72,10 +74,29 @@ namespace eDentist.WinUI.Forms.Treatments
             this.lblAddTreatment.TabIndex = 5;
             this.lblAddTreatment.Text = "Add a treatment";
             // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(21, 114);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(44, 20);
+            this.lblPrice.TabIndex = 10;
+            this.lblPrice.Text = "Price";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(109, 114);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(316, 20);
+            this.txtPrice.TabIndex = 9;
+            // 
             // TreatmentAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblCityName);
             this.Controls.Add(this.btnAddTreatment);
             this.Controls.Add(this.txtTreatment);
@@ -93,5 +114,7 @@ namespace eDentist.WinUI.Forms.Treatments
         private System.Windows.Forms.Button btnAddTreatment;
         private System.Windows.Forms.TextBox txtTreatment;
         private System.Windows.Forms.Label lblAddTreatment;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }

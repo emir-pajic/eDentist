@@ -34,6 +34,8 @@
             this.lblEditTreatment = new System.Windows.Forms.Label();
             this.lblTreatmentDescription = new System.Windows.Forms.Label();
             this.txtTreatment = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnUpdateTreatment
@@ -93,10 +95,29 @@
             this.txtTreatment.Size = new System.Drawing.Size(159, 20);
             this.txtTreatment.TabIndex = 26;
             // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(25, 225);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(44, 20);
+            this.lblPrice.TabIndex = 29;
+            this.lblPrice.Text = "Price";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(112, 225);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(159, 20);
+            this.txtPrice.TabIndex = 28;
+            // 
             // TreatmentEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblTreatmentDescription);
             this.Controls.Add(this.txtTreatment);
             this.Controls.Add(this.btnUpdateTreatment);
@@ -119,5 +140,7 @@
         private System.Windows.Forms.Label lblEditTreatment;
         private System.Windows.Forms.Label lblTreatmentDescription;
         private System.Windows.Forms.TextBox txtTreatment;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }

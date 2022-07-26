@@ -3,12 +3,6 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eDentist.WinUI.Forms.Treatments
@@ -23,10 +17,22 @@ namespace eDentist.WinUI.Forms.Treatments
 
         private async void btnAddTreatment_Click(object sender, EventArgs e)
         {
+            var price = 0;
+            if (int.TryParse(txtPrice.Text, out price))
+            {
+                price = Convert.ToInt32(txtPrice.Text);
+            }
+            else
+            {
+                MessageBox.Show("Price must be numeric value!");
+                return;
+            }
+
 
             var request = new TreatmentsUpsertRequest()
             {
-                Description = txtTreatment.Text
+                Description = txtTreatment.Text,
+                Price = price
             };
 
             var treatments = await service.Get<List<MTreatments>>(null);

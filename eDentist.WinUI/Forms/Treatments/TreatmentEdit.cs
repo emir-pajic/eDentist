@@ -34,6 +34,7 @@ namespace eDentist.WinUI.Forms.Treatments
         {
             _selectedTreatment = _existingTreatments.FirstOrDefault(x => x.Description.Equals(menuTreatments.SelectedItem));
             txtTreatment.Text = _selectedTreatment.Description;
+            txtPrice.Text = _selectedTreatment.Price.ToString();
         }
 
         private async void btnUpdateTreatment_Click(object sender, EventArgs e)
@@ -43,7 +44,8 @@ namespace eDentist.WinUI.Forms.Treatments
                 var request = new TreatmentsUpsertRequest()
                 {
                     TreatmentId = _selectedTreatment.TreatmentId,
-                    Description = txtTreatment.Text
+                    Description = txtTreatment.Text,
+                    Price = Convert.ToInt32(txtPrice.Text),
                 };
                 await service.Update<MTreatments>(_selectedTreatment.TreatmentId, request);
                 MessageBox.Show("Treatment updated!");
@@ -63,6 +65,13 @@ namespace eDentist.WinUI.Forms.Treatments
                 MessageBox.Show("Treatment description can not be empty!");
                 return false;
             }
+            var price = 0;
+            if (!int.TryParse(txtPrice.Text, out price))
+            {
+                MessageBox.Show("Price must be numeric value!");
+                return false;
+            }
+
             return true;
         }
     }
