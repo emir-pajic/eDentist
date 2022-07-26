@@ -1,13 +1,7 @@
 ﻿using eDentist.Model;
-using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +11,7 @@ namespace eDentist.WinUI.Forms.Cities
     {
         private readonly APIService service = new APIService("Cities");
         private readonly APIService countryService = new APIService("Countries");
+        List<CitiesCountries> result = new List<CitiesCountries>();
 
         public CityList()
         {
@@ -25,10 +20,11 @@ namespace eDentist.WinUI.Forms.Cities
         private async void CitiesList_Load(object sender, EventArgs e)
         {
             await LoadList();
+            txtSearch.Focus();
+
         }
         private async Task LoadList()
         {
-            List<CitiesCountries> result = new List<CitiesCountries>();
 
             var cities = await service.Get<List<MCities>>(null);
 
@@ -75,6 +71,22 @@ namespace eDentist.WinUI.Forms.Cities
         private void btnDelete_Click(object sender, EventArgs e)
         {
             PanelHelper.SwapPanels(this.Parent, this, new CityDelete());
+        }
+
+
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filtered = new List<CitiesCountries>();
+            foreach (var item in result)
+            {
+                if (item.CityName.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    filtered.Add(item);
+                }
+            }
+
+            dgvCities.DataSource = filtered;
         }
     }
 }

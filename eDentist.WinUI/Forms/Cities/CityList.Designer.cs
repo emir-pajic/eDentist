@@ -32,7 +32,6 @@ namespace eDentist.WinUI.Forms.Cities
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CityList));
             this.App = new System.Windows.Forms.Label();
             this.btnAddCity = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -64,17 +63,6 @@ namespace eDentist.WinUI.Forms.Cities
             this.btnAddCity.TabIndex = 76;
             this.btnAddCity.UseVisualStyleBackColor = true;
             this.btnAddCity.Click += new System.EventHandler(this.btnAddCity_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(328, 97);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 75;
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -110,6 +98,7 @@ namespace eDentist.WinUI.Forms.Cities
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
             this.txtSearch.TabIndex = 72;
             this.txtSearch.Text = "Enter Name";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvCities
             // 
@@ -120,10 +109,10 @@ namespace eDentist.WinUI.Forms.Cities
             this.CityID,
             this.CityName,
             this.CountryName});
-            this.dgvCities.Location = new System.Drawing.Point(37, 140);
+            this.dgvCities.Location = new System.Drawing.Point(41, 138);
             this.dgvCities.Name = "dgvCities";
             this.dgvCities.ReadOnly = true;
-            this.dgvCities.Size = new System.Drawing.Size(244, 150);
+            this.dgvCities.Size = new System.Drawing.Size(329, 150);
             this.dgvCities.TabIndex = 78;
             // 
             // CityID
@@ -136,6 +125,7 @@ namespace eDentist.WinUI.Forms.Cities
             // 
             // CityName
             // 
+            this.CityName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.CityName.DataPropertyName = "CityName";
             this.CityName.HeaderText = "City";
             this.CityName.Name = "CityName";
@@ -143,6 +133,7 @@ namespace eDentist.WinUI.Forms.Cities
             // 
             // CountryName
             // 
+            this.CountryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.CountryName.DataPropertyName = "CountryName";
             this.CountryName.HeaderText = "Country";
             this.CountryName.Name = "CountryName";
@@ -155,7 +146,6 @@ namespace eDentist.WinUI.Forms.Cities
             this.Controls.Add(this.dgvCities);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddCity);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.txtSearch);
@@ -172,7 +162,6 @@ namespace eDentist.WinUI.Forms.Cities
 
         private System.Windows.Forms.Label App;
         private System.Windows.Forms.Button btnAddCity;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.TextBox txtSearch;
