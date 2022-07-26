@@ -35,7 +35,6 @@ namespace eDentist.WinUI.Forms.Appointments
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnDetails = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnAddAppointment = new System.Windows.Forms.Button();
             this.App = new System.Windows.Forms.Label();
             this.mAppointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,7 +66,8 @@ namespace eDentist.WinUI.Forms.Appointments
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
             this.txtSearch.TabIndex = 50;
-            this.txtSearch.Text = "Enter Username ";
+            this.txtSearch.Text = "Enter Date";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnDetails
             // 
@@ -92,17 +92,6 @@ namespace eDentist.WinUI.Forms.Appointments
             this.btnDelete.TabIndex = 53;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(310, 75);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 54;
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnAddAppointment
             // 
@@ -146,11 +135,13 @@ namespace eDentist.WinUI.Forms.Appointments
             this.dgvAppointments.Location = new System.Drawing.Point(29, 143);
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.ReadOnly = true;
-            this.dgvAppointments.Size = new System.Drawing.Size(443, 150);
+            this.dgvAppointments.RowHeadersVisible = false;
+            this.dgvAppointments.Size = new System.Drawing.Size(488, 150);
             this.dgvAppointments.TabIndex = 57;
             // 
             // Date
             // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Date.DataPropertyName = "Date";
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
@@ -158,6 +149,7 @@ namespace eDentist.WinUI.Forms.Appointments
             // 
             // FirstName
             // 
+            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FirstName.DataPropertyName = "FirstName";
             this.FirstName.HeaderText = "First Name";
             this.FirstName.Name = "FirstName";
@@ -165,6 +157,7 @@ namespace eDentist.WinUI.Forms.Appointments
             // 
             // LastName
             // 
+            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.LastName.DataPropertyName = "LastName";
             this.LastName.HeaderText = "Last Name";
             this.LastName.Name = "LastName";
@@ -172,6 +165,7 @@ namespace eDentist.WinUI.Forms.Appointments
             // 
             // Status
             // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Status.DataPropertyName = "Status";
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
@@ -184,7 +178,6 @@ namespace eDentist.WinUI.Forms.Appointments
             this.Controls.Add(this.dgvAppointments);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddAppointment);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.txtSearch);
@@ -204,7 +197,6 @@ namespace eDentist.WinUI.Forms.Appointments
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAddAppointment;
         private System.Windows.Forms.Label App;
         private System.Windows.Forms.BindingSource mAppointmentsBindingSource;

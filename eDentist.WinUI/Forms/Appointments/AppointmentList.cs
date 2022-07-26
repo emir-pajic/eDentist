@@ -11,6 +11,8 @@ namespace eDentist.WinUI.Forms.Appointments
     {
         private readonly APIService service = new APIService("Appointments");
         private readonly APIService userService = new APIService("User");
+        List<UsersAppointments> result = new List<UsersAppointments>();
+
 
         public AppointmentList()
         {
@@ -19,11 +21,12 @@ namespace eDentist.WinUI.Forms.Appointments
         private async void AppointmentsList_Load(object sender, EventArgs e)
         {
             await LoadList();
+            txtSearch.Focus();
+
         }
         private async Task LoadList()
         {
             var appointments = await service.Get<List<MAppointments>>(null);
-            List<UsersAppointments> result = new List<UsersAppointments>();
 
             foreach (var item in appointments)
             {
@@ -65,6 +68,20 @@ namespace eDentist.WinUI.Forms.Appointments
         {
             PanelHelper.SwapPanels(this.Parent, this, new AppointmentDelete());
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filtered = new List<UsersAppointments>();
+            foreach (var item in result)
+            {
+                if (item.Date.ToString().Contains(txtSearch.Text.ToLower()))
+                {
+                    filtered.Add(item);
+                }
+            }
+
+            dgvAppointments.DataSource = filtered;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace eDentist.WinUI.Forms.Users
     public partial class UserList : UserControl
     {
         private readonly APIService userService = new APIService("User");
+        public List<MUsers> result = new List<MUsers>();
         public UserList()
         {
             InitializeComponent();
@@ -18,10 +19,12 @@ namespace eDentist.WinUI.Forms.Users
         private async void UserList_Load(object sender, EventArgs e)
         {
             await LoadList();
+            txtSearch.Focus();
+
         }
         private async Task LoadList()
         {
-            var result = await userService.Get<List<MUsers>>(null);
+            result = await userService.Get<List<MUsers>>(null);
 
             dgvUsers.AutoGenerateColumns = false;
             dgvUsers.ReadOnly = true;
@@ -52,6 +55,20 @@ namespace eDentist.WinUI.Forms.Users
         {
             PanelHelper.SwapPanels(this.Parent, this, new UserDelete());
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filtered = new List<MUsers>();
+            foreach (var item in result)
+            {
+                if (item.Username.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    filtered.Add(item);
+                }
+            }
+
+            dgvUsers.DataSource = filtered;
         }
     }
 }
