@@ -62,7 +62,12 @@ namespace eDentist.WinUI.Forms.Users
             ImageConverter imgConverter = new ImageConverter();
             imgBytes = (System.Byte[])imgConverter.ConvertTo(profileImage.Image, Type.GetType("System.Byte[]"));
 
+            if (imgBytes.Length == 0)
+            {
+                MessageBox.Show("Please add a profile image!");
 
+                return;
+            }
 
             var request = new UsersUpsertRequest()
             {

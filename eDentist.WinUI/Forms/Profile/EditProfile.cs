@@ -48,16 +48,17 @@ namespace eDentist.WinUI.Forms.Profile
 
             txtUserName.Text = user.Username;
             txtUserName.ReadOnly = true;
-
-            var city = _cities.FirstOrDefault(x => x.CityId.Equals(user.CityId)).CityName;
-            if (city == null)
+            if (user.CityId == null)
             {
-                txtCity.Text = "";
+                txtCity.Text = "N/A";
             }
             else
             {
+
+                var city = _cities.FirstOrDefault(x => x.CityId.Equals(user.CityId)).CityName;
                 txtCity.Text = city;
             }
+
             txtCity.ReadOnly = true;
 
             dtpDateOfBirth.Text = user.DateOfBirth.ToString();
