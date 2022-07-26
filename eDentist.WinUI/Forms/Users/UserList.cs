@@ -2,6 +2,7 @@
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,6 +11,9 @@ namespace eDentist.WinUI.Forms.Users
     public partial class UserList : UserControl
     {
         private readonly APIService userService = new APIService("User");
+        private readonly APIService _cityService = new APIService("Cities");
+        private List<MCities> _cities { get; set; }
+        public MCities _selectedCity { get; set; }
         public List<MUsers> result = new List<MUsers>();
         public UserList()
         {
@@ -23,10 +27,20 @@ namespace eDentist.WinUI.Forms.Users
         }
         private async Task LoadList()
         {
+            _cities = await _cityService.Get<List<MCities>>(null);
             result = await userService.Get<List<MUsers>>(null);
 
             foreach (var item in result)
             {
+                if (item.CityId == null)
+                {
+                    item.City = "N/A";
+                }
+                else
+                {
+                    item.City = _cities.FirstOrDefault(x => x.CityId.Equals(item.CityId)).CityName;
+                }
+
                 foreach (var role in item.UserRoles)
                 {
                     item.Role += role.Role.Name;

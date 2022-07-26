@@ -62,7 +62,7 @@ namespace eDentist.WinUI.Forms.Users
             FillUserData();
         }
 
-        private void FillUserData()
+        private async void FillUserData()
         {
             var splitted = UsersMenu.SelectedItem.ToString().Split(' ');
 
@@ -111,7 +111,7 @@ namespace eDentist.WinUI.Forms.Users
                     Telephone = txtTelephone.Text,
                     Image = imgBytes,
                     Roles = new List<int>() { _selectedRole.RoleId },
-                    RolesToDelete = new List<int>() { _selectedUser.UserRoles.First().RoleId },
+                    //RolesToDelete = new List<int>() { _selectedUser.UserRoles.First().RoleId },
                 };
 
                 await _userService.Update<MUsers>(request.UserId, request);

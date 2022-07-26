@@ -23,6 +23,7 @@ namespace eDentist.Model
         public string PasswordSalt { get; set; }
         public byte[] Image { get; set; }
         public string Role { get; set; }
+        public string City { get; set; }
 
         public virtual ICollection<MUserRoles> UserRoles { get; set; }
     }

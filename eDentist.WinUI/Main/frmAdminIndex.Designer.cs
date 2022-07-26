@@ -55,7 +55,7 @@ namespace eDentist.WinUI.Main
             // 
             this.ContentPanel.Location = new System.Drawing.Point(154, 36);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(862, 601);
+            this.ContentPanel.Size = new System.Drawing.Size(965, 581);
             this.ContentPanel.TabIndex = 1003;
             // 
             // panel1
@@ -66,7 +66,7 @@ namespace eDentist.WinUI.Main
             this.panel1.Controls.Add(this.Content);
             this.panel1.Location = new System.Drawing.Point(150, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(868, 38);
+            this.panel1.Size = new System.Drawing.Size(969, 38);
             this.panel1.TabIndex = 1001;
             // 
             // button2
@@ -77,7 +77,7 @@ namespace eDentist.WinUI.Main
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Maroon;
-            this.button2.Location = new System.Drawing.Point(815, 4);
+            this.button2.Location = new System.Drawing.Point(915, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(51, 32);
             this.button2.TabIndex = 1000;
@@ -93,7 +93,7 @@ namespace eDentist.WinUI.Main
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(760, 4);
+            this.button1.Location = new System.Drawing.Point(858, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 31);
             this.button1.TabIndex = 1001;
@@ -271,7 +271,7 @@ namespace eDentist.WinUI.Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 639);
+            this.ClientSize = new System.Drawing.Size(1131, 629);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

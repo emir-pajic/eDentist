@@ -40,6 +40,7 @@ namespace eDentist.WinUI.Forms.Users
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +54,7 @@ namespace eDentist.WinUI.Forms.Users
             this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
-            this.btnAddUser.Location = new System.Drawing.Point(696, 107);
+            this.btnAddUser.Location = new System.Drawing.Point(779, 54);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(41, 37);
             this.btnAddUser.TabIndex = 44;
@@ -65,7 +66,7 @@ namespace eDentist.WinUI.Forms.Users
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(790, 107);
+            this.btnDelete.Location = new System.Drawing.Point(873, 54);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(41, 37);
             this.btnDelete.TabIndex = 42;
@@ -77,7 +78,7 @@ namespace eDentist.WinUI.Forms.Users
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(743, 107);
+            this.btnDetails.Location = new System.Drawing.Point(826, 54);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(41, 37);
             this.btnDetails.TabIndex = 41;
@@ -88,7 +89,7 @@ namespace eDentist.WinUI.Forms.Users
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSearch.Location = new System.Drawing.Point(96, 120);
+            this.txtSearch.Location = new System.Drawing.Point(27, 67);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
@@ -100,7 +101,7 @@ namespace eDentist.WinUI.Forms.Users
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 80);
+            this.label1.Location = new System.Drawing.Point(23, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 45;
@@ -118,17 +119,18 @@ namespace eDentist.WinUI.Forms.Users
             this.FirstName,
             this.LastName,
             this.UserName,
+            this.City,
             this.Email,
             this.Telephone,
             this.DateOfBirth,
             this.Role,
             this.Image});
-            this.dgvUsers.Location = new System.Drawing.Point(96, 159);
+            this.dgvUsers.Location = new System.Drawing.Point(27, 106);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersVisible = false;
             this.dgvUsers.RowTemplate.Height = 30;
-            this.dgvUsers.Size = new System.Drawing.Size(735, 326);
+            this.dgvUsers.Size = new System.Drawing.Size(887, 467);
             this.dgvUsers.TabIndex = 40;
             // 
             // UserID
@@ -163,6 +165,13 @@ namespace eDentist.WinUI.Forms.Users
             this.UserName.HeaderText = "Username";
             this.UserName.Name = "UserName";
             this.UserName.ReadOnly = true;
+            // 
+            // City
+            // 
+            this.City.DataPropertyName = "City";
+            this.City.HeaderText = "City";
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
             // 
             // Email
             // 
@@ -235,6 +244,7 @@ namespace eDentist.WinUI.Forms.Users
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
