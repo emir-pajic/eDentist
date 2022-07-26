@@ -3,11 +3,9 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,10 +41,22 @@ namespace eDentist.WinUI.Forms.Materials
 
         private async void btnAddMaterial_Click(object sender, EventArgs e)
         {
+            Byte[] imgBytes = null;
+            ImageConverter imgConverter = new ImageConverter();
+            imgBytes = (System.Byte[])imgConverter.ConvertTo(materialImage.Image, Type.GetType("System.Byte[]"));
+
+
+            if (imgBytes.Length == 0)
+            {
+                MessageBox.Show("Please add a material image!");
+                return;
+            }
+
             var request = new MaterialsUpsertRequest()
             {
-                 Name = txtMaterial.Text,
-                 ManufacturerId = _selectedManufacturer.ManufacturerId
+                Name = txtMaterial.Text,
+                ManufacturerId = _selectedManufacturer.ManufacturerId,
+                Image = imgBytes
             };
 
             var materials = await _materialsService.Get<List<MMaterials>>(null);
@@ -63,6 +73,16 @@ namespace eDentist.WinUI.Forms.Materials
             await _materialsService.Insert<MMaterials>(request);
             MessageBox.Show("Material added!");
             PanelHelper.SwapPanels(this.Parent, this, new MaterialList());
+        }
+
+        private void materialImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                materialImage.Image = new Bitmap(opnfd.FileName);
+            }
         }
     }
 }

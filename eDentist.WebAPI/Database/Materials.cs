@@ -16,6 +16,8 @@ namespace eDentist.WebAPI.Database
         [Key]
         public int MaterialId { get; set; }
         public string Name { get; set; }
+        public byte[] Image { get; set; }
+
         public int? ManufacturerId { get; set; }
 
         public Manufacturers Manufacturer { get; set; }

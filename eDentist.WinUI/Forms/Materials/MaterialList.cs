@@ -47,8 +47,10 @@ namespace eDentist.WinUI.Forms.Materials
         {
             var resultObj = new MaterialsManufacturers()
             {
-                MaterialName = item.Name
+                MaterialName = item.Name,
+                Image = item.Image
             };
+
             if (manufacturer == null)
             {
                 resultObj.ManufacturerName = "N/A";

@@ -62,6 +62,8 @@ namespace eDentist.WinUI.Forms.Users
             ImageConverter imgConverter = new ImageConverter();
             imgBytes = (System.Byte[])imgConverter.ConvertTo(profileImage.Image, Type.GetType("System.Byte[]"));
 
+
+
             var request = new UsersUpsertRequest()
             {
                 FirstName = txtFirstName.Text,

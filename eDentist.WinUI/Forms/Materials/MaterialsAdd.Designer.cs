@@ -34,13 +34,15 @@ namespace eDentist.WinUI.Forms.Materials
             this.btnAddMaterial = new System.Windows.Forms.Button();
             this.txtMaterial = new System.Windows.Forms.TextBox();
             this.lblAddMaterial = new System.Windows.Forms.Label();
+            this.materialImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.materialImage)).BeginInit();
             this.SuspendLayout();
             // 
             // menuManufacturers
             // 
             this.menuManufacturers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.menuManufacturers.FormattingEnabled = true;
-            this.menuManufacturers.Location = new System.Drawing.Point(273, 92);
+            this.menuManufacturers.Location = new System.Drawing.Point(83, 133);
             this.menuManufacturers.Name = "menuManufacturers";
             this.menuManufacturers.Size = new System.Drawing.Size(158, 21);
             this.menuManufacturers.TabIndex = 16;
@@ -58,7 +60,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             // btnAddMaterial
             // 
-            this.btnAddMaterial.Location = new System.Drawing.Point(184, 146);
+            this.btnAddMaterial.Location = new System.Drawing.Point(96, 185);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(130, 23);
             this.btnAddMaterial.TabIndex = 14;
@@ -70,7 +72,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             this.txtMaterial.Location = new System.Drawing.Point(83, 92);
             this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(143, 20);
+            this.txtMaterial.Size = new System.Drawing.Size(158, 20);
             this.txtMaterial.TabIndex = 13;
             // 
             // lblAddMaterial
@@ -83,18 +85,31 @@ namespace eDentist.WinUI.Forms.Materials
             this.lblAddMaterial.TabIndex = 12;
             this.lblAddMaterial.Text = "Add a material";
             // 
+            // materialImage
+            // 
+            this.materialImage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.materialImage.Location = new System.Drawing.Point(278, 92);
+            this.materialImage.Name = "materialImage";
+            this.materialImage.Size = new System.Drawing.Size(180, 116);
+            this.materialImage.TabIndex = 48;
+            this.materialImage.TabStop = false;
+            this.materialImage.Tag = "";
+            this.materialImage.Click += new System.EventHandler(this.materialImage_Click);
+            // 
             // MaterialsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.materialImage);
             this.Controls.Add(this.menuManufacturers);
             this.Controls.Add(this.lblMaterial);
             this.Controls.Add(this.btnAddMaterial);
             this.Controls.Add(this.txtMaterial);
             this.Controls.Add(this.lblAddMaterial);
             this.Name = "MaterialsAdd";
-            this.Size = new System.Drawing.Size(491, 247);
+            this.Size = new System.Drawing.Size(568, 386);
             this.Load += new System.EventHandler(this.MaterialsAdd_LoadManufacturers);
+            ((System.ComponentModel.ISupportInitialize)(this.materialImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +122,6 @@ namespace eDentist.WinUI.Forms.Materials
         private System.Windows.Forms.Button btnAddMaterial;
         private System.Windows.Forms.TextBox txtMaterial;
         private System.Windows.Forms.Label lblAddMaterial;
+        private System.Windows.Forms.PictureBox materialImage;
     }
 }

@@ -39,6 +39,7 @@ namespace eDentist.WinUI.Forms.Materials
             this.MaterialId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaterialName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgMaterials)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +109,8 @@ namespace eDentist.WinUI.Forms.Materials
             this.dvgMaterials.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaterialId,
             this.MaterialName,
-            this.Manufacturer});
+            this.Manufacturer,
+            this.Image});
             this.dvgMaterials.Location = new System.Drawing.Point(20, 155);
             this.dvgMaterials.Name = "dvgMaterials";
             this.dvgMaterials.ReadOnly = true;
@@ -140,6 +142,14 @@ namespace eDentist.WinUI.Forms.Materials
             this.Manufacturer.Name = "Manufacturer";
             this.Manufacturer.ReadOnly = true;
             // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "Image";
+            this.Image.HeaderText = "Image";
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Width = 104;
+            // 
             // MaterialList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,5 +180,6 @@ namespace eDentist.WinUI.Forms.Materials
         private System.Windows.Forms.DataGridViewTextBoxColumn MaterialId;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaterialName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manufacturer;
+        private System.Windows.Forms.DataGridViewImageColumn Image;
     }
 }
