@@ -32,7 +32,6 @@ namespace eDentist.WinUI.Forms.Treatments
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreatmentList));
             this.App = new System.Windows.Forms.Label();
             this.btnAddTreatment = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -64,17 +63,6 @@ namespace eDentist.WinUI.Forms.Treatments
             this.btnAddTreatment.TabIndex = 69;
             this.btnAddTreatment.UseVisualStyleBackColor = true;
             this.btnAddTreatment.Click += new System.EventHandler(this.btnAddTreatment_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(374, 91);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 68;
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -110,6 +98,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
             this.txtSearch.TabIndex = 65;
             this.txtSearch.Text = "Enter Name";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvTreatments
             // 
@@ -160,7 +149,6 @@ namespace eDentist.WinUI.Forms.Treatments
             this.Controls.Add(this.dgvTreatments);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddTreatment);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.txtSearch);
@@ -176,7 +164,6 @@ namespace eDentist.WinUI.Forms.Treatments
         #endregion
         private System.Windows.Forms.Label App;
         private System.Windows.Forms.Button btnAddTreatment;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.TextBox txtSearch;

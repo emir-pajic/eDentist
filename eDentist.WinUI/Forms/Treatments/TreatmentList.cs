@@ -3,11 +3,6 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +11,9 @@ namespace eDentist.WinUI.Forms.Treatments
     public partial class TreatmentList : UserControl
     {
         private readonly APIService service = new APIService("Treatments");
+
+        public List<MTreatments> result = new List<MTreatments>();
+
         public TreatmentList()
         {
             InitializeComponent();
@@ -24,10 +22,12 @@ namespace eDentist.WinUI.Forms.Treatments
         private async void TreatmentsList_Load(object sender, EventArgs e)
         {
             await LoadList();
+            txtSearch.Focus();
+
         }
         private async Task LoadList()
         {
-            var result = await service.Get<List<MTreatments>>(null);
+            result = await service.Get<List<MTreatments>>(null);
 
             dgvTreatments.AutoGenerateColumns = false;
             dgvTreatments.ReadOnly = true;
@@ -57,6 +57,20 @@ namespace eDentist.WinUI.Forms.Treatments
         {
             PanelHelper.SwapPanels(this.Parent, this, new TreatmentDelete());
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filtered = new List<MTreatments>();
+            foreach (var item in result)
+            {
+                if (item.Description.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    filtered.Add(item);
+                }
+            }
+
+            dgvTreatments.DataSource = filtered;
         }
     }
 }

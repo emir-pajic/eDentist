@@ -32,7 +32,6 @@ namespace eDentist.WinUI.Forms.Examinations
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExaminationList));
             this.App = new System.Windows.Forms.Label();
             this.btnAddExamination = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -68,17 +67,6 @@ namespace eDentist.WinUI.Forms.Examinations
             this.btnAddExamination.UseVisualStyleBackColor = true;
             this.btnAddExamination.Click += new System.EventHandler(this.btnAddExamination_Click);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(324, 169);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 61;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // btnDelete
             // 
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -113,6 +101,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.txtSearch.Size = new System.Drawing.Size(275, 24);
             this.txtSearch.TabIndex = 58;
             this.txtSearch.Text = "Enter Name";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvExaminations
             // 
@@ -129,6 +118,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.dgvExaminations.Location = new System.Drawing.Point(33, 230);
             this.dgvExaminations.Name = "dgvExaminations";
             this.dgvExaminations.ReadOnly = true;
+            this.dgvExaminations.RowHeadersVisible = false;
             this.dgvExaminations.Size = new System.Drawing.Size(544, 150);
             this.dgvExaminations.TabIndex = 64;
             // 
@@ -142,6 +132,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // Description
             // 
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Description.DataPropertyName = "Description";
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
@@ -149,6 +140,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // AppointmentDate
             // 
+            this.AppointmentDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.AppointmentDate.DataPropertyName = "AppointmentDate";
             this.AppointmentDate.HeaderText = "AppointmentDate";
             this.AppointmentDate.Name = "AppointmentDate";
@@ -156,6 +148,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // Patient
             // 
+            this.Patient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Patient.DataPropertyName = "Patient";
             this.Patient.HeaderText = "Patient";
             this.Patient.Name = "Patient";
@@ -163,6 +156,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // Doctor
             // 
+            this.Doctor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Doctor.DataPropertyName = "Doctor";
             this.Doctor.HeaderText = "Doctor";
             this.Doctor.Name = "Doctor";
@@ -170,6 +164,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // Status
             // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Status.DataPropertyName = "Status";
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
@@ -182,7 +177,6 @@ namespace eDentist.WinUI.Forms.Examinations
             this.Controls.Add(this.dgvExaminations);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddExamination);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.txtSearch);
@@ -199,7 +193,6 @@ namespace eDentist.WinUI.Forms.Examinations
 
         private System.Windows.Forms.Label App;
         private System.Windows.Forms.Button btnAddExamination;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.TextBox txtSearch;

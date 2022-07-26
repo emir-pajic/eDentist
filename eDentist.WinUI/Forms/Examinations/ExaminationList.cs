@@ -3,11 +3,6 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +13,7 @@ namespace eDentist.WinUI.Forms.Examinations
         private readonly APIService service = new APIService("Examinations");
         private readonly APIService userService = new APIService("User");
         private readonly APIService appointmentService = new APIService("Appointments");
+        public List<Examination> result = new List<Examination>();
 
         public ExaminationList()
         {
@@ -27,11 +23,13 @@ namespace eDentist.WinUI.Forms.Examinations
         private async void ExaminationsList_Load(object sender, EventArgs e)
         {
             await LoadList();
+            txtSearch.Focus();
+
         }
         private async Task LoadList()
         {
             var examinations = await service.Get<List<MExaminations>>(null);
-            List<Examination> result = new List<Examination>();
+
 
             foreach (var item in examinations)
             {
@@ -80,6 +78,20 @@ namespace eDentist.WinUI.Forms.Examinations
         {
             PanelHelper.SwapPanels(this.Parent, this, new ExaminationDelete());
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filtered = new List<Examination>();
+            foreach (var item in result)
+            {
+                if (item.Description.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    filtered.Add(item);
+                }
+            }
+
+            dgvExaminations.DataSource = filtered;
         }
     }
 }
