@@ -48,10 +48,8 @@
             this.lblEditUser = new System.Windows.Forms.Label();
             this.lblEditUserSelect = new System.Windows.Forms.Label();
             this.UsersMenu = new System.Windows.Forms.ComboBox();
-            this.lblPasswordConfirmation = new System.Windows.Forms.Label();
-            this.txtPasswordConfirmation = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.profileImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -73,7 +71,7 @@
             // 
             // btnEditUser
             // 
-            this.btnEditUser.Location = new System.Drawing.Point(207, 545);
+            this.btnEditUser.Location = new System.Drawing.Point(207, 466);
             this.btnEditUser.Name = "btnEditUser";
             this.btnEditUser.Size = new System.Drawing.Size(130, 23);
             this.btnEditUser.TabIndex = 66;
@@ -85,7 +83,7 @@
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.Location = new System.Drawing.Point(34, 505);
+            this.lblRole.Location = new System.Drawing.Point(34, 426);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(42, 20);
             this.lblRole.TabIndex = 65;
@@ -95,7 +93,7 @@
             // 
             this.editUserRoleMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.editUserRoleMenu.FormattingEnabled = true;
-            this.editUserRoleMenu.Location = new System.Drawing.Point(207, 504);
+            this.editUserRoleMenu.Location = new System.Drawing.Point(207, 425);
             this.editUserRoleMenu.Name = "editUserRoleMenu";
             this.editUserRoleMenu.Size = new System.Drawing.Size(131, 21);
             this.editUserRoleMenu.TabIndex = 64;
@@ -236,50 +234,22 @@
             this.UsersMenu.TabIndex = 69;
             this.UsersMenu.SelectedIndexChanged += new System.EventHandler(this.UsersMenu_SelectedIndexChanged);
             // 
-            // lblPasswordConfirmation
+            // profileImage
             // 
-            this.lblPasswordConfirmation.AutoSize = true;
-            this.lblPasswordConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordConfirmation.Location = new System.Drawing.Point(34, 465);
-            this.lblPasswordConfirmation.Name = "lblPasswordConfirmation";
-            this.lblPasswordConfirmation.Size = new System.Drawing.Size(137, 20);
-            this.lblPasswordConfirmation.TabIndex = 74;
-            this.lblPasswordConfirmation.Text = "Confirm Password";
-            // 
-            // txtPasswordConfirmation
-            // 
-            this.txtPasswordConfirmation.Location = new System.Drawing.Point(207, 467);
-            this.txtPasswordConfirmation.Name = "txtPasswordConfirmation";
-            this.txtPasswordConfirmation.Size = new System.Drawing.Size(131, 20);
-            this.txtPasswordConfirmation.TabIndex = 73;
-            this.txtPasswordConfirmation.UseSystemPasswordChar = true;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(34, 424);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(78, 20);
-            this.lblPassword.TabIndex = 72;
-            this.lblPassword.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(207, 424);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(131, 20);
-            this.txtPassword.TabIndex = 71;
-            this.txtPassword.UseSystemPasswordChar = true;
+            this.profileImage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.profileImage.Location = new System.Drawing.Point(410, 149);
+            this.profileImage.Name = "profileImage";
+            this.profileImage.Size = new System.Drawing.Size(214, 220);
+            this.profileImage.TabIndex = 75;
+            this.profileImage.TabStop = false;
+            this.profileImage.Tag = "";
+            this.profileImage.Click += new System.EventHandler(this.profileImage_Click);
             // 
             // UserEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblPasswordConfirmation);
-            this.Controls.Add(this.txtPasswordConfirmation);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.profileImage);
             this.Controls.Add(this.lblEditUserSelect);
             this.Controls.Add(this.UsersMenu);
             this.Controls.Add(this.lblEmail);
@@ -301,8 +271,9 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblEditUser);
             this.Name = "UserEdit";
-            this.Size = new System.Drawing.Size(569, 628);
+            this.Size = new System.Drawing.Size(785, 628);
             this.Load += new System.EventHandler(this.UsersEdit_LoadData);
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,9 +301,6 @@
         private System.Windows.Forms.Label lblEditUser;
         private System.Windows.Forms.Label lblEditUserSelect;
         private System.Windows.Forms.ComboBox UsersMenu;
-        private System.Windows.Forms.Label lblPasswordConfirmation;
-        private System.Windows.Forms.TextBox txtPasswordConfirmation;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.PictureBox profileImage;
     }
 }

@@ -43,6 +43,7 @@ namespace eDentist.WinUI.Forms.Users
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +121,7 @@ namespace eDentist.WinUI.Forms.Users
             this.Email,
             this.Telephone,
             this.DateOfBirth,
+            this.Role,
             this.Image});
             this.dgvUsers.Location = new System.Drawing.Point(96, 159);
             this.dgvUsers.Name = "dgvUsers";
@@ -186,6 +188,14 @@ namespace eDentist.WinUI.Forms.Users
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.ReadOnly = true;
             // 
+            // Role
+            // 
+            this.Role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Role.DataPropertyName = "Role";
+            this.Role.HeaderText = "Role";
+            this.Role.Name = "Role";
+            this.Role.ReadOnly = true;
+            // 
             // Image
             // 
             this.Image.DataPropertyName = "Image";
@@ -228,6 +238,7 @@ namespace eDentist.WinUI.Forms.Users
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
         private System.Windows.Forms.DataGridViewImageColumn Image;
     }
 }

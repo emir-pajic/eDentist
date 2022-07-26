@@ -1,5 +1,4 @@
 ﻿using eDentist.Model;
-using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
@@ -26,18 +25,21 @@ namespace eDentist.WinUI.Forms.Users
         {
             result = await userService.Get<List<MUsers>>(null);
 
-            dgvUsers.AutoGenerateColumns = false;
-            dgvUsers.ReadOnly = true;
-            dgvUsers.DataSource = result;
-        }
-        private async Task LoadList(UsersSearchRequest request)
-        {
-            var result = await userService.Get<List<MUsers>>(request);
+            foreach (var item in result)
+            {
+                foreach (var role in item.UserRoles)
+                {
+                    item.Role += role.Role.Name;
+                    item.Role += " ";
+                }
+
+            }
 
             dgvUsers.AutoGenerateColumns = false;
             dgvUsers.ReadOnly = true;
             dgvUsers.DataSource = result;
         }
+
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {

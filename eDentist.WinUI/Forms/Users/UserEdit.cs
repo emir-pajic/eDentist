@@ -3,6 +3,7 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -75,6 +76,9 @@ namespace eDentist.WinUI.Forms.Users
             txtEmail.Text = _selectedUser.Email;
             dtpDateOfBirth.Text = _selectedUser.DateOfBirth.ToString();
             txtTelephone.Text = _selectedUser.Telephone;
+
+            ImageConverter converter = new ImageConverter();
+            profileImage.Image = (Image)converter.ConvertFrom(_selectedUser.Image);
         }
 
 
@@ -82,7 +86,16 @@ namespace eDentist.WinUI.Forms.Users
         private async void btnEditUser_Click(object sender, EventArgs e)
         {
             int? cityId = ValidateCity();
+            Byte[] imgBytes = null;
+            ImageConverter imgConverter = new ImageConverter();
+            imgBytes = (System.Byte[])imgConverter.ConvertTo(profileImage.Image, Type.GetType("System.Byte[]"));
 
+            if (imgBytes.Length == 0)
+            {
+                MessageBox.Show("Please add a profile image!");
+
+                return;
+            }
             if (ValidateInput(_selectedUser, _selectedRole))
             {
 
@@ -96,10 +109,9 @@ namespace eDentist.WinUI.Forms.Users
                     Email = txtEmail.Text,
                     DateOfBirth = dtpDateOfBirth.Value,
                     Telephone = txtTelephone.Text,
-                    Password = txtPassword.Text,
-                    PasswordConfirmation = txtPasswordConfirmation.Text,
-                    Image = _selectedUser.Image,
+                    Image = imgBytes,
                     Roles = new List<int>() { _selectedRole.RoleId },
+                    RolesToDelete = new List<int>() { _selectedUser.UserRoles.First().RoleId },
                 };
 
                 await _userService.Update<MUsers>(request.UserId, request);
@@ -163,21 +175,7 @@ namespace eDentist.WinUI.Forms.Users
                 MessageBox.Show("Email can not be empty!");
                 return false;
             }
-            if (String.IsNullOrEmpty(txtPassword.Text))
-            {
-                MessageBox.Show("Password can not be empty!");
-                return false;
-            }
-            if (String.IsNullOrEmpty(txtPasswordConfirmation.Text))
-            {
-                MessageBox.Show("Password confirmation can not be empty!");
-                return false;
-            }
-            if (!txtPassword.Text.Equals(txtPasswordConfirmation.Text))
-            {
-                MessageBox.Show("Passwords don't match!");
-                return false;
-            }
+
             if (role == null)
             {
                 MessageBox.Show("User role can not be empty");
@@ -186,5 +184,14 @@ namespace eDentist.WinUI.Forms.Users
             return true;
         }
 
+        private void profileImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                profileImage.Image = new Bitmap(opnfd.FileName);
+            }
+        }
     }
 }
