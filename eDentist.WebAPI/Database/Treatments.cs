@@ -16,6 +16,7 @@ namespace eDentist.WebAPI.Database
         [Key]
         public int TreatmentId { get; set; }
         public string Description { get; set; }
+        public double Price { get; set; }
 
         public virtual ICollection<TreatmentsMaterials> TreatmentsMaterials { get; set; }
     }

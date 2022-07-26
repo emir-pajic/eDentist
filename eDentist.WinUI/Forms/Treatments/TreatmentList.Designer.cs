@@ -39,6 +39,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.dgvTreatments = new System.Windows.Forms.DataGridView();
             this.TreatmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,10 +119,12 @@ namespace eDentist.WinUI.Forms.Treatments
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTreatments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TreatmentID,
-            this.Description});
+            this.Description,
+            this.Price});
             this.dgvTreatments.Location = new System.Drawing.Point(83, 147);
             this.dgvTreatments.Name = "dgvTreatments";
             this.dgvTreatments.ReadOnly = true;
+            this.dgvTreatments.RowHeadersVisible = false;
             this.dgvTreatments.Size = new System.Drawing.Size(288, 150);
             this.dgvTreatments.TabIndex = 71;
             // 
@@ -136,10 +139,19 @@ namespace eDentist.WinUI.Forms.Treatments
             // 
             // Description
             // 
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Description.DataPropertyName = "Description";
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // TreatmentList
             // 
@@ -171,5 +183,6 @@ namespace eDentist.WinUI.Forms.Treatments
         private System.Windows.Forms.DataGridView dgvTreatments;
         private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }
