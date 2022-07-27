@@ -1,5 +1,6 @@
 ﻿using eDentist.Model;
 using eDentist.Model.Request;
+using eDentist.WinUI.Forms.TreatmentsMaterials;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
@@ -71,6 +72,11 @@ namespace eDentist.WinUI.Forms.Treatments
             }
 
             dgvTreatments.DataSource = filtered;
+        }
+
+        private void btnAddTreatmentMaterials_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new AddTreatmentsMaterials());
         }
     }
 }

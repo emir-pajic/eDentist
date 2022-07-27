@@ -39,6 +39,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.TreatmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddTreatmentMaterials = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.btnAddTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTreatment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddTreatment.Image")));
-            this.btnAddTreatment.Location = new System.Drawing.Point(509, 78);
+            this.btnAddTreatment.Location = new System.Drawing.Point(500, 78);
             this.btnAddTreatment.Name = "btnAddTreatment";
             this.btnAddTreatment.Size = new System.Drawing.Size(41, 37);
             this.btnAddTreatment.TabIndex = 69;
@@ -69,7 +70,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(628, 78);
+            this.btnDelete.Location = new System.Drawing.Point(619, 78);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(41, 37);
             this.btnDelete.TabIndex = 67;
@@ -81,7 +82,7 @@ namespace eDentist.WinUI.Forms.Treatments
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(569, 78);
+            this.btnDetails.Location = new System.Drawing.Point(560, 78);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(41, 37);
             this.btnDetails.TabIndex = 66;
@@ -142,10 +143,21 @@ namespace eDentist.WinUI.Forms.Treatments
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             // 
+            // btnAddTreatmentMaterials
+            // 
+            this.btnAddTreatmentMaterials.Location = new System.Drawing.Point(500, 121);
+            this.btnAddTreatmentMaterials.Name = "btnAddTreatmentMaterials";
+            this.btnAddTreatmentMaterials.Size = new System.Drawing.Size(160, 23);
+            this.btnAddTreatmentMaterials.TabIndex = 72;
+            this.btnAddTreatmentMaterials.Text = "Add materials";
+            this.btnAddTreatmentMaterials.UseVisualStyleBackColor = true;
+            this.btnAddTreatmentMaterials.Click += new System.EventHandler(this.btnAddTreatmentMaterials_Click);
+            // 
             // TreatmentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAddTreatmentMaterials);
             this.Controls.Add(this.dgvTreatments);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddTreatment);
@@ -171,5 +183,6 @@ namespace eDentist.WinUI.Forms.Treatments
         private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.Button btnAddTreatmentMaterials;
     }
 }

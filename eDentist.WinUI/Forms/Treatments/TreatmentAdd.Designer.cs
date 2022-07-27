@@ -49,7 +49,7 @@ namespace eDentist.WinUI.Forms.Treatments
             // 
             // btnAddTreatment
             // 
-            this.btnAddTreatment.Location = new System.Drawing.Point(168, 180);
+            this.btnAddTreatment.Location = new System.Drawing.Point(171, 215);
             this.btnAddTreatment.Name = "btnAddTreatment";
             this.btnAddTreatment.Size = new System.Drawing.Size(130, 23);
             this.btnAddTreatment.TabIndex = 7;
