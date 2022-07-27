@@ -40,7 +40,7 @@ namespace eDentist.WinUI.Main
 
             else
             {
-                MessageBox.Show("Please use Admin or Instructor credentials to login!");
+                MessageBox.Show("Invalid credentials!");
                 frmLogin frm = new frmLogin();
                 frm.Show();
             }
