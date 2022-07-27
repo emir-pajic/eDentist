@@ -1,5 +1,4 @@
 ﻿using eDentist.Model;
-using eDentist.Model.Request;
 using eDentist.WinUI.Forms.TreatmentsMaterials;
 using eDentist.WinUI.Helper;
 using System;
@@ -34,14 +33,7 @@ namespace eDentist.WinUI.Forms.Treatments
             dgvTreatments.ReadOnly = true;
             dgvTreatments.DataSource = result;
         }
-        private async Task LoadList(TreatmentSearchRequest request)
-        {
-            var result = await service.Get<List<TreatmentSearchRequest>>(request);
 
-            dgvTreatments.AutoGenerateColumns = false;
-            dgvTreatments.ReadOnly = true;
-            dgvTreatments.DataSource = result;
-        }
 
         private void btnAddTreatment_Click(object sender, EventArgs e)
         {

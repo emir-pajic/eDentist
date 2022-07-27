@@ -92,5 +92,7 @@ namespace eDentist.WinUI.Forms.Materials
             }
             dvgMaterials.DataSource = filtered;
         }
+
+
     }
 }
