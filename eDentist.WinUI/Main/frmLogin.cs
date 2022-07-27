@@ -69,5 +69,7 @@ namespace eDentist.WinUI.Main
                 MessageBox.Show("Wrong Username Or Password!");
             }
         }
+
+
     }
 }
