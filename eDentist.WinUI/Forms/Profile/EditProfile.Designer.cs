@@ -54,7 +54,8 @@
             // profileImage
             // 
             this.profileImage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.profileImage.Location = new System.Drawing.Point(506, 69);
+            this.profileImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profileImage.Location = new System.Drawing.Point(474, 111);
             this.profileImage.Name = "profileImage";
             this.profileImage.Size = new System.Drawing.Size(214, 220);
             this.profileImage.TabIndex = 70;
@@ -64,176 +65,209 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(115, 230);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblEmail.Location = new System.Drawing.Point(38, 274);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 20);
+            this.lblEmail.Size = new System.Drawing.Size(53, 20);
             this.lblEmail.TabIndex = 69;
             this.lblEmail.Text = "Email";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(288, 230);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtEmail.Location = new System.Drawing.Point(211, 274);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(131, 20);
+            this.txtEmail.Size = new System.Drawing.Size(195, 24);
             this.txtEmail.TabIndex = 68;
             // 
             // saveInfo
             // 
-            this.saveInfo.Location = new System.Drawing.Point(288, 362);
+            this.saveInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.saveInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.saveInfo.Location = new System.Drawing.Point(243, 406);
             this.saveInfo.Name = "saveInfo";
-            this.saveInfo.Size = new System.Drawing.Size(130, 23);
+            this.saveInfo.Size = new System.Drawing.Size(131, 33);
             this.saveInfo.TabIndex = 67;
             this.saveInfo.Text = "Save";
-            this.saveInfo.UseVisualStyleBackColor = true;
+            this.saveInfo.UseVisualStyleBackColor = false;
             this.saveInfo.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelephone.Location = new System.Drawing.Point(115, 304);
+            this.lblTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelephone.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTelephone.Location = new System.Drawing.Point(38, 348);
             this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(113, 20);
+            this.lblTelephone.Size = new System.Drawing.Size(125, 20);
             this.lblTelephone.TabIndex = 60;
             this.lblTelephone.Text = "Phone number";
             // 
             // txtTelephone
             // 
-            this.txtTelephone.Location = new System.Drawing.Point(288, 304);
+            this.txtTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtTelephone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtTelephone.Location = new System.Drawing.Point(211, 348);
             this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(131, 20);
+            this.txtTelephone.Size = new System.Drawing.Size(195, 24);
             this.txtTelephone.TabIndex = 59;
             // 
             // lblDateOfBirth
             // 
             this.lblDateOfBirth.AutoSize = true;
-            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(115, 268);
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblDateOfBirth.Location = new System.Drawing.Point(38, 312);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
-            this.lblDateOfBirth.Size = new System.Drawing.Size(99, 20);
+            this.lblDateOfBirth.Size = new System.Drawing.Size(112, 20);
             this.lblDateOfBirth.TabIndex = 58;
             this.lblDateOfBirth.Text = "Date of Birth";
             // 
             // dtpDateOfBirth
             // 
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(288, 267);
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(211, 311);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(131, 20);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(195, 24);
             this.dtpDateOfBirth.TabIndex = 57;
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(115, 186);
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCity.Location = new System.Drawing.Point(38, 230);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(35, 20);
+            this.lblCity.Size = new System.Drawing.Size(39, 20);
             this.lblCity.TabIndex = 56;
             this.lblCity.Text = "City";
             // 
             // UserCityMenu
             // 
             this.UserCityMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UserCityMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.UserCityMenu.FormattingEnabled = true;
-            this.UserCityMenu.Location = new System.Drawing.Point(288, 188);
+            this.UserCityMenu.Location = new System.Drawing.Point(211, 232);
             this.UserCityMenu.Name = "UserCityMenu";
-            this.UserCityMenu.Size = new System.Drawing.Size(131, 21);
+            this.UserCityMenu.Size = new System.Drawing.Size(195, 26);
             this.UserCityMenu.TabIndex = 55;
             this.UserCityMenu.SelectedIndexChanged += new System.EventHandler(this.UserCityMenu_SelectedIndexChanged);
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(115, 146);
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblUserName.Location = new System.Drawing.Point(38, 190);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(83, 20);
+            this.lblUserName.Size = new System.Drawing.Size(91, 20);
             this.lblUserName.TabIndex = 54;
             this.lblUserName.Text = "Username";
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(288, 146);
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtUserName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtUserName.Location = new System.Drawing.Point(211, 190);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(131, 20);
+            this.txtUserName.Size = new System.Drawing.Size(195, 24);
             this.txtUserName.TabIndex = 53;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(115, 108);
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblLastName.Location = new System.Drawing.Point(38, 152);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(86, 20);
+            this.lblLastName.Size = new System.Drawing.Size(95, 20);
             this.lblLastName.TabIndex = 52;
             this.lblLastName.Text = "Last Name";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(288, 108);
+            this.txtLastName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtLastName.Location = new System.Drawing.Point(211, 152);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(131, 20);
+            this.txtLastName.Size = new System.Drawing.Size(195, 24);
             this.txtLastName.TabIndex = 51;
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(115, 67);
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblFirstName.Location = new System.Drawing.Point(38, 111);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(86, 20);
+            this.lblFirstName.Size = new System.Drawing.Size(96, 20);
             this.lblFirstName.TabIndex = 50;
             this.lblFirstName.Text = "First Name";
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(288, 69);
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtFirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtFirstName.Location = new System.Drawing.Point(211, 113);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(131, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(195, 24);
             this.txtFirstName.TabIndex = 49;
             // 
             // lblEditProfile
             // 
             this.lblEditProfile.AutoSize = true;
-            this.lblEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditProfile.Location = new System.Drawing.Point(115, 17);
+            this.lblEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditProfile.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblEditProfile.Location = new System.Drawing.Point(38, 20);
             this.lblEditProfile.Name = "lblEditProfile";
-            this.lblEditProfile.Size = new System.Drawing.Size(146, 24);
+            this.lblEditProfile.Size = new System.Drawing.Size(231, 33);
             this.lblEditProfile.TabIndex = 48;
             this.lblEditProfile.Text = "User Information";
             // 
             // uploadImage
             // 
-            this.uploadImage.Location = new System.Drawing.Point(547, 295);
+            this.uploadImage.BackColor = System.Drawing.SystemColors.Control;
+            this.uploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uploadImage.Location = new System.Drawing.Point(506, 346);
             this.uploadImage.Name = "uploadImage";
-            this.uploadImage.Size = new System.Drawing.Size(142, 23);
+            this.uploadImage.Size = new System.Drawing.Size(159, 33);
             this.uploadImage.TabIndex = 71;
             this.uploadImage.Text = "Upload image";
-            this.uploadImage.UseVisualStyleBackColor = true;
+            this.uploadImage.UseVisualStyleBackColor = false;
             this.uploadImage.Click += new System.EventHandler(this.uploadImage_Click);
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(288, 188);
+            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtCity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCity.Location = new System.Drawing.Point(211, 232);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(131, 20);
+            this.txtCity.Size = new System.Drawing.Size(195, 24);
             this.txtCity.TabIndex = 72;
             // 
             // editProfileInfo
             // 
-            this.editProfileInfo.Location = new System.Drawing.Point(119, 362);
+            this.editProfileInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.editProfileInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editProfileInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.editProfileInfo.Location = new System.Drawing.Point(42, 406);
             this.editProfileInfo.Name = "editProfileInfo";
-            this.editProfileInfo.Size = new System.Drawing.Size(142, 23);
+            this.editProfileInfo.Size = new System.Drawing.Size(142, 33);
             this.editProfileInfo.TabIndex = 73;
             this.editProfileInfo.Text = "Edit information";
-            this.editProfileInfo.UseVisualStyleBackColor = true;
+            this.editProfileInfo.UseVisualStyleBackColor = false;
             this.editProfileInfo.Click += new System.EventHandler(this.editProfileInfo_Click);
             // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.editProfileInfo);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.uploadImage);
