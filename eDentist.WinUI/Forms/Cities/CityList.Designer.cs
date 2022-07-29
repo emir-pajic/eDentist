@@ -30,6 +30,8 @@ namespace eDentist.WinUI.Forms.Cities
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CityList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.App = new System.Windows.Forms.Label();
             this.btnAddCity = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -104,16 +106,31 @@ namespace eDentist.WinUI.Forms.Cities
             // 
             this.dgvCities.AllowUserToAddRows = false;
             this.dgvCities.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dgvCities.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCities.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dgvCities.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCities.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCities.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CityID,
             this.CityName,
             this.CountryName});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCities.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCities.Location = new System.Drawing.Point(41, 138);
             this.dgvCities.Name = "dgvCities";
             this.dgvCities.ReadOnly = true;
             this.dgvCities.RowHeadersVisible = false;
-            this.dgvCities.Size = new System.Drawing.Size(329, 150);
+            this.dgvCities.Size = new System.Drawing.Size(415, 263);
             this.dgvCities.TabIndex = 78;
             // 
             // CityID
