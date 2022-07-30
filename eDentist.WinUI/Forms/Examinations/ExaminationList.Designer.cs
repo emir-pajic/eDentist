@@ -52,7 +52,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.App.AutoSize = true;
             this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.App.ForeColor = System.Drawing.Color.Coral;
+            this.App.ForeColor = System.Drawing.Color.White;
             this.App.Location = new System.Drawing.Point(53, 125);
             this.App.Name = "App";
             this.App.Size = new System.Drawing.Size(266, 29);
@@ -61,7 +61,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // btnAddExamination
             // 
-            this.btnAddExamination.BackColor = System.Drawing.Color.Coral;
+            this.btnAddExamination.BackColor = System.Drawing.Color.White;
             this.btnAddExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddExamination.Image = ((System.Drawing.Image)(resources.GetObject("btnAddExamination.Image")));
@@ -74,7 +74,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Coral;
+            this.btnDelete.BackColor = System.Drawing.Color.White;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
@@ -87,7 +87,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // btnDetails
             // 
-            this.btnDetails.BackColor = System.Drawing.Color.Coral;
+            this.btnDetails.BackColor = System.Drawing.Color.White;
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));

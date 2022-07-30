@@ -36,7 +36,7 @@
             // 
             // btnRemoveCountry
             // 
-            this.btnRemoveCountry.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveCountry.BackColor = System.Drawing.Color.White;
             this.btnRemoveCountry.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             // 
             this.lblCountryName.AutoSize = true;
             this.lblCountryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountryName.ForeColor = System.Drawing.Color.Coral;
+            this.lblCountryName.ForeColor = System.Drawing.Color.White;
             this.lblCountryName.Location = new System.Drawing.Point(31, 128);
             this.lblCountryName.Name = "lblCountryName";
             this.lblCountryName.Size = new System.Drawing.Size(82, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblRemoveCountry.AutoSize = true;
             this.lblRemoveCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveCountry.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveCountry.ForeColor = System.Drawing.Color.White;
             this.lblRemoveCountry.Location = new System.Drawing.Point(30, 29);
             this.lblRemoveCountry.Name = "lblRemoveCountry";
             this.lblRemoveCountry.Size = new System.Drawing.Size(221, 29);

@@ -51,7 +51,7 @@
             // 
             this.lblTreatment.AutoSize = true;
             this.lblTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTreatment.ForeColor = System.Drawing.Color.Coral;
+            this.lblTreatment.ForeColor = System.Drawing.Color.White;
             this.lblTreatment.Location = new System.Drawing.Point(32, 110);
             this.lblTreatment.Name = "lblTreatment";
             this.lblTreatment.Size = new System.Drawing.Size(104, 24);
@@ -62,7 +62,7 @@
             // 
             this.lblAddMaterial.AutoSize = true;
             this.lblAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddMaterial.ForeColor = System.Drawing.Color.White;
             this.lblAddMaterial.Location = new System.Drawing.Point(30, 25);
             this.lblAddMaterial.Name = "lblAddMaterial";
             this.lblAddMaterial.Size = new System.Drawing.Size(314, 29);
@@ -84,7 +84,7 @@
             // 
             this.Material.AutoSize = true;
             this.Material.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Material.ForeColor = System.Drawing.Color.Coral;
+            this.Material.ForeColor = System.Drawing.Color.White;
             this.Material.Location = new System.Drawing.Point(32, 153);
             this.Material.Name = "Material";
             this.Material.Size = new System.Drawing.Size(83, 24);
@@ -93,7 +93,7 @@
             // 
             // btnAddMaterialForTreatment
             // 
-            this.btnAddMaterialForTreatment.BackColor = System.Drawing.Color.Coral;
+            this.btnAddMaterialForTreatment.BackColor = System.Drawing.Color.White;
             this.btnAddMaterialForTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMaterialForTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaterialForTreatment.Location = new System.Drawing.Point(188, 203);

@@ -53,7 +53,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             this.lblManufacturerName.AutoSize = true;
             this.lblManufacturerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManufacturerName.ForeColor = System.Drawing.Color.Coral;
+            this.lblManufacturerName.ForeColor = System.Drawing.Color.White;
             this.lblManufacturerName.Location = new System.Drawing.Point(26, 82);
             this.lblManufacturerName.Name = "lblManufacturerName";
             this.lblManufacturerName.Size = new System.Drawing.Size(132, 24);
@@ -62,7 +62,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             // btnaddCity
             // 
-            this.btnaddCity.BackColor = System.Drawing.Color.Coral;
+            this.btnaddCity.BackColor = System.Drawing.Color.White;
             this.btnaddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddCity.Location = new System.Drawing.Point(250, 178);
@@ -85,7 +85,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             this.lblAddManufacturer.AutoSize = true;
             this.lblAddManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddManufacturer.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddManufacturer.ForeColor = System.Drawing.Color.White;
             this.lblAddManufacturer.Location = new System.Drawing.Point(26, 28);
             this.lblAddManufacturer.Name = "lblAddManufacturer";
             this.lblAddManufacturer.Size = new System.Drawing.Size(238, 29);
@@ -96,7 +96,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(26, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 24);

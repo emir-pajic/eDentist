@@ -40,7 +40,7 @@
             // 
             this.lblAddNewAppointment.AutoSize = true;
             this.lblAddNewAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddNewAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddNewAppointment.ForeColor = System.Drawing.Color.White;
             this.lblAddNewAppointment.Location = new System.Drawing.Point(36, 40);
             this.lblAddNewAppointment.Name = "lblAddNewAppointment";
             this.lblAddNewAppointment.Size = new System.Drawing.Size(267, 29);
@@ -51,7 +51,7 @@
             // 
             this.lblAppointment.AutoSize = true;
             this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblAppointment.ForeColor = System.Drawing.Color.White;
             this.lblAppointment.Location = new System.Drawing.Point(57, 142);
             this.lblAppointment.Name = "lblAppointment";
             this.lblAppointment.Size = new System.Drawing.Size(128, 24);
@@ -84,7 +84,7 @@
             // 
             this.lblPatient.AutoSize = true;
             this.lblPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPatient.ForeColor = System.Drawing.Color.Coral;
+            this.lblPatient.ForeColor = System.Drawing.Color.White;
             this.lblPatient.Location = new System.Drawing.Point(57, 179);
             this.lblPatient.Name = "lblPatient";
             this.lblPatient.Size = new System.Drawing.Size(73, 24);
@@ -93,7 +93,7 @@
             // 
             // btnAddAppointment
             // 
-            this.btnAddAppointment.BackColor = System.Drawing.Color.Coral;
+            this.btnAddAppointment.BackColor = System.Drawing.Color.White;
             this.btnAddAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

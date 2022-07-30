@@ -41,7 +41,7 @@
             // 
             // btnAddAppointment
             // 
-            this.btnAddAppointment.BackColor = System.Drawing.Color.Coral;
+            this.btnAddAppointment.BackColor = System.Drawing.Color.White;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAppointment.Location = new System.Drawing.Point(208, 309);
@@ -56,7 +56,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.Coral;
+            this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(22, 211);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(52, 24);
@@ -78,7 +78,7 @@
             // 
             this.lblAppointment.AutoSize = true;
             this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblAppointment.ForeColor = System.Drawing.Color.White;
             this.lblAppointment.Location = new System.Drawing.Point(22, 111);
             this.lblAppointment.Name = "lblAppointment";
             this.lblAppointment.Size = new System.Drawing.Size(128, 24);
@@ -97,7 +97,7 @@
             // 
             this.lblEditanAppointment.AutoSize = true;
             this.lblEditanAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditanAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblEditanAppointment.ForeColor = System.Drawing.Color.White;
             this.lblEditanAppointment.Location = new System.Drawing.Point(22, 21);
             this.lblEditanAppointment.Name = "lblEditanAppointment";
             this.lblEditanAppointment.Size = new System.Drawing.Size(245, 29);
@@ -119,7 +119,7 @@
             // 
             this.lblPatient.AutoSize = true;
             this.lblPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPatient.ForeColor = System.Drawing.Color.Coral;
+            this.lblPatient.ForeColor = System.Drawing.Color.White;
             this.lblPatient.Location = new System.Drawing.Point(22, 256);
             this.lblPatient.Name = "lblPatient";
             this.lblPatient.Size = new System.Drawing.Size(73, 24);
@@ -128,7 +128,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(0, 176);
             this.panel3.Name = "panel3";

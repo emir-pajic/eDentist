@@ -39,7 +39,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(35, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 29);
@@ -59,7 +59,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             this.lblAddCountry.AutoSize = true;
             this.lblAddCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddCountry.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddCountry.ForeColor = System.Drawing.Color.White;
             this.lblAddCountry.Location = new System.Drawing.Point(36, 93);
             this.lblAddCountry.Name = "lblAddCountry";
             this.lblAddCountry.Size = new System.Drawing.Size(82, 24);
@@ -68,7 +68,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             // btnAddCountry
             // 
-            this.btnAddCountry.BackColor = System.Drawing.Color.Coral;
+            this.btnAddCountry.BackColor = System.Drawing.Color.White;
             this.btnAddCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCountry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

@@ -36,7 +36,7 @@
             // 
             // btnRemoveAppointment
             // 
-            this.btnRemoveAppointment.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveAppointment.BackColor = System.Drawing.Color.White;
             this.btnRemoveAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             // 
             this.lblAppointment.AutoSize = true;
             this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblAppointment.ForeColor = System.Drawing.Color.White;
             this.lblAppointment.Location = new System.Drawing.Point(21, 100);
             this.lblAppointment.Name = "lblAppointment";
             this.lblAppointment.Size = new System.Drawing.Size(128, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblRemoveAppointment.AutoSize = true;
             this.lblRemoveAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveAppointment.ForeColor = System.Drawing.Color.White;
             this.lblRemoveAppointment.Location = new System.Drawing.Point(23, 25);
             this.lblRemoveAppointment.Name = "lblRemoveAppointment";
             this.lblRemoveAppointment.Size = new System.Drawing.Size(297, 29);

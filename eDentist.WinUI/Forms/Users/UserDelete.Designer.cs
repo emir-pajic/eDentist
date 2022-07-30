@@ -36,7 +36,7 @@
             // 
             // btnRemoveUser
             // 
-            this.btnRemoveUser.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveUser.BackColor = System.Drawing.Color.White;
             this.btnRemoveUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.Coral;
+            this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Location = new System.Drawing.Point(24, 130);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(53, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblRemoveUser.AutoSize = true;
             this.lblRemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveUser.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveUser.ForeColor = System.Drawing.Color.White;
             this.lblRemoveUser.Location = new System.Drawing.Point(24, 35);
             this.lblRemoveUser.Name = "lblRemoveUser";
             this.lblRemoveUser.Size = new System.Drawing.Size(202, 29);

@@ -54,7 +54,7 @@
             // 
             this.lblCityName.AutoSize = true;
             this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCityName.ForeColor = System.Drawing.Color.Coral;
+            this.lblCityName.ForeColor = System.Drawing.Color.White;
             this.lblCityName.Location = new System.Drawing.Point(19, 86);
             this.lblCityName.Name = "lblCityName";
             this.lblCityName.Size = new System.Drawing.Size(44, 24);
@@ -63,7 +63,7 @@
             // 
             // btnUpdateCity
             // 
-            this.btnUpdateCity.BackColor = System.Drawing.Color.Coral;
+            this.btnUpdateCity.BackColor = System.Drawing.Color.White;
             this.btnUpdateCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCity.Location = new System.Drawing.Point(130, 303);
@@ -86,7 +86,7 @@
             // 
             this.lblEditCity.AutoSize = true;
             this.lblEditCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditCity.ForeColor = System.Drawing.Color.Coral;
+            this.lblEditCity.ForeColor = System.Drawing.Color.White;
             this.lblEditCity.Location = new System.Drawing.Point(19, 32);
             this.lblEditCity.Name = "lblEditCity";
             this.lblEditCity.Size = new System.Drawing.Size(126, 29);
@@ -97,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(19, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 24);
@@ -119,7 +119,7 @@
             // 
             this.lblNewCountry.AutoSize = true;
             this.lblNewCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCountry.ForeColor = System.Drawing.Color.Coral;
+            this.lblNewCountry.ForeColor = System.Drawing.Color.White;
             this.lblNewCountry.Location = new System.Drawing.Point(19, 242);
             this.lblNewCountry.Name = "lblNewCountry";
             this.lblNewCountry.Size = new System.Drawing.Size(82, 24);
@@ -128,7 +128,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(-217, 155);
             this.panel3.Name = "panel3";

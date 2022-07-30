@@ -45,7 +45,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.Doctor.AutoSize = true;
             this.Doctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Doctor.ForeColor = System.Drawing.Color.Coral;
+            this.Doctor.ForeColor = System.Drawing.Color.White;
             this.Doctor.Location = new System.Drawing.Point(32, 128);
             this.Doctor.Name = "Doctor";
             this.Doctor.Size = new System.Drawing.Size(71, 24);
@@ -67,7 +67,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.lblAppointment.AutoSize = true;
             this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblAppointment.ForeColor = System.Drawing.Color.White;
             this.lblAppointment.Location = new System.Drawing.Point(32, 87);
             this.lblAppointment.Name = "lblAppointment";
             this.lblAppointment.Size = new System.Drawing.Size(128, 24);
@@ -76,7 +76,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             // btnaddCity
             // 
-            this.btnaddCity.BackColor = System.Drawing.Color.Coral;
+            this.btnaddCity.BackColor = System.Drawing.Color.White;
             this.btnaddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddCity.Location = new System.Drawing.Point(192, 270);
@@ -91,7 +91,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.lvlAddExamination.AutoSize = true;
             this.lvlAddExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvlAddExamination.ForeColor = System.Drawing.Color.Coral;
+            this.lvlAddExamination.ForeColor = System.Drawing.Color.White;
             this.lvlAddExamination.Location = new System.Drawing.Point(32, 33);
             this.lvlAddExamination.Name = "lvlAddExamination";
             this.lvlAddExamination.Size = new System.Drawing.Size(241, 29);
@@ -113,7 +113,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.Coral;
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
             this.lblDescription.Location = new System.Drawing.Point(32, 172);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(115, 24);
@@ -132,7 +132,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.Coral;
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(32, 211);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 24);

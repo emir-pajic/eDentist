@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(31, 249);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblManufacturerName.AutoSize = true;
             this.lblManufacturerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManufacturerName.ForeColor = System.Drawing.Color.Coral;
+            this.lblManufacturerName.ForeColor = System.Drawing.Color.White;
             this.lblManufacturerName.Location = new System.Drawing.Point(31, 208);
             this.lblManufacturerName.Name = "lblManufacturerName";
             this.lblManufacturerName.Size = new System.Drawing.Size(132, 24);
@@ -83,7 +83,7 @@
             // 
             // btnEditManufacturer
             // 
-            this.btnEditManufacturer.BackColor = System.Drawing.Color.Coral;
+            this.btnEditManufacturer.BackColor = System.Drawing.Color.White;
             this.btnEditManufacturer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEditManufacturer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditManufacturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -108,7 +108,7 @@
             // 
             this.lblManufacturerEdit.AutoSize = true;
             this.lblManufacturerEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManufacturerEdit.ForeColor = System.Drawing.Color.Coral;
+            this.lblManufacturerEdit.ForeColor = System.Drawing.Color.White;
             this.lblManufacturerEdit.Location = new System.Drawing.Point(31, 25);
             this.lblManufacturerEdit.Name = "lblManufacturerEdit";
             this.lblManufacturerEdit.Size = new System.Drawing.Size(238, 29);
@@ -130,7 +130,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Coral;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(31, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 24);
@@ -139,7 +139,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(-19, 170);
             this.panel3.Name = "panel3";

@@ -45,7 +45,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.Coral;
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(44, 276);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 24);
@@ -64,7 +64,7 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.Coral;
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
             this.lblDescription.Location = new System.Drawing.Point(44, 237);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(115, 24);
@@ -94,7 +94,7 @@
             // 
             this.Doctor.AutoSize = true;
             this.Doctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Doctor.ForeColor = System.Drawing.Color.Coral;
+            this.Doctor.ForeColor = System.Drawing.Color.White;
             this.Doctor.Location = new System.Drawing.Point(44, 193);
             this.Doctor.Name = "Doctor";
             this.Doctor.Size = new System.Drawing.Size(71, 24);
@@ -103,7 +103,7 @@
             // 
             // btnUpdateExamination
             // 
-            this.btnUpdateExamination.BackColor = System.Drawing.Color.Coral;
+            this.btnUpdateExamination.BackColor = System.Drawing.Color.White;
             this.btnUpdateExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateExamination.Location = new System.Drawing.Point(174, 334);
@@ -118,7 +118,7 @@
             // 
             this.lblEditanExamination.AutoSize = true;
             this.lblEditanExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditanExamination.ForeColor = System.Drawing.Color.Coral;
+            this.lblEditanExamination.ForeColor = System.Drawing.Color.White;
             this.lblEditanExamination.Location = new System.Drawing.Point(43, 34);
             this.lblEditanExamination.Name = "lblEditanExamination";
             this.lblEditanExamination.Size = new System.Drawing.Size(241, 29);
@@ -140,7 +140,7 @@
             // 
             this.Examinations.AutoSize = true;
             this.Examinations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Examinations.ForeColor = System.Drawing.Color.Coral;
+            this.Examinations.ForeColor = System.Drawing.Color.White;
             this.Examinations.Location = new System.Drawing.Point(44, 75);
             this.Examinations.Name = "Examinations";
             this.Examinations.Size = new System.Drawing.Size(125, 24);
@@ -149,7 +149,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(-42, 147);
             this.panel3.Name = "panel3";

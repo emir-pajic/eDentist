@@ -53,7 +53,7 @@
             // 
             this.lblMaterial.AutoSize = true;
             this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblMaterial.ForeColor = System.Drawing.Color.White;
             this.lblMaterial.Location = new System.Drawing.Point(28, 81);
             this.lblMaterial.Name = "lblMaterial";
             this.lblMaterial.Size = new System.Drawing.Size(83, 24);
@@ -62,7 +62,7 @@
             // 
             // btnUpdateMaterial
             // 
-            this.btnUpdateMaterial.BackColor = System.Drawing.Color.Coral;
+            this.btnUpdateMaterial.BackColor = System.Drawing.Color.White;
             this.btnUpdateMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,7 +78,7 @@
             // 
             this.lblEditMaterial.AutoSize = true;
             this.lblEditMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblEditMaterial.ForeColor = System.Drawing.Color.White;
             this.lblEditMaterial.Location = new System.Drawing.Point(28, 27);
             this.lblEditMaterial.Name = "lblEditMaterial";
             this.lblEditMaterial.Size = new System.Drawing.Size(181, 29);
@@ -100,7 +100,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(28, 208);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 24);
@@ -117,7 +117,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(-141, 146);
             this.panel3.Name = "panel3";

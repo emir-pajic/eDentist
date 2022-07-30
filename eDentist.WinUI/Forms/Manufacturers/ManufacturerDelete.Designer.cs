@@ -36,7 +36,7 @@
             // 
             // btnRemoveManufacturer
             // 
-            this.btnRemoveManufacturer.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveManufacturer.BackColor = System.Drawing.Color.White;
             this.btnRemoveManufacturer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveManufacturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             // 
             this.lblManufacturer.AutoSize = true;
             this.lblManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManufacturer.ForeColor = System.Drawing.Color.Coral;
+            this.lblManufacturer.ForeColor = System.Drawing.Color.White;
             this.lblManufacturer.Location = new System.Drawing.Point(20, 129);
             this.lblManufacturer.Name = "lblManufacturer";
             this.lblManufacturer.Size = new System.Drawing.Size(132, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblRemoveManufacturer.AutoSize = true;
             this.lblRemoveManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveManufacturer.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveManufacturer.ForeColor = System.Drawing.Color.White;
             this.lblRemoveManufacturer.Location = new System.Drawing.Point(20, 16);
             this.lblRemoveManufacturer.Name = "lblRemoveManufacturer";
             this.lblRemoveManufacturer.Size = new System.Drawing.Size(288, 29);

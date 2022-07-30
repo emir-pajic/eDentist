@@ -49,7 +49,7 @@
             // 
             this.lblCityName.AutoSize = true;
             this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCityName.ForeColor = System.Drawing.Color.Coral;
+            this.lblCityName.ForeColor = System.Drawing.Color.White;
             this.lblCityName.Location = new System.Drawing.Point(27, 125);
             this.lblCityName.Name = "lblCityName";
             this.lblCityName.Size = new System.Drawing.Size(44, 24);
@@ -60,7 +60,7 @@
             // 
             this.lblRemoveCity.AutoSize = true;
             this.lblRemoveCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveCity.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveCity.ForeColor = System.Drawing.Color.White;
             this.lblRemoveCity.Location = new System.Drawing.Point(27, 32);
             this.lblRemoveCity.Name = "lblRemoveCity";
             this.lblRemoveCity.Size = new System.Drawing.Size(176, 29);
@@ -69,7 +69,7 @@
             // 
             // btnRemoveCity
             // 
-            this.btnRemoveCity.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveCity.BackColor = System.Drawing.Color.White;
             this.btnRemoveCity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

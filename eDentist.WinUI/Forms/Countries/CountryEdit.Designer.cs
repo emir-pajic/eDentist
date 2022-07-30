@@ -42,7 +42,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             this.lblnewCountryName.AutoSize = true;
             this.lblnewCountryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnewCountryName.ForeColor = System.Drawing.Color.Coral;
+            this.lblnewCountryName.ForeColor = System.Drawing.Color.White;
             this.lblnewCountryName.Location = new System.Drawing.Point(30, 185);
             this.lblnewCountryName.Name = "lblnewCountryName";
             this.lblnewCountryName.Size = new System.Drawing.Size(82, 24);
@@ -64,7 +64,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             this.lblCountryName.AutoSize = true;
             this.lblCountryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountryName.ForeColor = System.Drawing.Color.Coral;
+            this.lblCountryName.ForeColor = System.Drawing.Color.White;
             this.lblCountryName.Location = new System.Drawing.Point(30, 81);
             this.lblCountryName.Name = "lblCountryName";
             this.lblCountryName.Size = new System.Drawing.Size(82, 24);
@@ -83,7 +83,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             this.lblEditCountry.AutoSize = true;
             this.lblEditCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditCountry.ForeColor = System.Drawing.Color.Coral;
+            this.lblEditCountry.ForeColor = System.Drawing.Color.White;
             this.lblEditCountry.Location = new System.Drawing.Point(30, 27);
             this.lblEditCountry.Name = "lblEditCountry";
             this.lblEditCountry.Size = new System.Drawing.Size(171, 29);
@@ -92,7 +92,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             // btnUpdateCountry
             // 
-            this.btnUpdateCountry.BackColor = System.Drawing.Color.Coral;
+            this.btnUpdateCountry.BackColor = System.Drawing.Color.White;
             this.btnUpdateCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCountry.Location = new System.Drawing.Point(128, 240);
@@ -105,7 +105,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(-218, 140);
             this.panel3.Name = "panel3";

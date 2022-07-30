@@ -50,7 +50,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngCities
             // 
-            this.btn_mngCities.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngCities.BackColor = System.Drawing.Color.White;
             this.btn_mngCities.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngCities.FlatAppearance.BorderSize = 0;
             this.btn_mngCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -65,7 +65,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngExam
             // 
-            this.btn_mngExam.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngExam.BackColor = System.Drawing.Color.White;
             this.btn_mngExam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngExam.FlatAppearance.BorderSize = 0;
             this.btn_mngExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -91,7 +91,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngAppo
             // 
-            this.btn_mngAppo.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngAppo.BackColor = System.Drawing.Color.White;
             this.btn_mngAppo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngAppo.FlatAppearance.BorderSize = 0;
             this.btn_mngAppo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -106,7 +106,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngUsers
             // 
-            this.btn_mngUsers.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngUsers.BackColor = System.Drawing.Color.White;
             this.btn_mngUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngUsers.FlatAppearance.BorderSize = 0;
             this.btn_mngUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -121,7 +121,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngManufacturers
             // 
-            this.btn_mngManufacturers.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngManufacturers.BackColor = System.Drawing.Color.White;
             this.btn_mngManufacturers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngManufacturers.FlatAppearance.BorderSize = 0;
             this.btn_mngManufacturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,7 +136,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngCountries
             // 
-            this.btn_mngCountries.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngCountries.BackColor = System.Drawing.Color.White;
             this.btn_mngCountries.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngCountries.FlatAppearance.BorderSize = 0;
             this.btn_mngCountries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -151,7 +151,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngMaterials
             // 
-            this.btn_mngMaterials.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngMaterials.BackColor = System.Drawing.Color.White;
             this.btn_mngMaterials.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngMaterials.FlatAppearance.BorderSize = 0;
             this.btn_mngMaterials.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,7 +166,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngTreatments
             // 
-            this.btn_mngTreatments.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngTreatments.BackColor = System.Drawing.Color.White;
             this.btn_mngTreatments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngTreatments.FlatAppearance.BorderSize = 0;
             this.btn_mngTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,7 +181,7 @@ namespace eDentist.WinUI.Main
             // 
             // btn_editProfile
             // 
-            this.btn_editProfile.BackColor = System.Drawing.Color.Coral;
+            this.btn_editProfile.BackColor = System.Drawing.Color.White;
             this.btn_editProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_editProfile.FlatAppearance.BorderSize = 0;
             this.btn_editProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

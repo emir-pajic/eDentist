@@ -54,7 +54,7 @@ namespace eDentist.WinUI.Forms.Users
             // 
             // btnAddUser
             // 
-            this.btnAddUser.BackColor = System.Drawing.Color.Coral;
+            this.btnAddUser.BackColor = System.Drawing.Color.White;
             this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
@@ -67,7 +67,7 @@ namespace eDentist.WinUI.Forms.Users
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Coral;
+            this.btnDelete.BackColor = System.Drawing.Color.White;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
@@ -80,7 +80,7 @@ namespace eDentist.WinUI.Forms.Users
             // 
             // btnDetails
             // 
-            this.btnDetails.BackColor = System.Drawing.Color.Coral;
+            this.btnDetails.BackColor = System.Drawing.Color.White;
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
@@ -107,7 +107,7 @@ namespace eDentist.WinUI.Forms.Users
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(23, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 29);

@@ -58,7 +58,7 @@
             // 
             this.lblAddNewUser.AutoSize = true;
             this.lblAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddNewUser.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddNewUser.ForeColor = System.Drawing.Color.White;
             this.lblAddNewUser.Location = new System.Drawing.Point(28, -4);
             this.lblAddNewUser.Name = "lblAddNewUser";
             this.lblAddNewUser.Size = new System.Drawing.Size(172, 29);
@@ -77,7 +77,7 @@
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.ForeColor = System.Drawing.Color.Coral;
+            this.lblFirstName.ForeColor = System.Drawing.Color.White;
             this.lblFirstName.Location = new System.Drawing.Point(30, 65);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(111, 24);
@@ -96,7 +96,7 @@
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.ForeColor = System.Drawing.Color.Coral;
+            this.lblLastName.ForeColor = System.Drawing.Color.White;
             this.lblLastName.Location = new System.Drawing.Point(30, 106);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(108, 24);
@@ -115,7 +115,7 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.Coral;
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(30, 144);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(105, 24);
@@ -137,7 +137,7 @@
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.ForeColor = System.Drawing.Color.Coral;
+            this.lblCity.ForeColor = System.Drawing.Color.White;
             this.lblCity.Location = new System.Drawing.Point(30, 184);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(44, 24);
@@ -156,7 +156,7 @@
             // 
             this.lblDateOfBirth.AutoSize = true;
             this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.ForeColor = System.Drawing.Color.Coral;
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.White;
             this.lblDateOfBirth.Location = new System.Drawing.Point(30, 266);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(123, 24);
@@ -175,7 +175,7 @@
             // 
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelephone.ForeColor = System.Drawing.Color.Coral;
+            this.lblTelephone.ForeColor = System.Drawing.Color.White;
             this.lblTelephone.Location = new System.Drawing.Point(30, 302);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(149, 24);
@@ -195,7 +195,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.Color.Coral;
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(30, 337);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(100, 24);
@@ -215,7 +215,7 @@
             // 
             this.lblPasswordConfirmation.AutoSize = true;
             this.lblPasswordConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordConfirmation.ForeColor = System.Drawing.Color.Coral;
+            this.lblPasswordConfirmation.ForeColor = System.Drawing.Color.White;
             this.lblPasswordConfirmation.Location = new System.Drawing.Point(30, 378);
             this.lblPasswordConfirmation.Name = "lblPasswordConfirmation";
             this.lblPasswordConfirmation.Size = new System.Drawing.Size(178, 24);
@@ -237,7 +237,7 @@
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.ForeColor = System.Drawing.Color.Coral;
+            this.lblRole.ForeColor = System.Drawing.Color.White;
             this.lblRole.Location = new System.Drawing.Point(30, 421);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(53, 24);
@@ -246,7 +246,7 @@
             // 
             // btnAddUser
             // 
-            this.btnAddUser.BackColor = System.Drawing.Color.Coral;
+            this.btnAddUser.BackColor = System.Drawing.Color.White;
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.Location = new System.Drawing.Point(228, 461);
@@ -269,7 +269,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.Coral;
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(30, 228);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(62, 24);

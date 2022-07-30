@@ -53,7 +53,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             this.lblMaterial.AutoSize = true;
             this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblMaterial.ForeColor = System.Drawing.Color.White;
             this.lblMaterial.Location = new System.Drawing.Point(15, 142);
             this.lblMaterial.Name = "lblMaterial";
             this.lblMaterial.Size = new System.Drawing.Size(83, 24);
@@ -62,7 +62,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             // btnAddMaterial
             // 
-            this.btnAddMaterial.BackColor = System.Drawing.Color.Coral;
+            this.btnAddMaterial.BackColor = System.Drawing.Color.White;
             this.btnAddMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaterial.Location = new System.Drawing.Point(135, 235);
@@ -85,7 +85,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             this.lblAddMaterial.AutoSize = true;
             this.lblAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddMaterial.ForeColor = System.Drawing.Color.White;
             this.lblAddMaterial.Location = new System.Drawing.Point(12, 35);
             this.lblAddMaterial.Name = "lblAddMaterial";
             this.lblAddMaterial.Size = new System.Drawing.Size(181, 29);

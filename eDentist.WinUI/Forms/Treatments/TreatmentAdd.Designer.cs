@@ -41,7 +41,7 @@ namespace eDentist.WinUI.Forms.Treatments
             // 
             this.lblCityName.AutoSize = true;
             this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCityName.ForeColor = System.Drawing.Color.Coral;
+            this.lblCityName.ForeColor = System.Drawing.Color.White;
             this.lblCityName.Location = new System.Drawing.Point(21, 78);
             this.lblCityName.Name = "lblCityName";
             this.lblCityName.Size = new System.Drawing.Size(104, 24);
@@ -50,7 +50,7 @@ namespace eDentist.WinUI.Forms.Treatments
             // 
             // btnAddTreatment
             // 
-            this.btnAddTreatment.BackColor = System.Drawing.Color.Coral;
+            this.btnAddTreatment.BackColor = System.Drawing.Color.White;
             this.btnAddTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTreatment.Location = new System.Drawing.Point(145, 160);
@@ -73,7 +73,7 @@ namespace eDentist.WinUI.Forms.Treatments
             // 
             this.lblAddTreatment.AutoSize = true;
             this.lblAddTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddTreatment.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddTreatment.ForeColor = System.Drawing.Color.White;
             this.lblAddTreatment.Location = new System.Drawing.Point(21, 27);
             this.lblAddTreatment.Name = "lblAddTreatment";
             this.lblAddTreatment.Size = new System.Drawing.Size(157, 24);
@@ -84,7 +84,7 @@ namespace eDentist.WinUI.Forms.Treatments
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.Coral;
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
             this.lblPrice.Location = new System.Drawing.Point(21, 114);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(58, 24);

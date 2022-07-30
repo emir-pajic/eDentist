@@ -36,7 +36,7 @@
             // 
             // btnRemoveExamination
             // 
-            this.btnRemoveExamination.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveExamination.BackColor = System.Drawing.Color.White;
             this.btnRemoveExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             // 
             this.lblExamination.AutoSize = true;
             this.lblExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExamination.ForeColor = System.Drawing.Color.Coral;
+            this.lblExamination.ForeColor = System.Drawing.Color.White;
             this.lblExamination.Location = new System.Drawing.Point(17, 140);
             this.lblExamination.Name = "lblExamination";
             this.lblExamination.Size = new System.Drawing.Size(125, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblRemoveExamination.AutoSize = true;
             this.lblRemoveExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveExamination.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveExamination.ForeColor = System.Drawing.Color.White;
             this.lblRemoveExamination.Location = new System.Drawing.Point(17, 22);
             this.lblRemoveExamination.Name = "lblRemoveExamination";
             this.lblRemoveExamination.Size = new System.Drawing.Size(293, 29);

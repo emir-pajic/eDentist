@@ -36,7 +36,7 @@
             // 
             // btnRemoveTreatment
             // 
-            this.btnRemoveTreatment.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveTreatment.BackColor = System.Drawing.Color.White;
             this.btnRemoveTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             // 
             this.lblTreatment.AutoSize = true;
             this.lblTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTreatment.ForeColor = System.Drawing.Color.Coral;
+            this.lblTreatment.ForeColor = System.Drawing.Color.White;
             this.lblTreatment.Location = new System.Drawing.Point(30, 125);
             this.lblTreatment.Name = "lblTreatment";
             this.lblTreatment.Size = new System.Drawing.Size(104, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblRemoveTreatment.AutoSize = true;
             this.lblRemoveTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveTreatment.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveTreatment.ForeColor = System.Drawing.Color.White;
             this.lblRemoveTreatment.Location = new System.Drawing.Point(27, 24);
             this.lblRemoveTreatment.Name = "lblRemoveTreatment";
             this.lblRemoveTreatment.Size = new System.Drawing.Size(246, 29);

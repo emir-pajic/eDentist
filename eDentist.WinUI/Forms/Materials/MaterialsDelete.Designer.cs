@@ -36,7 +36,7 @@
             // 
             // btnRemoveMaterial
             // 
-            this.btnRemoveMaterial.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveMaterial.BackColor = System.Drawing.Color.White;
             this.btnRemoveMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             // 
             this.lblMaterial.AutoSize = true;
             this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblMaterial.ForeColor = System.Drawing.Color.White;
             this.lblMaterial.Location = new System.Drawing.Point(29, 130);
             this.lblMaterial.Name = "lblMaterial";
             this.lblMaterial.Size = new System.Drawing.Size(83, 24);
@@ -74,7 +74,7 @@
             // 
             this.lblRemoveMaterial.AutoSize = true;
             this.lblRemoveMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblRemoveMaterial.ForeColor = System.Drawing.Color.White;
             this.lblRemoveMaterial.Location = new System.Drawing.Point(29, 24);
             this.lblRemoveMaterial.Name = "lblRemoveMaterial";
             this.lblRemoveMaterial.Size = new System.Drawing.Size(231, 29);

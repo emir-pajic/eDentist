@@ -66,7 +66,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.Coral;
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(38, 274);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(62, 24);
@@ -84,7 +84,7 @@
             // 
             // saveInfo
             // 
-            this.saveInfo.BackColor = System.Drawing.Color.Coral;
+            this.saveInfo.BackColor = System.Drawing.Color.White;
             this.saveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -100,7 +100,7 @@
             // 
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelephone.ForeColor = System.Drawing.Color.Coral;
+            this.lblTelephone.ForeColor = System.Drawing.Color.White;
             this.lblTelephone.Location = new System.Drawing.Point(38, 348);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(149, 24);
@@ -120,7 +120,7 @@
             // 
             this.lblDateOfBirth.AutoSize = true;
             this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.ForeColor = System.Drawing.Color.Coral;
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.White;
             this.lblDateOfBirth.Location = new System.Drawing.Point(38, 312);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(123, 24);
@@ -139,7 +139,7 @@
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.ForeColor = System.Drawing.Color.Coral;
+            this.lblCity.ForeColor = System.Drawing.Color.White;
             this.lblCity.Location = new System.Drawing.Point(38, 230);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(44, 24);
@@ -161,7 +161,7 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.Coral;
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(38, 190);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(105, 24);
@@ -181,7 +181,7 @@
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.ForeColor = System.Drawing.Color.Coral;
+            this.lblLastName.ForeColor = System.Drawing.Color.White;
             this.lblLastName.Location = new System.Drawing.Point(38, 152);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(108, 24);
@@ -202,7 +202,7 @@
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.ForeColor = System.Drawing.Color.Coral;
+            this.lblFirstName.ForeColor = System.Drawing.Color.White;
             this.lblFirstName.Location = new System.Drawing.Point(38, 111);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(111, 24);
@@ -222,7 +222,7 @@
             // 
             this.lblEditProfile.AutoSize = true;
             this.lblEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditProfile.ForeColor = System.Drawing.Color.Coral;
+            this.lblEditProfile.ForeColor = System.Drawing.Color.White;
             this.lblEditProfile.Location = new System.Drawing.Point(38, 20);
             this.lblEditProfile.Name = "lblEditProfile";
             this.lblEditProfile.Size = new System.Drawing.Size(247, 33);
@@ -231,7 +231,7 @@
             // 
             // uploadImage
             // 
-            this.uploadImage.BackColor = System.Drawing.Color.Coral;
+            this.uploadImage.BackColor = System.Drawing.Color.White;
             this.uploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -254,7 +254,7 @@
             // 
             // editProfileInfo
             // 
-            this.editProfileInfo.BackColor = System.Drawing.Color.Coral;
+            this.editProfileInfo.BackColor = System.Drawing.Color.White;
             this.editProfileInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editProfileInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editProfileInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
