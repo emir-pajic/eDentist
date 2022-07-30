@@ -50,11 +50,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngCities
             // 
-            this.btn_mngCities.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngCities.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngCities.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngCities.FlatAppearance.BorderSize = 0;
             this.btn_mngCities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngCities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mngCities.ForeColor = System.Drawing.Color.Black;
+            this.btn_mngCities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngCities.Location = new System.Drawing.Point(13, 556);
             this.btn_mngCities.Name = "btn_mngCities";
             this.btn_mngCities.Size = new System.Drawing.Size(171, 43);
@@ -65,10 +65,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngExam
             // 
-            this.btn_mngExam.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngExam.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngExam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngExam.FlatAppearance.BorderSize = 0;
             this.btn_mngExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mngExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngExam.Location = new System.Drawing.Point(13, 311);
             this.btn_mngExam.Name = "btn_mngExam";
             this.btn_mngExam.Size = new System.Drawing.Size(171, 43);
@@ -90,11 +91,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngAppo
             // 
-            this.btn_mngAppo.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngAppo.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngAppo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngAppo.FlatAppearance.BorderSize = 0;
             this.btn_mngAppo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngAppo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mngAppo.ForeColor = System.Drawing.Color.Black;
+            this.btn_mngAppo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngAppo.Location = new System.Drawing.Point(13, 262);
             this.btn_mngAppo.Name = "btn_mngAppo";
             this.btn_mngAppo.Size = new System.Drawing.Size(171, 43);
@@ -105,10 +106,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngUsers
             // 
-            this.btn_mngUsers.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngUsers.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngUsers.FlatAppearance.BorderSize = 0;
             this.btn_mngUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mngUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngUsers.Location = new System.Drawing.Point(13, 217);
             this.btn_mngUsers.Name = "btn_mngUsers";
             this.btn_mngUsers.Size = new System.Drawing.Size(171, 37);
@@ -119,11 +121,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngManufacturers
             // 
-            this.btn_mngManufacturers.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngManufacturers.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngManufacturers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngManufacturers.FlatAppearance.BorderSize = 0;
             this.btn_mngManufacturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngManufacturers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mngManufacturers.ForeColor = System.Drawing.Color.Black;
+            this.btn_mngManufacturers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngManufacturers.Location = new System.Drawing.Point(13, 458);
             this.btn_mngManufacturers.Name = "btn_mngManufacturers";
             this.btn_mngManufacturers.Size = new System.Drawing.Size(171, 43);
@@ -134,10 +136,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngCountries
             // 
-            this.btn_mngCountries.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngCountries.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngCountries.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngCountries.FlatAppearance.BorderSize = 0;
             this.btn_mngCountries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngCountries.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mngCountries.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngCountries.Location = new System.Drawing.Point(13, 507);
             this.btn_mngCountries.Name = "btn_mngCountries";
             this.btn_mngCountries.Size = new System.Drawing.Size(171, 43);
@@ -148,11 +151,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngMaterials
             // 
-            this.btn_mngMaterials.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngMaterials.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngMaterials.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngMaterials.FlatAppearance.BorderSize = 0;
             this.btn_mngMaterials.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mngMaterials.ForeColor = System.Drawing.Color.Black;
+            this.btn_mngMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngMaterials.Location = new System.Drawing.Point(13, 409);
             this.btn_mngMaterials.Name = "btn_mngMaterials";
             this.btn_mngMaterials.Size = new System.Drawing.Size(171, 43);
@@ -163,11 +166,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_mngTreatments
             // 
-            this.btn_mngTreatments.BackColor = System.Drawing.Color.Snow;
+            this.btn_mngTreatments.BackColor = System.Drawing.Color.Coral;
+            this.btn_mngTreatments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mngTreatments.FlatAppearance.BorderSize = 0;
             this.btn_mngTreatments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mngTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mngTreatments.ForeColor = System.Drawing.Color.Black;
+            this.btn_mngTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mngTreatments.Location = new System.Drawing.Point(13, 360);
             this.btn_mngTreatments.Name = "btn_mngTreatments";
             this.btn_mngTreatments.Size = new System.Drawing.Size(171, 43);
@@ -178,11 +181,11 @@ namespace eDentist.WinUI.Main
             // 
             // btn_editProfile
             // 
-            this.btn_editProfile.BackColor = System.Drawing.Color.Snow;
+            this.btn_editProfile.BackColor = System.Drawing.Color.Coral;
+            this.btn_editProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_editProfile.FlatAppearance.BorderSize = 0;
             this.btn_editProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editProfile.ForeColor = System.Drawing.Color.Black;
+            this.btn_editProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editProfile.Location = new System.Drawing.Point(13, 605);
             this.btn_editProfile.Name = "btn_editProfile";
             this.btn_editProfile.Size = new System.Drawing.Size(171, 43);
@@ -193,7 +196,7 @@ namespace eDentist.WinUI.Main
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel2.Controls.Add(this.btn_mngExam);
             this.panel2.Controls.Add(this.btn_mngAppo);
             this.panel2.Controls.Add(this.btn_mngUsers);

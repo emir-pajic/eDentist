@@ -36,41 +36,48 @@
             // 
             // btnRemoveTreatment
             // 
-            this.btnRemoveTreatment.Location = new System.Drawing.Point(96, 143);
+            this.btnRemoveTreatment.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveTreatment.Location = new System.Drawing.Point(99, 190);
             this.btnRemoveTreatment.Name = "btnRemoveTreatment";
-            this.btnRemoveTreatment.Size = new System.Drawing.Size(130, 23);
+            this.btnRemoveTreatment.Size = new System.Drawing.Size(139, 31);
             this.btnRemoveTreatment.TabIndex = 25;
             this.btnRemoveTreatment.Text = "Save";
-            this.btnRemoveTreatment.UseVisualStyleBackColor = true;
+            this.btnRemoveTreatment.UseVisualStyleBackColor = false;
             this.btnRemoveTreatment.Click += new System.EventHandler(this.btnRemoveTreatment_Click);
             // 
             // menuTreatments
             // 
             this.menuTreatments.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuTreatments.FormattingEnabled = true;
-            this.menuTreatments.Location = new System.Drawing.Point(137, 80);
+            this.menuTreatments.Location = new System.Drawing.Point(153, 117);
             this.menuTreatments.Name = "menuTreatments";
-            this.menuTreatments.Size = new System.Drawing.Size(158, 21);
+            this.menuTreatments.Size = new System.Drawing.Size(195, 32);
             this.menuTreatments.TabIndex = 24;
             this.menuTreatments.SelectedIndexChanged += new System.EventHandler(this.menuTreatments_SelectedIndexChanged);
             // 
             // lblTreatment
             // 
             this.lblTreatment.AutoSize = true;
-            this.lblTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTreatment.Location = new System.Drawing.Point(27, 78);
+            this.lblTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTreatment.ForeColor = System.Drawing.Color.Coral;
+            this.lblTreatment.Location = new System.Drawing.Point(30, 125);
             this.lblTreatment.Name = "lblTreatment";
-            this.lblTreatment.Size = new System.Drawing.Size(65, 20);
+            this.lblTreatment.Size = new System.Drawing.Size(104, 24);
             this.lblTreatment.TabIndex = 23;
-            this.lblTreatment.Text = "Material";
+            this.lblTreatment.Text = "Treatment";
             // 
             // lblRemoveTreatment
             // 
             this.lblRemoveTreatment.AutoSize = true;
-            this.lblRemoveTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveTreatment.ForeColor = System.Drawing.Color.Coral;
             this.lblRemoveTreatment.Location = new System.Drawing.Point(27, 24);
             this.lblRemoveTreatment.Name = "lblRemoveTreatment";
-            this.lblRemoveTreatment.Size = new System.Drawing.Size(178, 24);
+            this.lblRemoveTreatment.Size = new System.Drawing.Size(246, 29);
             this.lblRemoveTreatment.TabIndex = 22;
             this.lblRemoveTreatment.Text = "Remove a treatment";
             // 
@@ -78,6 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnRemoveTreatment);
             this.Controls.Add(this.menuTreatments);
             this.Controls.Add(this.lblTreatment);

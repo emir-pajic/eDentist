@@ -114,11 +114,11 @@ namespace eDentist.WinUI.Main
             // 
             this.txtPass.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(335, 379);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(240, 21);
+            this.txtPass.Size = new System.Drawing.Size(240, 22);
             this.txtPass.TabIndex = 41;
             // 
             // label3
@@ -137,12 +137,12 @@ namespace eDentist.WinUI.Main
             // 
             this.txtUsrName.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtUsrName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.txtUsrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsrName.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtUsrName.Location = new System.Drawing.Point(334, 299);
             this.txtUsrName.Margin = new System.Windows.Forms.Padding(10, 100, 30, 30);
             this.txtUsrName.Name = "txtUsrName";
-            this.txtUsrName.Size = new System.Drawing.Size(240, 28);
+            this.txtUsrName.Size = new System.Drawing.Size(240, 29);
             this.txtUsrName.TabIndex = 39;
             // 
             // label4

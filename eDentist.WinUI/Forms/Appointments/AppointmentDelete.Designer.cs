@@ -36,41 +36,48 @@
             // 
             // btnRemoveAppointment
             // 
-            this.btnRemoveAppointment.Location = new System.Drawing.Point(133, 156);
+            this.btnRemoveAppointment.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveAppointment.Location = new System.Drawing.Point(250, 150);
             this.btnRemoveAppointment.Name = "btnRemoveAppointment";
-            this.btnRemoveAppointment.Size = new System.Drawing.Size(130, 23);
+            this.btnRemoveAppointment.Size = new System.Drawing.Size(216, 31);
             this.btnRemoveAppointment.TabIndex = 33;
             this.btnRemoveAppointment.Text = "Save";
-            this.btnRemoveAppointment.UseVisualStyleBackColor = true;
+            this.btnRemoveAppointment.UseVisualStyleBackColor = false;
             this.btnRemoveAppointment.Click += new System.EventHandler(this.btnRemoveAppointment_Click);
             // 
             // menuAppointments
             // 
             this.menuAppointments.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuAppointments.FormattingEnabled = true;
-            this.menuAppointments.Location = new System.Drawing.Point(133, 81);
+            this.menuAppointments.Location = new System.Drawing.Point(167, 97);
             this.menuAppointments.Name = "menuAppointments";
-            this.menuAppointments.Size = new System.Drawing.Size(293, 21);
+            this.menuAppointments.Size = new System.Drawing.Size(385, 32);
             this.menuAppointments.TabIndex = 32;
             this.menuAppointments.SelectedIndexChanged += new System.EventHandler(this.menuAppointments_SelectedIndexChanged);
             // 
             // lblAppointment
             // 
             this.lblAppointment.AutoSize = true;
-            this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointment.Location = new System.Drawing.Point(23, 79);
+            this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointment.ForeColor = System.Drawing.Color.Coral;
+            this.lblAppointment.Location = new System.Drawing.Point(21, 100);
             this.lblAppointment.Name = "lblAppointment";
-            this.lblAppointment.Size = new System.Drawing.Size(100, 20);
+            this.lblAppointment.Size = new System.Drawing.Size(128, 24);
             this.lblAppointment.TabIndex = 31;
             this.lblAppointment.Text = "Appointment";
             // 
             // lblRemoveAppointment
             // 
             this.lblRemoveAppointment.AutoSize = true;
-            this.lblRemoveAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveAppointment.ForeColor = System.Drawing.Color.Coral;
             this.lblRemoveAppointment.Location = new System.Drawing.Point(23, 25);
             this.lblRemoveAppointment.Name = "lblRemoveAppointment";
-            this.lblRemoveAppointment.Size = new System.Drawing.Size(219, 24);
+            this.lblRemoveAppointment.Size = new System.Drawing.Size(297, 29);
             this.lblRemoveAppointment.TabIndex = 30;
             this.lblRemoveAppointment.Text = "Remove an Appointment";
             // 
@@ -78,12 +85,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnRemoveAppointment);
             this.Controls.Add(this.menuAppointments);
             this.Controls.Add(this.lblAppointment);
             this.Controls.Add(this.lblRemoveAppointment);
             this.Name = "AppointmentDelete";
-            this.Size = new System.Drawing.Size(499, 282);
+            this.Size = new System.Drawing.Size(674, 282);
             this.Load += new System.EventHandler(this.AppointmentsDelete_LoadData);
             this.ResumeLayout(false);
             this.PerformLayout();

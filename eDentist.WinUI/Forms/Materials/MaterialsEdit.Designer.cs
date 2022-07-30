@@ -35,79 +35,101 @@
             this.menuManufacturers = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaterial = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // menuMaterials
             // 
             this.menuMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMaterials.FormattingEnabled = true;
-            this.menuMaterials.Location = new System.Drawing.Point(99, 81);
+            this.menuMaterials.Location = new System.Drawing.Point(118, 73);
             this.menuMaterials.Name = "menuMaterials";
-            this.menuMaterials.Size = new System.Drawing.Size(158, 21);
+            this.menuMaterials.Size = new System.Drawing.Size(203, 32);
             this.menuMaterials.TabIndex = 21;
             this.menuMaterials.SelectedIndexChanged += new System.EventHandler(this.menuMaterials_SelectedIndexChanged);
             // 
             // lblMaterial
             // 
             this.lblMaterial.AutoSize = true;
-            this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaterial.ForeColor = System.Drawing.Color.Coral;
             this.lblMaterial.Location = new System.Drawing.Point(28, 81);
             this.lblMaterial.Name = "lblMaterial";
-            this.lblMaterial.Size = new System.Drawing.Size(65, 20);
+            this.lblMaterial.Size = new System.Drawing.Size(83, 24);
             this.lblMaterial.TabIndex = 20;
             this.lblMaterial.Text = "Material";
             // 
             // btnUpdateMaterial
             // 
-            this.btnUpdateMaterial.Location = new System.Drawing.Point(191, 226);
+            this.btnUpdateMaterial.BackColor = System.Drawing.Color.Coral;
+            this.btnUpdateMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateMaterial.Location = new System.Drawing.Point(118, 269);
             this.btnUpdateMaterial.Name = "btnUpdateMaterial";
-            this.btnUpdateMaterial.Size = new System.Drawing.Size(130, 23);
+            this.btnUpdateMaterial.Size = new System.Drawing.Size(203, 30);
             this.btnUpdateMaterial.TabIndex = 19;
             this.btnUpdateMaterial.Text = "Save";
-            this.btnUpdateMaterial.UseVisualStyleBackColor = true;
+            this.btnUpdateMaterial.UseVisualStyleBackColor = false;
             this.btnUpdateMaterial.Click += new System.EventHandler(this.btnUpdateMaterial_Click);
             // 
             // lblEditMaterial
             // 
             this.lblEditMaterial.AutoSize = true;
-            this.lblEditMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditMaterial.ForeColor = System.Drawing.Color.Coral;
             this.lblEditMaterial.Location = new System.Drawing.Point(28, 27);
             this.lblEditMaterial.Name = "lblEditMaterial";
-            this.lblEditMaterial.Size = new System.Drawing.Size(127, 24);
+            this.lblEditMaterial.Size = new System.Drawing.Size(181, 29);
             this.lblEditMaterial.TabIndex = 17;
             this.lblEditMaterial.Text = "Edit a material";
             // 
             // menuManufacturers
             // 
             this.menuManufacturers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuManufacturers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuManufacturers.FormattingEnabled = true;
-            this.menuManufacturers.Location = new System.Drawing.Point(286, 167);
+            this.menuManufacturers.Location = new System.Drawing.Point(348, 210);
             this.menuManufacturers.Name = "menuManufacturers";
-            this.menuManufacturers.Size = new System.Drawing.Size(158, 21);
+            this.menuManufacturers.Size = new System.Drawing.Size(216, 32);
             this.menuManufacturers.TabIndex = 24;
             this.menuManufacturers.SelectedIndexChanged += new System.EventHandler(this.menuManufacturers_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 165);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(28, 208);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(83, 24);
             this.label1.TabIndex = 23;
             this.label1.Text = "Material";
             // 
             // txtMaterial
             // 
-            this.txtMaterial.Location = new System.Drawing.Point(118, 167);
+            this.txtMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaterial.Location = new System.Drawing.Point(118, 210);
             this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(143, 20);
+            this.txtMaterial.Size = new System.Drawing.Size(201, 29);
             this.txtMaterial.TabIndex = 22;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(-141, 146);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(809, 10);
+            this.panel3.TabIndex = 58;
             // 
             // MaterialsEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuManufacturers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMaterial);
@@ -116,7 +138,7 @@
             this.Controls.Add(this.btnUpdateMaterial);
             this.Controls.Add(this.lblEditMaterial);
             this.Name = "MaterialsEdit";
-            this.Size = new System.Drawing.Size(526, 442);
+            this.Size = new System.Drawing.Size(773, 442);
             this.Load += new System.EventHandler(this.MaterialsEdit_LoadData);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,5 +154,6 @@
         private System.Windows.Forms.ComboBox menuManufacturers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaterial;
+        private System.Windows.Forms.Panel panel3;
     }
 }

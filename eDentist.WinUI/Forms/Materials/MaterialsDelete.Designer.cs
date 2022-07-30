@@ -36,41 +36,48 @@
             // 
             // btnRemoveMaterial
             // 
-            this.btnRemoveMaterial.Location = new System.Drawing.Point(98, 143);
+            this.btnRemoveMaterial.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveMaterial.Location = new System.Drawing.Point(139, 183);
             this.btnRemoveMaterial.Name = "btnRemoveMaterial";
-            this.btnRemoveMaterial.Size = new System.Drawing.Size(130, 23);
+            this.btnRemoveMaterial.Size = new System.Drawing.Size(258, 29);
             this.btnRemoveMaterial.TabIndex = 21;
             this.btnRemoveMaterial.Text = "Save";
-            this.btnRemoveMaterial.UseVisualStyleBackColor = true;
+            this.btnRemoveMaterial.UseVisualStyleBackColor = false;
             this.btnRemoveMaterial.Click += new System.EventHandler(this.btnRemoveMaterial_Click);
             // 
             // menuMaterials
             // 
             this.menuMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMaterials.FormattingEnabled = true;
-            this.menuMaterials.Location = new System.Drawing.Point(139, 80);
+            this.menuMaterials.Location = new System.Drawing.Point(139, 132);
             this.menuMaterials.Name = "menuMaterials";
-            this.menuMaterials.Size = new System.Drawing.Size(158, 21);
+            this.menuMaterials.Size = new System.Drawing.Size(258, 32);
             this.menuMaterials.TabIndex = 20;
             this.menuMaterials.SelectedIndexChanged += new System.EventHandler(this.menuMaterials_SelectedIndexChanged);
             // 
             // lblMaterial
             // 
             this.lblMaterial.AutoSize = true;
-            this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterial.Location = new System.Drawing.Point(29, 78);
+            this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblMaterial.Location = new System.Drawing.Point(29, 130);
             this.lblMaterial.Name = "lblMaterial";
-            this.lblMaterial.Size = new System.Drawing.Size(65, 20);
+            this.lblMaterial.Size = new System.Drawing.Size(83, 24);
             this.lblMaterial.TabIndex = 19;
             this.lblMaterial.Text = "Material";
             // 
             // lblRemoveMaterial
             // 
             this.lblRemoveMaterial.AutoSize = true;
-            this.lblRemoveMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveMaterial.ForeColor = System.Drawing.Color.Coral;
             this.lblRemoveMaterial.Location = new System.Drawing.Point(29, 24);
             this.lblRemoveMaterial.Name = "lblRemoveMaterial";
-            this.lblRemoveMaterial.Size = new System.Drawing.Size(166, 24);
+            this.lblRemoveMaterial.Size = new System.Drawing.Size(231, 29);
             this.lblRemoveMaterial.TabIndex = 18;
             this.lblRemoveMaterial.Text = "Remove a material";
             // 
@@ -78,6 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnRemoveMaterial);
             this.Controls.Add(this.menuMaterials);
             this.Controls.Add(this.lblMaterial);

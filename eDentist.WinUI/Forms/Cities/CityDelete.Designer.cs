@@ -37,47 +37,55 @@
             // menuCities
             // 
             this.menuCities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuCities.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuCities.FormattingEnabled = true;
-            this.menuCities.Location = new System.Drawing.Point(68, 85);
+            this.menuCities.Location = new System.Drawing.Point(109, 125);
             this.menuCities.Name = "menuCities";
-            this.menuCities.Size = new System.Drawing.Size(158, 21);
+            this.menuCities.Size = new System.Drawing.Size(211, 32);
             this.menuCities.TabIndex = 12;
             this.menuCities.SelectedIndexChanged += new System.EventHandler(this.menuCities_SelectedIndexChanged);
             // 
             // lblCityName
             // 
             this.lblCityName.AutoSize = true;
-            this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCityName.Location = new System.Drawing.Point(27, 86);
+            this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCityName.ForeColor = System.Drawing.Color.Coral;
+            this.lblCityName.Location = new System.Drawing.Point(27, 125);
             this.lblCityName.Name = "lblCityName";
-            this.lblCityName.Size = new System.Drawing.Size(35, 20);
+            this.lblCityName.Size = new System.Drawing.Size(44, 24);
             this.lblCityName.TabIndex = 11;
             this.lblCityName.Text = "City";
             // 
             // lblRemoveCity
             // 
             this.lblRemoveCity.AutoSize = true;
-            this.lblRemoveCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoveCity.ForeColor = System.Drawing.Color.Coral;
             this.lblRemoveCity.Location = new System.Drawing.Point(27, 32);
             this.lblRemoveCity.Name = "lblRemoveCity";
-            this.lblRemoveCity.Size = new System.Drawing.Size(128, 24);
+            this.lblRemoveCity.Size = new System.Drawing.Size(176, 29);
             this.lblRemoveCity.TabIndex = 10;
             this.lblRemoveCity.Text = "Remove a city";
             // 
             // btnRemoveCity
             // 
-            this.btnRemoveCity.Location = new System.Drawing.Point(96, 151);
+            this.btnRemoveCity.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveCity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveCity.Location = new System.Drawing.Point(109, 178);
             this.btnRemoveCity.Name = "btnRemoveCity";
-            this.btnRemoveCity.Size = new System.Drawing.Size(130, 23);
+            this.btnRemoveCity.Size = new System.Drawing.Size(211, 29);
             this.btnRemoveCity.TabIndex = 13;
             this.btnRemoveCity.Text = "Save";
-            this.btnRemoveCity.UseVisualStyleBackColor = true;
+            this.btnRemoveCity.UseVisualStyleBackColor = false;
             this.btnRemoveCity.Click += new System.EventHandler(this.btnRemoveCity_Click);
             // 
             // CityDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnRemoveCity);
             this.Controls.Add(this.menuCities);
             this.Controls.Add(this.lblCityName);
