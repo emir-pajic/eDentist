@@ -39,47 +39,57 @@ namespace eDentist.WinUI.Forms.Cities
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(23, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 24);
+            this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add a city";
             // 
             // txtCityName
             // 
-            this.txtCityName.Location = new System.Drawing.Point(64, 76);
+            this.txtCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCityName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCityName.Location = new System.Drawing.Point(83, 67);
             this.txtCityName.Name = "txtCityName";
-            this.txtCityName.Size = new System.Drawing.Size(100, 20);
+            this.txtCityName.Size = new System.Drawing.Size(262, 29);
             this.txtCityName.TabIndex = 1;
             // 
             // btnaddCity
             // 
-            this.btnaddCity.Location = new System.Drawing.Point(119, 120);
+            this.btnaddCity.BackColor = System.Drawing.Color.Coral;
+            this.btnaddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddCity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnaddCity.Location = new System.Drawing.Point(153, 166);
             this.btnaddCity.Name = "btnaddCity";
-            this.btnaddCity.Size = new System.Drawing.Size(130, 23);
+            this.btnaddCity.Size = new System.Drawing.Size(140, 36);
             this.btnaddCity.TabIndex = 2;
             this.btnaddCity.Text = "Save";
-            this.btnaddCity.UseVisualStyleBackColor = true;
+            this.btnaddCity.UseVisualStyleBackColor = false;
             this.btnaddCity.Click += new System.EventHandler(this.btnaddCity_Click);
             // 
             // lblCityName
             // 
             this.lblCityName.AutoSize = true;
-            this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCityName.ForeColor = System.Drawing.Color.Coral;
             this.lblCityName.Location = new System.Drawing.Point(23, 74);
             this.lblCityName.Name = "lblCityName";
-            this.lblCityName.Size = new System.Drawing.Size(35, 20);
+            this.lblCityName.Size = new System.Drawing.Size(44, 24);
             this.lblCityName.TabIndex = 3;
             this.lblCityName.Text = "City";
             // 
             // menuCountries
             // 
             this.menuCountries.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuCountries.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuCountries.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menuCountries.FormattingEnabled = true;
-            this.menuCountries.Location = new System.Drawing.Point(189, 75);
+            this.menuCountries.Location = new System.Drawing.Point(83, 119);
             this.menuCountries.Name = "menuCountries";
-            this.menuCountries.Size = new System.Drawing.Size(158, 21);
+            this.menuCountries.Size = new System.Drawing.Size(262, 32);
             this.menuCountries.TabIndex = 4;
             this.menuCountries.SelectedIndexChanged += new System.EventHandler(this.menuCountries_SelectedIndexChanged);
             // 
@@ -87,6 +97,7 @@ namespace eDentist.WinUI.Forms.Cities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.menuCountries);
             this.Controls.Add(this.lblCityName);
             this.Controls.Add(this.btnaddCity);
