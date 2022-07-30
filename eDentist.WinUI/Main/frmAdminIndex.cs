@@ -93,5 +93,13 @@ namespace eDentist.WinUI.Main
             PanelHelper.RemovePanels(ContentPanel);
             PanelHelper.AddPanel(ContentPanel, new EditProfile());
         }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin frm = new frmLogin();
+            SignedInUser.User = null;
+            frm.Show();
+        }
     }
 }
