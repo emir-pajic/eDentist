@@ -2,6 +2,8 @@
 using eDentist.Model;
 using eDentist.Model.Request;
 using eDentist.WebAPI.Database;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace eDentist.WebAPI.Service
 {
@@ -15,6 +17,21 @@ namespace eDentist.WebAPI.Service
             _mapper = mapper;
         }
 
+        public override async Task<bool> Delete(int ID)
+        {
+            var entity = await _context.Treatments.
+                Include(i => i.TreatmentsMaterials).
+                FirstOrDefaultAsync(i => i.TreatmentId == ID);
 
+            //if (entity.Users.Count != 0)
+            //{
+
+            //}
+
+            _context.Treatments.Remove(entity);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
     }
 }
