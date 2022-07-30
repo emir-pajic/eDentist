@@ -30,6 +30,10 @@ namespace eDentist.WinUI.Forms.Manufacturers
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManufacturerList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.App = new System.Windows.Forms.Label();
             this.btnAddManufacturer = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -46,57 +50,61 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // App
             // 
             this.App.AutoSize = true;
-            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.App.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.App.Location = new System.Drawing.Point(25, 45);
             this.App.Name = "App";
-            this.App.Size = new System.Drawing.Size(125, 20);
+            this.App.Size = new System.Drawing.Size(277, 29);
             this.App.TabIndex = 84;
-            this.App.Text = "Manufacturers";
+            this.App.Text = "Manage manufacturers";
             // 
             // btnAddManufacturer
             // 
+            this.btnAddManufacturer.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnAddManufacturer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddManufacturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddManufacturer.Image = ((System.Drawing.Image)(resources.GetObject("btnAddManufacturer.Image")));
-            this.btnAddManufacturer.Location = new System.Drawing.Point(455, 68);
+            this.btnAddManufacturer.Location = new System.Drawing.Point(487, 37);
             this.btnAddManufacturer.Name = "btnAddManufacturer";
-            this.btnAddManufacturer.Size = new System.Drawing.Size(41, 37);
+            this.btnAddManufacturer.Size = new System.Drawing.Size(54, 47);
             this.btnAddManufacturer.TabIndex = 83;
-            this.btnAddManufacturer.UseVisualStyleBackColor = true;
+            this.btnAddManufacturer.UseVisualStyleBackColor = false;
             this.btnAddManufacturer.Click += new System.EventHandler(this.btnAddManufacturer_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(574, 68);
+            this.btnDelete.Location = new System.Drawing.Point(627, 37);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(41, 37);
+            this.btnDelete.Size = new System.Drawing.Size(54, 47);
             this.btnDelete.TabIndex = 81;
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnDetails
             // 
+            this.btnDetails.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(515, 68);
+            this.btnDetails.Location = new System.Drawing.Point(558, 37);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(41, 37);
+            this.btnDetails.Size = new System.Drawing.Size(54, 47);
             this.btnDetails.TabIndex = 80;
-            this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSearch.Location = new System.Drawing.Point(29, 81);
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSearch.Location = new System.Drawing.Point(48, 147);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(275, 24);
+            this.txtSearch.Size = new System.Drawing.Size(275, 28);
             this.txtSearch.TabIndex = 79;
             this.txtSearch.Text = "Enter Name";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -105,17 +113,52 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             this.dvgManufacturers.AllowUserToAddRows = false;
             this.dvgManufacturers.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dvgManufacturers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dvgManufacturers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dvgManufacturers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dvgManufacturers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dvgManufacturers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgManufacturers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgManufacturers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgManufacturers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ManufacturerID,
             this.ManufacturerName,
             this.FoundationYear,
             this.Country});
-            this.dvgManufacturers.Location = new System.Drawing.Point(29, 141);
+            this.dvgManufacturers.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgManufacturers.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dvgManufacturers.Location = new System.Drawing.Point(48, 207);
             this.dvgManufacturers.Name = "dvgManufacturers";
             this.dvgManufacturers.ReadOnly = true;
+            this.dvgManufacturers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgManufacturers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dvgManufacturers.RowHeadersVisible = false;
-            this.dvgManufacturers.Size = new System.Drawing.Size(448, 150);
+            this.dvgManufacturers.RowTemplate.Height = 30;
+            this.dvgManufacturers.Size = new System.Drawing.Size(644, 243);
             this.dvgManufacturers.TabIndex = 85;
             // 
             // ManufacturerID
@@ -154,6 +197,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.dvgManufacturers);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddManufacturer);
@@ -161,7 +205,7 @@ namespace eDentist.WinUI.Forms.Manufacturers
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.txtSearch);
             this.Name = "ManufacturerList";
-            this.Size = new System.Drawing.Size(653, 419);
+            this.Size = new System.Drawing.Size(903, 681);
             this.Load += new System.EventHandler(this.ManufacturersList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgManufacturers)).EndInit();
             this.ResumeLayout(false);
