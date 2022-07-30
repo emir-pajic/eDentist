@@ -48,15 +48,17 @@ namespace eDentist.WinUI.Forms.Examinations
             // App
             // 
             this.App.AutoSize = true;
-            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.App.ForeColor = System.Drawing.Color.Coral;
             this.App.Location = new System.Drawing.Point(33, 119);
             this.App.Name = "App";
-            this.App.Size = new System.Drawing.Size(116, 20);
+            this.App.Size = new System.Drawing.Size(266, 29);
             this.App.TabIndex = 63;
-            this.App.Text = "Examinations";
+            this.App.Text = "Manage examinations";
             // 
             // btnAddExamination
             // 
+            this.btnAddExamination.BackColor = System.Drawing.Color.Coral;
             this.btnAddExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddExamination.Image = ((System.Drawing.Image)(resources.GetObject("btnAddExamination.Image")));
@@ -64,11 +66,12 @@ namespace eDentist.WinUI.Forms.Examinations
             this.btnAddExamination.Name = "btnAddExamination";
             this.btnAddExamination.Size = new System.Drawing.Size(41, 37);
             this.btnAddExamination.TabIndex = 62;
-            this.btnAddExamination.UseVisualStyleBackColor = true;
+            this.btnAddExamination.UseVisualStyleBackColor = false;
             this.btnAddExamination.Click += new System.EventHandler(this.btnAddExamination_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.Coral;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
@@ -76,11 +79,12 @@ namespace eDentist.WinUI.Forms.Examinations
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(41, 37);
             this.btnDelete.TabIndex = 60;
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnDetails
             // 
+            this.btnDetails.BackColor = System.Drawing.Color.Coral;
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
@@ -88,7 +92,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(41, 37);
             this.btnDetails.TabIndex = 59;
-            this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // txtSearch

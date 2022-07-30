@@ -48,7 +48,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             this.App.AutoSize = true;
             this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.App.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.App.ForeColor = System.Drawing.Color.Coral;
             this.App.Location = new System.Drawing.Point(91, 78);
             this.App.Name = "App";
             this.App.Size = new System.Drawing.Size(220, 29);
@@ -57,7 +57,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             // btnAddCountry
             // 
-            this.btnAddCountry.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAddCountry.BackColor = System.Drawing.Color.Coral;
             this.btnAddCountry.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCountry.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCountry.Image")));
@@ -70,7 +70,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnDelete.BackColor = System.Drawing.Color.Coral;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
@@ -83,7 +83,7 @@ namespace eDentist.WinUI.Forms.Countries
             // 
             // btnCountryDetails
             // 
-            this.btnCountryDetails.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCountryDetails.BackColor = System.Drawing.Color.Coral;
             this.btnCountryDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCountryDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCountryDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnCountryDetails.Image")));
