@@ -57,11 +57,11 @@
             // lblAddNewUser
             // 
             this.lblAddNewUser.AutoSize = true;
-            this.lblAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddNewUser.ForeColor = System.Drawing.Color.Coral;
             this.lblAddNewUser.Location = new System.Drawing.Point(28, -4);
             this.lblAddNewUser.Name = "lblAddNewUser";
-            this.lblAddNewUser.Size = new System.Drawing.Size(160, 29);
+            this.lblAddNewUser.Size = new System.Drawing.Size(172, 29);
             this.lblAddNewUser.TabIndex = 24;
             this.lblAddNewUser.Text = "Add new user";
             // 
