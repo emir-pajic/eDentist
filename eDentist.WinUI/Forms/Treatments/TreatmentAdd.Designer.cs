@@ -40,61 +40,70 @@ namespace eDentist.WinUI.Forms.Treatments
             // lblCityName
             // 
             this.lblCityName.AutoSize = true;
-            this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCityName.ForeColor = System.Drawing.Color.Coral;
             this.lblCityName.Location = new System.Drawing.Point(21, 78);
             this.lblCityName.Name = "lblCityName";
-            this.lblCityName.Size = new System.Drawing.Size(82, 20);
+            this.lblCityName.Size = new System.Drawing.Size(104, 24);
             this.lblCityName.TabIndex = 8;
             this.lblCityName.Text = "Treatment";
             // 
             // btnAddTreatment
             // 
-            this.btnAddTreatment.Location = new System.Drawing.Point(171, 215);
+            this.btnAddTreatment.BackColor = System.Drawing.Color.Coral;
+            this.btnAddTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTreatment.Location = new System.Drawing.Point(145, 160);
             this.btnAddTreatment.Name = "btnAddTreatment";
-            this.btnAddTreatment.Size = new System.Drawing.Size(130, 23);
+            this.btnAddTreatment.Size = new System.Drawing.Size(316, 34);
             this.btnAddTreatment.TabIndex = 7;
             this.btnAddTreatment.Text = "Save";
-            this.btnAddTreatment.UseVisualStyleBackColor = true;
+            this.btnAddTreatment.UseVisualStyleBackColor = false;
             this.btnAddTreatment.Click += new System.EventHandler(this.btnAddTreatment_Click);
             // 
             // txtTreatment
             // 
-            this.txtTreatment.Location = new System.Drawing.Point(109, 78);
+            this.txtTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTreatment.Location = new System.Drawing.Point(145, 78);
             this.txtTreatment.Name = "txtTreatment";
-            this.txtTreatment.Size = new System.Drawing.Size(316, 20);
+            this.txtTreatment.Size = new System.Drawing.Size(316, 29);
             this.txtTreatment.TabIndex = 6;
             // 
             // lblAddTreatment
             // 
             this.lblAddTreatment.AutoSize = true;
-            this.lblAddTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddTreatment.ForeColor = System.Drawing.Color.Coral;
             this.lblAddTreatment.Location = new System.Drawing.Point(21, 27);
             this.lblAddTreatment.Name = "lblAddTreatment";
-            this.lblAddTreatment.Size = new System.Drawing.Size(142, 24);
+            this.lblAddTreatment.Size = new System.Drawing.Size(157, 24);
             this.lblAddTreatment.TabIndex = 5;
             this.lblAddTreatment.Text = "Add a treatment";
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.Coral;
             this.lblPrice.Location = new System.Drawing.Point(21, 114);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(44, 20);
+            this.lblPrice.Size = new System.Drawing.Size(58, 24);
             this.lblPrice.TabIndex = 10;
             this.lblPrice.Text = "Price";
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(109, 114);
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(145, 114);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(316, 20);
+            this.txtPrice.Size = new System.Drawing.Size(316, 29);
             this.txtPrice.TabIndex = 9;
             // 
             // TreatmentAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblCityName);

@@ -44,101 +44,114 @@ namespace eDentist.WinUI.Forms.Examinations
             // Doctor
             // 
             this.Doctor.AutoSize = true;
-            this.Doctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Doctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Doctor.ForeColor = System.Drawing.Color.Coral;
             this.Doctor.Location = new System.Drawing.Point(32, 128);
             this.Doctor.Name = "Doctor";
-            this.Doctor.Size = new System.Drawing.Size(57, 20);
+            this.Doctor.Size = new System.Drawing.Size(71, 24);
             this.Doctor.TabIndex = 18;
             this.Doctor.Text = "Doctor";
             // 
             // menuAppointments
             // 
             this.menuAppointments.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuAppointments.FormattingEnabled = true;
-            this.menuAppointments.Location = new System.Drawing.Point(162, 86);
+            this.menuAppointments.Location = new System.Drawing.Point(182, 87);
             this.menuAppointments.Name = "menuAppointments";
-            this.menuAppointments.Size = new System.Drawing.Size(158, 21);
+            this.menuAppointments.Size = new System.Drawing.Size(158, 32);
             this.menuAppointments.TabIndex = 16;
             this.menuAppointments.SelectedIndexChanged += new System.EventHandler(this.menuAppointments_SelectedIndexChanged);
             // 
             // lblAppointment
             // 
             this.lblAppointment.AutoSize = true;
-            this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointment.ForeColor = System.Drawing.Color.Coral;
             this.lblAppointment.Location = new System.Drawing.Point(32, 87);
             this.lblAppointment.Name = "lblAppointment";
-            this.lblAppointment.Size = new System.Drawing.Size(100, 20);
+            this.lblAppointment.Size = new System.Drawing.Size(128, 24);
             this.lblAppointment.TabIndex = 15;
             this.lblAppointment.Text = "Appointment";
             // 
             // btnaddCity
             // 
-            this.btnaddCity.Location = new System.Drawing.Point(172, 269);
+            this.btnaddCity.BackColor = System.Drawing.Color.Coral;
+            this.btnaddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddCity.Location = new System.Drawing.Point(192, 270);
             this.btnaddCity.Name = "btnaddCity";
-            this.btnaddCity.Size = new System.Drawing.Size(130, 23);
+            this.btnaddCity.Size = new System.Drawing.Size(130, 32);
             this.btnaddCity.TabIndex = 14;
             this.btnaddCity.Text = "Save";
-            this.btnaddCity.UseVisualStyleBackColor = true;
+            this.btnaddCity.UseVisualStyleBackColor = false;
             this.btnaddCity.Click += new System.EventHandler(this.btnaddCity_Click);
             // 
             // lvlAddExamination
             // 
             this.lvlAddExamination.AutoSize = true;
-            this.lvlAddExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlAddExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlAddExamination.ForeColor = System.Drawing.Color.Coral;
             this.lvlAddExamination.Location = new System.Drawing.Point(32, 33);
             this.lvlAddExamination.Name = "lvlAddExamination";
-            this.lvlAddExamination.Size = new System.Drawing.Size(178, 24);
+            this.lvlAddExamination.Size = new System.Drawing.Size(241, 29);
             this.lvlAddExamination.TabIndex = 12;
             this.lvlAddExamination.Text = "Add an examination";
             // 
             // menuDoctors
             // 
             this.menuDoctors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuDoctors.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuDoctors.FormattingEnabled = true;
-            this.menuDoctors.Location = new System.Drawing.Point(162, 130);
+            this.menuDoctors.Location = new System.Drawing.Point(182, 131);
             this.menuDoctors.Name = "menuDoctors";
-            this.menuDoctors.Size = new System.Drawing.Size(158, 21);
+            this.menuDoctors.Size = new System.Drawing.Size(158, 32);
             this.menuDoctors.TabIndex = 19;
             this.menuDoctors.SelectedIndexChanged += new System.EventHandler(this.menuDoctors_SelectedIndexChanged);
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.Coral;
             this.lblDescription.Location = new System.Drawing.Point(32, 172);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(89, 20);
+            this.lblDescription.Size = new System.Drawing.Size(115, 24);
             this.lblDescription.TabIndex = 21;
             this.lblDescription.Text = "Description";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(162, 175);
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(182, 176);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(158, 20);
+            this.txtDescription.Size = new System.Drawing.Size(158, 29);
             this.txtDescription.TabIndex = 20;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.Coral;
             this.lblStatus.Location = new System.Drawing.Point(32, 211);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(56, 20);
+            this.lblStatus.Size = new System.Drawing.Size(66, 24);
             this.lblStatus.TabIndex = 23;
             this.lblStatus.Text = "Status";
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(162, 214);
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Location = new System.Drawing.Point(182, 215);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(158, 20);
+            this.txtStatus.Size = new System.Drawing.Size(158, 29);
             this.txtStatus.TabIndex = 22;
             // 
             // ExaminationsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.lblDescription);

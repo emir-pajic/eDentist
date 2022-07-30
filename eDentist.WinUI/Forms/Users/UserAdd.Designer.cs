@@ -57,205 +57,229 @@
             // lblAddNewUser
             // 
             this.lblAddNewUser.AutoSize = true;
-            this.lblAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddNewUser.Location = new System.Drawing.Point(35, 36);
+            this.lblAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddNewUser.ForeColor = System.Drawing.Color.Coral;
+            this.lblAddNewUser.Location = new System.Drawing.Point(28, -4);
             this.lblAddNewUser.Name = "lblAddNewUser";
-            this.lblAddNewUser.Size = new System.Drawing.Size(128, 24);
+            this.lblAddNewUser.Size = new System.Drawing.Size(160, 29);
             this.lblAddNewUser.TabIndex = 24;
             this.lblAddNewUser.Text = "Add new user";
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(208, 88);
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(228, 67);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(131, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(295, 29);
             this.txtFirstName.TabIndex = 25;
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(35, 86);
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.ForeColor = System.Drawing.Color.Coral;
+            this.lblFirstName.Location = new System.Drawing.Point(30, 65);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(86, 20);
+            this.lblFirstName.Size = new System.Drawing.Size(111, 24);
             this.lblFirstName.TabIndex = 26;
             this.lblFirstName.Text = "First Name";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(208, 127);
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(228, 106);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(131, 20);
+            this.txtLastName.Size = new System.Drawing.Size(295, 29);
             this.txtLastName.TabIndex = 27;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(35, 127);
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.ForeColor = System.Drawing.Color.Coral;
+            this.lblLastName.Location = new System.Drawing.Point(30, 106);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(86, 20);
+            this.lblLastName.Size = new System.Drawing.Size(108, 24);
             this.lblLastName.TabIndex = 28;
             this.lblLastName.Text = "Last Name";
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(208, 165);
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(228, 144);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(131, 20);
+            this.txtUserName.Size = new System.Drawing.Size(295, 29);
             this.txtUserName.TabIndex = 29;
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(35, 165);
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.Coral;
+            this.lblUserName.Location = new System.Drawing.Point(30, 144);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(83, 20);
+            this.lblUserName.Size = new System.Drawing.Size(105, 24);
             this.lblUserName.TabIndex = 30;
             this.lblUserName.Text = "Username";
             // 
             // addUserCitiesMenu
             // 
             this.addUserCitiesMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.addUserCitiesMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUserCitiesMenu.FormattingEnabled = true;
-            this.addUserCitiesMenu.Location = new System.Drawing.Point(208, 204);
+            this.addUserCitiesMenu.Location = new System.Drawing.Point(228, 183);
             this.addUserCitiesMenu.Name = "addUserCitiesMenu";
-            this.addUserCitiesMenu.Size = new System.Drawing.Size(131, 21);
+            this.addUserCitiesMenu.Size = new System.Drawing.Size(295, 32);
             this.addUserCitiesMenu.TabIndex = 31;
             this.addUserCitiesMenu.SelectedIndexChanged += new System.EventHandler(this.addUserCitiesMenu_SelectedIndexChanged);
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(35, 205);
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.Color.Coral;
+            this.lblCity.Location = new System.Drawing.Point(30, 184);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(35, 20);
+            this.lblCity.Size = new System.Drawing.Size(44, 24);
             this.lblCity.TabIndex = 32;
             this.lblCity.Text = "City";
             // 
             // dtpDateOfBirth
             // 
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(208, 286);
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(228, 265);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(131, 20);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(295, 29);
             this.dtpDateOfBirth.TabIndex = 34;
             // 
             // lblDateOfBirth
             // 
             this.lblDateOfBirth.AutoSize = true;
-            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(35, 287);
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.Coral;
+            this.lblDateOfBirth.Location = new System.Drawing.Point(30, 266);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
-            this.lblDateOfBirth.Size = new System.Drawing.Size(99, 20);
+            this.lblDateOfBirth.Size = new System.Drawing.Size(123, 24);
             this.lblDateOfBirth.TabIndex = 35;
             this.lblDateOfBirth.Text = "Date of Birth";
             // 
             // txtTelephone
             // 
-            this.txtTelephone.Location = new System.Drawing.Point(208, 323);
+            this.txtTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelephone.Location = new System.Drawing.Point(228, 302);
             this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(131, 20);
+            this.txtTelephone.Size = new System.Drawing.Size(295, 29);
             this.txtTelephone.TabIndex = 36;
             // 
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelephone.Location = new System.Drawing.Point(35, 323);
+            this.lblTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelephone.ForeColor = System.Drawing.Color.Coral;
+            this.lblTelephone.Location = new System.Drawing.Point(30, 302);
             this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(113, 20);
+            this.lblTelephone.Size = new System.Drawing.Size(149, 24);
             this.lblTelephone.TabIndex = 37;
             this.lblTelephone.Text = "Phone number";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(208, 358);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(228, 337);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(131, 20);
+            this.txtPassword.Size = new System.Drawing.Size(295, 29);
             this.txtPassword.TabIndex = 38;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(35, 358);
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.Coral;
+            this.lblPassword.Location = new System.Drawing.Point(30, 337);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(78, 20);
+            this.lblPassword.Size = new System.Drawing.Size(100, 24);
             this.lblPassword.TabIndex = 39;
             this.lblPassword.Text = "Password";
             // 
             // txtPasswordConfirmation
             // 
-            this.txtPasswordConfirmation.Location = new System.Drawing.Point(208, 401);
+            this.txtPasswordConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordConfirmation.Location = new System.Drawing.Point(228, 380);
             this.txtPasswordConfirmation.Name = "txtPasswordConfirmation";
-            this.txtPasswordConfirmation.Size = new System.Drawing.Size(131, 20);
+            this.txtPasswordConfirmation.Size = new System.Drawing.Size(295, 29);
             this.txtPasswordConfirmation.TabIndex = 40;
             this.txtPasswordConfirmation.UseSystemPasswordChar = true;
             // 
             // lblPasswordConfirmation
             // 
             this.lblPasswordConfirmation.AutoSize = true;
-            this.lblPasswordConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordConfirmation.Location = new System.Drawing.Point(35, 399);
+            this.lblPasswordConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordConfirmation.ForeColor = System.Drawing.Color.Coral;
+            this.lblPasswordConfirmation.Location = new System.Drawing.Point(30, 378);
             this.lblPasswordConfirmation.Name = "lblPasswordConfirmation";
-            this.lblPasswordConfirmation.Size = new System.Drawing.Size(137, 20);
+            this.lblPasswordConfirmation.Size = new System.Drawing.Size(178, 24);
             this.lblPasswordConfirmation.TabIndex = 41;
             this.lblPasswordConfirmation.Text = "Confirm Password";
             // 
             // addUserRoleMenu
             // 
             this.addUserRoleMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.addUserRoleMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUserRoleMenu.FormattingEnabled = true;
-            this.addUserRoleMenu.Location = new System.Drawing.Point(208, 441);
+            this.addUserRoleMenu.Location = new System.Drawing.Point(228, 420);
             this.addUserRoleMenu.Name = "addUserRoleMenu";
-            this.addUserRoleMenu.Size = new System.Drawing.Size(131, 21);
+            this.addUserRoleMenu.Size = new System.Drawing.Size(295, 32);
             this.addUserRoleMenu.TabIndex = 42;
             this.addUserRoleMenu.SelectedIndexChanged += new System.EventHandler(this.addUserRoleMenu_SelectedIndexChanged);
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.Location = new System.Drawing.Point(35, 442);
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.ForeColor = System.Drawing.Color.Coral;
+            this.lblRole.Location = new System.Drawing.Point(30, 421);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(42, 20);
+            this.lblRole.Size = new System.Drawing.Size(53, 24);
             this.lblRole.TabIndex = 43;
             this.lblRole.Text = "Role";
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(208, 482);
+            this.btnAddUser.BackColor = System.Drawing.Color.Coral;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.Location = new System.Drawing.Point(228, 461);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(130, 23);
+            this.btnAddUser.Size = new System.Drawing.Size(294, 36);
             this.btnAddUser.TabIndex = 44;
             this.btnAddUser.Text = "Save";
-            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.UseVisualStyleBackColor = false;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(208, 249);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(228, 228);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(131, 20);
+            this.txtEmail.Size = new System.Drawing.Size(295, 29);
             this.txtEmail.TabIndex = 45;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(35, 249);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Coral;
+            this.lblEmail.Location = new System.Drawing.Point(30, 228);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 20);
+            this.lblEmail.Size = new System.Drawing.Size(62, 24);
             this.lblEmail.TabIndex = 46;
             this.lblEmail.Text = "Email";
             // 
             // profileImage
             // 
             this.profileImage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.profileImage.Location = new System.Drawing.Point(375, 86);
+            this.profileImage.Location = new System.Drawing.Point(562, 65);
             this.profileImage.Name = "profileImage";
             this.profileImage.Size = new System.Drawing.Size(214, 220);
             this.profileImage.TabIndex = 47;
@@ -267,6 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.profileImage);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
@@ -291,7 +316,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblAddNewUser);
             this.Name = "UserAdd";
-            this.Size = new System.Drawing.Size(684, 552);
+            this.Size = new System.Drawing.Size(882, 699);
             this.Load += new System.EventHandler(this.UsersAdd_LoadData);
             ((System.ComponentModel.ISupportInitialize)(this.profileImage)).EndInit();
             this.ResumeLayout(false);

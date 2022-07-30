@@ -41,56 +41,63 @@ namespace eDentist.WinUI.Forms.Materials
             // menuManufacturers
             // 
             this.menuManufacturers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuManufacturers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuManufacturers.FormattingEnabled = true;
-            this.menuManufacturers.Location = new System.Drawing.Point(83, 133);
+            this.menuManufacturers.Location = new System.Drawing.Point(135, 190);
             this.menuManufacturers.Name = "menuManufacturers";
-            this.menuManufacturers.Size = new System.Drawing.Size(158, 21);
+            this.menuManufacturers.Size = new System.Drawing.Size(205, 32);
             this.menuManufacturers.TabIndex = 16;
             this.menuManufacturers.SelectedIndexChanged += new System.EventHandler(this.menuManufacturers_SelectedIndexChanged);
             // 
             // lblMaterial
             // 
             this.lblMaterial.AutoSize = true;
-            this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterial.Location = new System.Drawing.Point(12, 89);
+            this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaterial.ForeColor = System.Drawing.Color.Coral;
+            this.lblMaterial.Location = new System.Drawing.Point(15, 142);
             this.lblMaterial.Name = "lblMaterial";
-            this.lblMaterial.Size = new System.Drawing.Size(65, 20);
+            this.lblMaterial.Size = new System.Drawing.Size(83, 24);
             this.lblMaterial.TabIndex = 15;
             this.lblMaterial.Text = "Material";
             // 
             // btnAddMaterial
             // 
-            this.btnAddMaterial.Location = new System.Drawing.Point(96, 185);
+            this.btnAddMaterial.BackColor = System.Drawing.Color.Coral;
+            this.btnAddMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaterial.Location = new System.Drawing.Point(135, 235);
             this.btnAddMaterial.Name = "btnAddMaterial";
-            this.btnAddMaterial.Size = new System.Drawing.Size(130, 23);
+            this.btnAddMaterial.Size = new System.Drawing.Size(205, 32);
             this.btnAddMaterial.TabIndex = 14;
             this.btnAddMaterial.Text = "Save";
-            this.btnAddMaterial.UseVisualStyleBackColor = true;
+            this.btnAddMaterial.UseVisualStyleBackColor = false;
             this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
             // 
             // txtMaterial
             // 
-            this.txtMaterial.Location = new System.Drawing.Point(83, 92);
+            this.txtMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaterial.Location = new System.Drawing.Point(135, 142);
             this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(158, 20);
+            this.txtMaterial.Size = new System.Drawing.Size(205, 29);
             this.txtMaterial.TabIndex = 13;
             // 
             // lblAddMaterial
             // 
             this.lblAddMaterial.AutoSize = true;
-            this.lblAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMaterial.ForeColor = System.Drawing.Color.Coral;
             this.lblAddMaterial.Location = new System.Drawing.Point(12, 35);
             this.lblAddMaterial.Name = "lblAddMaterial";
-            this.lblAddMaterial.Size = new System.Drawing.Size(130, 24);
+            this.lblAddMaterial.Size = new System.Drawing.Size(181, 29);
             this.lblAddMaterial.TabIndex = 12;
             this.lblAddMaterial.Text = "Add a material";
             // 
             // materialImage
             // 
             this.materialImage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.materialImage.Location = new System.Drawing.Point(278, 92);
+            this.materialImage.Location = new System.Drawing.Point(388, 142);
             this.materialImage.Name = "materialImage";
-            this.materialImage.Size = new System.Drawing.Size(180, 116);
+            this.materialImage.Size = new System.Drawing.Size(227, 125);
             this.materialImage.TabIndex = 48;
             this.materialImage.TabStop = false;
             this.materialImage.Tag = "";
@@ -100,6 +107,7 @@ namespace eDentist.WinUI.Forms.Materials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.materialImage);
             this.Controls.Add(this.menuManufacturers);
             this.Controls.Add(this.lblMaterial);

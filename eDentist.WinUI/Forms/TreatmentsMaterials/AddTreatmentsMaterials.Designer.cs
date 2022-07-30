@@ -39,67 +39,76 @@
             // menuTreatments
             // 
             this.menuTreatments.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuTreatments.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuTreatments.FormattingEnabled = true;
-            this.menuTreatments.Location = new System.Drawing.Point(116, 82);
+            this.menuTreatments.Location = new System.Drawing.Point(188, 113);
             this.menuTreatments.Name = "menuTreatments";
-            this.menuTreatments.Size = new System.Drawing.Size(158, 21);
+            this.menuTreatments.Size = new System.Drawing.Size(242, 32);
             this.menuTreatments.TabIndex = 27;
             this.menuTreatments.SelectedIndexChanged += new System.EventHandler(this.menuTreatments_SelectedIndexChanged);
             // 
             // lblTreatment
             // 
             this.lblTreatment.AutoSize = true;
-            this.lblTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTreatment.Location = new System.Drawing.Point(30, 80);
+            this.lblTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTreatment.ForeColor = System.Drawing.Color.Coral;
+            this.lblTreatment.Location = new System.Drawing.Point(32, 110);
             this.lblTreatment.Name = "lblTreatment";
-            this.lblTreatment.Size = new System.Drawing.Size(82, 20);
+            this.lblTreatment.Size = new System.Drawing.Size(104, 24);
             this.lblTreatment.TabIndex = 26;
             this.lblTreatment.Text = "Treatment";
             // 
             // lblAddMaterial
             // 
             this.lblAddMaterial.AutoSize = true;
-            this.lblAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMaterial.ForeColor = System.Drawing.Color.Coral;
             this.lblAddMaterial.Location = new System.Drawing.Point(30, 25);
             this.lblAddMaterial.Name = "lblAddMaterial";
-            this.lblAddMaterial.Size = new System.Drawing.Size(223, 24);
+            this.lblAddMaterial.Size = new System.Drawing.Size(314, 29);
             this.lblAddMaterial.TabIndex = 25;
             this.lblAddMaterial.Text = "Add material for treatment";
             // 
             // menuMaterials
             // 
             this.menuMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.menuMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMaterials.FormattingEnabled = true;
-            this.menuMaterials.Location = new System.Drawing.Point(116, 125);
+            this.menuMaterials.Location = new System.Drawing.Point(188, 156);
             this.menuMaterials.Name = "menuMaterials";
-            this.menuMaterials.Size = new System.Drawing.Size(158, 21);
+            this.menuMaterials.Size = new System.Drawing.Size(242, 32);
             this.menuMaterials.TabIndex = 29;
             this.menuMaterials.SelectedIndexChanged += new System.EventHandler(this.menuMaterials_SelectedIndexChanged);
             // 
             // Material
             // 
             this.Material.AutoSize = true;
-            this.Material.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Material.Location = new System.Drawing.Point(30, 123);
+            this.Material.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Material.ForeColor = System.Drawing.Color.Coral;
+            this.Material.Location = new System.Drawing.Point(32, 153);
             this.Material.Name = "Material";
-            this.Material.Size = new System.Drawing.Size(65, 20);
+            this.Material.Size = new System.Drawing.Size(83, 24);
             this.Material.TabIndex = 28;
             this.Material.Text = "Material";
             // 
             // btnAddMaterialForTreatment
             // 
-            this.btnAddMaterialForTreatment.Location = new System.Drawing.Point(123, 172);
+            this.btnAddMaterialForTreatment.BackColor = System.Drawing.Color.Coral;
+            this.btnAddMaterialForTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMaterialForTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaterialForTreatment.Location = new System.Drawing.Point(188, 203);
             this.btnAddMaterialForTreatment.Name = "btnAddMaterialForTreatment";
-            this.btnAddMaterialForTreatment.Size = new System.Drawing.Size(130, 23);
+            this.btnAddMaterialForTreatment.Size = new System.Drawing.Size(242, 30);
             this.btnAddMaterialForTreatment.TabIndex = 30;
             this.btnAddMaterialForTreatment.Text = "Save";
-            this.btnAddMaterialForTreatment.UseVisualStyleBackColor = true;
+            this.btnAddMaterialForTreatment.UseVisualStyleBackColor = false;
             this.btnAddMaterialForTreatment.Click += new System.EventHandler(this.btnAddMaterialForTreatment_Click);
             // 
             // AddTreatmentsMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnAddMaterialForTreatment);
             this.Controls.Add(this.menuMaterials);
             this.Controls.Add(this.Material);
