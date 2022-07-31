@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eDentist.Model
 {
@@ -11,5 +9,6 @@ namespace eDentist.Model
         public string Patient { get; set; }
         public string Doctor { get; set; }
         public string Status { get; set; }
+        public string Treatment { get; set; }
     }
 }

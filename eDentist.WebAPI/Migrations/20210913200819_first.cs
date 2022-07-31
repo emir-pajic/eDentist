@@ -207,6 +207,7 @@ namespace eDentist.WebAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AdditionalInfo = table.Column<string>(nullable: true),
                     AppointmentId = table.Column<int>(nullable: true),
+                    TreatmentId = table.Column<int>(nullable: true),
                     UserId = table.Column<int>(nullable: true),
                     Status = table.Column<string>(nullable: true),
                     TreatmentsMaterialsId = table.Column<int>(nullable: true),
@@ -232,6 +233,12 @@ namespace eDentist.WebAPI.Migrations
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Examinations_Treatments_TreatmentId",
+                        column: x => x.TreatmentId,
+                        principalTable: "Treatments",
+                        principalColumn: "TreatmentId",
                         onDelete: ReferentialAction.Restrict);
                 });
 

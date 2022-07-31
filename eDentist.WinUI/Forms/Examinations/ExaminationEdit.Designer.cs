@@ -39,6 +39,8 @@
             this.existingExaminations = new System.Windows.Forms.ComboBox();
             this.Examinations = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.treatmentsMenu = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblStatus
@@ -46,7 +48,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(44, 276);
+            this.lblStatus.Location = new System.Drawing.Point(44, 338);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 24);
             this.lblStatus.TabIndex = 33;
@@ -55,7 +57,7 @@
             // txtStatus
             // 
             this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(174, 279);
+            this.txtStatus.Location = new System.Drawing.Point(174, 341);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(530, 29);
             this.txtStatus.TabIndex = 32;
@@ -65,7 +67,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(44, 237);
+            this.lblDescription.Location = new System.Drawing.Point(44, 299);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(115, 24);
             this.lblDescription.TabIndex = 31;
@@ -74,7 +76,7 @@
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(174, 240);
+            this.txtDescription.Location = new System.Drawing.Point(174, 302);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(530, 29);
             this.txtDescription.TabIndex = 30;
@@ -107,7 +109,7 @@
             this.btnUpdateExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateExamination.Location = new System.Drawing.Point(174, 334);
+            this.btnUpdateExamination.Location = new System.Drawing.Point(174, 396);
             this.btnUpdateExamination.Name = "btnUpdateExamination";
             this.btnUpdateExamination.Size = new System.Drawing.Size(530, 28);
             this.btnUpdateExamination.TabIndex = 25;
@@ -157,11 +159,35 @@
             this.panel3.Size = new System.Drawing.Size(809, 10);
             this.panel3.TabIndex = 56;
             // 
+            // treatmentsMenu
+            // 
+            this.treatmentsMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.treatmentsMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treatmentsMenu.FormattingEnabled = true;
+            this.treatmentsMenu.Location = new System.Drawing.Point(175, 249);
+            this.treatmentsMenu.Name = "treatmentsMenu";
+            this.treatmentsMenu.Size = new System.Drawing.Size(530, 32);
+            this.treatmentsMenu.TabIndex = 58;
+            this.treatmentsMenu.SelectedIndexChanged += new System.EventHandler(this.treatmentsMenu_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(45, 247);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 24);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Treatment";
+            // 
             // ExaminationEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.treatmentsMenu);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.existingExaminations);
             this.Controls.Add(this.Examinations);
@@ -194,5 +220,7 @@
         private System.Windows.Forms.ComboBox existingExaminations;
         private System.Windows.Forms.Label Examinations;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox treatmentsMenu;
+        private System.Windows.Forms.Label label1;
     }
 }

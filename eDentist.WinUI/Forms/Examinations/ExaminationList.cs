@@ -13,6 +13,8 @@ namespace eDentist.WinUI.Forms.Examinations
         private readonly APIService service = new APIService("Examinations");
         private readonly APIService userService = new APIService("User");
         private readonly APIService appointmentService = new APIService("Appointments");
+        private readonly APIService treatmentService = new APIService("Treatments");
+
         public List<Examination> result = new List<Examination>();
 
         public ExaminationList()
@@ -38,6 +40,7 @@ namespace eDentist.WinUI.Forms.Examinations
                 var patient = await userService.GetById<MUsers>(appointment.UserId);
 
 
+
                 var resultObj = new Examination()
                 {
                     Description = item.AdditionalInfo,
@@ -46,6 +49,16 @@ namespace eDentist.WinUI.Forms.Examinations
                     Doctor = doctor.FirstName + " " + doctor.LastName,
                     Status = item.Status
                 };
+
+                if (item.TreatmentId == null)
+                {
+                    resultObj.Treatment = "N/A";
+                }
+                else
+                {
+                    var treatment = await treatmentService.GetById<MTreatments>(item.TreatmentId);
+                    resultObj.Treatment = treatment.Description;
+                }
 
                 result.Add(resultObj);
             }

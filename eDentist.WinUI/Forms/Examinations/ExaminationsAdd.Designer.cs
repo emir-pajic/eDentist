@@ -39,6 +39,8 @@ namespace eDentist.WinUI.Forms.Examinations
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.treatmentsMenu = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Doctor
@@ -79,7 +81,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.btnaddCity.BackColor = System.Drawing.Color.White;
             this.btnaddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddCity.Location = new System.Drawing.Point(238, 264);
+            this.btnaddCity.Location = new System.Drawing.Point(238, 317);
             this.btnaddCity.Name = "btnaddCity";
             this.btnaddCity.Size = new System.Drawing.Size(130, 32);
             this.btnaddCity.TabIndex = 14;
@@ -114,7 +116,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(32, 172);
+            this.lblDescription.Location = new System.Drawing.Point(32, 225);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(115, 24);
             this.lblDescription.TabIndex = 21;
@@ -123,7 +125,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(182, 176);
+            this.txtDescription.Location = new System.Drawing.Point(182, 229);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(232, 29);
             this.txtDescription.TabIndex = 20;
@@ -133,7 +135,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(32, 211);
+            this.lblStatus.Location = new System.Drawing.Point(32, 264);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 24);
             this.lblStatus.TabIndex = 23;
@@ -142,16 +144,40 @@ namespace eDentist.WinUI.Forms.Examinations
             // txtStatus
             // 
             this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(182, 215);
+            this.txtStatus.Location = new System.Drawing.Point(182, 268);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(232, 29);
             this.txtStatus.TabIndex = 22;
+            // 
+            // treatmentsMenu
+            // 
+            this.treatmentsMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.treatmentsMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treatmentsMenu.FormattingEnabled = true;
+            this.treatmentsMenu.Location = new System.Drawing.Point(183, 183);
+            this.treatmentsMenu.Name = "treatmentsMenu";
+            this.treatmentsMenu.Size = new System.Drawing.Size(232, 32);
+            this.treatmentsMenu.TabIndex = 25;
+            this.treatmentsMenu.SelectedIndexChanged += new System.EventHandler(this.treatmentsMenu_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(33, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 24);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Treatment";
             // 
             // ExaminationsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.treatmentsMenu);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.lblDescription);
@@ -182,5 +208,7 @@ namespace eDentist.WinUI.Forms.Examinations
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.ComboBox treatmentsMenu;
+        private System.Windows.Forms.Label label1;
     }
 }

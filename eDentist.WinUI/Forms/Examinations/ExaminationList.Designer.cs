@@ -44,6 +44,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Treatment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.App.AutoSize = true;
             this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.App.ForeColor = System.Drawing.Color.White;
-            this.App.Location = new System.Drawing.Point(53, 125);
+            this.App.Location = new System.Drawing.Point(-2, 117);
             this.App.Name = "App";
             this.App.Size = new System.Drawing.Size(266, 29);
             this.App.TabIndex = 63;
@@ -102,10 +103,10 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSearch.Location = new System.Drawing.Point(58, 226);
+            this.txtSearch.Location = new System.Drawing.Point(3, 226);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(275, 32);
+            this.txtSearch.Size = new System.Drawing.Size(330, 33);
             this.txtSearch.TabIndex = 58;
             this.txtSearch.Text = "Enter Name";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -136,6 +137,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.AppointmentDate,
             this.Patient,
             this.Doctor,
+            this.Treatment,
             this.Status});
             this.dgvExaminations.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -147,11 +149,11 @@ namespace eDentist.WinUI.Forms.Examinations
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvExaminations.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvExaminations.Location = new System.Drawing.Point(58, 275);
+            this.dgvExaminations.Location = new System.Drawing.Point(3, 275);
             this.dgvExaminations.Name = "dgvExaminations";
             this.dgvExaminations.ReadOnly = true;
             this.dgvExaminations.RowHeadersVisible = false;
-            this.dgvExaminations.Size = new System.Drawing.Size(814, 246);
+            this.dgvExaminations.Size = new System.Drawing.Size(869, 247);
             this.dgvExaminations.TabIndex = 64;
             // 
             // ExaminationID
@@ -174,7 +176,7 @@ namespace eDentist.WinUI.Forms.Examinations
             // 
             this.AppointmentDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.AppointmentDate.DataPropertyName = "AppointmentDate";
-            this.AppointmentDate.HeaderText = "AppointmentDate";
+            this.AppointmentDate.HeaderText = "Date";
             this.AppointmentDate.Name = "AppointmentDate";
             this.AppointmentDate.ReadOnly = true;
             // 
@@ -193,6 +195,14 @@ namespace eDentist.WinUI.Forms.Examinations
             this.Doctor.HeaderText = "Doctor";
             this.Doctor.Name = "Doctor";
             this.Doctor.ReadOnly = true;
+            // 
+            // Treatment
+            // 
+            this.Treatment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Treatment.DataPropertyName = "Treatment";
+            this.Treatment.HeaderText = "Treatment";
+            this.Treatment.Name = "Treatment";
+            this.Treatment.ReadOnly = true;
             // 
             // Status
             // 
@@ -235,6 +245,7 @@ namespace eDentist.WinUI.Forms.Examinations
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Patient;
         private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Treatment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

@@ -3,11 +3,7 @@ using eDentist.Model.Request;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,9 +14,15 @@ namespace eDentist.WinUI.Forms.Examinations
         private readonly APIService _appointmentService = new APIService("Appointments");
         private readonly APIService _userService = new APIService("User");
         private readonly APIService _examinationService = new APIService("Examinations");
+        private readonly APIService _treatmentsService = new APIService("Treatments");
+
 
         private List<MAppointments> _appointments { get; set; }
         private List<MExaminations> _existingExamination { get; set; }
+
+        private List<MTreatments> _treatments { get; set; }
+        private MTreatments _selectedTreatment { get; set; }
+
 
         private List<MUsers> _users { get; set; }
 
@@ -43,6 +45,8 @@ namespace eDentist.WinUI.Forms.Examinations
             _appointments = await _appointmentService.Get<List<MAppointments>>(null);
             _users = await _userService.Get<List<MUsers>>(null);
 
+            _treatments = await _treatmentsService.Get<List<MTreatments>>(null);
+            treatmentsMenu.Items.AddRange(_treatments.Select(x => x.Description).ToArray());
 
             FillExaminationData();
             FillDoctorsData();
@@ -113,6 +117,11 @@ namespace eDentist.WinUI.Forms.Examinations
 
         private async void btnUpdateExamination_Click(object sender, EventArgs e)
         {
+            if (_selectedTreatment == null)
+            {
+                MessageBox.Show("You must select a treatment");
+                return;
+            }
             if (ValidateInput(_selectedExamination, _newDoctor, txtDescription.Text, txtStatus.Text))
             {
                 var request = new ExaminationUpsertRequest()
@@ -122,6 +131,7 @@ namespace eDentist.WinUI.Forms.Examinations
                     AdditionalInfo = txtDescription.Text,
                     UserId = _newDoctor.UserId,
                     Status = txtStatus.Text,
+                    TreatmentId = _selectedTreatment.TreatmentId
                 };
 
                 await _examinationService.Update<MExaminations>(_selectedExamination.ExaminationId, request);
@@ -156,6 +166,11 @@ namespace eDentist.WinUI.Forms.Examinations
             }
 
             return true;
+        }
+
+        private void treatmentsMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _selectedTreatment = _treatments.FirstOrDefault(x => x.Description.Equals(treatmentsMenu.SelectedItem));
         }
     }
 }
