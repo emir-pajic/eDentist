@@ -247,6 +247,7 @@
             // btnAddUser
             // 
             this.btnAddUser.BackColor = System.Drawing.Color.White;
+            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.Location = new System.Drawing.Point(228, 461);

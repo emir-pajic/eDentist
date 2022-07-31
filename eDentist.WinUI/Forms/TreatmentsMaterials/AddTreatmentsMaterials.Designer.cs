@@ -94,6 +94,7 @@
             // btnAddMaterialForTreatment
             // 
             this.btnAddMaterialForTreatment.BackColor = System.Drawing.Color.White;
+            this.btnAddMaterialForTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddMaterialForTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMaterialForTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaterialForTreatment.Location = new System.Drawing.Point(188, 203);

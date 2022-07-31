@@ -104,6 +104,7 @@
             // btnUpdateExamination
             // 
             this.btnUpdateExamination.BackColor = System.Drawing.Color.White;
+            this.btnUpdateExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateExamination.Location = new System.Drawing.Point(174, 334);

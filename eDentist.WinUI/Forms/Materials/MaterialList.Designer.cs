@@ -198,6 +198,7 @@ namespace eDentist.WinUI.Forms.Materials
             // trmtMaterialList
             // 
             this.trmtMaterialList.BackColor = System.Drawing.Color.White;
+            this.trmtMaterialList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trmtMaterialList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trmtMaterialList.Location = new System.Drawing.Point(479, 158);
             this.trmtMaterialList.Name = "trmtMaterialList";

@@ -59,6 +59,7 @@ namespace eDentist.WinUI.Forms.Cities
             // btnaddCity
             // 
             this.btnaddCity.BackColor = System.Drawing.Color.White;
+            this.btnaddCity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnaddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddCity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

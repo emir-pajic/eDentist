@@ -42,6 +42,7 @@
             // btnUpdateTreatment
             // 
             this.btnUpdateTreatment.BackColor = System.Drawing.Color.White;
+            this.btnUpdateTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTreatment.Location = new System.Drawing.Point(160, 272);
             this.btnUpdateTreatment.Name = "btnUpdateTreatment";

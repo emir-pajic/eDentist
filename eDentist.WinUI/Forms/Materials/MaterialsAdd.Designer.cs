@@ -63,6 +63,7 @@ namespace eDentist.WinUI.Forms.Materials
             // btnAddMaterial
             // 
             this.btnAddMaterial.BackColor = System.Drawing.Color.White;
+            this.btnAddMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaterial.Location = new System.Drawing.Point(135, 235);

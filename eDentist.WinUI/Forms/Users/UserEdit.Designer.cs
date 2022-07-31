@@ -99,6 +99,7 @@
             // 
             // editUserRoleMenu
             // 
+            this.editUserRoleMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editUserRoleMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.editUserRoleMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editUserRoleMenu.FormattingEnabled = true;
@@ -140,6 +141,7 @@
             // 
             // dtpDateOfBirth
             // 
+            this.dtpDateOfBirth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateOfBirth.Location = new System.Drawing.Point(207, 349);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
@@ -159,6 +161,7 @@
             // 
             // editUserCitiesMenu
             // 
+            this.editUserCitiesMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editUserCitiesMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.editUserCitiesMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editUserCitiesMenu.FormattingEnabled = true;

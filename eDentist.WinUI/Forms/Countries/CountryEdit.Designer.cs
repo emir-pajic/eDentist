@@ -93,6 +93,7 @@ namespace eDentist.WinUI.Forms.Countries
             // btnUpdateCountry
             // 
             this.btnUpdateCountry.BackColor = System.Drawing.Color.White;
+            this.btnUpdateCountry.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCountry.Location = new System.Drawing.Point(128, 240);

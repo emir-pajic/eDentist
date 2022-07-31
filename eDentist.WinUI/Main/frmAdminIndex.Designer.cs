@@ -41,10 +41,10 @@ namespace eDentist.WinUI.Main
             this.btn_mngTreatments = new System.Windows.Forms.Button();
             this.btn_editProfile = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LogOut = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.LogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserPicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -214,6 +214,21 @@ namespace eDentist.WinUI.Main
             this.panel2.Size = new System.Drawing.Size(196, 725);
             this.panel2.TabIndex = 1002;
             // 
+            // LogOut
+            // 
+            this.LogOut.BackColor = System.Drawing.Color.White;
+            this.LogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogOut.FlatAppearance.BorderSize = 0;
+            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.Location = new System.Drawing.Point(13, 654);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(171, 43);
+            this.LogOut.TabIndex = 78;
+            this.LogOut.Text = "Log out";
+            this.LogOut.UseVisualStyleBackColor = false;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
+            // 
             // ContentPanel
             // 
             this.ContentPanel.BackColor = System.Drawing.Color.Transparent;
@@ -246,21 +261,6 @@ namespace eDentist.WinUI.Main
             this.label2.TabIndex = 1005;
             this.label2.Text = "By Emir Pajić v 1.0.0";
             // 
-            // LogOut
-            // 
-            this.LogOut.BackColor = System.Drawing.Color.White;
-            this.LogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogOut.FlatAppearance.BorderSize = 0;
-            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut.Location = new System.Drawing.Point(13, 654);
-            this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(171, 43);
-            this.LogOut.TabIndex = 78;
-            this.LogOut.Text = "Log out";
-            this.LogOut.UseVisualStyleBackColor = false;
-            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
-            // 
             // frmAdminIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +271,7 @@ namespace eDentist.WinUI.Main
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.panel2);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAdminIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

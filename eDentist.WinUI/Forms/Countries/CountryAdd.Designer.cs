@@ -69,6 +69,7 @@ namespace eDentist.WinUI.Forms.Countries
             // btnAddCountry
             // 
             this.btnAddCountry.BackColor = System.Drawing.Color.White;
+            this.btnAddCountry.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCountry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

@@ -85,6 +85,7 @@
             // saveInfo
             // 
             this.saveInfo.BackColor = System.Drawing.Color.White;
+            this.saveInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -232,6 +233,7 @@
             // uploadImage
             // 
             this.uploadImage.BackColor = System.Drawing.Color.White;
+            this.uploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -255,6 +257,7 @@
             // editProfileInfo
             // 
             this.editProfileInfo.BackColor = System.Drawing.Color.White;
+            this.editProfileInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editProfileInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editProfileInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editProfileInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -291,6 +294,7 @@
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblEditProfile);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "EditProfile";
             this.Size = new System.Drawing.Size(772, 557);
             this.Load += new System.EventHandler(this.EditProfile_Load);

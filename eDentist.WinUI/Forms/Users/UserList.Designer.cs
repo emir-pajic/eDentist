@@ -58,7 +58,7 @@ namespace eDentist.WinUI.Forms.Users
             this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
-            this.btnAddUser.Location = new System.Drawing.Point(779, 54);
+            this.btnAddUser.Location = new System.Drawing.Point(779, 27);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(41, 37);
             this.btnAddUser.TabIndex = 44;
@@ -71,7 +71,7 @@ namespace eDentist.WinUI.Forms.Users
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(873, 54);
+            this.btnDelete.Location = new System.Drawing.Point(873, 27);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(41, 37);
             this.btnDelete.TabIndex = 42;
@@ -84,7 +84,7 @@ namespace eDentist.WinUI.Forms.Users
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(826, 54);
+            this.btnDetails.Location = new System.Drawing.Point(826, 27);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(41, 37);
             this.btnDetails.TabIndex = 41;

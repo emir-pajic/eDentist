@@ -42,6 +42,7 @@
             // btnAddAppointment
             // 
             this.btnAddAppointment.BackColor = System.Drawing.Color.White;
+            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAppointment.Location = new System.Drawing.Point(208, 309);

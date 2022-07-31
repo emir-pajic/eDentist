@@ -51,6 +51,7 @@ namespace eDentist.WinUI.Forms.Treatments
             // btnAddTreatment
             // 
             this.btnAddTreatment.BackColor = System.Drawing.Color.White;
+            this.btnAddTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTreatment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTreatment.Location = new System.Drawing.Point(145, 160);

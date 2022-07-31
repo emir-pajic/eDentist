@@ -95,6 +95,7 @@
             // 
             this.btnAddAppointment.BackColor = System.Drawing.Color.White;
             this.btnAddAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAppointment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

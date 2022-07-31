@@ -64,6 +64,7 @@
             // btnUpdateCity
             // 
             this.btnUpdateCity.BackColor = System.Drawing.Color.White;
+            this.btnUpdateCity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCity.Location = new System.Drawing.Point(130, 303);

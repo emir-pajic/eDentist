@@ -59,7 +59,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.menuAppointments.FormattingEnabled = true;
             this.menuAppointments.Location = new System.Drawing.Point(182, 87);
             this.menuAppointments.Name = "menuAppointments";
-            this.menuAppointments.Size = new System.Drawing.Size(158, 32);
+            this.menuAppointments.Size = new System.Drawing.Size(232, 32);
             this.menuAppointments.TabIndex = 16;
             this.menuAppointments.SelectedIndexChanged += new System.EventHandler(this.menuAppointments_SelectedIndexChanged);
             // 
@@ -79,7 +79,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.btnaddCity.BackColor = System.Drawing.Color.White;
             this.btnaddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddCity.Location = new System.Drawing.Point(192, 270);
+            this.btnaddCity.Location = new System.Drawing.Point(238, 264);
             this.btnaddCity.Name = "btnaddCity";
             this.btnaddCity.Size = new System.Drawing.Size(130, 32);
             this.btnaddCity.TabIndex = 14;
@@ -105,7 +105,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.menuDoctors.FormattingEnabled = true;
             this.menuDoctors.Location = new System.Drawing.Point(182, 131);
             this.menuDoctors.Name = "menuDoctors";
-            this.menuDoctors.Size = new System.Drawing.Size(158, 32);
+            this.menuDoctors.Size = new System.Drawing.Size(232, 32);
             this.menuDoctors.TabIndex = 19;
             this.menuDoctors.SelectedIndexChanged += new System.EventHandler(this.menuDoctors_SelectedIndexChanged);
             // 
@@ -125,7 +125,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(182, 176);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(158, 29);
+            this.txtDescription.Size = new System.Drawing.Size(232, 29);
             this.txtDescription.TabIndex = 20;
             // 
             // lblStatus
@@ -144,7 +144,7 @@ namespace eDentist.WinUI.Forms.Examinations
             this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatus.Location = new System.Drawing.Point(182, 215);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(158, 29);
+            this.txtStatus.Size = new System.Drawing.Size(232, 29);
             this.txtStatus.TabIndex = 22;
             // 
             // ExaminationsAdd
