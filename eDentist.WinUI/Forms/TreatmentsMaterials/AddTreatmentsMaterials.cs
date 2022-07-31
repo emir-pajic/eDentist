@@ -24,6 +24,8 @@ namespace eDentist.WinUI.Forms.TreatmentsMaterials
         private List<MMaterials> _existingMaterials { get; set; }
         private MMaterials _selectedMaterial { get; set; }
 
+        public List<MTreatmentsMaterials> trmntMat = new List<MTreatmentsMaterials>();
+
 
         public AddTreatmentsMaterials()
         {
@@ -55,6 +57,16 @@ namespace eDentist.WinUI.Forms.TreatmentsMaterials
 
         private async void btnAddMaterialForTreatment_Click(object sender, EventArgs e)
         {
+            trmntMat = await trmtService.Get<List<MTreatmentsMaterials>>(null);
+
+            foreach (var item in trmntMat)
+            {
+                if (item.MaterialId.Equals(_selectedMaterial.MaterialId) && item.TreatmentId.Equals(_selectedTreatment.TreatmentId))
+                {
+                    MessageBox.Show("Material is already added for selected treatment!");
+                    return;
+                }
+            }
 
             if (_selectedMaterial == null)
             {

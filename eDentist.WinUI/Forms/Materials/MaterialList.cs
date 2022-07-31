@@ -1,4 +1,5 @@
 ﻿using eDentist.Model;
+using eDentist.WinUI.Forms.TreatmentsMaterials;
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
@@ -93,6 +94,10 @@ namespace eDentist.WinUI.Forms.Materials
             dvgMaterials.DataSource = filtered;
         }
 
+        private void trmtMaterialList_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new TreatmentsMaterialsList());
 
+        }
     }
 }

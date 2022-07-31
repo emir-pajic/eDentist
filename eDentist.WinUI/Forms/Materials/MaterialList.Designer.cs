@@ -44,6 +44,7 @@ namespace eDentist.WinUI.Forms.Materials
             this.MaterialName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.trmtMaterialList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgMaterials)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,11 +195,24 @@ namespace eDentist.WinUI.Forms.Materials
             this.Image.ReadOnly = true;
             this.Image.Width = 104;
             // 
+            // trmtMaterialList
+            // 
+            this.trmtMaterialList.BackColor = System.Drawing.Color.White;
+            this.trmtMaterialList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trmtMaterialList.Location = new System.Drawing.Point(479, 158);
+            this.trmtMaterialList.Name = "trmtMaterialList";
+            this.trmtMaterialList.Size = new System.Drawing.Size(283, 32);
+            this.trmtMaterialList.TabIndex = 79;
+            this.trmtMaterialList.Text = "Materials needed for treatments";
+            this.trmtMaterialList.UseVisualStyleBackColor = false;
+            this.trmtMaterialList.Click += new System.EventHandler(this.trmtMaterialList_Click);
+            // 
             // MaterialList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.trmtMaterialList);
             this.Controls.Add(this.dvgMaterials);
             this.Controls.Add(this.App);
             this.Controls.Add(this.btnAddMaterial);
@@ -226,5 +240,6 @@ namespace eDentist.WinUI.Forms.Materials
         private System.Windows.Forms.DataGridViewTextBoxColumn MaterialName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manufacturer;
         private System.Windows.Forms.DataGridViewImageColumn Image;
+        private System.Windows.Forms.Button trmtMaterialList;
     }
 }

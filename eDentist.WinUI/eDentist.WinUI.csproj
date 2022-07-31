@@ -216,6 +216,12 @@
     <Compile Include="Forms\TreatmentsMaterials\AddTreatmentsMaterials.Designer.cs">
       <DependentUpon>AddTreatmentsMaterials.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TreatmentsMaterials\TreatmentsMaterialsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\TreatmentsMaterials\TreatmentsMaterialsList.Designer.cs">
+      <DependentUpon>TreatmentsMaterialsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Treatments\TreatmentAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TreatmentsMaterials\AddTreatmentsMaterials.resx">
       <DependentUpon>AddTreatmentsMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TreatmentsMaterials\TreatmentsMaterialsList.resx">
+      <DependentUpon>TreatmentsMaterialsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Treatments\TreatmentAdd.resx">
       <DependentUpon>TreatmentAdd.cs</DependentUpon>
