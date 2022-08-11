@@ -1,4 +1,5 @@
 ﻿using eDentist.Model;
+using eDentist.WinUI.Forms.About;
 using eDentist.WinUI.Forms.Appointments;
 using eDentist.WinUI.Forms.Profile;
 using eDentist.WinUI.Helper;
@@ -45,6 +46,12 @@ namespace eDentist.WinUI.Main
         {
             PanelHelper.RemovePanels(ContentPanel);
             PanelHelper.AddPanel(ContentPanel, new AppointmentListPatient(SignedInUser.User));
+        }
+
+        private void button4_Click(object sender, System.EventArgs e)
+        {
+            PanelHelper.RemovePanels(ContentPanel);
+            PanelHelper.AddPanel(ContentPanel, new AboutEDentist());
         }
     }
 }
