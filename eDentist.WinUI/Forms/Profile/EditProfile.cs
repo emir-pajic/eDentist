@@ -119,7 +119,6 @@ namespace eDentist.WinUI.Forms.Profile
 
                 await _userService.Update<MUsers>(request.UserId, request);
                 MessageBox.Show("User updated!");
-                PanelHelper.SwapPanels(this.Parent, this, new EditProfile());
             }
 
 

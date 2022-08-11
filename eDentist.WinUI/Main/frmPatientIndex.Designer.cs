@@ -38,6 +38,7 @@
             this.btn_editProfile = new System.Windows.Forms.Button();
             this.userImage = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userImage)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnMyAppointments);
             this.panel2.Controls.Add(this.btnBookAppointment);
@@ -91,6 +93,7 @@
             this.btnMyAppointments.TabIndex = 80;
             this.btnMyAppointments.Text = "My appointments";
             this.btnMyAppointments.UseVisualStyleBackColor = false;
+            this.btnMyAppointments.Click += new System.EventHandler(this.btnMyAppointments_Click);
             // 
             // btnBookAppointment
             // 
@@ -160,6 +163,20 @@
             this.label5.TabIndex = 1006;
             this.label5.Text = "\"A better life starts with a beautiful smile\"";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(13, 373);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(171, 43);
+            this.button2.TabIndex = 82;
+            this.button2.Text = "Oral health tips";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // frmPatientIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,5 +208,6 @@
         private System.Windows.Forms.Button btnMyAppointments;
         private System.Windows.Forms.Button btnBookAppointment;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

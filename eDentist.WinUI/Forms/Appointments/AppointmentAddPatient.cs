@@ -25,7 +25,7 @@ namespace eDentist.WinUI.Forms.Appointments
             };
 
             await _appointmentService.Insert<MAppointments>(request);
-            MessageBox.Show("Appointment added!");
+            MessageBox.Show("Appointment requested!");
             //PanelHelper.SwapPanels(this.Parent, this, new AppointmentList());
         }
     }
