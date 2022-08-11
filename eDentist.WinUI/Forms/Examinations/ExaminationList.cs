@@ -17,6 +17,7 @@ namespace eDentist.WinUI.Forms.Examinations
 
         public List<Examination> result = new List<Examination>();
 
+
         public ExaminationList()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace eDentist.WinUI.Forms.Examinations
         }
         private async Task LoadList()
         {
+
             var examinations = await service.Get<List<MExaminations>>(null);
 
 

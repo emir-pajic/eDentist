@@ -174,6 +174,12 @@
     <Compile Include="Forms\Examinations\ExaminationList.Designer.cs">
       <DependentUpon>ExaminationList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Examinations\ExaminationListPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Examinations\ExaminationListPatient.Designer.cs">
+      <DependentUpon>ExaminationListPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Examinations\ExaminationsAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Examinations\ExaminationList.resx">
       <DependentUpon>ExaminationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Examinations\ExaminationListPatient.resx">
+      <DependentUpon>ExaminationListPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Examinations\ExaminationsAdd.resx">
       <DependentUpon>ExaminationsAdd.cs</DependentUpon>

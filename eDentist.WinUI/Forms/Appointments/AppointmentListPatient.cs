@@ -34,6 +34,7 @@ namespace eDentist.WinUI.Forms.Appointments
 
                     var resultObj = new UsersAppointments()
                     {
+                        AppointmentId = item.AppointmentId,
                         Date = item.Date,
                         FirstName = _user.FirstName,
                         LastName = _user.LastName,
