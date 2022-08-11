@@ -66,6 +66,12 @@
     <Compile Include="Forms\About\AboutEDentist.Designer.cs">
       <DependentUpon>AboutEDentist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\About\OralHealthTips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\About\OralHealthTips.Designer.cs">
+      <DependentUpon>OralHealthTips.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Appointments\AppointmentAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,6 +318,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\About\AboutEDentist.resx">
       <DependentUpon>AboutEDentist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About\OralHealthTips.resx">
+      <DependentUpon>OralHealthTips.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Appointments\AppointmentAdd.resx">
       <DependentUpon>AppointmentAdd.cs</DependentUpon>

@@ -53,5 +53,11 @@ namespace eDentist.WinUI.Main
             PanelHelper.RemovePanels(ContentPanel);
             PanelHelper.AddPanel(ContentPanel, new AboutEDentist());
         }
+
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            PanelHelper.RemovePanels(ContentPanel);
+            PanelHelper.AddPanel(ContentPanel, new OralHealthTips());
+        }
     }
 }
