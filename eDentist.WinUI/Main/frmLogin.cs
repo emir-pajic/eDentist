@@ -37,7 +37,11 @@ namespace eDentist.WinUI.Main
                 var form = new frmAdminIndex(user);
                 form.Show();
             }
-
+            else if (loggedInUser == "Patient")
+            {
+                var form = new frmPatientIndex(user);
+                form.Show();
+            }
             else
             {
                 MessageBox.Show("Invalid credentials!");
