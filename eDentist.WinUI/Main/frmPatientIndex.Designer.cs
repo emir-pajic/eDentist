@@ -98,6 +98,7 @@
             this.button3.TabIndex = 83;
             this.button3.Text = "Payments";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
