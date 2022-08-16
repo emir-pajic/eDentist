@@ -1,4 +1,5 @@
 ﻿using eDentist.Model;
+using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -34,7 +35,7 @@ namespace eDentist.WinUI.Forms.Appointments
 
                     var user = await userService.GetById<MUsers>(item.UserId);
 
-                    if (item.AppointmentStatus.Equals("Requested"))
+                    if (item.AppointmentStatus.Equals("Requested") && item.Date.DayOfYear >= DateTime.Now.DayOfYear)
                     {
 
                         var resultObj = new UsersAppointments()
@@ -71,6 +72,12 @@ namespace eDentist.WinUI.Forms.Appointments
             }
 
             dgvAppointmentsStaff.DataSource = filtered;
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new AppointmentStaffAccept());
+
         }
     }
 }

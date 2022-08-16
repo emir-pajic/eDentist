@@ -33,11 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAppointmentsStaff = new System.Windows.Forms.DataGridView();
-            this.App = new System.Windows.Forms.Label();
-            this.txtSearchApp = new System.Windows.Forms.TextBox();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.App = new System.Windows.Forms.Label();
+            this.txtSearchApp = new System.Windows.Forms.TextBox();
+            this.btnAccept = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointmentsStaff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,30 +87,9 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAppointmentsStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAppointmentsStaff.RowHeadersVisible = false;
+            this.dgvAppointmentsStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAppointmentsStaff.Size = new System.Drawing.Size(671, 257);
             this.dgvAppointmentsStaff.TabIndex = 66;
-            // 
-            // App
-            // 
-            this.App.AutoSize = true;
-            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.App.ForeColor = System.Drawing.Color.White;
-            this.App.Location = new System.Drawing.Point(128, 36);
-            this.App.Name = "App";
-            this.App.Size = new System.Drawing.Size(306, 29);
-            this.App.TabIndex = 65;
-            this.App.Text = "Requested Appointments";
-            // 
-            // txtSearchApp
-            // 
-            this.txtSearchApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchApp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSearchApp.Location = new System.Drawing.Point(133, 136);
-            this.txtSearchApp.Multiline = true;
-            this.txtSearchApp.Name = "txtSearchApp";
-            this.txtSearchApp.Size = new System.Drawing.Size(275, 33);
-            this.txtSearchApp.TabIndex = 64;
-            this.txtSearchApp.Text = "Enter Date";
             // 
             // Date
             // 
@@ -135,18 +115,56 @@
             this.LastName.Name = "LastName";
             this.LastName.ReadOnly = true;
             // 
+            // App
+            // 
+            this.App.AutoSize = true;
+            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.App.ForeColor = System.Drawing.Color.White;
+            this.App.Location = new System.Drawing.Point(128, 36);
+            this.App.Name = "App";
+            this.App.Size = new System.Drawing.Size(306, 29);
+            this.App.TabIndex = 65;
+            this.App.Text = "Requested Appointments";
+            // 
+            // txtSearchApp
+            // 
+            this.txtSearchApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchApp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSearchApp.Location = new System.Drawing.Point(133, 136);
+            this.txtSearchApp.Multiline = true;
+            this.txtSearchApp.Name = "txtSearchApp";
+            this.txtSearchApp.Size = new System.Drawing.Size(275, 33);
+            this.txtSearchApp.TabIndex = 64;
+            this.txtSearchApp.Text = "Enter Date";
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.BackColor = System.Drawing.Color.White;
+            this.btnAccept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAccept.Location = new System.Drawing.Point(478, 135);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(326, 34);
+            this.btnAccept.TabIndex = 67;
+            this.btnAccept.Text = "Accept an appointment";
+            this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
             // AppointmentListStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.dgvAppointmentsStaff);
             this.Controls.Add(this.App);
             this.Controls.Add(this.txtSearchApp);
             this.Name = "AppointmentListStaff";
             this.Size = new System.Drawing.Size(1046, 511);
             this.Load += new System.EventHandler(this.AppointmentsList_Load);
-
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointmentsStaff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,5 +179,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.Button btnAccept;
     }
 }
