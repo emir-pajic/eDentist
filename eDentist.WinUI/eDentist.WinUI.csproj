@@ -108,6 +108,12 @@
     <Compile Include="Forms\Appointments\AppointmentListPatient.Designer.cs">
       <DependentUpon>AppointmentListPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Appointments\AppointmentListStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Appointments\AppointmentListStaff.Designer.cs">
+      <DependentUpon>AppointmentListStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cities\CityAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Appointments\AppointmentListPatient.resx">
       <DependentUpon>AppointmentListPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Appointments\AppointmentListStaff.resx">
+      <DependentUpon>AppointmentListStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cities\CityAdd.resx">
       <DependentUpon>CityAdd.cs</DependentUpon>

@@ -149,6 +149,7 @@
             this.btnAllAppointments.TabIndex = 79;
             this.btnAllAppointments.Text = "Appointment Requests";
             this.btnAllAppointments.UseVisualStyleBackColor = false;
+            this.btnAllAppointments.Click += new System.EventHandler(this.btnAllAppointments_Click);
             // 
             // btnLogOut
             // 
