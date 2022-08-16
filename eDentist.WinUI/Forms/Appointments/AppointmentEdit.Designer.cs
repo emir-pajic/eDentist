@@ -37,6 +37,8 @@
             this.menuPatients = new System.Windows.Forms.ComboBox();
             this.lblPatient = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblAppStatus = new System.Windows.Forms.Label();
+            this.txtAppStatus = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAddAppointment
@@ -45,7 +47,7 @@
             this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAppointment.Location = new System.Drawing.Point(208, 309);
+            this.btnAddAppointment.Location = new System.Drawing.Point(208, 346);
             this.btnAddAppointment.Name = "btnAddAppointment";
             this.btnAddAppointment.Size = new System.Drawing.Size(317, 32);
             this.btnAddAppointment.TabIndex = 51;
@@ -136,11 +138,33 @@
             this.panel3.Size = new System.Drawing.Size(809, 10);
             this.panel3.TabIndex = 54;
             // 
+            // lblAppStatus
+            // 
+            this.lblAppStatus.AutoSize = true;
+            this.lblAppStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppStatus.ForeColor = System.Drawing.Color.White;
+            this.lblAppStatus.Location = new System.Drawing.Point(22, 303);
+            this.lblAppStatus.Name = "lblAppStatus";
+            this.lblAppStatus.Size = new System.Drawing.Size(66, 24);
+            this.lblAppStatus.TabIndex = 56;
+            this.lblAppStatus.Text = "Status";
+            // 
+            // txtAppStatus
+            // 
+            this.txtAppStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppStatus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtAppStatus.Location = new System.Drawing.Point(208, 304);
+            this.txtAppStatus.Name = "txtAppStatus";
+            this.txtAppStatus.Size = new System.Drawing.Size(317, 29);
+            this.txtAppStatus.TabIndex = 55;
+            // 
             // AppointmentEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblAppStatus);
+            this.Controls.Add(this.txtAppStatus);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuPatients);
             this.Controls.Add(this.lblPatient);
@@ -169,5 +193,7 @@
         private System.Windows.Forms.ComboBox menuPatients;
         private System.Windows.Forms.Label lblPatient;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblAppStatus;
+        private System.Windows.Forms.TextBox txtAppStatus;
     }
 }

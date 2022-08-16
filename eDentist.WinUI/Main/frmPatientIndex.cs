@@ -2,7 +2,6 @@
 using eDentist.WinUI.Forms.About;
 using eDentist.WinUI.Forms.Appointments;
 using eDentist.WinUI.Forms.Examinations;
-using eDentist.WinUI.Forms.Payments;
 using eDentist.WinUI.Forms.Profile;
 using eDentist.WinUI.Helper;
 using System.Drawing;
@@ -68,10 +67,6 @@ namespace eDentist.WinUI.Main
             PanelHelper.AddPanel(ContentPanel, new ExaminationListPatient(SignedInUser.User));
         }
 
-        private void button3_Click(object sender, System.EventArgs e)
-        {
-            PanelHelper.RemovePanels(ContentPanel);
-            PanelHelper.AddPanel(ContentPanel, new UserPayments());
-        }
+
     }
 }

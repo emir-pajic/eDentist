@@ -67,7 +67,8 @@ namespace eDentist.WinUI.Forms.Appointments
 
         private async void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            if (ValidateInput(_selectedAppointment, _selectedUser))
+
+            if (ValidateInput(_selectedAppointment, _selectedUser, txtAppStatus.Text))
             {
 
                 var request = new AppointmentsUpsertRequest()
@@ -76,7 +77,8 @@ namespace eDentist.WinUI.Forms.Appointments
                     Date = dtpAppointment.Value,
                     UserId = _selectedUser.UserId,
                     DayId = _selectedAppointment.DayId,
-                    Status = _selectedAppointment.Status
+                    Status = _selectedAppointment.Status,
+                    AppointmentStatus = txtAppStatus.Text
                 };
 
                 await _appointmentService.Update<MAppointments>(request.AppointmentId, request);
@@ -85,7 +87,7 @@ namespace eDentist.WinUI.Forms.Appointments
             }
         }
 
-        private bool ValidateInput(MAppointments selected, MUsers patient)
+        private bool ValidateInput(MAppointments selected, MUsers patient, string appStatus)
         {
             if (selected == null)
             {
@@ -95,6 +97,11 @@ namespace eDentist.WinUI.Forms.Appointments
             if (patient == null)
             {
                 MessageBox.Show("Patient must be selected!");
+                return false;
+            }
+            if (string.IsNullOrEmpty(appStatus))
+            {
+                MessageBox.Show("Status can not be empty");
                 return false;
             }
             return true;
