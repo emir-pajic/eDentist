@@ -208,6 +208,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPatientIndex";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "eDentist | Patient";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userImage)).EndInit();

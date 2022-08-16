@@ -66,7 +66,5 @@ namespace eDentist.WinUI.Main
             PanelHelper.RemovePanels(ContentPanel);
             PanelHelper.AddPanel(ContentPanel, new ExaminationListPatient(SignedInUser.User));
         }
-
-
     }
 }

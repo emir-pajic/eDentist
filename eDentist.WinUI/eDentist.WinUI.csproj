@@ -320,6 +320,12 @@
     <Compile Include="Main\frmPatientIndex.Designer.cs">
       <DependentUpon>frmPatientIndex.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\frmStaffIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmStaffIndex.Designer.cs">
+      <DependentUpon>frmStaffIndex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\About\AboutEDentist.resx">
@@ -450,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmPatientIndex.resx">
       <DependentUpon>frmPatientIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmStaffIndex.resx">
+      <DependentUpon>frmStaffIndex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
