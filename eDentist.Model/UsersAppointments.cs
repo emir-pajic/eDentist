@@ -9,6 +9,8 @@ namespace eDentist.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public bool Status { get; set; }
+        public string AppointmentStatus { get; set; }
+
 
     }
 }

@@ -46,7 +46,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.mAppointmentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.SuspendLayout();
@@ -151,7 +151,7 @@ namespace eDentist.WinUI.Forms.Appointments
             this.Date,
             this.FirstName,
             this.LastName,
-            this.Status});
+            this.AppointmentStatus});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,13 +200,13 @@ namespace eDentist.WinUI.Forms.Appointments
             this.LastName.Name = "LastName";
             this.LastName.ReadOnly = true;
             // 
-            // Status
+            // AppointmentStatus
             // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.AppointmentStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.AppointmentStatus.DataPropertyName = "AppointmentStatus";
+            this.AppointmentStatus.HeaderText = "Status";
+            this.AppointmentStatus.Name = "AppointmentStatus";
+            this.AppointmentStatus.ReadOnly = true;
             // 
             // AppointmentList
             // 
@@ -242,6 +242,6 @@ namespace eDentist.WinUI.Forms.Appointments
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentStatus;
     }
 }

@@ -38,7 +38,7 @@ namespace eDentist.WinUI.Forms.Appointments
                         Date = item.Date,
                         FirstName = _user.FirstName,
                         LastName = _user.LastName,
-                        Status = item.Status
+                        AppointmentStatus = item.AppointmentStatus,
                     };
                     result.Add(resultObj);
                 }

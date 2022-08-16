@@ -9,5 +9,7 @@ namespace eDentist.Model.Request
         public int? UserId { get; set; }
         public int? DayId { get; set; }
         public bool Status { get; set; }
+        public string AppointmentStatus { get; set; }
+
     }
 }

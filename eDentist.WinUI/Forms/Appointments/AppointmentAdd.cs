@@ -60,7 +60,8 @@ namespace eDentist.WinUI.Forms.Appointments
             var request = new AppointmentsUpsertRequest()
             {
                 Date = dtpAppointment.Value,
-                UserId = _selectedUser.UserId
+                UserId = _selectedUser.UserId,
+                AppointmentStatus = "Requested"
             };
 
             await _appointmentService.Insert<MAppointments>(request);
