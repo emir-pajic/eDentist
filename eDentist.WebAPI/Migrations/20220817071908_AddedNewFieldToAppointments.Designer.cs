@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eDentist.WebAPI.Database;
 
 namespace eDentist.WebAPI.Migrations
 {
     [DbContext(typeof(eDentistContext))]
-    partial class eDentistContextModelSnapshot : ModelSnapshot
+    [Migration("20220817071908_AddedNewFieldToAppointments")]
+    partial class AddedNewFieldToAppointments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -10,7 +10,7 @@ namespace eDentist.Model
         public string LastName { get; set; }
         public bool Status { get; set; }
         public string AppointmentStatus { get; set; }
-
-
+        public int? AcceptedById { get; set; }
+        public string Doctor { get; set; }
     }
 }

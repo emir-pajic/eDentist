@@ -14,6 +14,8 @@ namespace eDentist.Model
         public int? DayId { get; set; }
         public bool Status { get; set; }
         public string AppointmentStatus { get; set; }
+        public int? AcceptedById { get; set; }
+
 
     }
 }

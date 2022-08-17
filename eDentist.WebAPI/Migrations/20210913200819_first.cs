@@ -156,6 +156,7 @@ namespace eDentist.WebAPI.Migrations
                     DayId = table.Column<int>(nullable: true),
                     Status = table.Column<bool>(nullable: false),
                     AppointmentStatus = table.Column<string>(nullable: true),
+                    AcceptedById = table.Column<int>(nullable: true),
                 },
                 constraints: table =>
                 {

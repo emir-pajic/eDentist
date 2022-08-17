@@ -33,12 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAppointmentsPatient = new System.Windows.Forms.DataGridView();
+            this.App = new System.Windows.Forms.Label();
+            this.txtSearchApp = new System.Windows.Forms.TextBox();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.App = new System.Windows.Forms.Label();
-            this.txtSearchApp = new System.Windows.Forms.TextBox();
+            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointmentsPatient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,8 @@
             this.Date,
             this.FirstName,
             this.LastName,
-            this.Status});
+            this.Status,
+            this.Doctor});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,6 +92,29 @@
             this.dgvAppointmentsPatient.RowHeadersVisible = false;
             this.dgvAppointmentsPatient.Size = new System.Drawing.Size(671, 257);
             this.dgvAppointmentsPatient.TabIndex = 63;
+            // 
+            // App
+            // 
+            this.App.AutoSize = true;
+            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.App.ForeColor = System.Drawing.Color.White;
+            this.App.Location = new System.Drawing.Point(58, 14);
+            this.App.Name = "App";
+            this.App.Size = new System.Drawing.Size(210, 29);
+            this.App.TabIndex = 62;
+            this.App.Text = "My appointments";
+            // 
+            // txtSearchApp
+            // 
+            this.txtSearchApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchApp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSearchApp.Location = new System.Drawing.Point(63, 122);
+            this.txtSearchApp.Multiline = true;
+            this.txtSearchApp.Name = "txtSearchApp";
+            this.txtSearchApp.Size = new System.Drawing.Size(275, 33);
+            this.txtSearchApp.TabIndex = 58;
+            this.txtSearchApp.Text = "Enter Date";
+            this.txtSearchApp.TextChanged += new System.EventHandler(this.txtSearchApp_TextChanged);
             // 
             // Date
             // 
@@ -123,28 +148,12 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
-            // App
+            // Doctor
             // 
-            this.App.AutoSize = true;
-            this.App.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.App.ForeColor = System.Drawing.Color.White;
-            this.App.Location = new System.Drawing.Point(58, 14);
-            this.App.Name = "App";
-            this.App.Size = new System.Drawing.Size(210, 29);
-            this.App.TabIndex = 62;
-            this.App.Text = "My appointments";
-            // 
-            // txtSearchApp
-            // 
-            this.txtSearchApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchApp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSearchApp.Location = new System.Drawing.Point(63, 122);
-            this.txtSearchApp.Multiline = true;
-            this.txtSearchApp.Name = "txtSearchApp";
-            this.txtSearchApp.Size = new System.Drawing.Size(275, 33);
-            this.txtSearchApp.TabIndex = 58;
-            this.txtSearchApp.Text = "Enter Date";
-            this.txtSearchApp.TextChanged += new System.EventHandler(this.txtSearchApp_TextChanged);
+            this.Doctor.DataPropertyName = "Doctor";
+            this.Doctor.HeaderText = "Doctor";
+            this.Doctor.Name = "Doctor";
+            this.Doctor.ReadOnly = true;
             // 
             // AppointmentListPatient
             // 
@@ -172,5 +181,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
     }
 }

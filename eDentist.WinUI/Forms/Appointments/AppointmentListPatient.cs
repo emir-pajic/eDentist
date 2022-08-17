@@ -9,6 +9,8 @@ namespace eDentist.WinUI.Forms.Appointments
     public partial class AppointmentListPatient : UserControl
     {
         private readonly APIService service = new APIService("Appointments");
+        private readonly APIService _userService = new APIService("User");
+
         List<UsersAppointments> result = new List<UsersAppointments>();
         private MUsers _user;
 
@@ -29,25 +31,36 @@ namespace eDentist.WinUI.Forms.Appointments
 
             foreach (var item in appointments)
             {
+                var resultObj = new UsersAppointments();
                 if (item.UserId == _user.UserId)
                 {
 
-                    var resultObj = new UsersAppointments()
-                    {
-                        AppointmentId = item.AppointmentId,
-                        Date = item.Date,
-                        FirstName = _user.FirstName,
-                        LastName = _user.LastName,
-                        AppointmentStatus = item.AppointmentStatus,
-                    };
-                    result.Add(resultObj);
-                }
-            }
+                    resultObj.AppointmentId = item.AppointmentId;
+                    resultObj.Date = item.Date;
+                    resultObj.FirstName = _user.FirstName;
+                    resultObj.LastName = _user.LastName;
+                    resultObj.AppointmentStatus = item.AppointmentStatus;
+                    resultObj.Doctor = "N/A";
+                };
 
+                if (item.AcceptedById != null)
+                {
+                    var doc = await _userService.GetById<MUsers>(item.AcceptedById);
+
+                    if (doc != null)
+                    {
+                        resultObj.Doctor = doc.FirstName + " " + doc.LastName;
+                    }
+                }
+
+                result.Add(resultObj);
+            }
             dgvAppointmentsPatient.AutoGenerateColumns = false;
             dgvAppointmentsPatient.ReadOnly = true;
             dgvAppointmentsPatient.DataSource = result;
         }
+
+
 
         private void txtSearchApp_TextChanged(object sender, EventArgs e)
         {
