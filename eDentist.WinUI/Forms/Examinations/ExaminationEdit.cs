@@ -136,7 +136,7 @@ namespace eDentist.WinUI.Forms.Examinations
 
                 await _examinationService.Update<MExaminations>(_selectedExamination.ExaminationId, request);
                 MessageBox.Show("Examination updated!");
-                PanelHelper.SwapPanels(this.Parent, this, new ExaminationList());
+                PanelHelper.SwapPanels(this.Parent, this, new ExaminationListStaff());
             }
 
 

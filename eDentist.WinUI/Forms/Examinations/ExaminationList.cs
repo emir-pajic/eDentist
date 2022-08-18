@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace eDentist.WinUI.Forms.Examinations
 {
-    public partial class ExaminationList : UserControl
+    public partial class ExaminationListStaff : UserControl
     {
         private readonly APIService service = new APIService("Examinations");
         private readonly APIService userService = new APIService("User");
@@ -18,7 +18,7 @@ namespace eDentist.WinUI.Forms.Examinations
         public List<Examination> result = new List<Examination>();
 
 
-        public ExaminationList()
+        public ExaminationListStaff()
         {
             InitializeComponent();
         }

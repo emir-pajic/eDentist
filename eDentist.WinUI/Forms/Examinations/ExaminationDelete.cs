@@ -91,7 +91,7 @@ namespace eDentist.WinUI.Forms.Examinations
             {
                 await _examinationService.Delete<MExaminations>(_selectedExamination.ExaminationId);
                 MessageBox.Show("Examination removed!");
-                PanelHelper.SwapPanels(this.Parent, this, new ExaminationList());
+                PanelHelper.SwapPanels(this.Parent, this, new ExaminationListStaff());
 
             }
         }

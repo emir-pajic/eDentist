@@ -35,7 +35,7 @@ namespace eDentist.WinUI.Forms.Appointments
 
                     var user = await userService.GetById<MUsers>(item.UserId);
 
-                    if (item.AppointmentStatus.Equals("Requested") && item.Date.DayOfYear >= DateTime.Now.DayOfYear)
+                    if (item.AppointmentStatus.Equals("Requested"))
                     {
 
                         var resultObj = new UsersAppointments()

@@ -55,7 +55,7 @@ namespace eDentist.WinUI.Main
         private void btn_mngExam_Click(object sender, EventArgs e)
         {
             PanelHelper.RemovePanels(ContentPanel);
-            PanelHelper.AddPanel(ContentPanel, new ExaminationList());
+            PanelHelper.AddPanel(ContentPanel, new ExaminationListStaff());
         }
 
         private void btn_mngTreatments_Click(object sender, EventArgs e)

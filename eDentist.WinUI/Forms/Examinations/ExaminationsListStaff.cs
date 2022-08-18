@@ -1,4 +1,5 @@
 ﻿using eDentist.Model;
+using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -114,6 +115,11 @@ namespace eDentist.WinUI.Forms.Examinations
             }
 
             dgvExaminationsStaff.DataSource = filtered;
+        }
+
+        private void btnAddExaminationStaff_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new ExaminationsAddStaff(_user));
         }
     }
 }

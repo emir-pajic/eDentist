@@ -171,6 +171,7 @@
             this.btnAddExaminationStaff.Size = new System.Drawing.Size(41, 37);
             this.btnAddExaminationStaff.TabIndex = 74;
             this.btnAddExaminationStaff.UseVisualStyleBackColor = false;
+            this.btnAddExaminationStaff.Click += new System.EventHandler(this.btnAddExaminationStaff_Click);
             // 
             // ExaminationsListStaff
             // 

@@ -1,7 +1,7 @@
 ﻿
 namespace eDentist.WinUI.Forms.Examinations
 {
-    partial class ExaminationList
+    partial class ExaminationListStaff
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace eDentist.WinUI.Forms.Examinations
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExaminationList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExaminationListStaff));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
