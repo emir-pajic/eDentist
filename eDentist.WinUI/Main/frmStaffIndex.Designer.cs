@@ -123,6 +123,7 @@
             this.btnMyExaminations.TabIndex = 81;
             this.btnMyExaminations.Text = "My Examinations";
             this.btnMyExaminations.UseVisualStyleBackColor = false;
+            this.btnMyExaminations.Click += new System.EventHandler(this.btnMyExaminations_Click);
             // 
             // btnMyApps
             // 

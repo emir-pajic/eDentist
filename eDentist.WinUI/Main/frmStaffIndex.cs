@@ -1,5 +1,6 @@
 ﻿using eDentist.Model;
 using eDentist.WinUI.Forms.Appointments;
+using eDentist.WinUI.Forms.Examinations;
 using eDentist.WinUI.Forms.Materials;
 using eDentist.WinUI.Forms.Profile;
 using eDentist.WinUI.Forms.Treatments;
@@ -59,6 +60,12 @@ namespace eDentist.WinUI.Main
         {
             PanelHelper.RemovePanels(ContentPanel);
             PanelHelper.AddPanel(ContentPanel, new AppointmentListStaffMy(SignedInUser.User));
+        }
+
+        private void btnMyExaminations_Click(object sender, System.EventArgs e)
+        {
+            PanelHelper.RemovePanels(ContentPanel);
+            PanelHelper.AddPanel(ContentPanel, new ExaminationsListStaff(SignedInUser.User));
         }
     }
 }
