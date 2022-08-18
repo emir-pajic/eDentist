@@ -93,6 +93,7 @@
             this.button4.TabIndex = 84;
             this.button4.Text = "Manage Treatments";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnMaterials
             // 
@@ -107,6 +108,7 @@
             this.btnMaterials.TabIndex = 82;
             this.btnMaterials.Text = "Manage Materials";
             this.btnMaterials.UseVisualStyleBackColor = false;
+            this.btnMaterials.Click += new System.EventHandler(this.btnMaterials_Click);
             // 
             // btnMyExaminations
             // 
@@ -135,6 +137,7 @@
             this.btnMyApps.TabIndex = 80;
             this.btnMyApps.Text = "My Appointments";
             this.btnMyApps.UseVisualStyleBackColor = false;
+            this.btnMyApps.Click += new System.EventHandler(this.btnMyApps_Click);
             // 
             // btnAllAppointments
             // 
