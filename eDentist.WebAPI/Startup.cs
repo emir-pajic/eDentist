@@ -1,3 +1,4 @@
+using AutoMapper;
 using eDentist.Model;
 using eDentist.Model.Request;
 using eDentist.WebAPI.Database;
@@ -48,6 +49,8 @@ namespace eDentist.WebAPI
             services.AddControllers().AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
+
+
             services.AddControllers((x => x.Filters.Add<ErrorFilter>()));
             services.AddAutoMapper(typeof(Startup));
 
@@ -81,7 +84,7 @@ namespace eDentist.WebAPI
             });
 
             services.AddAuthentication("BasicAuthentication")
-              .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+                  .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
