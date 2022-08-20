@@ -139,6 +139,12 @@
     <Compile Include="Forms\Appointments\AppointmentListStaffMy.Designer.cs">
       <DependentUpon>AppointmentListStaffMy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Appointments\AppointmentsReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Appointments\AppointmentsReport.Designer.cs">
+      <DependentUpon>AppointmentsReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Appointments\AppointmentStaffAccept.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -408,6 +414,9 @@
     <EmbeddedResource Include="Forms\Appointments\AppointmentListStaffMy.resx">
       <DependentUpon>AppointmentListStaffMy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Appointments\AppointmentsReport.resx">
+      <DependentUpon>AppointmentsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Appointments\AppointmentStaffAccept.resx">
       <DependentUpon>AppointmentStaffAccept.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,6 +543,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\AppointmentsBetweenDates.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -550,7 +560,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
-    <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eDentist.Model\eDentist.Model.csproj">

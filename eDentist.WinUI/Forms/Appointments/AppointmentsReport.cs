@@ -1,5 +1,5 @@
 ﻿using eDentist.Model;
-using eDentist.WinUI.Helper;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,22 +7,22 @@ using System.Windows.Forms;
 
 namespace eDentist.WinUI.Forms.Appointments
 {
-    public partial class AppointmentListStaffMy : UserControl
+    public partial class AppointmentsReport : UserControl
     {
-        public MUsers _user { get; set; }
         private readonly APIService service = new APIService("Appointments");
         private readonly APIService userService = new APIService("User");
         List<UsersAppointments> result = new List<UsersAppointments>();
 
-        public AppointmentListStaffMy(MUsers user)
+        private MUsers _user { get; set; }
+
+        public AppointmentsReport(MUsers user)
         {
-            _user = user;
             InitializeComponent();
+            _user = user;
         }
-        private async void AppointmentsListStaffMy_Load(object sender, EventArgs e)
+        private async void AppointmentsReport_Load(object sender, EventArgs e)
         {
             await LoadList();
-            txtSearchMyApp.Focus();
 
         }
         private async Task LoadList()
@@ -36,17 +36,17 @@ namespace eDentist.WinUI.Forms.Appointments
 
                     var user = await userService.GetById<MUsers>(item.UserId);
 
-                    if (item.AppointmentStatus.Equals("Accepted"))
                     {
                         if (item.AcceptedById != null && item.AcceptedById == _user.UserId)
                         {
 
                             var resultObj = new UsersAppointments()
                             {
-                                AppointmentId = item.AppointmentId,
                                 Date = item.Date,
+                                Doctor = _user.FirstName + " " + _user.LastName,
                                 FirstName = user.FirstName,
                                 LastName = user.LastName,
+                                AppointmentStatus = item.AppointmentStatus,
                             };
                             result.Add(resultObj);
                         }
@@ -55,29 +55,11 @@ namespace eDentist.WinUI.Forms.Appointments
                 }
             }
 
-            dgvAppointmentsStaffMy.AutoGenerateColumns = false;
-            dgvAppointmentsStaffMy.ReadOnly = true;
-            dgvAppointmentsStaffMy.DataSource = result;
+            ReportDataSource ds = new ReportDataSource("AppDataSet", result);
+            reportViewer1.LocalReport.DataSources.Add(ds);
+            this.reportViewer1.RefreshReport();
         }
 
-        private void txtSearchMyApp_TextChanged(object sender, EventArgs e)
-        {
-            var filtered = new List<UsersAppointments>();
-            foreach (var item in result)
-            {
-                if (item.Date.ToString().Contains(txtSearchMyApp.Text.ToLower()))
-                {
-                    filtered.Add(item);
-                }
-            }
 
-            dgvAppointmentsStaffMy.DataSource = filtered;
-        }
-
-        private void btnAppointmentSummaries_Click(object sender, EventArgs e)
-        {
-            PanelHelper.SwapPanels(this.Parent, this, new AppointmentsReport(_user));
-
-        }
     }
 }
