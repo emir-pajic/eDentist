@@ -1,7 +1,7 @@
+
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget
- {
+class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
 }
@@ -43,23 +43,70 @@ class _LoginState extends State<Login> {
                       height: 20,
                     ),
                     TextField(
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 18),
+                      decoration: const InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        hintText: 'Username',
+                        hintStyle: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
                       controller: usernameController,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          hintText: 'Username'),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     TextField(
+                      obscureText: true,
+                      enableSuggestions: false,
+                      autocorrect: false,
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 18),
                       controller: passwordController,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15)),
-                          focusColor: Colors.white,
-                          hintText: 'Password'),
+                      decoration: const InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(width: 2, color: Colors.white),
+                        ),
+                        hintStyle: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        hintText: 'Password',
+                      ),
                     ),
                     const SizedBox(
                       height: 20,
@@ -72,13 +119,8 @@ class _LoginState extends State<Login> {
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
                         onPressed: () async {
-                          ScaffoldMessenger.of(context)
-                              .showSnackBar(const SnackBar(
-                            content: SizedBox(
-                                height: 20,
-                                child: Center(child: Text('error'))),
-                            backgroundColor: Color.fromARGB(255, 100, 9, 13),
-                          ));
+
+
                         },
                         child: const Text(
                           'Login',
