@@ -26,18 +26,23 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: const EdgeInsets.all(50),
                 child: Column(
-                  //mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+  
                       children: const [
+
+                        Image(height: 80, width: 80,image: AssetImage('assets/logo.png')),
+
                         Text(
-                          'eDentist',
+                          'eDentist login',
                           style: TextStyle(
                               fontSize: 36,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic),
-                        )
+                              fontStyle: FontStyle.italic,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(
