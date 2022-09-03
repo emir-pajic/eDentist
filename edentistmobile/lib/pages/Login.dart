@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
+
   @override
   _LoginState createState() => _LoginState();
 }
@@ -118,16 +119,21 @@ class _LoginState extends State<Login> {
                           color: Colors.lightBlue,
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
-                        onPressed: () async {
-
-
-                        },
+                        onPressed: () async {},
                         child: const Text(
                           'Login',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       ),
-                    )
+                    ),
+                    Container(
+                      height: 100,
+                      padding: const EdgeInsets.all(25),
+                      child: const Text(
+                        'You don\'t have account? Register here!',
+                        style: TextStyle(color: Colors.lightBlue),
+                      ),
+                    ),
                   ],
                 ),
               ),
