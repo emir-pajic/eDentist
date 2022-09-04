@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:edentistmobile/services/APIService.dart';
+import '../models/User.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -29,18 +33,18 @@ class _LoginState extends State<Login> {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
-  
                       children: const [
-
-                        Image(height: 80, width: 80,image: AssetImage('assets/logo.png')),
-
+                        Image(
+                            height: 80,
+                            width: 80,
+                            image: AssetImage('assets/logo.png')),
                         Text(
                           'eDentist login',
                           style: TextStyle(
-                              fontSize: 36,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic,
+                            fontSize: 36,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic,
                           ),
                         ),
                       ],
@@ -124,7 +128,38 @@ class _LoginState extends State<Login> {
                           color: Colors.lightBlue,
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
-                        onPressed: () async {},
+                        onPressed: () async {
+                          APIService.username = usernameController.text;
+                          APIService.password = passwordController.text;
+
+                          Map data = {
+                            'username': '${usernameController.text}',
+                            'password': '${passwordController.text}'
+                          };
+
+                          var body = jsonEncode(data);
+                          var result = await APIService.authenticate(
+                              'User/Authenticate', body);
+
+                          var error = '';
+                          if (result != null) {
+                            APIService.signedInUser = User.fromJson(result);
+                          }
+                          if (APIService
+                                  .signedInUser?.userRoles?[0].role?.name !=
+                              "Patient") {
+                            error = 'Only patients';
+                          }
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: SizedBox(
+                                height: 20, child: Center(child: Text(error))),
+                            backgroundColor: Color.fromARGB(255, 100, 9, 13),
+                          ));
+
+                          APIService.signedInUser = null;
+                          APIService.username = null;
+                          APIService.password = null;
+                        },
                         child: const Text(
                           'Login',
                           style: TextStyle(color: Colors.white, fontSize: 20),
