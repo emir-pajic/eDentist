@@ -1,4 +1,5 @@
 
+import 'package:edentistmobile/pages/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:edentistmobile/pages/Login.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login':(context)=>Login(),
         //'/loading':(context)=>Loading(),
-        //'/home':(context)=>Home(),
+        '/home':(context)=>Home(),
         //'/appointments':(context)=>Appointments(),
         //'/myAppointments':(context)=>MyAppointments(),
         //'/examinations':(context)=>Examinations(),

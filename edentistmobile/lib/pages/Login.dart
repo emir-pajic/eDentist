@@ -142,14 +142,31 @@ class _LoginState extends State<Login> {
                               'User/Authenticate', body);
 
                           var error = '';
-                          if (result != null) {
+
+
+                          if (result == null){
+                            error = "Invalid credentials!";
+                          }
+                          else{
                             APIService.signedInUser = User.fromJson(result);
                           }
+
+
                           if (APIService
-                                  .signedInUser?.userRoles?[0].role?.name !=
+                              .signedInUser?.userRoles?[0].role?.name !=
                               "Patient") {
-                            error = 'Only patients';
+                            error = 'Application is patients only!';
+                            APIService.signedInUser = null;
+                            APIService.username = null;
+                            APIService.password = null;
+                          }else{
+                            Navigator.of(context).pushReplacementNamed('/home');
+
+                            return;
                           }
+
+
+
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: SizedBox(
                                 height: 20, child: Center(child: Text(error))),
