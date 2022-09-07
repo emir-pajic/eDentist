@@ -73,7 +73,7 @@ class APIService {
         }
       });
 
-      return myappointments;
+      return appointments.toList();
     }
     return null;
   }
