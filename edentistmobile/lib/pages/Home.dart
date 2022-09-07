@@ -34,15 +34,15 @@ class _HomeState extends State<Home> {
               ),
               ListTile(
                 title: Text('Book an Appointment'),
-                onTap: () {
-                  print(APIService.signedInUser?.userId);
+                onTap: () async {
+                  //await APIService.getmyappointments("Appointments", APIService.signedInUser?.userId?? 0);
                   //Navigator.of(context).pushNamed('/appointmentsBook');
                 },
               ),
               ListTile(
                 title: Text('My Appointments'),
                 onTap: () {
-                  //Navigator.of(context).pushNamed('/myAppointments');
+                  Navigator.of(context).pushNamed('/myAppointments');
                 },
               ),
               ListTile(

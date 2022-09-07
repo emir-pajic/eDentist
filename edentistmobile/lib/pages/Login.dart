@@ -143,29 +143,27 @@ class _LoginState extends State<Login> {
 
                           var error = '';
 
-
-                          if (result == null){
+                          if (result == null) {
                             error = "Invalid credentials!";
-                          }
-                          else{
+                          } else {
                             APIService.signedInUser = User.fromJson(result);
                           }
 
+                          if (APIService.signedInUser != null) {
+                            if (APIService
+                                    .signedInUser?.userRoles?[0].role?.name !=
+                                "Patient") {
+                              error = 'Application is patients only!';
+                              APIService.signedInUser = null;
+                              APIService.username = null;
+                              APIService.password = null;
+                            } else {
+                              Navigator.of(context)
+                                  .pushReplacementNamed('/home');
 
-                          if (APIService
-                              .signedInUser?.userRoles?[0].role?.name !=
-                              "Patient") {
-                            error = 'Application is patients only!';
-                            APIService.signedInUser = null;
-                            APIService.username = null;
-                            APIService.password = null;
-                          }else{
-                            Navigator.of(context).pushReplacementNamed('/home');
-
-                            return;
+                              return;
+                            }
                           }
-
-
 
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: SizedBox(

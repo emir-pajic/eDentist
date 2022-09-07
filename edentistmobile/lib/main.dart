@@ -2,6 +2,7 @@
 import 'package:edentistmobile/pages/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:edentistmobile/pages/Login.dart';
+import 'package:edentistmobile/pages/MyAppointments.dart';
 
 
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         //'/loading':(context)=>Loading(),
         '/home':(context)=>Home(),
         //'/appointments':(context)=>Appointments(),
-        //'/myAppointments':(context)=>MyAppointments(),
+        '/myAppointments':(context)=>MyAppointments(),
         //'/examinations':(context)=>Examinations(),
         //'/ocjene':(context)=>MojeOcjene()
       },
