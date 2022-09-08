@@ -77,4 +77,26 @@ class APIService {
     }
     return null;
   }
+
+  static Future<dynamic> getDoctor(String route, int? userId) async {
+    String baseUrl = '$apiBase$route$userId';
+    final String basicAuth =
+        'Basic ${base64Encode(utf8.encode('$username:$password'))}';
+
+    print(baseUrl);
+
+
+    final response = await http.get(
+      Uri.parse(baseUrl),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        HttpHeaders.authorizationHeader: basicAuth
+      },
+    );
+
+    if (response.statusCode == 201 || response.statusCode == 200) {
+      return json.decode(response.body);
+    }
+    return null;
+  }
 }

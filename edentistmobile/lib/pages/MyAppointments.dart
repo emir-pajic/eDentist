@@ -2,6 +2,8 @@ import 'package:edentistmobile/models/Appointment.dart';
 import 'package:flutter/material.dart';
 import 'package:edentistmobile/services/APIService.dart';
 
+import 'AppointmentDetails.dart';
+
 class MyAppointments extends StatefulWidget {
   @override
   _MyAppointmentsState createState() => _MyAppointmentsState();
@@ -64,7 +66,8 @@ class _MyAppointmentsState extends State<MyAppointments> {
       child: Card(
         child: TextButton(
           onPressed: (){
-            
+            Navigator.push(context, MaterialPageRoute(builder: (context) => AppointmentDetails(appointment: appointment,)));
+
           },
           child: Padding(
               padding: EdgeInsets.all(20),
