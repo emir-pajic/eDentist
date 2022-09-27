@@ -11,6 +11,7 @@ int? treatmentId;
 String? status;
 int? treatmentsMaterialsId;
 String? paymentTokenId;
+String? exDate;
 
 Examination(
     this.examinationId,

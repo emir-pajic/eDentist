@@ -174,6 +174,7 @@ class APIService {
         apps.forEach((appointment) {
 
             if (item.appointmentId == appointment.appointmentId && appointment.userId == userId){
+              item.exDate = appointment.date;
              myExaminations.add(item);
             }
 

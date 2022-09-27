@@ -14,8 +14,11 @@ class AppointmentDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: Text("Appointment Details"),
+        backgroundColor: Colors.blue[900],
+
       ),
       body: Card(
         child: Column(
@@ -24,15 +27,6 @@ class AppointmentDetails extends StatelessWidget {
               leading: Icon(Icons.calendar_month_sharp),
               title: Text("Appointment date: ${appointment?.date}"),
               subtitle: Text("Status: ${appointment?.appointmentStatus}"),
-
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-
-                const SizedBox(width: 8),
-
-              ],
             ),
           ],
         ),

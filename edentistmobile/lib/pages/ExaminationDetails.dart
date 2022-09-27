@@ -13,10 +13,24 @@ class ExaminationDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title: Text("Appointment Details"),
+        title: Text("Examination Details"),
+        backgroundColor: Colors.blue[900],
+
       ),
-      body: Text("Welcome"),
+      body: Card(
+        child: Column(
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.face),
+              title: Text("Examination: ${examination?.additionalInfo}"),
+              subtitle: Text("Status: ${examination?.status}"),
+              trailing: Text("1000\$"),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
