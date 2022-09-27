@@ -7,8 +7,7 @@ import '../models/User.dart';
 
 class AppointmentDetails extends StatelessWidget {
   final Appointment? appointment;
-  String? doctorName;
-  String? doctorLastName;
+
 
   AppointmentDetails({Key? key, required this.appointment}) : super(key: key);
 
@@ -24,7 +23,7 @@ class AppointmentDetails extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.calendar_month_sharp),
               title: Text("Appointment date: ${appointment?.date}"),
-              subtitle: Text("Doctor: ${doctorName}" ),
+              subtitle: Text("Status: ${appointment?.appointmentStatus}"),
 
             ),
             Row(
@@ -32,11 +31,7 @@ class AppointmentDetails extends StatelessWidget {
               children: <Widget>[
 
                 const SizedBox(width: 8),
-                TextButton(
-                  child: const Text('CANEL APPOINTMENT'),
-                  onPressed: () {/* ... */},
-                ),
-                const SizedBox(width: 8),
+
               ],
             ),
           ],
@@ -45,15 +40,7 @@ class AppointmentDetails extends StatelessWidget {
     );
   }
 
-
-
-  Future<User?> getDoctor() async{
-    var result = await APIService.getDoctor("User/", appointment?.acceptedById);
-
-    if (result != null){
-      return User.fromJson(result);
-    }
-    return null;
-  }
 }
+
+
 

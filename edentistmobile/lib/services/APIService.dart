@@ -85,7 +85,6 @@ class APIService {
 
     print(baseUrl);
 
-
     final response = await http.get(
       Uri.parse(baseUrl),
       headers: <String, String>{
@@ -95,6 +94,28 @@ class APIService {
     );
 
     if (response.statusCode == 201 || response.statusCode == 200) {
+      return json.decode(response.body);
+    }
+    return null;
+  }
+
+  static Future<dynamic> removeAppointment(String route, int? appId) async {
+    String baseUrl = '$apiBase$route$appId';
+    final String basicAuth =
+        'Basic ${base64Encode(utf8.encode('$username:$password'))}';
+
+    print(baseUrl);
+
+    final response = await http.delete(
+      Uri.parse(baseUrl),
+      headers: <String, String>{
+        'Accept': 'text/plain',
+        HttpHeaders.authorizationHeader: basicAuth
+      },
+    );
+
+    if (response.statusCode == 201 || response.statusCode == 200) {
+      print(response.body);
       return json.decode(response.body);
     }
     return null;
