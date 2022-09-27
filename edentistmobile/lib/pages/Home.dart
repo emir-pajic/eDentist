@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
               ListTile(
                 title: Text('My Examinations'),
                 onTap: () {
-                  //Navigator.of(context).pushNamed('/myExaminations');
+                  Navigator.of(context).pushNamed('/myExaminations');
                 },
               ),
               ListTile(

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:edentistmobile/models/Appointment.dart';
+import 'package:edentistmobile/models/Examination.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
 
@@ -73,7 +74,7 @@ class APIService {
         }
       });
 
-      return appointments.toList();
+      return myappointments.toList();
     }
     return null;
   }
@@ -139,6 +140,47 @@ class APIService {
 
     if (response.statusCode == 201 || response.statusCode == 200) {
       return json.decode(response.body);
+    }
+    return null;
+  }
+
+  static Future<dynamic> getmyexaminations(String route, int userId) async {
+    String baseUrl = '$apiBase$route';
+    final String basicAuth =
+        'Basic ${base64Encode(utf8.encode('$username:$password'))}';
+
+    print(baseUrl);
+
+    List<Examination> myExaminations = <Examination>[];
+
+    final response = await http.get(
+      Uri.parse(baseUrl),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        HttpHeaders.authorizationHeader: basicAuth
+      },
+    );
+
+    if (response.statusCode == 201 || response.statusCode == 200) {
+      List<Examination> examinations = (json.decode(response.body) as List)
+          .map((data) => Examination.fromJson(data))
+          .toList();
+
+      var apps = await getmyappointments("Appointments", userId);
+
+
+
+      examinations.forEach((item) {
+        apps.forEach((appointment) {
+
+            if (item.appointmentId == appointment.appointmentId && appointment.userId == userId){
+             myExaminations.add(item);
+            }
+
+          });
+      });
+
+      return myExaminations.toList();
     }
     return null;
   }

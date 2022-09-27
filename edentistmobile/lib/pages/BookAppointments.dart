@@ -95,7 +95,7 @@ class _BookAppointmentState extends State<BookAppointment> {
                   var body = jsonEncode(data);
                   
                   await APIService.bookAppointment("Appointments", body);
-
+                  
                   Navigator.of(context).pop();
                 },
               )
