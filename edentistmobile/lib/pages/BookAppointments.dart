@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:edentistmobile/services/APIService.dart';
 
@@ -10,7 +12,7 @@ class BookAppointment extends StatefulWidget {
 
 class _BookAppointmentState extends State<BookAppointment> {
   DateTime dateTime =
-      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day, DateTime.now().hour, DateTime.now().minute);
   @override
   Widget build(BuildContext context) {
     final hours = dateTime.hour.toString().padLeft(2, '0');
@@ -48,14 +50,14 @@ class _BookAppointmentState extends State<BookAppointment> {
                       final date = await pickDate();
                       if (date == null) return; // 'CANCEL'
 
-                      final newDateTime = DateTime(
-                          dateTime.year,
-                          dateTime.month,
-                          dateTime.day,
+                      final dnt = DateTime(
+                          date.year,
+                          date.month,
+                          date.day,
                           dateTime.hour,
                           dateTime.minute);
                       setState(() {
-                        dateTime = newDateTime;
+                        dateTime = dnt;
                       });
                     },
                   ),
@@ -67,7 +69,7 @@ class _BookAppointmentState extends State<BookAppointment> {
                   onPressed: () async {
                     final time = await pickTime();
 
-                    if (time == null) return; //0'CANCEL'
+                    if (time == null) return; //'CANCEL'
 
                     final newDateTime = DateTime(dateTime.year, dateTime.month,
                         dateTime.day, time.hour, time.minute);
@@ -75,12 +77,27 @@ class _BookAppointmentState extends State<BookAppointment> {
                     setState(() {
                       dateTime = newDateTime;
                     });
+
+
                   },
                 ))
               ]),
               ElevatedButton(
                 child: Text('Book'),
-                onPressed: () async {},
+                onPressed: () async {
+
+                  Map data = {
+                    'Date': '${dateTime}',
+                    'UserId': '${APIService.signedInUser?.userId}',
+                    'AppointmentStatus': 'Requested'
+                  };
+
+                  var body = jsonEncode(data);
+                  
+                  await APIService.bookAppointment("Appointments", body);
+
+                  Navigator.of(context).pop();
+                },
               )
             ],
           ),
