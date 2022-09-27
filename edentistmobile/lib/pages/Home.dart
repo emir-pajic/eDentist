@@ -37,6 +37,8 @@ class _HomeState extends State<Home> {
                 onTap: () async {
                   //await APIService.getmyappointments("Appointments", APIService.signedInUser?.userId?? 0);
                   //Navigator.of(context).pushNamed('/appointmentsBook');
+                  Navigator.of(context).pushNamed('/bookAppointment');
+
                 },
               ),
               ListTile(

@@ -1,8 +1,11 @@
 
+import 'package:edentistmobile/pages/BookAppointments.dart';
 import 'package:edentistmobile/pages/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:edentistmobile/pages/Login.dart';
 import 'package:edentistmobile/pages/MyAppointments.dart';
+import 'package:edentistmobile/pages/BookAppointments.dart';
+
 
 
 
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
       home:Login(),
       routes: {
         '/login':(context)=>Login(),
-        //'/loading':(context)=>Loading(),
+        '/bookAppointment':(context)=>BookAppointment(),
         '/home':(context)=>Home(),
         //'/appointments':(context)=>Appointments(),
         '/myAppointments':(context)=>MyAppointments(),
