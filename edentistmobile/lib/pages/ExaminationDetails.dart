@@ -1,4 +1,5 @@
 
+
 import 'package:edentistmobile/controller/payment_controller.dart';
 import 'package:edentistmobile/services/APIService.dart';
 import 'package:flutter/material.dart';
@@ -30,13 +31,14 @@ class ExaminationDetails extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.face),
               title: Text("Examination: ${examination?.additionalInfo}"),
-              subtitle: Text("Status: ${examination?.status}"),
-              trailing: Text("1000\$"),
+              subtitle: Text("Treatment: ${examination?.treatmentDesription}\nStatus: ${examination?.status}"),
+              trailing: Text("${examination?.price!.toInt().toString()} €"),
+
             ),
             Center(
               child: ElevatedButton(
                 child: Text("Make Payment"),
-                onPressed: () => paymentController.makePayment(amount: '5', currency: 'USD'),
+                onPressed: () => paymentController.makePayment(amount: '${examination?.price!.toInt()}', currency: 'EUR'),
               ),
             )
           ],
