@@ -5,11 +5,14 @@ import 'package:edentistmobile/pages/MyExaminations.dart';
 import 'package:flutter/material.dart';
 import 'package:edentistmobile/pages/Login.dart';
 import 'package:edentistmobile/pages/MyAppointments.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
 
 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Stripe.publishableKey = 'pk_test_51LmyUKEOfTcAasxeJukjP2cLq7z23OEigceGmHtErpAI654wz0iGm3w0Ax9OaIag1lKg9tC42mITbt624AOQravT00BkYUpYEV';
 
-void main() {
   runApp(const MyApp());
 }
 
