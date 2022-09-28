@@ -26,11 +26,15 @@ class _HomeState extends State<Home> {
         drawer: Drawer(
           backgroundColor: Colors.white,
           child: ListView(
+
             children: [
-              DrawerHeader(child: Center(child: Text('eDentist', style: TextStyle(fontSize: 20, color: Colors.white),)),
+              DrawerHeader(child: Center(child: Text('', style: TextStyle(fontSize: 20, color: Colors.white),)),
                 decoration: BoxDecoration(
-                    color: Colors.blue[900]
+                    color: Colors.blue[900],
+                  image: new DecorationImage(fit: BoxFit.cover, image: MemoryImage(APIService.signedInUser!.imageArray))
                 ),
+
+
               ),
               ListTile(
                 title: Text('Book an Appointment'),
