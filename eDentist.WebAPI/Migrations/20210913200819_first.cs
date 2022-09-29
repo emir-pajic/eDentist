@@ -241,6 +241,7 @@ namespace eDentist.WebAPI.Migrations
                         column: x => x.TreatmentId,
                         principalTable: "Treatments",
                         principalColumn: "TreatmentId",
+                        onUpdate: ReferentialAction.NoAction,
                         onDelete: ReferentialAction.Restrict);
                 });
 
