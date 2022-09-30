@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:edentistmobile/models/Appointment.dart';
 import 'package:edentistmobile/models/Examination.dart';
 import 'package:edentistmobile/models/Treatment.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
 
@@ -241,6 +242,70 @@ class APIService {
 
     if (response.statusCode == 201 || response.statusCode == 200) {
       return json.decode(response.body);
+    }
+    return null;
+  }
+
+  static Future<dynamic> getmypaidexaminations(String route, int userId) async {
+    String baseUrl = '$apiBase$route';
+    final String basicAuth =
+        'Basic ${base64Encode(utf8.encode('$username:$password'))}';
+
+    print(baseUrl);
+
+    List<Examination> myExaminations = <Examination>[];
+    List<Examination> payedExaminations = <Examination>[];
+
+
+    final response = await http.get(
+      Uri.parse(baseUrl),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        HttpHeaders.authorizationHeader: basicAuth
+      },
+    );
+
+    if (response.statusCode == 201 || response.statusCode == 200) {
+      List<Examination> examinations = (json.decode(response.body) as List)
+          .map((data) => Examination.fromJson(data))
+          .toList();
+
+      var apps = await getmyappointments("Appointments", userId);
+      var trtmt = await getTreatments("Treatments") as List;
+      var trM = trtmt.map((data) => Treatment.fromJson(data))
+          .toList();
+
+
+
+      examinations.forEach((item) {
+        apps.forEach((appointment) {
+
+          if (item.appointmentId == appointment.appointmentId && appointment.userId == userId){
+            item.exDate = appointment.date;
+            myExaminations.add(item);
+          }
+
+        });
+      });
+
+      myExaminations.forEach((ex) {
+        trM.forEach((tr) {
+
+          if (tr.treatmentId == ex.treatmentId){
+            ex.treatmentDesription = tr.description;
+            ex.price = tr.price;
+          }
+
+        });
+      });
+
+      myExaminations.forEach((ex) {
+        if (ex.paymentTokenId.isNull == false){
+          payedExaminations.add(ex);
+        }
+      });
+
+      return payedExaminations.toList();
     }
     return null;
   }

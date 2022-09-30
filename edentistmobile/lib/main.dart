@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:edentistmobile/pages/Login.dart';
 import 'package:edentistmobile/pages/MyAppointments.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:edentistmobile/pages/Payments.dart';
 
 
 
@@ -28,10 +29,9 @@ class MyApp extends StatelessWidget {
         '/login':(context)=>Login(),
         '/bookAppointment':(context)=>BookAppointment(),
         '/home':(context)=>Home(),
-        //'/appointments':(context)=>Appointments(),
         '/myAppointments':(context)=>MyAppointments(),
         '/myExaminations':(context)=>MyExaminations(),
-        //'/ocjene':(context)=>MojeOcjene()
+        '/payments':(context)=>Payments()
       },
     );
   }

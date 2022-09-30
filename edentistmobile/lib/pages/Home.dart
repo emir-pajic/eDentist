@@ -57,12 +57,12 @@ class _HomeState extends State<Home> {
                   Navigator.of(context).pushNamed('/myExaminations');
                 },
               ),
-              /*ListTile(
+              ListTile(
                 title: Text('Payments'),
                 onTap: () {
-                  //Navigator.of(context).pushNamed('/payments');
+                  Navigator.of(context).pushNamed('/payments');
                 },
-              ),*/
+              ),
               ListTile(
                 title: Text('Log out'),
                 onTap: () {
