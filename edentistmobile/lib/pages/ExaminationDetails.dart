@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:uuid/uuid.dart';
 
 import 'package:edentistmobile/controller/payment_controller.dart';
 import 'package:edentistmobile/services/APIService.dart';
@@ -36,7 +37,7 @@ class ExaminationDetails extends StatelessWidget {
               child: ElevatedButton(
                   child: Text("Make Payment"),
                   onPressed: () async {
-                    if (examination?.paymentTokenId != 'payment') {
+                    if (examination?.paymentTokenId.isNull == true) {
                       paymentController.makePayment(
                           amount: '${examination?.price!.toInt()}',
                           currency: 'EUR');
@@ -47,7 +48,7 @@ class ExaminationDetails extends StatelessWidget {
                         'userId': examination?.userId,
                         'treatmentId': examination?.treatmentId,
                         'status': examination?.status,
-                        'paymentTokenId': 'payment'
+                        'paymentTokenId': Uuid().v1()
                       };
 
                       var body = jsonEncode(data);
