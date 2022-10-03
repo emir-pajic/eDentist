@@ -33,10 +33,6 @@ namespace eDentist.WinUI.Forms.Appointments
         {
             _appointments = await _appointmentService.Get<List<MAppointments>>(null);
             acceptAppointmentUserMenu.Items.AddRange(_appointments.Where(x => x.Date.DayOfYear >= DateTime.Now.DayOfYear && x.AppointmentStatus.Equals("Requested")).Select(x => x.Date.ToString()).ToArray());
-
-
-
-
         }
 
 

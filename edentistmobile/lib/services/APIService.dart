@@ -5,6 +5,7 @@ import 'package:edentistmobile/models/Treatment.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
+import 'dart:math';
 
 import '../models/User.dart';
 
@@ -170,30 +171,24 @@ class APIService {
 
       var apps = await getmyappointments("Appointments", userId);
       var trtmt = await getTreatments("Treatments") as List;
-      var trM = trtmt.map((data) => Treatment.fromJson(data))
-          .toList();
-
-
+      var trM = trtmt.map((data) => Treatment.fromJson(data)).toList();
 
       examinations.forEach((item) {
         apps.forEach((appointment) {
-
-            if (item.appointmentId == appointment.appointmentId && appointment.userId == userId){
-              item.exDate = appointment.date;
-             myExaminations.add(item);
-            }
-
-          });
+          if (item.appointmentId == appointment.appointmentId &&
+              appointment.userId == userId) {
+            item.exDate = appointment.date;
+            myExaminations.add(item);
+          }
+        });
       });
 
       myExaminations.forEach((ex) {
         trM.forEach((tr) {
-
-          if (tr.treatmentId == ex.treatmentId){
+          if (tr.treatmentId == ex.treatmentId) {
             ex.treatmentDesription = tr.description;
             ex.price = tr.price;
           }
-
         });
       });
 
@@ -223,7 +218,8 @@ class APIService {
     return null;
   }
 
-  static Future<dynamic> updateExamination(String route, int? exId, String body) async {
+  static Future<dynamic> updateExamination(
+      String route, int? exId, String body) async {
     String baseUrl = '$apiBase$route$exId';
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
@@ -256,7 +252,6 @@ class APIService {
     List<Examination> myExaminations = <Examination>[];
     List<Examination> payedExaminations = <Examination>[];
 
-
     final response = await http.get(
       Uri.parse(baseUrl),
       headers: <String, String>{
@@ -272,35 +267,29 @@ class APIService {
 
       var apps = await getmyappointments("Appointments", userId);
       var trtmt = await getTreatments("Treatments") as List;
-      var trM = trtmt.map((data) => Treatment.fromJson(data))
-          .toList();
-
-
+      var trM = trtmt.map((data) => Treatment.fromJson(data)).toList();
 
       examinations.forEach((item) {
         apps.forEach((appointment) {
-
-          if (item.appointmentId == appointment.appointmentId && appointment.userId == userId){
+          if (item.appointmentId == appointment.appointmentId &&
+              appointment.userId == userId) {
             item.exDate = appointment.date;
             myExaminations.add(item);
           }
-
         });
       });
 
       myExaminations.forEach((ex) {
         trM.forEach((tr) {
-
-          if (tr.treatmentId == ex.treatmentId){
+          if (tr.treatmentId == ex.treatmentId) {
             ex.treatmentDesription = tr.description;
             ex.price = tr.price;
           }
-
         });
       });
 
       myExaminations.forEach((ex) {
-        if (ex.paymentTokenId.isNull == false){
+        if (ex.paymentTokenId.isNull == false) {
           payedExaminations.add(ex);
         }
       });
@@ -317,7 +306,6 @@ class APIService {
 
     print(baseUrl);
 
-
     final response = await http.get(
       Uri.parse(baseUrl),
       headers: <String, String>{
@@ -328,29 +316,87 @@ class APIService {
 
     List<User> doctors = <User>[];
 
-
     if (response.statusCode == 201 || response.statusCode == 200) {
       List<User> users = (json.decode(response.body) as List)
           .map((data) => User.fromJson(data))
           .toList();
 
       users.forEach((element) {
-
-        if (element.userRoles?[0].role?.name ==
-            "Staff"){
-
+        if (element.userRoles?[0].role?.name == "Staff") {
           doctors.add(element);
         }
-
       });
 
       return doctors.toList();
     }
 
-
-
-
     return null;
   }
 
+  static Future<dynamic> getMostOftenDoctorOnMyAppointments(String route, int userId) async {
+    String baseUrl = '$apiBase$route';
+    final String basicAuth =
+        'Basic ${base64Encode(utf8.encode('$username:$password'))}';
+
+    print(baseUrl);
+
+    List<Appointment> myappointments = <Appointment>[];
+
+    final response = await http.get(
+      Uri.parse(baseUrl),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        HttpHeaders.authorizationHeader: basicAuth
+      },
+    );
+
+    if (response.statusCode == 201 || response.statusCode == 200) {
+      List<Appointment> appointments = (json.decode(response.body) as List)
+          .map((data) => Appointment.fromJson(data))
+          .toList();
+
+      appointments.forEach((item) {
+        if (item.userId == APIService.signedInUser?.userId) {
+          myappointments.add(item);
+        }
+      });
+
+      var docIds = <int>[];
+
+      myappointments.forEach((element) {
+
+        if (element.acceptedById != null){
+          docIds.add(element.acceptedById!);
+        }
+      });
+
+      var highest = Map();
+
+      docIds.forEach((l) {
+        if(!highest.containsKey(l)) {
+          highest[l] = 1;
+        } else {
+          highest[l] +=1;
+        }
+      });
+
+      print(highest);
+
+      var thevalue=0;
+      var thekey;
+
+      highest.forEach((k,v){
+        if(v>thevalue) {
+          thevalue = v;
+          thekey = k;
+        }
+      });
+
+      print("highest doctor " + thekey.toString());
+
+      var doc = await getDoctor("User/", thekey);
+      return doc;
+    }
+    return null;
+  }
 }

@@ -12,7 +12,6 @@ class BookAppointment extends StatefulWidget {
   State<BookAppointment> createState() => _BookAppointmentState();
 }
 
-
 class _BookAppointmentState extends State<BookAppointment> {
   DateTime dateTime = DateTime(DateTime.now().year, DateTime.now().month,
       DateTime.now().day, DateTime.now().hour, DateTime.now().minute);
@@ -36,22 +35,17 @@ class _BookAppointmentState extends State<BookAppointment> {
 
     setState(() {
       selectedValue = menuItems.first.value.toString();
-
-
     });
   }
-  get dropdownItems => menuItems;
 
+  get dropdownItems => menuItems;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_){
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       getDoctors();
-
     });
-
-
   }
 
   @override
@@ -117,29 +111,56 @@ class _BookAppointmentState extends State<BookAppointment> {
                   },
                 )),
               ]),
-              DropdownButton<String>(
-                value: selectedValue,
-                hint: Text(
-                  "Select a Prefered doctor",
-                  style: TextStyle(color: Colors.white),
+              const Text(
+                "Select preferred doctor",
+                style: TextStyle(color: Colors.white, fontSize: 18, height: 3),
+              ),
+              Container(
+                child: DropdownButton<String>(
+                  onTap: () async {
+                    var response =
+                        await APIService.getMostOftenDoctorOnMyAppointments(
+                            "Appointments",
+                            APIService.signedInUser?.userId ?? 0);
+                    if (response != null) {
+                      User? docUser = User.fromJson(response);
+
+                      var message = 'Based on number of your visits, your most visited and recommended doctor is ${docUser.firstName} ${docUser.lastname}';
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: SizedBox(
+                            height: 60, child: Center(child: Text(message, style: TextStyle(
+                           fontSize: 18
+                        ),))),
+                        backgroundColor: Colors.blue,
+                      ));
+                    }
+                  },
+                  value: selectedValue,
+                  hint: const Text(
+                    "Select a Prefered doctor",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onChanged: (String? newValue) {
+                    print(newValue);
+
+                    setState(() {
+                      selectedValue = newValue!;
+                    });
+                  },
+                  alignment: Alignment.center,
+                  dropdownColor: Colors.white,
+                  items: dropdownItems,
+                  style: const TextStyle(
+                      //te
+                      color: Colors.blue, //Font color
+                      fontSize: 20
+                      //font size on dropdown button
+
+                      ),
                 ),
-                onChanged: (String? newValue) {
-
-                  print(newValue);
-
-                  setState(() {
-                    selectedValue = newValue!;
-                  });
-                },
-                items: dropdownItems,
-                style: TextStyle(
-                    //te
-                    color: Colors.blue, //Font color
-                    fontSize: 20 //font size on dropdown button
-                    ),
               ),
               ElevatedButton(
-                child: Text('Book'),
+                child: const Text('Book'),
                 onPressed: () async {
                   Map data = {
                     'Date': '${dateTime}',
