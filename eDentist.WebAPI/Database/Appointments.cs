@@ -25,6 +25,7 @@ namespace eDentist.WebAPI.Database
         public string AppointmentStatus { get; set; }
         public int? AcceptedById { get; set; }
 
+        public int? PreferedDoctorId { get; set; }
         public virtual Days Day { get; set; }
         public virtual Users User { get; set; }
         public virtual ICollection<Examinations> Examinations { get; set; }

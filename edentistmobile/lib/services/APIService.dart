@@ -310,4 +310,47 @@ class APIService {
     return null;
   }
 
+  static Future<dynamic> getAllDoctors(String route) async {
+    String baseUrl = '$apiBase$route';
+    final String basicAuth =
+        'Basic ${base64Encode(utf8.encode('$username:$password'))}';
+
+    print(baseUrl);
+
+
+    final response = await http.get(
+      Uri.parse(baseUrl),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        HttpHeaders.authorizationHeader: basicAuth
+      },
+    );
+
+    List<User> doctors = <User>[];
+
+
+    if (response.statusCode == 201 || response.statusCode == 200) {
+      List<User> users = (json.decode(response.body) as List)
+          .map((data) => User.fromJson(data))
+          .toList();
+
+      users.forEach((element) {
+
+        if (element.userRoles?[0].role?.name ==
+            "Staff"){
+
+          doctors.add(element);
+        }
+
+      });
+
+      return doctors.toList();
+    }
+
+
+
+
+    return null;
+  }
+
 }

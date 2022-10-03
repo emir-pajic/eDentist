@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:edentistmobile/services/APIService.dart';
 
+import '../models/User.dart';
+
 class BookAppointment extends StatefulWidget {
   const BookAppointment({Key? key}) : super(key: key);
 
@@ -10,9 +12,48 @@ class BookAppointment extends StatefulWidget {
   State<BookAppointment> createState() => _BookAppointmentState();
 }
 
+
 class _BookAppointmentState extends State<BookAppointment> {
-  DateTime dateTime =
-      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day, DateTime.now().hour, DateTime.now().minute);
+  DateTime dateTime = DateTime(DateTime.now().year, DateTime.now().month,
+      DateTime.now().day, DateTime.now().hour, DateTime.now().minute);
+  List<User> doctors = [];
+  List<DropdownMenuItem<String>> menuItems = [];
+  String selectedValue = "test";
+
+  void getDoctors() async {
+    var gdocts = await APIService.getAllDoctors("User") as List;
+
+    gdocts.forEach((element) {
+      doctors.add(element);
+    });
+
+    doctors.forEach((element) {
+      menuItems.add(DropdownMenuItem(
+          child: Text(
+              element.firstName.toString() + " " + element.lastname.toString()),
+          value: element.userId.toString()));
+    });
+
+    setState(() {
+      selectedValue = menuItems.first.value.toString();
+
+
+    });
+  }
+  get dropdownItems => menuItems;
+
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      getDoctors();
+
+    });
+
+
+  }
+
   @override
   Widget build(BuildContext context) {
     final hours = dateTime.hour.toString().padLeft(2, '0');
@@ -50,12 +91,8 @@ class _BookAppointmentState extends State<BookAppointment> {
                       final date = await pickDate();
                       if (date == null) return; // 'CANCEL'
 
-                      final dnt = DateTime(
-                          date.year,
-                          date.month,
-                          date.day,
-                          dateTime.hour,
-                          dateTime.minute);
+                      final dnt = DateTime(date.year, date.month, date.day,
+                          dateTime.hour, dateTime.minute);
                       setState(() {
                         dateTime = dnt;
                       });
@@ -77,25 +114,44 @@ class _BookAppointmentState extends State<BookAppointment> {
                     setState(() {
                       dateTime = newDateTime;
                     });
-
-
                   },
-                ))
+                )),
               ]),
+              DropdownButton<String>(
+                value: selectedValue,
+                hint: Text(
+                  "Select a Prefered doctor",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onChanged: (String? newValue) {
+
+                  print(newValue);
+
+                  setState(() {
+                    selectedValue = newValue!;
+                  });
+                },
+                items: dropdownItems,
+                style: TextStyle(
+                    //te
+                    color: Colors.blue, //Font color
+                    fontSize: 20 //font size on dropdown button
+                    ),
+              ),
               ElevatedButton(
                 child: Text('Book'),
                 onPressed: () async {
-
                   Map data = {
                     'Date': '${dateTime}',
                     'UserId': '${APIService.signedInUser?.userId}',
-                    'AppointmentStatus': 'Requested'
+                    'AppointmentStatus': 'Requested',
+                    'preferedDoctorId': int.parse(selectedValue)
                   };
 
                   var body = jsonEncode(data);
-                  
+
                   await APIService.bookAppointment("Appointments", body);
-                  
+
                   Navigator.of(context).pop();
                 },
               )
