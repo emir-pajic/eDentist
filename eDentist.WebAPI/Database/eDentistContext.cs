@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -99,7 +96,9 @@ namespace eDentist.WebAPI.Database
              {
                  MaterialId = 1,
                  Name = "Brufen 400mg",
-                 ManufacturerId = 1
+                 ManufacturerId = 1,
+                 //Image = File.ReadAllBytes,
+                 Image = File.ReadAllBytes("Files/admin.jpg")
              });
 
 
@@ -134,6 +133,7 @@ namespace eDentist.WebAPI.Database
                     PasswordSalt = Salt[0],
                     PasswordHash = GenerateHash(Salt[0], "pajson1"),
                     Image = File.ReadAllBytes("Files/admin.jpg")
+
                 },
                 new Users
                 {
@@ -147,7 +147,8 @@ namespace eDentist.WebAPI.Database
                     Telephone = "061-918-661",
                     PasswordSalt = Salt[1],
                     PasswordHash = GenerateHash(Salt[1], "pajson2"),
-                    Image = File.ReadAllBytes("Files/user.jpg")
+                    //Image = FromFile()
+                    Image = File.ReadAllBytes("Files/admin.jpg")
                 }
             );
             modelBuilder.Entity<Roles>().HasData

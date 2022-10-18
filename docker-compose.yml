@@ -1,0 +1,35 @@
+version: '3'
+services:
+  edentist-database:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Saber1337aaa
+      - MSSQL_PID=Developer
+    ports:
+      - 1433
+    expose:
+      - 1433
+    networks:
+      - edentist-network
+
+  edentist-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:eDentist=Server=edentist-database,1433;Database=210403;User=sa;Password=Saber1337aaa;ConnectRetryCount=0
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 5000:5000
+    networks:
+      - edentist-network
+    links:
+      - edentist-database
+    depends_on:
+      - edentist-database
+
+networks:
+  edentist-network:
+    driver: bridge
