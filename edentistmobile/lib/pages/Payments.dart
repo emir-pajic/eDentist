@@ -40,7 +40,7 @@ class _PaymentsState extends State<Payments> {
       builder:
           (BuildContext context, AsyncSnapshot<List<Examination>> snapshot) {
         if (snapshot.connectionState==ConnectionState.waiting){
-          return Center(child: Text("Loading...."),);
+          return Center(child: const Text("Loading...."),);
         }else if (snapshot.hasError){
           return Center(child: Text("Error...."),);
 

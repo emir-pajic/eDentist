@@ -3,20 +3,19 @@ import 'package:edentistmobile/services/APIService.dart';
 import 'package:flutter/material.dart';
 
 import '../models/Appointment.dart';
-import '../models/User.dart';
 
 class AppointmentDetails extends StatelessWidget {
   final Appointment? appointment;
 
 
-  AppointmentDetails({Key? key, required this.appointment}) : super(key: key);
+  const AppointmentDetails({Key? key, required this.appointment}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title: Text("Appointment Details"),
+        title: const Text("Appointment Details"),
         backgroundColor: Colors.blue[900],
 
       ),

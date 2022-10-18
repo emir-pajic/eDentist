@@ -5,7 +5,6 @@ import 'package:edentistmobile/models/Treatment.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
-import 'dart:math';
 
 import '../models/User.dart';
 
@@ -32,7 +31,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     final response = await http.post(
       Uri.parse(baseUrl),
@@ -54,7 +52,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     List<Appointment> myappointments = <Appointment>[];
 
@@ -98,7 +95,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     final response = await http.get(
       Uri.parse(baseUrl),
@@ -119,7 +115,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     final response = await http.delete(
       Uri.parse(baseUrl),
@@ -130,7 +125,6 @@ class APIService {
     );
 
     if (response.statusCode == 201 || response.statusCode == 200) {
-      print(response.body);
       return json.decode(response.body);
     }
     return null;
@@ -141,7 +135,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     final response = await http.post(
       Uri.parse(baseUrl),
@@ -163,7 +156,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     List<Examination> myExaminations = <Examination>[];
 
@@ -213,7 +205,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     final response = await http.get(
       Uri.parse(baseUrl),
@@ -235,7 +226,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     final response = await http.put(
       Uri.parse(baseUrl),
@@ -258,7 +248,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     List<Examination> myExaminations = <Examination>[];
     List<Examination> payedExaminations = <Examination>[];
@@ -315,7 +304,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     final response = await http.get(
       Uri.parse(baseUrl),
@@ -349,7 +337,6 @@ class APIService {
     final String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
-    print(baseUrl);
 
     List<Appointment> myappointments = <Appointment>[];
 
@@ -391,7 +378,6 @@ class APIService {
         }
       });
 
-      print(highest);
 
       var thevalue=0;
       var thekey;
@@ -403,7 +389,6 @@ class APIService {
         }
       });
 
-      print("highest doctor " + thekey.toString());
 
       var doc = await getDoctor("User/", thekey);
       return doc;

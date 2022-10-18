@@ -26,8 +26,8 @@ class PaymentDetails extends StatelessWidget {
         child: Column(
           children: <Widget>[
             ListTile(
-              leading: Icon(Icons.monetization_on_sharp),
-              title: Text("Subject: Payment for treatment ${examination?.treatmentDesription}", style: TextStyle(
+              leading: const Icon(Icons.monetization_on_sharp),
+              title: Text("Subject: Payment for treatment ${examination?.treatmentDesription}", style: const TextStyle(
                 fontSize: 24
               ),),
               subtitle: Text(

@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text('eDentist menu'),
+          title: const Text('eDentist menu'),
           backgroundColor: Colors.blue[900],
         ),
 
@@ -37,34 +37,32 @@ class _HomeState extends State<Home> {
 
               ),
               ListTile(
-                title: Text('Book an Appointment'),
+                title: const Text('Book an Appointment'),
                 onTap: () async {
-                  //await APIService.getmyappointments("Appointments", APIService.signedInUser?.userId?? 0);
-                  //Navigator.of(context).pushNamed('/appointmentsBook');
                   Navigator.of(context).pushNamed('/bookAppointment');
 
                 },
               ),
               ListTile(
-                title: Text('My Appointments'),
+                title: const Text('My Appointments'),
                 onTap: () {
                   Navigator.of(context).pushNamed('/myAppointments');
                 },
               ),
               ListTile(
-                title: Text('My Examinations'),
+                title: const Text('My Examinations'),
                 onTap: () {
                   Navigator.of(context).pushNamed('/myExaminations');
                 },
               ),
               ListTile(
-                title: Text('Payments'),
+                title: const Text('Payments'),
                 onTap: () {
                   Navigator.of(context).pushNamed('/payments');
                 },
               ),
               ListTile(
-                title: Text('Log out'),
+                title: const Text('Log out'),
                 onTap: () {
                   APIService.username = null;
                   APIService.password = null;

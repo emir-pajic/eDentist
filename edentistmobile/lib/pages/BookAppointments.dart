@@ -128,7 +128,7 @@ class _BookAppointmentState extends State<BookAppointment> {
                       var message = 'Based on number of your visits, your most visited and recommended doctor is ${docUser.firstName} ${docUser.lastname}';
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: SizedBox(
-                            height: 60, child: Center(child: Text(message, style: TextStyle(
+                            height: 60, child: Center(child: Text(message, style: const TextStyle(
                            fontSize: 18
                         ),))),
                         backgroundColor: Colors.blue,
@@ -137,11 +137,10 @@ class _BookAppointmentState extends State<BookAppointment> {
                   },
                   value: selectedValue,
                   hint: const Text(
-                    "Select a Prefered doctor",
+                    "Select a Preferred doctor",
                     style: TextStyle(color: Colors.white),
                   ),
                   onChanged: (String? newValue) {
-                    print(newValue);
 
                     setState(() {
                       selectedValue = newValue!;

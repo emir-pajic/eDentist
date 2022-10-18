@@ -24,14 +24,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Login(),
+      home:const Login(),
       routes: {
-        '/login':(context)=>Login(),
-        '/bookAppointment':(context)=>BookAppointment(),
+        '/login':(context)=>const Login(),
+        '/bookAppointment':(context)=>const BookAppointment(),
         '/home':(context)=>Home(),
         '/myAppointments':(context)=>MyAppointments(),
-        '/myExaminations':(context)=>MyExaminations(),
-        '/payments':(context)=>Payments()
+        '/myExaminations':(context)=>const MyExaminations(),
+        '/payments':(context)=>const Payments()
       },
     );
   }

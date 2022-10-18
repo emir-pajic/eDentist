@@ -11,7 +11,7 @@ import '../models/Examination.dart';
 class ExaminationDetails extends StatelessWidget {
   final Examination? examination;
 
-  ExaminationDetails({Key? key, required this.examination}) : super(key: key);
+  const ExaminationDetails({Key? key, required this.examination}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,22 +20,36 @@ class ExaminationDetails extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title: Text("Examination Details"),
+        title: const Text("Examination Details"),
         backgroundColor: Colors.blue[900],
       ),
       body: Card(
         child: Column(
           children: <Widget>[
             ListTile(
-              leading: Icon(Icons.face),
-              title: Text("Examination: ${examination?.additionalInfo}"),
+              leading: const Icon(Icons.face),
+              title: Text("Examination: ${examination?.additionalInfo}", style: const TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400
+              ),),
               subtitle: Text(
-                  "Treatment: ${examination?.treatmentDesription}\nStatus: ${examination?.status}"),
-              trailing: Text("${examination?.price!.toInt().toString()} €"),
+                  "\nTreatment: ${examination?.treatmentDesription}\n\nStatus: ${examination?.status}\n\nPrice: ${examination?.price!.toInt().toString()} €\n\n", style: const TextStyle(
+                  fontSize: 22,
+                  color: Colors.blue
+              ),),
+
             ),
             Center(
               child: ElevatedButton(
-                  child: Text("Make Payment"),
+
+                  child: const Text("Make Payment", style: TextStyle(
+                    fontSize: 24,
+                    fontStyle: FontStyle.italic,
+                    letterSpacing: 1.5
+                  ),),
+
+
                   onPressed: () async {
                     if (examination?.paymentTokenId.isNull == true) {
                       paymentController.makePayment(
