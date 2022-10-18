@@ -181,14 +181,7 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 100,
-                      padding: const EdgeInsets.all(25),
-                      child: const Text(
-                        'You don\'t have account? Register here!',
-                        style: TextStyle(color: Colors.lightBlue),
-                      ),
-                    ),
+
                   ],
                 ),
               ),

@@ -24,10 +24,19 @@ class AppointmentDetails extends StatelessWidget {
         child: Column(
           children: <Widget>[
             ListTile(
-              leading: Icon(Icons.calendar_month_sharp),
-              title: Text("Appointment date: ${appointment?.date}"),
-              subtitle: Text("Status: ${appointment?.appointmentStatus}"),
+              leading: const Icon(Icons.calendar_month_sharp),
+              title: Text("Appointment date: ${appointment?.date}", style: const TextStyle(
+                fontSize: 24,
+                fontStyle: FontStyle.italic,
+                color: Colors.blue
+              ),),
+              subtitle: Text("\nAppointment Status: ${appointment?.appointmentStatus}\n\nLocation: eDentist Office Mostar bb 88400\n\nPatient: ${APIService.signedInUser?.firstName} ${APIService.signedInUser?.lastname}\n\nDoctor: ${appointment?.doctor ?? "N/A"}", style: const TextStyle(
+                fontSize: 22,
+                color: Colors.blue,
+                fontStyle: FontStyle.italic
+              )),
             ),
+
           ],
         ),
       ),

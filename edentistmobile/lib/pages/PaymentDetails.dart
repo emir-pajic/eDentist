@@ -34,7 +34,7 @@ class PaymentDetails extends StatelessWidget {
                   "\nRef number: ${examination?.paymentTokenId}\n\nCard Number: **** **** **** 4242\n\nReceiver: eDentist d.o.o Mostar \n\nStatus: Completed\n\nAmount: ${examination?.price?.toInt()} €", style: const TextStyle(
                 fontSize: 18,
                 fontStyle: FontStyle.italic,
-                color: Colors.red
+                color: Colors.blue
               ),),
             ),
 

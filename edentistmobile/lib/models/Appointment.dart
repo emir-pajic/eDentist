@@ -10,6 +10,7 @@ class Appointment {
   bool? status;
   String? appointmentStatus;
   int? acceptedById;
+  String? doctor;
 
   Appointment(
       {this.appointmentId,

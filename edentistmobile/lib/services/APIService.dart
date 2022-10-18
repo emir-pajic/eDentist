@@ -77,6 +77,17 @@ class APIService {
         }
       });
 
+
+      myappointments.forEach((item) async{
+        if (item.acceptedById != null){
+          var doc = await getDoctor("User/", item.acceptedById);
+          if (doc != null) {
+            User? docUser = User.fromJson(doc);
+            item.doctor = docUser.firstName! + " " + docUser.lastname!;
+          }
+        }
+      });
+
       return myappointments.toList();
     }
     return null;
