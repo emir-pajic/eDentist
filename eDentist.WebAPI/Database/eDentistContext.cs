@@ -77,6 +77,51 @@ namespace eDentist.WebAPI.Database
                 {
                     CountryId = 1,
                     CountryName = "Bosnia and Herzegovina"
+                },
+                new Countries
+                {
+                    CountryId = 2,
+                    CountryName = "Croatia"
+                },
+                new Countries
+                {
+                    CountryId = 3,
+                    CountryName = "Serbia"
+                },
+                new Countries
+                {
+                    CountryId = 4,
+                    CountryName = "Montenegro"
+                },
+                new Countries
+                {
+                    CountryId = 5,
+                    CountryName = "Turkey"
+                },
+                new Countries
+                {
+                    CountryId = 6,
+                    CountryName = "Slovenia"
+                },
+                new Countries
+                {
+                    CountryId = 7,
+                    CountryName = "Spain"
+                },
+                new Countries
+                {
+                    CountryId = 8,
+                    CountryName = "France"
+                },
+                new Countries
+                {
+                    CountryId = 9,
+                    CountryName = "Germany"
+                },
+                new Countries
+                {
+                    CountryId = 10,
+                    CountryName = "Denmark"
                 });
 
 
