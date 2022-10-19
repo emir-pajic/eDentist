@@ -16,7 +16,7 @@ namespace eDentist.WinUI.Main
         {
             InitializeComponent();
             this.ActiveControl = txtUsrName;
-            this.AcceptButton = button3;
+            this.AcceptButton = login;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace eDentist.WinUI.Main
             }
         }
 
-        private async void button3_Click(object sender, EventArgs e)
+        private async void login_Click(object sender, EventArgs e)
         {
             APIService.Username = txtUsrName.Text;
             APIService.Password = txtPass.Text;
@@ -79,7 +79,5 @@ namespace eDentist.WinUI.Main
                 MessageBox.Show("Wrong Username Or Password!");
             }
         }
-
-
     }
 }
