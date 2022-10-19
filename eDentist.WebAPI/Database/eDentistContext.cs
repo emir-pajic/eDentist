@@ -333,12 +333,54 @@ namespace eDentist.WebAPI.Database
                     CityId = 1,
                     Email = "emir.pajic@edu.fit.ba",
                     DateOfBirth = DateTime.Now,
-                    Telephone = "061-918-661",
+                    Telephone = "061-001-110",
                     PasswordSalt = Salt[0],
                     PasswordHash = GenerateHash(Salt[0], "pajson1"),
                     Image = File.ReadAllBytes("Files/admin.jpg")
-
+                },
+                new Users
+                {
+                    UserId = 6,
+                    FirstName = "John",
+                    LastName = "Doe",
+                    Username = "Administrator",
+                    CityId = 4,
+                    Email = "admin@edu.fit.ba",
+                    DateOfBirth = DateTime.Now,
+                    Telephone = "061-123-123",
+                    PasswordSalt = Salt[0],
+                    PasswordHash = GenerateHash(Salt[0], "test"),
+                    Image = File.ReadAllBytes("Files/admin.jpg")
+                },
+                new Users
+                {
+                    UserId = 3,
+                    FirstName = "Ervin",
+                    LastName = "Howell",
+                    Username = "Patient",
+                    CityId = 7,
+                    Email = "patient@edu.fit.ba",
+                    DateOfBirth = DateTime.Now,
+                    Telephone = "061-321-321",
+                    PasswordSalt = Salt[0],
+                    PasswordHash = GenerateHash(Salt[0], "test"),
+                    Image = File.ReadAllBytes("Files/download.jpg")
+                },
+                new Users
+                {
+                    UserId = 4,
+                    FirstName = "Dennis",
+                    LastName = "Schulist",
+                    Username = "Staff",
+                    CityId = 2,
+                    Email = "staff@edu.fit.ba",
+                    DateOfBirth = DateTime.Now,
+                    Telephone = "061-333-111",
+                    PasswordSalt = Salt[0],
+                    PasswordHash = GenerateHash(Salt[0], "test"),
+                    Image = File.ReadAllBytes("Files/doc.jpg")
                 }
+
 
             );
             modelBuilder.Entity<Roles>().HasData
@@ -350,7 +392,13 @@ namespace eDentist.WebAPI.Database
 
             modelBuilder.Entity<UserRoles>().HasData(
                 new UserRoles { UserRoleId = 1, UserId = 1, RoleId = 1 },
-                new UserRoles { UserRoleId = 2, UserId = 2, RoleId = 2 }
+                //new UserRoles { UserRoleId = 2, UserId = 2, RoleId = 1 },
+                new UserRoles { UserRoleId = 3, UserId = 3, RoleId = 2 },
+                new UserRoles { UserRoleId = 4, UserId = 4, RoleId = 3 },
+                new UserRoles { UserRoleId = 5, UserId = 6, RoleId = 1 }
+
+
+
                 );
 
             modelBuilder.Entity<Days>().HasData(
