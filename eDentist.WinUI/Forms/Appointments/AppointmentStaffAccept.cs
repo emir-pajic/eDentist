@@ -65,7 +65,8 @@ namespace eDentist.WinUI.Forms.Appointments
                     DayId = _selectedAppointment.DayId,
                     Status = _selectedAppointment.Status,
                     AppointmentStatus = "Accepted",
-                    AcceptedById = SignedInUser.User.UserId
+                    AcceptedById = SignedInUser.User.UserId,
+                    PreferedDoctorId = _selectedAppointment.PreferedDoctorId,
                 };
 
                 await _appointmentService.Update<MAppointments>(request.AppointmentId, request);

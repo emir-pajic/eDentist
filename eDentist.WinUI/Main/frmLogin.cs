@@ -39,8 +39,11 @@ namespace eDentist.WinUI.Main
             }
             else if (loggedInUser == "Patient")
             {
-                var form = new frmPatientIndex(user);
-                form.Show();
+                //var form = new frmPatientIndex(user);
+                //form.Show();
+                MessageBox.Show("Please use mobile application as patient");
+                frmLogin frm = new frmLogin();
+                frm.Show();
             }
             else if (loggedInUser == "Staff")
             {

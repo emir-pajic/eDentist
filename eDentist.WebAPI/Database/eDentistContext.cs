@@ -378,7 +378,7 @@ namespace eDentist.WebAPI.Database
                     Telephone = "061-333-111",
                     PasswordSalt = Salt[0],
                     PasswordHash = GenerateHash(Salt[0], "test"),
-                    Image = File.ReadAllBytes("Files/doc.jpg")
+                    Image = File.ReadAllBytes("Files/admin.jpg")
                 }
 
 
@@ -399,6 +399,50 @@ namespace eDentist.WebAPI.Database
 
 
 
+                );
+
+            modelBuilder.Entity<Appointments>().HasData(
+                new Appointments
+                {
+                    AppointmentId = 1,
+                    Date = new DateTime(2022, 11, 10, 17, 0, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Requested",
+                    PreferedDoctorId = 4,
+                },
+                new Appointments
+                {
+                    AppointmentId = 2,
+                    Date = new DateTime(2022, 10, 31, 11, 30, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Requested",
+                    PreferedDoctorId = 4,
+                },
+                new Appointments
+                {
+                    AppointmentId = 3,
+                    Date = new DateTime(2023, 1, 3, 14, 15, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Requested",
+                    PreferedDoctorId = 4,
+                },
+                new Appointments
+                {
+                    AppointmentId = 4,
+                    Date = new DateTime(2022, 12, 13, 12, 45, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Accepted",
+                    PreferedDoctorId = 4,
+                    AcceptedById = 4
+                },
+                new Appointments
+                {
+                    AppointmentId = 5,
+                    Date = new DateTime(2022, 11, 22, 15, 15, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Requested",
+                    PreferedDoctorId = 4,
+                }
                 );
 
             modelBuilder.Entity<Days>().HasData(
