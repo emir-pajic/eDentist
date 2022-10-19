@@ -442,6 +442,46 @@ namespace eDentist.WebAPI.Database
                     UserId = 3,
                     AppointmentStatus = "Requested",
                     PreferedDoctorId = 4,
+                },
+                new Appointments
+                {
+                    AppointmentId = 6,
+                    Date = new DateTime(2022, 12, 13, 9, 45, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Accepted",
+                    PreferedDoctorId = 4,
+                    AcceptedById = 4
+                },
+                new Appointments
+                {
+                    AppointmentId = 7,
+                    Date = new DateTime(2022, 12, 23, 12, 45, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Accepted",
+                    PreferedDoctorId = 4,
+                    AcceptedById = 4
+                },
+                new Appointments
+                {
+                    AppointmentId = 8,
+                    Date = new DateTime(2022, 12, 18, 10, 45, 0),
+                    UserId = 3,
+                    AppointmentStatus = "Accepted",
+                    PreferedDoctorId = 4,
+                    AcceptedById = 4
+                }
+                );
+
+            modelBuilder.Entity<Examinations>().HasData(
+
+                new Examinations
+                {
+                    ExaminationId = 1,
+                    AppointmentId = 4,
+                    UserId = 4,
+                    AdditionalInfo = "vadjenje zuba",
+                    Status = "Uspjesno",
+                    TreatmentId = 6
                 }
                 );
 
