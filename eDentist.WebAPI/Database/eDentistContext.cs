@@ -160,6 +160,72 @@ namespace eDentist.WebAPI.Database
                     CityId = 2,
                     CityName = "Sarajevo",
                     CountryId = 1
+                },
+                new Cities
+                {
+                    CityId = 3,
+                    CityName = "Zagreb",
+                    CountryId = 2
+                },
+                new Cities
+                {
+                    CityId = 4,
+                    CityName = "Split",
+                    CountryId = 2
+                },
+                new Cities
+                {
+                    CityId = 5,
+                    CityName = "Belgrade",
+                    CountryId = 3
+                },
+                new Cities
+                {
+                    CityId = 6,
+                    CityName = "Novi Sad",
+                    CountryId = 3
+                },
+                new Cities
+                {
+                    CityId = 7,
+                    CityName = "Podgorica",
+                    CountryId = 4
+                },
+                new Cities
+                {
+                    CityId = 8,
+                    CityName = "Istanbul",
+                    CountryId = 5
+                },
+                new Cities
+                {
+                    CityId = 9,
+                    CityName = "Ljubljana",
+                    CountryId = 6
+                },
+                new Cities
+                {
+                    CityId = 10,
+                    CityName = "Madrid",
+                    CountryId = 7
+                },
+                new Cities
+                {
+                    CityId = 11,
+                    CityName = "Paris",
+                    CountryId = 8
+                },
+                new Cities
+                {
+                    CityId = 12,
+                    CityName = "Frankfurt",
+                    CountryId = 9
+                },
+                new Cities
+                {
+                    CityId = 13,
+                    CityName = "Copenhagen",
+                    CountryId = 10
                 }
                 );
 
@@ -179,22 +245,8 @@ namespace eDentist.WebAPI.Database
                     PasswordHash = GenerateHash(Salt[0], "pajson1"),
                     Image = File.ReadAllBytes("Files/admin.jpg")
 
-                },
-                new Users
-                {
-                    UserId = 2,
-                    FirstName = "Emir",
-                    LastName = "Pajić",
-                    Username = "Pajson2",
-                    CityId = 2,
-                    Email = "emir.pajic2@edu.fit.ba",
-                    DateOfBirth = DateTime.Now,
-                    Telephone = "061-918-661",
-                    PasswordSalt = Salt[1],
-                    PasswordHash = GenerateHash(Salt[1], "pajson2"),
-                    //Image = FromFile()
-                    Image = File.ReadAllBytes("Files/admin.jpg")
                 }
+
             );
             modelBuilder.Entity<Roles>().HasData
             (
