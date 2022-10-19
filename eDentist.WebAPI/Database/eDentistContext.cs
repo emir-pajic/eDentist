@@ -171,8 +171,41 @@ namespace eDentist.WebAPI.Database
                  Name = "Brufen 400mg",
                  ManufacturerId = 1,
                  //Image = File.ReadAllBytes,
-                 Image = File.ReadAllBytes("Files/admin.jpg")
-             });
+                 Image = File.ReadAllBytes("Files/brufen.jpg")
+             },
+             new Materials
+             {
+                 MaterialId = 2,
+                 Name = "Anestezija",
+                 ManufacturerId = 3,
+                 //Image = File.ReadAllBytes,
+                 Image = File.ReadAllBytes("Files/anestezija.jpg")
+             },
+             new Materials
+             {
+                 MaterialId = 3,
+                 Name = "Titanski implantati",
+                 ManufacturerId = 2,
+                 //Image = File.ReadAllBytes,
+                 Image = File.ReadAllBytes("Files/implantati.jpg")
+             },
+             new Materials
+             {
+                 MaterialId = 4,
+                 Name = "Stomatoloska klijesta",
+                 ManufacturerId = 2,
+                 //Image = File.ReadAllBytes,
+                 Image = File.ReadAllBytes("Files/klijesta.jpg")
+             },
+             new Materials
+             {
+                 MaterialId = 5,
+                 Name = "Nerv igla",
+                 ManufacturerId = 4,
+                 //Image = File.ReadAllBytes,
+                 Image = File.ReadAllBytes("Files/igla.jpg")
+             }
+             );
 
 
             modelBuilder.Entity<Cities>().HasData(
