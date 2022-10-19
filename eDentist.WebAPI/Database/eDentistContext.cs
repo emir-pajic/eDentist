@@ -69,7 +69,39 @@ namespace eDentist.WebAPI.Database
                 Salt.Add(GenerateSalt());
             }
 
-
+            modelBuilder.Entity<Treatments>().HasData(
+                new Treatments
+                {
+                    TreatmentId = 6,
+                    Description = "Vadjenje zuba",
+                    Price = 30
+                },
+                new Treatments
+                {
+                    TreatmentId = 2,
+                    Description = "Ugradnja plombe",
+                    Price = 50,
+                    TreatmentsMaterials = null
+                },
+                new Treatments
+                {
+                    TreatmentId = 3,
+                    Description = "Izbjeljivanje zuba",
+                    Price = 100
+                },
+                new Treatments
+                {
+                    TreatmentId = 4,
+                    Description = "Ugradnja zastitnih navlaka",
+                    Price = 80
+                },
+                new Treatments
+                {
+                    TreatmentId = 5,
+                    Description = "Ugradnja implantata",
+                    Price = 1000
+                }
+                );
 
             modelBuilder.Entity<Countries>().HasData(
 
