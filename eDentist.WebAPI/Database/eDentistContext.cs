@@ -130,9 +130,37 @@ namespace eDentist.WebAPI.Database
               new Manufacturers
               {
                   ManufacturerId = 1,
-                  Name = "Bosnalijek",
+                  Name = "Bosnalijek d.d",
                   FoundationYear = 1951,
                   CountryId = 1
+              },
+              new Manufacturers
+              {
+                  ManufacturerId = 2,
+                  Name = "Hemofarm d.o.o",
+                  FoundationYear = 1962,
+                  CountryId = 1
+              },
+              new Manufacturers
+              {
+                  ManufacturerId = 3,
+                  Name = "PLIVA d.o.o",
+                  FoundationYear = 1973,
+                  CountryId = 2
+              },
+              new Manufacturers
+              {
+                  ManufacturerId = 4,
+                  Name = "Pharma S d.o.o",
+                  FoundationYear = 1943,
+                  CountryId = 2
+              },
+              new Manufacturers
+              {
+                  ManufacturerId = 5,
+                  Name = "Farmahem d.o.o",
+                  FoundationYear = 1983,
+                  CountryId = 3
               });
 
 
