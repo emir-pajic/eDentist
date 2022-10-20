@@ -37,11 +37,7 @@ namespace eDentist.WinUI.Main
             PanelHelper.AddPanel(ContentPanel, new EditProfile());
         }
 
-        private void btnBookAppointment_Click(object sender, System.EventArgs e)
-        {
-            PanelHelper.RemovePanels(ContentPanel);
-            PanelHelper.AddPanel(ContentPanel, new AppointmentAddPatient(SignedInUser.User));
-        }
+
 
         private void btnMyAppointments_Click(object sender, System.EventArgs e)
         {

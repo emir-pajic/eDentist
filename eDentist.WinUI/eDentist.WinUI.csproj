@@ -97,12 +97,6 @@
     <Compile Include="Forms\Appointments\AppointmentAdd.Designer.cs">
       <DependentUpon>AppointmentAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Appointments\AppointmentAddPatient.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Appointments\AppointmentAddPatient.Designer.cs">
-      <DependentUpon>AppointmentAddPatient.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Appointments\AppointmentDelete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -392,9 +386,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Appointments\AppointmentAdd.resx">
       <DependentUpon>AppointmentAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Appointments\AppointmentAddPatient.resx">
-      <DependentUpon>AppointmentAddPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Appointments\AppointmentDelete.resx">
       <DependentUpon>AppointmentDelete.cs</DependentUpon>
