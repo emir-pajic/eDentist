@@ -14,6 +14,7 @@ namespace eDentist.WinUI.Forms.Appointments
     {
         private readonly APIService _userService = new APIService("User");
         private readonly APIService _appointmentService = new APIService("Appointments");
+        private MUsers _user;
 
         private List<MAppointments> _appointments { get; set; }
         private MAppointments _selectedAppointment { get; set; }
@@ -21,9 +22,10 @@ namespace eDentist.WinUI.Forms.Appointments
 
 
 
-        public AppointmentStaffAccept()
+        public AppointmentStaffAccept(MUsers user)
         {
             InitializeComponent();
+            _user = user;
         }
         private async void AppointmentStaffAccept_LoadData(object sender, EventArgs e)
         {
@@ -32,7 +34,7 @@ namespace eDentist.WinUI.Forms.Appointments
         private async Task AppointmentStaffAccept_Load()
         {
             _appointments = await _appointmentService.Get<List<MAppointments>>(null);
-            acceptAppointmentUserMenu.Items.AddRange(_appointments.Where(x => x.Date.DayOfYear >= DateTime.Now.DayOfYear && x.AppointmentStatus.Equals("Requested")).Select(x => x.Date.ToString()).ToArray());
+            acceptAppointmentUserMenu.Items.AddRange(_appointments.Where(x => x.Date >= DateTime.Now && x.AppointmentStatus.Equals("Requested") && x.PreferedDoctorId == _user.UserId).Select(x => x.Date.ToString()).ToArray());
         }
 
 
@@ -71,7 +73,7 @@ namespace eDentist.WinUI.Forms.Appointments
 
                 await _appointmentService.Update<MAppointments>(request.AppointmentId, request);
                 MessageBox.Show("Appointment accepted!");
-                PanelHelper.SwapPanels(this.Parent, this, new AppointmentListStaff());
+                PanelHelper.SwapPanels(this.Parent, this, new AppointmentListStaff(_user));
             }
         }
 

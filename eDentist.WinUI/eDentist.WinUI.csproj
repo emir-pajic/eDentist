@@ -91,12 +91,6 @@
     <Compile Include="Forms\About\OralHealthTips.Designer.cs">
       <DependentUpon>OralHealthTips.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Appointments\AppointmentAdd.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Appointments\AppointmentAdd.Designer.cs">
-      <DependentUpon>AppointmentAdd.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Appointments\AppointmentDelete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -383,9 +377,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\About\OralHealthTips.resx">
       <DependentUpon>OralHealthTips.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Appointments\AppointmentAdd.resx">
-      <DependentUpon>AppointmentAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Appointments\AppointmentDelete.resx">
       <DependentUpon>AppointmentDelete.cs</DependentUpon>

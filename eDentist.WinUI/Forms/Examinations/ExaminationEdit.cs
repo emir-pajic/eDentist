@@ -80,6 +80,7 @@ namespace eDentist.WinUI.Forms.Examinations
                         var doctor = _users.FirstOrDefault(x => x.UserId.Equals(examination.UserId));
                         var patient = _users.FirstOrDefault(x => x.UserId.Equals(appointment.UserId));
 
+                        if (doctor == null || patient == null) continue;
                         existingExaminations.Items.Add(appointment.Date + "-" + patient.FirstName + " " + patient.LastName + "-" + doctor.FirstName + " " + doctor.LastName + "-" + examination.AdditionalInfo);
 
                     }
@@ -117,12 +118,8 @@ namespace eDentist.WinUI.Forms.Examinations
 
         private async void btnUpdateExamination_Click(object sender, EventArgs e)
         {
-            if (_selectedTreatment == null)
-            {
-                MessageBox.Show("You must select a treatment");
-                return;
-            }
-            if (ValidateInput(_selectedExamination, _newDoctor, txtDescription.Text, txtStatus.Text))
+
+            if (ValidateInput(_selectedExamination, _newDoctor, txtDescription.Text))
             {
                 var request = new ExaminationUpsertRequest()
                 {
@@ -142,7 +139,7 @@ namespace eDentist.WinUI.Forms.Examinations
 
         }
 
-        private bool ValidateInput(MExaminations selected, MUsers doctor, string description, string status)
+        private bool ValidateInput(MExaminations selected, MUsers doctor, string description)
         {
             if (selected == null)
             {
@@ -154,16 +151,17 @@ namespace eDentist.WinUI.Forms.Examinations
                 MessageBox.Show("You must assign a doctor to a examination!");
                 return false;
             }
+            if (_selectedTreatment == null)
+            {
+                MessageBox.Show("You must select a treatment");
+                return false;
+            }
             if (string.IsNullOrEmpty(description))
             {
                 MessageBox.Show("Examination description can not be emptry!");
                 return false;
             }
-            if (string.IsNullOrEmpty(status))
-            {
-                MessageBox.Show("Examination status can not be emptry!");
-                return false;
-            }
+
 
             return true;
         }

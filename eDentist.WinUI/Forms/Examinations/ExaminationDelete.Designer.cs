@@ -40,7 +40,7 @@
             this.btnRemoveExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveExamination.Location = new System.Drawing.Point(258, 193);
+            this.btnRemoveExamination.Location = new System.Drawing.Point(380, 188);
             this.btnRemoveExamination.Name = "btnRemoveExamination";
             this.btnRemoveExamination.Size = new System.Drawing.Size(148, 31);
             this.btnRemoveExamination.TabIndex = 29;
@@ -55,7 +55,7 @@
             this.menuExaminations.FormattingEnabled = true;
             this.menuExaminations.Location = new System.Drawing.Point(167, 132);
             this.menuExaminations.Name = "menuExaminations";
-            this.menuExaminations.Size = new System.Drawing.Size(370, 32);
+            this.menuExaminations.Size = new System.Drawing.Size(586, 32);
             this.menuExaminations.TabIndex = 28;
             this.menuExaminations.SelectedIndexChanged += new System.EventHandler(this.menuExaminations_SelectedIndexChanged);
             // 

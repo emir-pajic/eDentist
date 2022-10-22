@@ -88,9 +88,14 @@ namespace eDentist.WinUI.Forms.TreatmentsMaterials
                         {
                             //var mat = await materialsService.GetById<MMaterials>(trmat.MaterialId);
                             var mat = materials.FirstOrDefault(x => x.MaterialId.Equals(trmat.MaterialId));
-                            var man = await manufacturerService.GetById<MManufacturers>(mat.ManufacturerId);
-                            var data = HandleData(mat, man);
-                            filtered.Add(data);
+                            if (mat != null)
+                            {
+
+                                var man = await manufacturerService.GetById<MManufacturers>(mat.ManufacturerId);
+                                var data = HandleData(mat, man);
+                                filtered.Add(data);
+                            }
+
                         }
                     }
                 }

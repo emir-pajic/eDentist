@@ -141,17 +141,6 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAddAppointment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAUNJREFUOE+N
-        kzGOgzAURF1wgXAdwhWAEwQll0LUcJZIIDgCaalIkGjo/u7z6ntNFoUtRrL9Z8bfY9us6yqv18thmiZp
-        21au16uEYWhxu92k73t5Pp+2rhjHUQwiCmAYBknTVIIgEGPMBqxRg6N8TMw8z3bSNI2cTicnOJ/PUte1
-        RRRFbh3O/X53JrYDXH0xyPPckS6Xy6YGVzsxtEFrPgH4Bozf62jY3BDY3pnZ9ZMBGoI1pM0CZ4aoKIrC
-        GZRlualpJtyO4ZqYEJYKjgAXjdX+18C/7qqqfg1sG98T2vLbpG0VcBy/Fsex1VgtQeyFCFENGL/X0XRd
-        JwZClmV/CEcGSZLYmn0Hew/p0zXCfTweP+8AA0g8T9+ETAiWwPTMKubZo+EbOANw9Jlo2/9MtgO+JCZq
-        xCLBkjDXBBgTmNYVy7LIF8EHZavEsmC9AAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="mAppointmentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

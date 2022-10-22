@@ -37,9 +37,14 @@ namespace eDentist.WinUI.Forms.Examinations
 
             foreach (var item in examinations)
             {
+                if (item.AppointmentId == null) continue;
                 var appointment = await appointmentService.GetById<MAppointments>(item.AppointmentId);
+
+                if (appointment == null || appointment.UserId == null) continue;
                 var doctor = await userService.GetById<MUsers>(item.UserId);
                 var patient = await userService.GetById<MUsers>(appointment.UserId);
+
+
 
 
 
@@ -59,7 +64,15 @@ namespace eDentist.WinUI.Forms.Examinations
                 else
                 {
                     var treatment = await treatmentService.GetById<MTreatments>(item.TreatmentId);
-                    resultObj.Treatment = treatment.Description;
+                    if (treatment == null)
+                    {
+                        resultObj.Treatment = "N/A";
+                    }
+                    else
+                    {
+
+                        resultObj.Treatment = treatment.Description;
+                    }
                 }
 
                 result.Add(resultObj);

@@ -59,7 +59,7 @@
             this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatus.Location = new System.Drawing.Point(174, 341);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(530, 29);
+            this.txtStatus.Size = new System.Drawing.Size(624, 29);
             this.txtStatus.TabIndex = 32;
             // 
             // lblDescription
@@ -78,7 +78,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(174, 302);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(530, 29);
+            this.txtDescription.Size = new System.Drawing.Size(624, 29);
             this.txtDescription.TabIndex = 30;
             // 
             // menuDoctors
@@ -88,7 +88,7 @@
             this.menuDoctors.FormattingEnabled = true;
             this.menuDoctors.Location = new System.Drawing.Point(174, 195);
             this.menuDoctors.Name = "menuDoctors";
-            this.menuDoctors.Size = new System.Drawing.Size(530, 32);
+            this.menuDoctors.Size = new System.Drawing.Size(624, 32);
             this.menuDoctors.TabIndex = 29;
             this.menuDoctors.SelectedIndexChanged += new System.EventHandler(this.menuDoctors_SelectedIndexChanged);
             // 
@@ -109,9 +109,9 @@
             this.btnUpdateExamination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateExamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateExamination.Location = new System.Drawing.Point(174, 396);
+            this.btnUpdateExamination.Location = new System.Drawing.Point(308, 390);
             this.btnUpdateExamination.Name = "btnUpdateExamination";
-            this.btnUpdateExamination.Size = new System.Drawing.Size(530, 28);
+            this.btnUpdateExamination.Size = new System.Drawing.Size(361, 28);
             this.btnUpdateExamination.TabIndex = 25;
             this.btnUpdateExamination.Text = "Save";
             this.btnUpdateExamination.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             this.existingExaminations.FormattingEnabled = true;
             this.existingExaminations.Location = new System.Drawing.Point(174, 74);
             this.existingExaminations.Name = "existingExaminations";
-            this.existingExaminations.Size = new System.Drawing.Size(530, 32);
+            this.existingExaminations.Size = new System.Drawing.Size(624, 32);
             this.existingExaminations.TabIndex = 35;
             this.existingExaminations.SelectedIndexChanged += new System.EventHandler(this.existingExaminations_SelectedIndexChanged);
             // 
@@ -156,7 +156,7 @@
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(-42, 147);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(809, 10);
+            this.panel3.Size = new System.Drawing.Size(840, 10);
             this.panel3.TabIndex = 56;
             // 
             // treatmentsMenu
@@ -166,7 +166,7 @@
             this.treatmentsMenu.FormattingEnabled = true;
             this.treatmentsMenu.Location = new System.Drawing.Point(175, 249);
             this.treatmentsMenu.Name = "treatmentsMenu";
-            this.treatmentsMenu.Size = new System.Drawing.Size(530, 32);
+            this.treatmentsMenu.Size = new System.Drawing.Size(624, 32);
             this.treatmentsMenu.TabIndex = 58;
             this.treatmentsMenu.SelectedIndexChanged += new System.EventHandler(this.treatmentsMenu_SelectedIndexChanged);
             // 

@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
-using System;
 
 namespace eDentist.WebAPI.Migrations
 {
@@ -223,26 +222,26 @@ namespace eDentist.WebAPI.Migrations
                         column: x => x.AppointmentId,
                         principalTable: "Appointments",
                         principalColumn: "AppointmentId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Examinations_TreatmentsMaterials_TreatmentsMaterialsId",
                         column: x => x.TreatmentsMaterialsId,
                         principalTable: "TreatmentsMaterials",
                         principalColumn: "TreatmentMaterialId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Examinations_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Examinations_Treatments_TreatmentId",
                         column: x => x.TreatmentId,
                         principalTable: "Treatments",
                         principalColumn: "TreatmentId",
                         onUpdate: ReferentialAction.NoAction,
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.InsertData(

@@ -53,12 +53,6 @@ namespace eDentist.WinUI.Forms.Appointments
         }
 
 
-        private void btnAddAppointment_Click(object sender, EventArgs e)
-        {
-            PanelHelper.SwapPanels(this.Parent, this, new AppointmentAdd());
-
-        }
-
         private void btnDetails_Click(object sender, EventArgs e)
         {
             PanelHelper.SwapPanels(this.Parent, this, new AppointmentEdit());

@@ -12,11 +12,13 @@ namespace eDentist.WinUI.Forms.Appointments
         private readonly APIService service = new APIService("Appointments");
         private readonly APIService userService = new APIService("User");
         List<UsersAppointments> result = new List<UsersAppointments>();
+        private MUsers _user;
 
 
-        public AppointmentListStaff()
+        public AppointmentListStaff(MUsers user)
         {
             InitializeComponent();
+            _user = user;
         }
         private async void AppointmentsList_Load(object sender, EventArgs e)
         {
@@ -35,7 +37,7 @@ namespace eDentist.WinUI.Forms.Appointments
 
                     var user = await userService.GetById<MUsers>(item.UserId);
 
-                    if (item.AppointmentStatus.Equals("Requested"))
+                    if (item.AppointmentStatus.Equals("Requested") && item.PreferedDoctorId == _user.UserId)
                     {
 
                         var resultObj = new UsersAppointments()
@@ -76,7 +78,7 @@ namespace eDentist.WinUI.Forms.Appointments
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            PanelHelper.SwapPanels(this.Parent, this, new AppointmentStaffAccept());
+            PanelHelper.SwapPanels(this.Parent, this, new AppointmentStaffAccept(_user));
 
         }
     }

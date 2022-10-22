@@ -48,8 +48,10 @@ namespace eDentist.WinUI.Forms.Examinations
                 if (appointment.AcceptedById != null)
                 {
 
-                    if (appointment.AcceptedById == _user.UserId)
+                    if (appointment.AcceptedById == _user.UserId && appointment.Date <= DateTime.Now)
+
                     {
+
                         menuAppointmentsStaff.Items.Add(appointment.Date);
                     }
                 }
@@ -70,11 +72,18 @@ namespace eDentist.WinUI.Forms.Examinations
 
         private async void btnaddExamination_Click(object sender, EventArgs e)
         {
+            if (_selectedAppointment == null)
+            {
+                MessageBox.Show("Please select an appointment!");
+                return;
+            }
             if (_selectedTreatment == null)
             {
                 MessageBox.Show("Please select a treatment!");
                 return;
             }
+
+
             var request = new ExaminationUpsertRequest()
             {
                 AppointmentId = _selectedAppointment.AppointmentId,

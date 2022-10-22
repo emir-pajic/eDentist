@@ -18,10 +18,16 @@ namespace eDentist.WinUI.Forms.Treatments
         private async void btnAddTreatment_Click(object sender, EventArgs e)
         {
             var price = 0;
+            if (String.IsNullOrEmpty(txtTreatment.Text))
+            {
+                MessageBox.Show("Treatment can't be empty!");
+                return;
+            }
             if (int.TryParse(txtPrice.Text, out price))
             {
                 price = Convert.ToInt32(txtPrice.Text);
             }
+
             else
             {
                 MessageBox.Show("Price must be numeric value!");

@@ -2,11 +2,7 @@
 using eDentist.WinUI.Helper;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -56,6 +52,7 @@ namespace eDentist.WinUI.Forms.Examinations
                     {
                         var doctor = _users.FirstOrDefault(x => x.UserId.Equals(examination.UserId));
                         var patient = _users.FirstOrDefault(x => x.UserId.Equals(appointment.UserId));
+                        if (doctor == null || patient == null) continue;
 
                         menuExaminations.Items.Add(appointment.Date + "-" + patient.FirstName + " " + patient.LastName + "-" + doctor.FirstName + " " + doctor.LastName + "-" + examination.AdditionalInfo);
 

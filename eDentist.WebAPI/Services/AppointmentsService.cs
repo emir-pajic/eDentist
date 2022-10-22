@@ -2,7 +2,7 @@
 using eDentist.Model;
 using eDentist.Model.Request;
 using eDentist.WebAPI.Database;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace eDentist.WebAPI.Service
 {
@@ -24,8 +24,20 @@ namespace eDentist.WebAPI.Service
             await _context.Appointments.AddAsync(entity);
             await _context.SaveChangesAsync();
 
-            return _mapper.Map<MAppointments>(entity);        
+            return _mapper.Map<MAppointments>(entity);
 
+        }
+
+        public override async Task<bool> Delete(int ID)
+        {
+            var entity = await _context.Appointments.
+                Include(i => i.Examinations).
+                FirstOrDefaultAsync(i => i.AppointmentId == ID);
+
+            _context.Appointments.Remove(entity);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
 
         private int GetWeekDayId(int dayOfWeek)

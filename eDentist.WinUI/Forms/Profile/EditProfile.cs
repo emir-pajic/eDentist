@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,8 @@ namespace eDentist.WinUI.Forms.Profile
         private MUsers user;
         private readonly APIService _cityService = new APIService("Cities");
         private readonly APIService _userService = new APIService("User");
+        string emailPattern = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+
 
         private List<MCities> _cities { get; set; }
 
@@ -173,12 +176,68 @@ namespace eDentist.WinUI.Forms.Profile
                 MessageBox.Show("Username can not be empty!");
                 return false;
             }
-            if (String.IsNullOrEmpty(txtEmail.Text))
+            if (!Email_Validating(txtEmail.Text))
             {
-                MessageBox.Show("Email can not be empty!");
+                MessageBox.Show("Please enter a valid email");
+                return false;
+            }
+            if (!Phone_Validating(txtTelephone.Text))
+            {
+                MessageBox.Show("Please enter a valid phone number");
                 return false;
             }
             return true;
+        }
+
+
+        private bool Email_Validating(string email)
+        {
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                bool isEmailValid = Regex.IsMatch(txtEmail.Text, emailPattern);
+                if (isEmailValid == false)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
+            }
+            return false;
+
+        }
+
+        bool IsDigitsOnly(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
+        }
+        private bool Phone_Validating(string telephone)
+        {
+            string phone = telephone.ToString();
+            if (string.IsNullOrWhiteSpace(phone) || phone.Length < 9 || phone.Length > 9)
+            {
+                return false;
+            }
+            else
+            {
+
+                if (IsDigitsOnly(phone) == false)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
     }
 }

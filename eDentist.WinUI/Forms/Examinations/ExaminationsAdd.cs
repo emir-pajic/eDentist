@@ -48,6 +48,7 @@ namespace eDentist.WinUI.Forms.Examinations
 
             foreach (var appointment in _appointments)
             {
+                if (appointment.UserId == null) continue;
                 if (appointment.Date < DateTime.Now)
                 {
 
@@ -85,11 +86,27 @@ namespace eDentist.WinUI.Forms.Examinations
 
         private async void btnaddCity_Click(object sender, EventArgs e)
         {
+            if (_selectedAppointment == null)
+            {
+                MessageBox.Show("Please select an appointment!");
+                return;
+            }
+            if (_selectedUser == null)
+            {
+                MessageBox.Show("Please select a doctor!");
+                return;
+            }
             if (_selectedTreatment == null)
             {
                 MessageBox.Show("Please select a treatment!");
                 return;
             }
+            if (String.IsNullOrEmpty(txtDescription.Text))
+            {
+                MessageBox.Show("Please write a treatment description");
+                return;
+            }
+
             var request = new ExaminationUpsertRequest()
             {
                 AppointmentId = _selectedAppointment.AppointmentId,

@@ -41,7 +41,7 @@ namespace eDentist.WinUI.Main
         private void btnAllAppointments_Click(object sender, System.EventArgs e)
         {
             PanelHelper.RemovePanels(ContentPanel);
-            PanelHelper.AddPanel(ContentPanel, new AppointmentListStaff());
+            PanelHelper.AddPanel(ContentPanel, new AppointmentListStaff(_user));
         }
 
         private void btnMaterials_Click(object sender, System.EventArgs e)
