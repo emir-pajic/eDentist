@@ -32,6 +32,12 @@ Staff - Desktop:
 Username: Staff
 Password: test
 
+Username: Staff1
+Password: test
+
+Username: Staff2
+Password: test
+
 Patient - Mobile:
 
 Username: Patient

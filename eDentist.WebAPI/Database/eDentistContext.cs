@@ -379,6 +379,34 @@ namespace eDentist.WebAPI.Database
                     PasswordSalt = Salt[0],
                     PasswordHash = GenerateHash(Salt[0], "test"),
                     Image = File.ReadAllBytes("Files/admin.jpg")
+                },
+                new Users
+                {
+                    UserId = 5,
+                    FirstName = "Martin",
+                    LastName = "Fowler",
+                    Username = "Staff1",
+                    CityId = 5,
+                    Email = "staff1@edu.fit.ba",
+                    DateOfBirth = DateTime.Now,
+                    Telephone = "061-333-111",
+                    PasswordSalt = Salt[0],
+                    PasswordHash = GenerateHash(Salt[0], "test"),
+                    Image = File.ReadAllBytes("Files/admin.jpg")
+                },
+                new Users
+                {
+                    UserId = 7,
+                    FirstName = "Ennis",
+                    LastName = "Richie",
+                    Username = "Staff2",
+                    CityId = 3,
+                    Email = "staff2@edu.fit.ba",
+                    DateOfBirth = DateTime.Now,
+                    Telephone = "061-333-111",
+                    PasswordSalt = Salt[0],
+                    PasswordHash = GenerateHash(Salt[0], "test"),
+                    Image = File.ReadAllBytes("Files/admin.jpg")
                 }
 
 
@@ -395,7 +423,11 @@ namespace eDentist.WebAPI.Database
                 //new UserRoles { UserRoleId = 2, UserId = 2, RoleId = 1 },
                 new UserRoles { UserRoleId = 3, UserId = 3, RoleId = 2 },
                 new UserRoles { UserRoleId = 4, UserId = 4, RoleId = 3 },
-                new UserRoles { UserRoleId = 5, UserId = 6, RoleId = 1 }
+                new UserRoles { UserRoleId = 5, UserId = 6, RoleId = 1 },
+                new UserRoles { UserRoleId = 6, UserId = 7, RoleId = 3 },
+                new UserRoles { UserRoleId = 7, UserId = 5, RoleId = 3 }
+
+
 
 
 
